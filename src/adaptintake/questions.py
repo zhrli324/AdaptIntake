@@ -86,6 +86,13 @@ TEMPLATES: dict[str, dict[Stage, str]] = {
     },
 }
 
+# "Anything else?" follow-ups for list slots that may still have items.
+LIST_FOLLOWUP = {
+    "medications": "Apart from those, do you take any other medicines, including ones you buy yourself?",
+    "past_history": "Apart from that, have you had any other health problems, operations or hospital stays?",
+    "associated_symptoms": "Apart from that, have you noticed anything else that comes with it?",
+}
+
 STAGE_INSTRUCTIONS = {
     Stage.OPEN: "Ask an open question that invites the patient to describe it in their own words.",
     Stage.FOCUSED: "Ask about one specific aspect, still letting the patient answer freely.",
@@ -143,6 +150,8 @@ class QuestionResult:
 
 def template_question(decision: Decision, state: InformationState) -> str:
     slot = decision.slots[0]
+    if state[slot].list_open and not state[slot].vague and slot in LIST_FOLLOWUP:
+        return LIST_FOLLOWUP[slot]
     if decision.stage == Stage.CLARIFY:
         a, b = (state[slot].conflicting_values + ["", ""])[:2]
         return f"I want to make sure I have this right about {SLOTS[slot].label}. I noted '{a}' and also '{b}'. Which is closer?"
@@ -161,11 +170,16 @@ def generate_question(
     recent = "\n".join(f"{t['role']}: {t['text']}" for t in transcript[-6:])
     topics = "; ".join(f"{SLOTS[s].label} ({SLOTS[s].description})" for s in decision.slots)
     extra = ""
+    first = state[decision.slots[0]]
+    if first.list_open and not first.vague:
+        extra = f"\nThe patient already mentioned: {first.value}. Ask only whether there is anything else to add."
     if decision.stage == Stage.CLARIFY:
         values = state[decision.slots[0]].conflicting_values
         extra = f"\nThe two answers were: {values}"
+    main_problem = state["chief_complaint"].value or "not yet known"
     request = (
         f"Recent conversation:\n{recent}\n\n"
+        f"Main problem (symptom questions refer to this): {main_problem}\n"
         f"Topic(s) to ask about: {topics}{extra}\n"
         f"Question form: {STAGE_INSTRUCTIONS[decision.stage]}\n"
         f"Style: {GUIDANCE_INSTRUCTIONS[decision.guidance]}"

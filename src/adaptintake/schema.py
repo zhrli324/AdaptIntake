@@ -83,12 +83,13 @@ class SlotState(BaseModel):
     conflicting_values: list[str] = Field(default_factory=list)
     times_asked: int = 0
     clarified: bool = False  # was vague or conflicting at some point, later resolved
+    list_open: bool = False  # list slot (e.g. medicines) that may have more items: ask "anything else?"
 
     @property
     def is_resolved(self) -> bool:
         """Resolved = nothing more to ask: a specific answer, unknown, or declined."""
         if self.status == SlotStatus.REPORTED:
-            return not self.vague
+            return not self.vague and not self.list_open
         return self.status in (SlotStatus.UNKNOWN, SlotStatus.DECLINED)
 
 
@@ -135,6 +136,11 @@ class SlotUpdate(BaseModel):
     )
     contradicts_previous: bool = Field(
         description="True if this value is inconsistent with the value already recorded for the slot."
+    )
+    no_more: bool = Field(
+        default=False,
+        description="True if the patient says there is nothing more to add for this topic "
+        "(e.g. 'that's all', 'no other tablets', 'nothing else').",
     )
 
 

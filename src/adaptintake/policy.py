@@ -27,17 +27,20 @@ class Stage(str, Enum):
 
 FUNNEL = [Stage.OPEN, Stage.FOCUSED, Stage.CLOSED]
 
-UNCERTAINTY = {"conflicting": 1.5, "missing": 1.0, "vague": 0.6}
-BURDEN_SCALE = {Guidance.CONFIRM: 0.5, Guidance.FOCUSED: 1.0, Guidance.SCAFFOLDED: 1.5}
+UNCERTAINTY = {"conflicting": 1.5, "missing": 1.0, "list_open": 0.8, "vague": 0.6}
+# Scaffolded questions are short and closed, but the patient is struggling: effort weighs more there.
+BURDEN_SCALE = {Guidance.CONFIRM: 0.6, Guidance.FOCUSED: 0.8, Guidance.SCAFFOLDED: 1.0}
+LIST_SLOTS = {"medications", "past_history", "associated_symptoms"}
 FUNNEL_START = {Guidance.CONFIRM: 0, Guidance.FOCUSED: 1, Guidance.SCAFFOLDED: 1}
 
 
 @dataclass
 class PolicyConfig:
     lam: float = 0.5  # weight of patient effort
-    repeat_penalty: float = 0.25  # added burden per earlier ask of the same slot
+    repeat_penalty: float = 0.2  # added burden per earlier ask of the same slot
     threshold: float = 0.15  # gaps scoring below this are not worth asking about
     max_asks_per_slot: int = 3
+    max_asks_list_slot: int = 5  # list slots may need "anything else?" follow-ups
     max_turns: int = 20
     allow_bundling: bool = True  # confirm level may cover two missing slots in one question
 
@@ -59,6 +62,8 @@ def uncertainty(slot: SlotState) -> float:
         return UNCERTAINTY["missing"]
     if slot.status == SlotStatus.REPORTED and slot.vague:
         return UNCERTAINTY["vague"]
+    if slot.status == SlotStatus.REPORTED and slot.list_open:
+        return UNCERTAINTY["list_open"]
     return 0.0
 
 
@@ -73,6 +78,8 @@ def stage_for(slot: SlotState, guidance: Guidance) -> Stage:
         return Stage.CLARIFY
     if slot.name == "chief_complaint" and slot.times_asked == 0:
         return Stage.OPEN
+    if slot.list_open and not slot.vague:
+        return Stage.FOCUSED  # "anything else?"
     index = min(FUNNEL_START[guidance] + slot.times_asked, len(FUNNEL) - 1)
     return FUNNEL[index]
 
@@ -86,7 +93,7 @@ def decide(
     candidates = {
         s.name: round(priority(s, guidance, cfg), 3)
         for s in state.open_slots()
-        if s.times_asked < cfg.max_asks_per_slot
+        if s.times_asked < (cfg.max_asks_list_slot if s.name in LIST_SLOTS else cfg.max_asks_per_slot)
     }
     if turns_used >= cfg.max_turns:
         return Decision("stop", scores=candidates, guidance=guidance, reason="turn budget reached")

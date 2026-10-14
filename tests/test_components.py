@@ -7,8 +7,8 @@ from adaptintake.schema import SLOT_ORDER, InformationState, SlotStatus, SlotUpd
 from adaptintake.summary import build_summary
 
 
-def upd(slot, value, evidence, kind="answer", vague=False, contradicts=False):
-    return SlotUpdate(slot=slot, value=value, evidence=evidence, kind=kind, vague=vague, contradicts_previous=contradicts)
+def upd(slot, value, evidence, kind="answer", vague=False, contradicts=False, no_more=False):
+    return SlotUpdate(slot=slot, value=value, evidence=evidence, kind=kind, vague=vague, contradicts_previous=contradicts, no_more=no_more)
 
 
 def analysis(*updates, off_topic=False, stop=False):
@@ -151,3 +151,23 @@ def test_summary_sections():
     assert [i.slot for i in s.clarified] == ["onset"]
     assert "past_history" in [i.slot for i in s.unclear]
     assert "dizzy when I stand" in s.to_markdown()
+
+
+def test_unknown_detail_keeps_reported_value():
+    state = InformationState()
+    apply_analysis(state, analysis(upd("medications", "a stomach tablet", "a stomach tablet", vague=True)), "I take a stomach tablet", 1)
+    apply_analysis(state, analysis(upd("medications", "cannot remember its name", "can't remember", kind="unknown")), "I can't remember", 2)
+    slot = state["medications"]
+    assert slot.status == SlotStatus.REPORTED and not slot.vague  # no more asking for that name
+    assert slot.value.startswith("a stomach tablet")
+
+
+def test_list_slots_ask_anything_else_until_closed():
+    state = InformationState()
+    resolve_all(state)
+    apply_analysis(state, analysis(upd("medications", "amlodipine", "amlodipine")), "I take amlodipine", 1)
+    assert state["medications"].list_open and not state["medications"].is_resolved
+    d = decide(state, Guidance.SCAFFOLDED, 3, PolicyConfig())
+    assert d.slots == ["medications"] and d.stage == Stage.FOCUSED
+    apply_analysis(state, analysis(upd("medications", "no other medicines", "that's all", no_more=True)), "that's all", 2)
+    assert state["medications"].is_resolved and state["medications"].value.endswith("amlodipine")

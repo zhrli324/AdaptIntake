@@ -12,22 +12,26 @@ from .llm import LLM
 PERSONAS: dict[str, str] = {
     "clear": (
         "You communicate clearly. Answer what is asked fully and precisely, in 1-3 sentences, with concrete "
-        "times and numbers when you know them. You may mention a closely related detail if it seems relevant."
+        "times, numbers and names when you know them. Answer only what was asked."
     ),
     "fragmented": (
-        "You communicate in fragments. Give short, partial answers (often 3-10 words), one detail at a time. "
-        "Sometimes drift to a loosely related topic (a family member, a past event) instead of answering fully. "
-        "You only give a specific detail when a question asks about it directly."
+        "You communicate in fragments. HARD RULES: each reply is at most 12 words; give at most ONE fact per "
+        "reply, even if the question asks about several things; in about one reply out of three, drift to a "
+        "loosely related topic (a family member, a past event) instead of answering. Never list several "
+        "medicines or conditions in one reply; mention one and stop."
     ),
     "uncertain": (
-        "You are often unsure about details. Your first answer to questions about time, numbers or names is "
-        "vague ('a while ago', 'not too bad', 'some tablets'). When the question offers concrete options or an "
-        "everyday reference point (a weekend, a holiday, a meal), you can usually give the more precise answer."
+        "You are often unsure about details. HARD RULES: the FIRST time you are asked about a time, duration, "
+        "frequency, amount, dose, score or the name of something, answer vaguely WITHOUT the specific detail "
+        "(e.g. 'a while back', 'not too bad', 'some tablets', 'a few times'). Give the specific detail only if "
+        "the interviewer asks about that same thing again, offers concrete options, or gives an everyday "
+        "reference point (a weekend, a holiday, a meal). Keep replies to 1-2 short sentences and answer only "
+        "what was asked."
     ),
     "contradictory": (
         "You sometimes misremember. The first time the topic of the CONTRADICTION comes up, say the "
         "'first says' version. If later asked about it again or asked which version is right, give the true "
-        "fact. Otherwise answer normally, in 1-2 sentences."
+        "fact. Otherwise answer only what was asked, in 1-2 sentences."
     ),
 }
 

@@ -101,6 +101,12 @@ class BaseIntake:
             self._understand(reply)  # still record what was said, for the summary
             return self._finish(redflags.URGENT_MESSAGE, f"red flag: {hit.category}")
         update = self._understand(reply)
+        # A list question ("anything else?") answered without a new item closes the list.
+        touched = {u.slot for u in update.accepted}
+        if self.questions and not update.off_topic:
+            for s in self.questions[-1]["slots"]:
+                if self.state[s].list_open and s not in touched:
+                    self.state[s].list_open = False
         if update.wants_to_stop:
             return self._finish(STOP_MESSAGE, "patient asked to stop")
         return self._next(update)

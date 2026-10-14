@@ -26,7 +26,10 @@ Rules:
 - If the patient says they do not know or cannot remember something that was asked, use kind "unknown".
 - If the patient says they would rather not talk about something, use kind "declined".
 - Mark vague=true for answers too imprecise to be useful ("a while ago", "not great", "some pills").
+- For medications, mark vague=true if any medicine mentioned in the slot so far is described without its name
+  (e.g. "a new blood pressure tablet"), unless the patient said they cannot remember the name.
 - Set contradicts_previous=true only if the new value is inconsistent with the value already recorded.
+- Set no_more=true when the patient says there is nothing more to add for a topic ("that's all", "no others").
 - Never add facts, causes or diagnoses the patient did not state."""
 
 
@@ -96,10 +99,15 @@ def apply_analysis(
         was_resolved = slot.is_resolved
         slot.evidence.append(Evidence(turn=turn, quote=update.evidence))
 
-        if update.kind in ("unknown", "declined"):
-            if slot.status != SlotStatus.REPORTED or slot.vague:
+        if update.no_more and update.slot in MULTI_VALUE_SLOTS and slot.status == SlotStatus.REPORTED:
+            slot.list_open = False
+        elif update.kind in ("unknown", "declined"):
+            if slot.status == SlotStatus.REPORTED and slot.value:
+                # Keep what was already said; the patient cannot add the missing detail, so stop asking.
+                slot.value = f"{slot.value}; {update.value}"
+            else:
                 slot.status = SlotStatus.UNKNOWN if update.kind == "unknown" else SlotStatus.DECLINED
-                slot.vague = False
+            slot.vague = False
             result.unknown_or_declined.append(update.slot)
         elif slot.status == SlotStatus.REPORTED and update.contradicts_previous:
             slot.status = SlotStatus.CONFLICTING
@@ -117,6 +125,8 @@ def apply_analysis(
                 slot.value = f"{slot.value}; {update.value}"
             else:
                 slot.value = update.value
+            if update.slot in MULTI_VALUE_SLOTS:
+                slot.list_open = not update.no_more
             slot.status = SlotStatus.REPORTED
             slot.vague = update.vague
             slot.conflicting_values = []
