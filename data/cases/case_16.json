@@ -1,0 +1,146 @@
+{
+  "id": "case_16",
+  "title": "Night-time leg cramps",
+  "source": "synthetic",
+  "profile": {
+    "age": 73,
+    "sex": "female",
+    "context": "Lives with her husband and attends alone; no hearing or memory problems."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Painful cramps in the legs at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Started about 6 weeks ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "region",
+      "text": "In the calves of both legs, mainly the left.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "A sudden tight knot in the calf, with the toes pulling downwards.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Wakes her 3-4 nights a week; each cramp lasts 2-5 minutes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "provocation",
+      "text": "Standing up and stretching the calf eases it; worse after long days on her feet.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "severity",
+      "text": "Very painful at the time, about 8/10, and the calf is sore the next morning.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "associated_symptoms",
+      "text": "No leg swelling, no pain when walking and no numbness in the feet.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has type 2 diabetes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Has high cholesterol.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Started bendroflumethiazide 2.5 mg once daily about 2 months ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes metformin 500 mg twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes atorvastatin 20 mg at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "medications",
+      "text": "Takes lisinopril 10 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Wants something to stop the cramps and has heard quinine helps.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "timing",
+    "first_says": "Each cramp lasts about half an hour.",
+    "fact_id": "F5"
+  },
+  "red_flag": null
+}

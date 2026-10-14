@@ -1,0 +1,146 @@
+{
+  "id": "case_02",
+  "title": "Worsening right knee pain",
+  "source": "synthetic",
+  "profile": {
+    "age": 72,
+    "sex": "male",
+    "context": "Lives with his wife in a two-storey house and attends alone; good hearing and memory."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Pain in the right knee that has been getting worse.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "The knee has ached on and off for about 3 years but has become noticeably worse over the last 2 months.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "provocation",
+      "text": "Worse going down stairs and after walking more than 10 minutes; better with rest and paracetamol.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "A deep, grinding ache; the knee feels stiff for about 20 minutes in the morning.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "region",
+      "text": "Pain is on the inner side of the right knee and does not spread down the leg.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "severity",
+      "text": "About 7/10 on bad days; can no longer walk the dog round the park.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "The knee sometimes swells slightly by the evening; no redness, fever or locking.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has had type 2 diabetes for about 10 years.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Had a stent put in a heart artery 6 years ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes metformin 1 g twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes aspirin 75 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes atorvastatin 40 mg at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes ramipril 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "Penicillin gives him a rash.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "functional_change",
+      "text": "Now goes downstairs one step at a time holding the rail.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Wants something stronger for the pain and asks whether he might need a knee replacement.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "It only started getting bad last week.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

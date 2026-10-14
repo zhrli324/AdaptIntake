@@ -1,0 +1,129 @@
+{
+  "id": "case_19",
+  "title": "Chest pressure on exertion today",
+  "source": "synthetic",
+  "profile": {
+    "age": 71,
+    "sex": "male",
+    "context": "Lives with his wife and attends alone, having walked to the surgery; good hearing and memory."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "A pressure feeling in the chest.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Started this morning while carrying shopping up the hill, and came back while walking to the surgery.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "quality",
+      "text": "Crushing, heavy pressure in the centre of the chest, like a weight, spreading down the left arm, brought on by exertion today.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "provocation",
+      "text": "Eased after about 10 minutes of rest each time.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "severity",
+      "text": "About 8/10 at its worst.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "timing",
+      "text": "Two episodes today, each lasting 10-15 minutes; a mild ache remains now.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "Felt sweaty, sick and breathless during the episodes.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has high blood pressure and high cholesterol.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has type 2 diabetes and is an ex-smoker.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes ramipril 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes atorvastatin 20 mg at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes metformin 1 g twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "main_concern",
+      "text": "Thinks it is probably indigestion or a pulled muscle and wants to get home.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": null,
+  "red_flag": {
+    "fact_id": "F3",
+    "description": "Crushing central chest pressure radiating to the left arm on exertion today, with sweating and nausea: possible acute coronary syndrome needing emergency care."
+  }
+}

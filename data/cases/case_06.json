@@ -1,0 +1,146 @@
+{
+  "id": "case_06",
+  "title": "Tiredness and low energy",
+  "source": "synthetic",
+  "profile": {
+    "age": 70,
+    "sex": "female",
+    "context": "Lives with her husband, who has Parkinson's disease and for whom she is the main carer; attends alone."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Feeling tired and lacking energy all the time.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Came on gradually over about 2 months.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "timing",
+      "text": "Tired all day, worse in the afternoon; now needs a nap most days, which is new.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "severity",
+      "text": "Rates her energy 3/10; has had to stop her twice-weekly swimming.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "associated_symptoms",
+      "text": "More short of breath than usual on hills, and friends say she looks pale.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No chest pain, no weight loss and no change in bowel habit.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "Sleeps about 7 hours but wakes unrefreshed; mood feels 'a bit flat' with the caring.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has had type 2 diabetes for 12 years.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has an underactive thyroid.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes metformin 500 mg twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes levothyroxine 100 micrograms each morning.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Has taken omeprazole 20 mg once daily for indigestion for years.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes ibuprofen 400 mg bought from the chemist most days for shoulder pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "Codeine makes her very sick.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "functional_change",
+      "text": "Struggling to help her husband wash and dress in the mornings.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Worried she will not be able to keep caring for her husband.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "Since last week, I'd say.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

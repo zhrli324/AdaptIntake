@@ -1,0 +1,138 @@
+{
+  "id": "case_07",
+  "title": "Swollen ankles",
+  "source": "synthetic",
+  "profile": {
+    "age": 81,
+    "sex": "female",
+    "context": "Lives with her husband, who attends with her; no memory or hearing problems."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Both ankles are swollen.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "First noticed about 4 weeks ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "timing",
+      "text": "Swelling is worse by the evening and mostly gone in the morning after lying flat.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "region",
+      "text": "Both ankles and lower shins, about equally; socks leave marks on the skin.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "severity",
+      "text": "Shoes feel tight by teatime; mildly uncomfortable, about 3/10.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No breathlessness lying flat, no waking up breathless and no chest pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No calf pain or redness in either leg.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has been told her kidney function is 'a bit reduced'.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Amlodipine was increased from 5 mg to 10 mg once daily about 6 weeks ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes a small water tablet each morning; cannot remember its name (it is indapamide 2.5 mg).",
+      "essential": true,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes simvastatin 20 mg at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "functional_change",
+      "text": "Sits with her feet up in the afternoons and has stopped wearing her usual shoes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Afraid the swelling means her heart is failing, as her sister had heart failure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "medications",
+    "first_says": "I'm still on the 5 mg one, I think.",
+    "fact_id": "F10"
+  },
+  "red_flag": null
+}

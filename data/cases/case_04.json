@@ -1,0 +1,138 @@
+{
+  "id": "case_04",
+  "title": "Constipation",
+  "source": "synthetic",
+  "profile": {
+    "age": 88,
+    "sex": "female",
+    "context": "Lives with her son and his family; her son attends and helps with the history; memory is fine but she speaks slowly."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Constipation: opening her bowels much less often and having to strain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Started about 3 weeks ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "timing",
+      "text": "Now opens her bowels about every 4-5 days; normally every day or every other day.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "Stools are hard and pellet-like.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "severity",
+      "text": "Straining is uncomfortable, about 4/10, and her lower tummy feels bloated.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No blood in the stools, no black stools and no vomiting.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "provocation",
+      "text": "Has been drinking less (about 3 cups of tea a day) to avoid getting up at night.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has osteoarthritis of the spine and knees.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has an irregular heartbeat (atrial fibrillation).",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Started co-codamol 30/500, two tablets four times a day, about a month ago for back pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes apixaban 2.5 mg twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes bisoprolol 2.5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes a calcium and vitamin D chewable tablet twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Wants something to get things moving and is worried it could be something serious like bowel cancer.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "timing",
+    "first_says": "I go most days, really.",
+    "fact_id": "F3"
+  },
+  "red_flag": null
+}

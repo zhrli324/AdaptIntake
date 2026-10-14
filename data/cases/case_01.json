@@ -1,0 +1,146 @@
+{
+  "id": "case_01",
+  "title": "Dizziness on standing after a new blood-pressure tablet",
+  "source": "synthetic",
+  "profile": {
+    "age": 79,
+    "sex": "female",
+    "context": "Lives alone in a ground-floor flat, attends alone, daughter visits weekly; mild hearing loss in the left ear."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Feels light-headed and dizzy when she stands up from a chair or gets out of bed.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "The dizziness began about 10 days ago, roughly a week after starting a new blood-pressure tablet.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "provocation",
+      "text": "Worse on first getting up in the morning and when standing quickly; settles if she sits back down for a minute.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "Feels like a swimmy, about-to-faint feeling rather than the room spinning.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Each episode lasts less than a minute and happens several times a day.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "severity",
+      "text": "Rates it 6/10; nearly fell once and had to grab the kitchen worktop, but has not actually fallen.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No chest pain, palpitations, blackouts or weakness of the arms or legs.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has had high blood pressure for about 15 years.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has osteoarthritis of both hips.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Started amlodipine 5 mg once daily about two and a half weeks ago, added by the practice nurse for high readings.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes bendroflumethiazide 2.5 mg (a water tablet) every morning for years.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes a small tablet for her stomach each morning; cannot remember its name (it is lansoprazole 15 mg).",
+      "essential": true,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes paracetamol 1 g up to three times a day for hip pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "functional_change",
+      "text": "Has stopped going to her Tuesday lunch club because she is worried about feeling faint on the bus.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Worried the new tablet is causing it and wants to know whether she should stop it.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "Oh, it's been going on for months, I think.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

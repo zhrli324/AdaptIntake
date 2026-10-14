@@ -1,0 +1,138 @@
+{
+  "id": "case_17",
+  "title": "Blurred vision when reading",
+  "source": "synthetic",
+  "profile": {
+    "age": 80,
+    "sex": "male",
+    "context": "Lives with his wife and attends alone; still drives; good memory."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Blurred vision when reading.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Came on gradually over about 6 months.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "region",
+      "text": "Affects both eyes, the right slightly worse.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "Print looks fuzzy; straight lines such as door frames look normal.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "provocation",
+      "text": "Worse in dim light; a brighter lamp and his old reading glasses help a little.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "severity",
+      "text": "Can no longer read the newspaper; rates it 6/10.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No eye pain, no redness, no flashes or floaters and no sudden loss of vision.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "associated_symptoms",
+      "text": "Bothered by glare from car headlights at night.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has had type 2 diabetes for 18 years.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "His last eye test was about 3 years ago; he cannot remember when it was.",
+      "essential": false,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes metformin 1 g twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes linagliptin 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes amlodipine 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Worried he will have to stop driving.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "medications",
+    "first_says": "I just take one metformin a day.",
+    "fact_id": "F11"
+  },
+  "red_flag": null
+}

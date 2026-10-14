@@ -1,0 +1,138 @@
+{
+  "id": "case_13",
+  "title": "Heartburn",
+  "source": "synthetic",
+  "profile": {
+    "age": 66,
+    "sex": "female",
+    "context": "Lives with her husband and works part-time as a school receptionist; attends alone."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Heartburn.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Started about 6 weeks ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "quality",
+      "text": "A burning feeling behind the breastbone with a sour taste in the mouth.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "region",
+      "text": "Centre of the chest rising up to the throat; does not spread to the arms or jaw.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "provocation",
+      "text": "Worse after large meals, lying flat at night and bending over; antacids help within minutes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "timing",
+      "text": "Happens most evenings and lasts about 30 minutes each time.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "severity",
+      "text": "About 5/10; it wakes her from sleep about twice a week.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "associated_symptoms",
+      "text": "No difficulty swallowing, no vomiting, no black stools and no weight loss.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "associated_symptoms",
+      "text": "Not brought on by exertion and no breathlessness.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Has osteoarthritis in her hands.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "past_history",
+      "text": "Smokes about 10 cigarettes a day and has told her family she has quit.",
+      "essential": false,
+      "known": true,
+      "willing": false
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Started naproxen 250 mg twice daily about 2 months ago for hand pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes Gaviscon liquid after meals when needed.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "Allergic to erythromycin, which caused vomiting and a rash.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Wants to make sure it is not her heart.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "timing",
+    "first_says": "Oh, only once or twice a week.",
+    "fact_id": "F6"
+  },
+  "red_flag": null
+}

@@ -1,0 +1,146 @@
+{
+  "id": "case_18",
+  "title": "Forgetfulness noticed by family",
+  "source": "synthetic",
+  "profile": {
+    "age": 85,
+    "sex": "male",
+    "context": "Lives with his wife; his wife and son attend with him; he is hard of hearing."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "His family have noticed he has become more forgetful.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Has come on gradually over about a year, according to his family.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "quality",
+      "text": "Forgets recent conversations and repeats questions; memory for the distant past is good.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "severity",
+      "text": "Has missed two hospital appointments and left the gas hob on twice.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Steady and gradual, not varying from day to day, with no sudden worsening.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No headaches, falls or weakness, and no seeing things that are not there.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "Mood is fairly good and he sleeps well.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "functional_change",
+      "text": "Has had two minor scrapes with the car in the last 3 months and still drives.",
+      "essential": true,
+      "known": true,
+      "willing": false
+    },
+    {
+      "id": "F9",
+      "slot": "functional_change",
+      "text": "Has missed several doses of his tablets; his wife found unused tablets in his pill organiser, which he is unaware of.",
+      "essential": false,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "past_history",
+      "text": "Has type 2 diabetes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes amlodipine 10 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes metformin 500 mg twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "medications",
+      "text": "Takes oxybutynin 5 mg twice daily for his bladder.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Says he is fine and wants to keep driving and stay independent; his family want a memory check.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "It's only been a month or so.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

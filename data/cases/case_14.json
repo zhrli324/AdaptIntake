@@ -1,0 +1,138 @@
+{
+  "id": "case_14",
+  "title": "Shaky hands",
+  "source": "synthetic",
+  "profile": {
+    "age": 78,
+    "sex": "male",
+    "context": "Lives with his wife, who attends with him; mild hearing loss."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Shaking of the hands.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "First noticed about 8 months ago and has slowly got worse.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "provocation",
+      "text": "Worse holding a cup, writing or when anxious; better after a glass of wine.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "region",
+      "text": "Both hands, the right slightly more; his head does not shake.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Present when he uses his hands and goes away when his hands rest in his lap.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "severity",
+      "text": "Spills his tea and his handwriting is harder to read; rates it 5/10.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No slowness of walking, no shuffling and no change in his sense of smell.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "His father had a shaky hand in old age.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has had asthma since childhood.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Uses his salbutamol inhaler 2-3 times a day recently, more than usual.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Uses a beclometasone inhaler, two puffs twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Started sertraline 50 mg once daily about 4 months ago for anxiety.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "allergies",
+      "text": "Aspirin makes his asthma worse.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "functional_change",
+      "text": "Has switched to an electric razor because he cannot shave safely with a blade.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Worried it is Parkinson's disease, like a friend of his.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "It came on suddenly a fortnight ago.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

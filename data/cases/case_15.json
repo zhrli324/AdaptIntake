@@ -1,0 +1,138 @@
+{
+  "id": "case_15",
+  "title": "Poor appetite and weight loss",
+  "source": "synthetic",
+  "profile": {
+    "age": 86,
+    "sex": "female",
+    "context": "Lives alone since her husband died 10 months ago; her daughter attends; hearing is good but she has some memory lapses."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Not feeling like eating and losing weight.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Has been happening over about 4 months.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "severity",
+      "text": "Has lost about 5 kg (from 58 kg to 53 kg); her clothes are loose.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "timing",
+      "text": "Eats one small meal a day, usually toast, and skips lunch.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "associated_symptoms",
+      "text": "No difficulty swallowing, no tummy pain, no change in bowel habit and no blood in the stools.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "Feels low and tearful since her husband died and sleeps poorly.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Was admitted to a psychiatric ward with depression at the age of 50.",
+      "essential": false,
+      "known": true,
+      "willing": false
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has been told her kidneys are not working fully (chronic kidney disease).",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes amlodipine 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes lansoprazole 15 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes paracetamol 500 mg, two tablets, when needed for aches.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "functional_change",
+      "text": "Has stopped cooking proper meals and no longer goes to church.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Says she 'just isn't hungry' but worries she might have cancer.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "Only the last couple of weeks.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

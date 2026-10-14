@@ -1,0 +1,130 @@
+{
+  "id": "case_03",
+  "title": "Burning and frequency passing urine",
+  "source": "synthetic",
+  "profile": {
+    "age": 84,
+    "sex": "female",
+    "context": "Lives in sheltered housing with a warden and attends with her niece; mildly hard of hearing."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Burning when passing urine and needing to go much more often.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Started 4 days ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "timing",
+      "text": "Passing urine about every hour in the day and getting up 3-4 times at night (usually once).",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "severity",
+      "text": "The stinging is about 5/10; uncomfortable but she is managing.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "associated_symptoms",
+      "text": "Urine looks cloudy and smells stronger; she has not seen any blood.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No fever, shivers, back or side pain, or vomiting; her niece has not noticed any new confusion.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Had a water infection about a year ago that was treated with antibiotics.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has an underactive thyroid.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "medications",
+      "text": "Takes levothyroxine 75 micrograms each morning.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes alendronic acid 70 mg once a week for thin bones.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Uses a vaginal cream from the hospital twice a week; cannot remember its name (it is estriol cream).",
+      "essential": true,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "allergies",
+      "text": "Allergic to trimethoprim, which gave her an itchy rash.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "functional_change",
+      "text": "Has stopped going to the residents' coffee morning in case she cannot reach a toilet in time.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "main_concern",
+      "text": "Thinks it is another water infection and hopes to get antibiotics before the weekend.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "Oh, it's been about two weeks now.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

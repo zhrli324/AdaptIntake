@@ -1,0 +1,138 @@
+{
+  "id": "case_11",
+  "title": "Recent fall at home",
+  "source": "synthetic",
+  "profile": {
+    "age": 90,
+    "sex": "female",
+    "context": "Lives alone with a pendant alarm and a carer visiting once a day; attends with her granddaughter; hard of hearing and wears hearing aids."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Had a fall at home.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Fell 5 days ago, in the evening, on the way to the bathroom.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "provocation",
+      "text": "Got up quickly from her armchair, felt unsteady and caught her foot on the edge of the rug.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "severity",
+      "text": "Bruised her right hip and elbow; can walk but the hip is sore, about 4/10.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Lay on the floor for about 40 minutes before pressing her pendant alarm.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "Did not black out and had no chest pain or palpitations beforehand.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Has had two other falls in the past year, without fractures.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has osteoporosis and broke her wrist 8 years ago.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes doxazosin 4 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes a tablet at night to help her sleep, prescribed years ago; cannot remember its name (it is zopiclone 3.75 mg).",
+      "essential": true,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes Adcal-D3 (calcium and vitamin D) twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "functional_change",
+      "text": "Since the fall she holds on to furniture to walk around and has not been out to the shops.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Afraid of falling again and of having to move into a care home.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "It was only yesterday.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

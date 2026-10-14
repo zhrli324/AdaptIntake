@@ -1,0 +1,146 @@
+{
+  "id": "case_10",
+  "title": "Breathlessness climbing stairs",
+  "source": "synthetic",
+  "profile": {
+    "age": 83,
+    "sex": "male",
+    "context": "Lives with his wife in a house with the bedroom upstairs; his wife attends and fills in details; mild memory difficulty."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Getting out of breath climbing the stairs.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Has gradually got worse over about 3 months.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "provocation",
+      "text": "Comes on with stairs or walking uphill and settles after resting for 2-3 minutes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "severity",
+      "text": "Has to stop halfway up the 14 stairs to get his breath; used to manage without stopping.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Only happens on exertion; he is not breathless at rest.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "Ankles are a bit puffy in the evening and he now uses two pillows instead of one.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No chest pain, no coughing up blood and no fever.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has had atrial fibrillation for 5 years.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Had a heart attack 12 years ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Had a heart scan (echocardiogram) at the hospital last year; he does not know or remember the result.",
+      "essential": false,
+      "known": false,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes rivaroxaban 15 mg once daily with the evening meal.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes bisoprolol 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Takes atorvastatin 40 mg at night.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "medications",
+      "text": "Takes ramipril 2.5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F16",
+      "slot": "main_concern",
+      "text": "Worried about managing the stairs to bed and wants to know whether his heart is getting worse.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "Just since last week.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}

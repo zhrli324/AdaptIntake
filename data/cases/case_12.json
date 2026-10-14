@@ -1,0 +1,138 @@
+{
+  "id": "case_12",
+  "title": "Itchy rash after starting a new tablet",
+  "source": "synthetic",
+  "profile": {
+    "age": 74,
+    "sex": "male",
+    "context": "Lives with his partner and attends alone; good hearing and memory."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "An itchy red rash.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Appeared 5 days ago, about a week after starting a new tablet.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "region",
+      "text": "On the chest, back and upper arms; the face and mouth are not affected.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "quality",
+      "text": "Raised, blotchy red patches that are very itchy.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "severity",
+      "text": "The itch is 7/10 and keeps him awake.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No swelling of the lips or tongue, no breathing difficulty, no blisters, no mouth ulcers and no fever.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "provocation",
+      "text": "Worse after hot showers; a cool shower and the antihistamine help a little.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has gout.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Started allopurinol 100 mg once daily about 12 days ago for gout.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes amlodipine 10 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Takes candesartan 8 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Has taken cetirizine 10 mg once daily from the chemist for the last 3 days.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "No previously known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Wants to know whether he should stop the new gout tablet.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "medications",
+    "first_says": "It's the 300 mg one, I believe.",
+    "fact_id": "F10"
+  },
+  "red_flag": null
+}

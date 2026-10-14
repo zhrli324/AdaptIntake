@@ -1,0 +1,121 @@
+{
+  "id": "case_20",
+  "title": "Sudden arm weakness and slurred speech",
+  "source": "synthetic",
+  "profile": {
+    "age": 77,
+    "sex": "female",
+    "context": "Lives with her husband, who attends with her and helps because her speech is unclear."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Sudden weakness of the right arm and slurred speech that started this morning.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Came on suddenly at about 8 am today while eating breakfast, roughly 3 hours ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "severity",
+      "text": "Cannot lift a cup or grip with her right hand, and her husband cannot understand some of her words.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "timing",
+      "text": "Has been constant and has not improved since it started.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "region",
+      "text": "Affects the right arm; the right side of her face also 'feels funny'.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No headache, no loss of consciousness and no fall or head injury.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Was diagnosed with atrial fibrillation 2 years ago.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "medications",
+      "text": "Stopped her blood thinner (apixaban 5 mg twice daily) herself 3 weeks ago because of bruising.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "medications",
+      "text": "Takes bisoprolol 2.5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Takes amlodipine 5 mg once daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "allergies",
+      "text": "Allergic to penicillin, which gives her a rash.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "main_concern",
+      "text": "Wants to wait and see whether it wears off after a lie-down.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": null,
+  "red_flag": {
+    "fact_id": "F1",
+    "description": "Sudden-onset one-sided arm weakness and slurred speech starting this morning: possible acute stroke needing emergency care."
+  }
+}

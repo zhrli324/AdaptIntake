@@ -1,0 +1,138 @@
+{
+  "id": "case_05",
+  "title": "Cough for about three weeks",
+  "source": "synthetic",
+  "profile": {
+    "age": 76,
+    "sex": "male",
+    "context": "Lives with his wife in a bungalow and attends alone; wears hearing aids."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "A cough that will not go away.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "Began about 3 weeks ago after a cold.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "quality",
+      "text": "Bringing up white-to-yellow phlegm, more than his usual morning phlegm.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "provocation",
+      "text": "Cold air and talking for a long time set it off; steam inhalation helps a little.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "timing",
+      "text": "Worst in the morning and at night; coughing fits last a few minutes.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "severity",
+      "text": "Disturbing his sleep most nights; rates it 6/10.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "Slightly more breathless than usual walking to the shop.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "associated_symptoms",
+      "text": "No coughing up blood, no weight loss, no night sweats and no chest pain.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Has had COPD for 8 years.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Smoked 20 cigarettes a day for 40 years; stopped 10 years ago.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "medications",
+      "text": "Uses a blue salbutamol inhaler, now 4-5 times a day instead of his usual twice.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F12",
+      "slot": "medications",
+      "text": "Uses a Fostair 100/6 inhaler, two puffs twice daily.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F13",
+      "slot": "medications",
+      "text": "Has taken lisinopril 10 mg once daily for blood pressure for several years.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F14",
+      "slot": "allergies",
+      "text": "No known drug allergies.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F15",
+      "slot": "main_concern",
+      "text": "Worried his lungs are getting worse or that it could be cancer.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": {
+    "slot": "onset",
+    "first_says": "It's only been a few days, really.",
+    "fact_id": "F2"
+  },
+  "red_flag": null
+}
