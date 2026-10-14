@@ -1,0 +1,869 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've not been sleeping well at all, that's the main thing. It's been going on a while now and it's wearing me down."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an allergy, or a bad reaction to any medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so. I've never had any trouble with medicines that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, how much is not sleeping well affecting your daily life?"
+  },
+  {
+   "role": "patient",
+   "text": "It's hard to put a number on it, but it's bothering me quite a bit. Some days are worse than others."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you're taking these days, whether regularly or just every now and then?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a couple of things — one for my blood pressure and one for my prostate. Nothing else regular, really."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had any operations or been in the hospital for any reason?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I've never had an operation or been in hospital for anything. Just the blood pressure and prostate stuff, managed with tablets."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the sleep trouble, have you noticed anything else going on with your body or how you feel?"
+  },
+  {
+   "role": "patient",
+   "text": "My mood's been a bit low at times, I suppose, since I stopped working. Nothing serious though."
+  },
+  {
+   "role": "agent",
+   "text": "When you're not sleeping well, do you feel it anywhere in particular in your body?"
+  },
+  {
+   "role": "patient",
+   "text": "I just feel exhausted, mostly. Worn out all over, and I end up dozing off in the chair in the afternoon."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything you've noticed that seems to make your sleep better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Late evenings watching telly seem to make it worse. On days I've been out for a good long walk, I tend to sleep a bit better."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice your sleep wasn’t as good?"
+  },
+  {
+   "role": "patient",
+   "text": "It started a while back now, a few months I'd say. Can't put an exact date on it."
+  },
+  {
+   "role": "agent",
+   "text": "What would you most like to get out of today's visit about your sleep?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd really like to get some proper sleeping tablets, to be honest. The ones from the pharmacy aren't doing the job."
+  },
+  {
+   "role": "agent",
+   "text": "Besides your blood pressure and prostate, is there anything else about your past health you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's about it. Nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Besides your sleep and your mood, is there anything else you've noticed that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Not really. I don't snore loudly as far as I know, and I've never nodded off while driving or anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "How much is your sleep affecting your everyday life — not much, somewhat, or a lot, or you’re not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It's affecting me a lot, I'd say. I'm only getting about four hours a night and I feel exhausted — I'd rate it a seven out of ten."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines right now — regularly, recently started or changed, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "There's the losartan for my blood pressure and the tamsulosin for my prostate. And I've been taking some over-the-counter sleeping tablets from the pharmacy most nights for the past few weeks."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Have you ever had an allergy, or a bad reaction to any medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "On a scale from 0 to 10, how much is not sleeping well affecting your daily life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me about any medicines you're taking these days, whether regularly or just every now and then?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you ever had any operations or been in the hospital for any reason?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Besides the sleep trouble, have you noticed anything else going on with your body or how you feel?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "When you're not sleeping well, do you feel it anywhere in particular in your body?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything you've noticed that seems to make your sleep better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "When did you first notice your sleep wasn’t as good?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What would you most like to get out of today's visit about your sleep?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Besides your blood pressure and prostate, is there anything else about your past health you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Besides your sleep and your mood, is there anything else you've noticed that you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "How much is your sleep affecting your everyday life — not much, somewhat, or a lot, or you’re not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.26)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Are you taking any medicines right now — regularly, recently started or changed, or you're not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Not sleeping well — described as the main thing bothering them",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've not been sleeping well at all, that's the main thing"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started a few months ago; cannot put an exact date on it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been going on a while now"
+     },
+     {
+      "turn": 9,
+      "quote": "It started a while back now, a few months I'd say. Can't put an exact date on it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Late evenings watching television make sleep worse; a good long walk during the day helps them sleep a bit better",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "Late evenings watching telly seem to make it worse. On days I've been out for a good long walk, I tend to sleep a bit better."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Feels exhausted and worn out",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I just feel exhausted, mostly. Worn out all over"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Worn out all over the body",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "Worn out all over"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Rates it 7 out of 10; affecting them a lot",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's hard to put a number on it, but it's bothering me quite a bit."
+     },
+     {
+      "turn": 13,
+      "quote": "It's affecting me a lot, I'd say."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Only getting about four hours of sleep a night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Some days are worse than others."
+     },
+     {
+      "turn": 13,
+      "quote": "I'm only getting about four hours a night"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Mood has been a bit low at times since stopping working; not serious",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "My mood's been a bit low at times, I suppose, since I stopped working."
+     },
+     {
+      "turn": 12,
+      "quote": "I don't snore loudly as far as I know, and I've never nodded off while driving or anything like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Never had an operation or been in hospital for anything; only blood pressure and prostate problems, managed with tablets",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, I've never had an operation or been in hospital for anything. Just the blood pressure and prostate stuff, managed with tablets."
+     },
+     {
+      "turn": 11,
+      "quote": "No, that's about it. Nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a couple of regular medicines — one for blood pressure and one for prostate; nothing else regular; Has been using sleeping tablets/medicines from the pharmacy, which are not doing the job (name not given); Losartan for blood pressure and tamsulosin for prostate; also over-the-counter sleeping tablets from the pharmacy most nights for the past few weeks (name of the sleeping tablets not given)",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I take a couple of things — one for my blood pressure and one for my prostate. Nothing else regular, really."
+     },
+     {
+      "turn": 10,
+      "quote": "The ones from the pharmacy aren't doing the job."
+     },
+     {
+      "turn": 14,
+      "quote": "There's the losartan for my blood pressure and the tamsulosin for my prostate. And I've been taking some over-the-counter sleeping tablets from the pharmacy most nights for the past few weeks."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "No, I don't think so. I've never had any trouble with medicines that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Sleep problems are affecting everyday life a lot; feels exhausted",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's wearing me down"
+     },
+     {
+      "turn": 7,
+      "quote": "I end up dozing off in the chair in the afternoon"
+     },
+     {
+      "turn": 13,
+      "quote": "It's affecting me a lot, I'd say. I'm only getting about four hours a night and I feel exhausted"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Would like to get proper sleeping tablets prescribed, as the ones from the pharmacy are not working",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I'd really like to get some proper sleeping tablets, to be honest. The ones from the pharmacy aren't doing the job."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Not sleeping well — described as the main thing bothering them",
+    "evidence": [
+     "I've not been sleeping well at all, that's the main thing"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Late evenings watching television make sleep worse; a good long walk during the day helps them sleep a bit better",
+    "evidence": [
+     "Late evenings watching telly seem to make it worse. On days I've been out for a good long walk, I tend to sleep a bit better."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Feels exhausted and worn out",
+    "evidence": [
+     "I just feel exhausted, mostly. Worn out all over"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Worn out all over the body",
+    "evidence": [
+     "Worn out all over"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Only getting about four hours of sleep a night",
+    "evidence": [
+     "Some days are worse than others.",
+     "I'm only getting about four hours a night"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Mood has been a bit low at times since stopping working; not serious",
+    "evidence": [
+     "My mood's been a bit low at times, I suppose, since I stopped working.",
+     "I don't snore loudly as far as I know, and I've never nodded off while driving or anything like that."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Never had an operation or been in hospital for anything; only blood pressure and prostate problems, managed with tablets",
+    "evidence": [
+     "No, I've never had an operation or been in hospital for anything. Just the blood pressure and prostate stuff, managed with tablets.",
+     "No, that's about it. Nothing else I can think of."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to medicines",
+    "evidence": [
+     "No, I don't think so. I've never had any trouble with medicines that I know of."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Would like to get proper sleeping tablets prescribed, as the ones from the pharmacy are not working",
+    "evidence": [
+     "I'd really like to get some proper sleeping tablets, to be honest. The ones from the pharmacy aren't doing the job."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Started a few months ago; cannot put an exact date on it",
+    "evidence": [
+     "It's been going on a while now",
+     "It started a while back now, a few months I'd say. Can't put an exact date on it."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Rates it 7 out of 10; affecting them a lot",
+    "evidence": [
+     "It's hard to put a number on it, but it's bothering me quite a bit.",
+     "It's affecting me a lot, I'd say."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Sleep problems are affecting everyday life a lot; feels exhausted",
+    "evidence": [
+     "it's wearing me down",
+     "I end up dozing off in the chair in the afternoon",
+     "It's affecting me a lot, I'd say. I'm only getting about four hours a night and I feel exhausted"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes a couple of regular medicines — one for blood pressure and one for prostate; nothing else regular; Has been using sleeping tablets/medicines from the pharmacy, which are not doing the job (name not given); Losartan for blood pressure and tamsulosin for prostate; also over-the-counter sleeping tablets from the pharmacy most nights for the past few weeks (name of the sleeping tablets not given)",
+    "evidence": [
+     "I take a couple of things — one for my blood pressure and one for my prostate. Nothing else regular, really.",
+     "The ones from the pharmacy aren't doing the job.",
+     "There's the losartan for my blood pressure and the tamsulosin for my prostate. And I've been taking some over-the-counter sleeping tablets from the pharmacy most nights for the past few weeks."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 14,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_08",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 14,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 297,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.4666666666666667,
+  "essential_completeness": 0.375,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": false,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": false,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.07692307692307693,
+  "leading_details": [
+   {
+    "index": 6,
+    "reason": "Presupposes the sleep problem is felt in a particular body location and prompts for a somatic symptom the patient had not mentioned."
+   }
+  ]
+ }
+}

@@ -1,0 +1,702 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Can't sleep properly. Been going on a while now."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "About three months back, around when I retired."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Used to love my allotment. Too tired for it now."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "Just exhausted all the time, really."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "No, it's not like a pain anywhere."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say about a 7."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "I nod off fine, but wake about 3 or 4."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "Mood's been a bit low since I stopped working."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Been on my own since the divorce, two years now."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I take losartan for my blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, never had any allergies to medicines."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Too tired to work on my allotment."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Just want proper sleeping tablets from the doctor."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cannot sleep properly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Can't sleep properly"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three months ago, around the time the patient retired",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Been going on a while now"
+     },
+     {
+      "turn": 2,
+      "quote": "About three months back, around when I retired."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Feels exhausted",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "Just exhausted all the time, really."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "No specific body location — it is not a pain anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, it's not like a pain anywhere."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Rates it about a 7 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "about a 7"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Falls asleep fine but wakes around 3 or 4 in the morning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "all the time, really"
+     },
+     {
+      "turn": 7,
+      "quote": "I nod off fine, but wake about 3 or 4."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling too tired; Mood has been a bit low since stopping work",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Too tired for it now."
+     },
+     {
+      "turn": 8,
+      "quote": "Mood's been a bit low since I stopped working."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has blood pressure, for which losartan is taken",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "for my blood pressure"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes losartan for blood pressure",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I take losartan for my blood pressure."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, never had any allergies to medicines."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Too tired to work on the allotment",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Used to love my allotment. Too tired for it now."
+     },
+     {
+      "turn": 12,
+      "quote": "Too tired to work on my allotment."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants to be prescribed proper sleeping tablets by the doctor",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "Just want proper sleeping tablets from the doctor."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cannot sleep properly",
+    "evidence": [
+     "Can't sleep properly"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Feels exhausted",
+    "evidence": [
+     "Just exhausted all the time, really."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "No specific body location — it is not a pain anywhere",
+    "evidence": [
+     "No, it's not like a pain anywhere."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Rates it about a 7 out of 10",
+    "evidence": [
+     "about a 7"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Falls asleep fine but wakes around 3 or 4 in the morning",
+    "evidence": [
+     "all the time, really",
+     "I nod off fine, but wake about 3 or 4."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling too tired; Mood has been a bit low since stopping work",
+    "evidence": [
+     "Too tired for it now.",
+     "Mood's been a bit low since I stopped working."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has blood pressure, for which losartan is taken",
+    "evidence": [
+     "for my blood pressure"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes losartan for blood pressure",
+    "evidence": [
+     "I take losartan for my blood pressure."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "No, never had any allergies to medicines."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Too tired to work on the allotment",
+    "evidence": [
+     "Used to love my allotment. Too tired for it now.",
+     "Too tired to work on my allotment."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants to be prescribed proper sleeping tablets by the doctor",
+    "evidence": [
+     "Just want proper sleeping tablets from the doctor."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Started about three months ago, around the time the patient retired",
+    "evidence": [
+     "Been going on a while now",
+     "About three months back, around when I retired."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_08",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 2,
+  "unnecessary_rate": 0.15384615384615385,
+  "patient_words": 103,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.3333333333333333,
+  "essential_completeness": 0.375,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": false,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": false,
+   "F16": true
+  },
+  "fidelity": 0.8333333333333334,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.08333333333333333,
+  "leading_details": [
+   {
+    "index": 4,
+    "reason": "Presupposes a localized pain or sensation and possible spread, although the patient had described exhaustion and later said it was not like pain."
+   }
+  ]
+ }
+}

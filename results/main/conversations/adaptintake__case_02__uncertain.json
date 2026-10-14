@@ -1,0 +1,862 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's my right knee, mainly. It's been aching for a good while but it's got a lot worse lately."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how much the aching in your knee is affecting your daily life, and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It's getting in the way, I'm afraid — I go down the stairs one step at a time holding the rail now, and I've had to give up walking the dog round the park.\n\nAs for medicines, there's an antibiotic that brings me out in a rash, though I can't quite recall the name of it."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take — regular ones or ones that have recently changed — and also about any health conditions, operations, or hospital stays you've had in the past?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a few tablets — some for my diabetes and my heart, and one for cholesterol at night. I'm not sure of all the names and doses offhand, sorry.\n\nI've had type 2 diabetes for a fair few years, and I had a stent put in a heart artery some time back."
+  },
+  {
+   "role": "agent",
+   "text": "How bad would you say the aching in your right knee is these days: mild, moderate, severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "On a bad day it's about a 7 out of 10, so I'd say it's fairly severe. It's stopping me doing the things I used to."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me if anything else is going on along with the aching in your knee, and whether you’ve noticed anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Going down stairs is the worst, and it plays up if I walk any distance. Resting and a paracetamol help settle it.\n\nIt does swell up a bit by the evening sometimes, but there's no redness or fever, and it doesn't lock or give way."
+  },
+  {
+   "role": "agent",
+   "text": "How does the aching in your right knee behave over a typical day or week — is it steady or does it come and go, and if it comes and goes, how often and for how long, and is there a time of day it’s usually better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It tends to come and go — some days are better than others. It's usually stiffer first thing in the morning, and it's often worse by the evening or after I've been on my feet a while."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me when you first noticed the aching in your right knee, and what that was like — how it started and whether anything seemed to bring it on?"
+  },
+  {
+   "role": "patient",
+   "text": "It's been going on for quite a while now, a good few years I'd say. Nothing in particular brought it on that I can recall — it just started aching on and off."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add about your medicines, like anything new or recently changed?"
+  },
+  {
+   "role": "patient",
+   "text": "Nothing's changed recently, no. I take metformin twice a day, an aspirin, a ramipril, and atorvastatin at night — those have all been the same for a long while."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your knee, and what are you hoping we can help with at this visit?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, the pain's getting me down, and I'd like something stronger for it. And I suppose I'm wondering whether I might end up needing a knee replacement."
+  },
+  {
+   "role": "agent",
+   "text": "Thanks for telling me about the diabetes and the stent — is there anything else from your past health, like other ongoing conditions, past illnesses, operations, or hospital stays, that you think I should know about?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's about the lot as far as I know — just the diabetes and the heart stent. Nothing else springs to mind."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed about your knee that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so — that's everything I can think of about it."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me how much the aching in your knee is affecting your daily life, and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "provocation": 0.48,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take — regular ones or ones that have recently changed — and also about any health conditions, operations, or hospital stays you've had in the past?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "provocation": 0.48,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How bad would you say the aching in your right knee is these days: mild, moderate, severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Can you tell me if anything else is going on along with the aching in your knee, and whether you’ve noticed anything that makes it better or worse?",
+   "slots": [
+    "associated_symptoms",
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "provocation": 0.48,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms, provocation (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false,
+    "provocation": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How does the aching in your right knee behave over a typical day or week — is it steady or does it come and go, and if it comes and goes, how often and for how long, and is there a time of day it’s usually better or worse?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "timing": 0.48,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Could you tell me when you first noticed the aching in your right knee, and what that was like — how it started and whether anything seemed to bring it on?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.42)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything else you’d like to add about your medicines, like anything new or recently changed?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "What worries you most about your knee, and what are you hoping we can help with at this visit?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Thanks for telling me about the diabetes and the stent — is there anything else from your past health, like other ongoing conditions, past illnesses, operations, or hospital stays, that you think I should know about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you’ve noticed about your knee that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Aching in the right knee",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my right knee, mainly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Has been going on for a good few years; nothing in particular brought it on, it just started aching on and off",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been aching for a good while but it's got a lot worse lately."
+     },
+     {
+      "turn": 7,
+      "quote": "It's been going on for quite a while now, a good few years I'd say. Nothing in particular brought it on that I can recall"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse after being on their feet a while",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Going down stairs is the worst, and it plays up if I walk any distance. Resting and a paracetamol help settle it."
+     },
+     {
+      "turn": 6,
+      "quote": "it's often worse by the evening or after I've been on my feet a while"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Aching",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been aching for a good while"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Right knee",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my right knee, mainly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 7 out of 10 on a bad day; fairly severe",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "On a bad day it's about a 7 out of 10, so I'd say it's fairly severe."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes, with some days better than others; usually stiff first thing in the morning and often worse by the evening or after being on their feet a while",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "It tends to come and go — some days are better than others. It's usually stiffer first thing in the morning, and it's often worse by the evening or after I've been on my feet a while."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Knee sometimes swells up a bit by the evening; no redness or fever, and the knee does not lock or give way",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It does swell up a bit by the evening sometimes, but there's no redness or fever, and it doesn't lock or give way."
+     },
+     {
+      "turn": 11,
+      "quote": "No, I don't think so — that's everything I can think of about it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Type 2 diabetes for several years; had a stent put in a heart artery some time back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had type 2 diabetes for a fair few years, and I had a stent put in a heart artery some time back."
+     },
+     {
+      "turn": 10,
+      "quote": "No, that's about the lot as far as I know — just the diabetes and the heart stent. Nothing else springs to mind."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "A few tablets: some for diabetes and heart, and one for cholesterol taken at night; names and doses not recalled",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take a few tablets — some for my diabetes and my heart, and one for cholesterol at night. I'm not sure of all the names and doses offhand, sorry."
+     },
+     {
+      "turn": 8,
+      "quote": "Nothing's changed recently, no. I take metformin twice a day, an aspirin, a ramipril, and atorvastatin at night"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Allergic to an antibiotic (name not recalled), causes a rash",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "there's an antibiotic that brings me out in a rash, though I can't quite recall the name of it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Stopping the patient doing the things they used to do",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It's getting in the way, I'm afraid — I go down the stairs one step at a time holding the rail now, and I've had to give up walking the dog round the park."
+     },
+     {
+      "turn": 4,
+      "quote": "It's stopping me doing the things I used to."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "The pain is getting them down; they would like something stronger for it, and they are wondering whether they might end up needing a knee replacement",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "the pain's getting me down, and I'd like something stronger for it. And I suppose I'm wondering whether I might end up needing a knee replacement"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Aching in the right knee",
+    "evidence": [
+     "It's my right knee, mainly."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse after being on their feet a while",
+    "evidence": [
+     "Going down stairs is the worst, and it plays up if I walk any distance. Resting and a paracetamol help settle it.",
+     "it's often worse by the evening or after I've been on my feet a while"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Aching",
+    "evidence": [
+     "It's been aching for a good while"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Right knee",
+    "evidence": [
+     "It's my right knee, mainly."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 7 out of 10 on a bad day; fairly severe",
+    "evidence": [
+     "On a bad day it's about a 7 out of 10, so I'd say it's fairly severe."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes, with some days better than others; usually stiff first thing in the morning and often worse by the evening or after being on their feet a while",
+    "evidence": [
+     "It tends to come and go — some days are better than others. It's usually stiffer first thing in the morning, and it's often worse by the evening or after I've been on my feet a while."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Knee sometimes swells up a bit by the evening; no redness or fever, and the knee does not lock or give way",
+    "evidence": [
+     "It does swell up a bit by the evening sometimes, but there's no redness or fever, and it doesn't lock or give way.",
+     "No, I don't think so — that's everything I can think of about it."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Type 2 diabetes for several years; had a stent put in a heart artery some time back",
+    "evidence": [
+     "I've had type 2 diabetes for a fair few years, and I had a stent put in a heart artery some time back.",
+     "No, that's about the lot as far as I know — just the diabetes and the heart stent. Nothing else springs to mind."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "A few tablets: some for diabetes and heart, and one for cholesterol taken at night; names and doses not recalled",
+    "evidence": [
+     "I take a few tablets — some for my diabetes and my heart, and one for cholesterol at night. I'm not sure of all the names and doses offhand, sorry.",
+     "Nothing's changed recently, no. I take metformin twice a day, an aspirin, a ramipril, and atorvastatin at night"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Allergic to an antibiotic (name not recalled), causes a rash",
+    "evidence": [
+     "there's an antibiotic that brings me out in a rash, though I can't quite recall the name of it"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Stopping the patient doing the things they used to do",
+    "evidence": [
+     "It's getting in the way, I'm afraid — I go down the stairs one step at a time holding the rail now, and I've had to give up walking the dog round the park.",
+     "It's stopping me doing the things I used to."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "The pain is getting them down; they would like something stronger for it, and they are wondering whether they might end up needing a knee replacement",
+    "evidence": [
+     "the pain's getting me down, and I'd like something stronger for it. And I suppose I'm wondering whether I might end up needing a knee replacement"
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Has been going on for a good few years; nothing in particular brought it on, it just started aching on and off",
+    "evidence": [
+     "It's been aching for a good while but it's got a lot worse lately.",
+     "It's been going on for quite a while now, a good few years I'd say. Nothing in particular brought it on that I can recall"
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 11,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.838,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.619,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.659,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.68,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.69,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.695,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.7,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_02",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 11,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 362,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.375,
+  "essential_completeness": 0.4,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": false,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false,
+   "F15": false,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

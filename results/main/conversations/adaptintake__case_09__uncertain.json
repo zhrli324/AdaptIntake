@@ -1,0 +1,994 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's my lower back, doctor. It's been giving me a fair bit of grief."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me when your lower back problem started and how it came on, and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on a while back, after I'd been doing some lifting in the garden. As for medicines, I've never had any bad reactions that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about any medicines you take regularly or have taken recently, including any new or changed ones, and the dose if you know it?"
+  },
+  {
+   "role": "patient",
+   "text": "I take some tablets for my diabetes, and I've been taking a painkiller from the chemist since this started. I couldn't tell you the doses offhand."
+  },
+  {
+   "role": "agent",
+   "text": "What other symptoms, if any, have you noticed since your back problem started?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that. I've had no numbness or weakness in my legs, no trouble with the waterworks or my bowels, and no fever or weight loss."
+  },
+  {
+   "role": "agent",
+   "text": "Do any activities seem to make your back problem better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's worse when I bend over or get out of the car. It eases off if I lie on my side, and a hot water bottle helps a bit."
+  },
+  {
+   "role": "agent",
+   "text": "Is your back problem with you all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly there all the time, though now and then I get a sharp twinge on top of it."
+  },
+  {
+   "role": "agent",
+   "text": "Apart from your diabetes, is there anything else about your past health — like other long-term conditions, past illnesses, operations, or hospital stays — that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I had a similar spell of back trouble a few years back, and that settled down with some physiotherapy. Otherwise it's just the diabetes, nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your back, and what are you hoping to get from this visit?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose what's on my mind is whether I've slipped a disc, and whether I need to have a scan done. That's what I'd like to find out."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me a bit about how your back problem is at the moment, and whether it's making any difference to your daily life, like your sleep, moving around, or your usual activities?"
+  },
+  {
+   "role": "patient",
+   "text": "It's putting a stop to my gardening, which I'm not happy about, and I need a hand getting my socks on in the morning. Otherwise I'm managing to get about, just a bit stiff and slow."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me when this latest bout of back trouble started, and whether it came on suddenly or built up gradually — and did anything in particular seem to set it off?"
+  },
+  {
+   "role": "patient",
+   "text": "It started about ten days ago. I was shifting some heavy bags of compost and it came on suddenly after that."
+  },
+  {
+   "role": "agent",
+   "text": "How much is your back affecting you day to day at the moment — say, on a scale of 0 to 10, where 0 is no trouble at all and 10 is the worst you can imagine?"
+  },
+  {
+   "role": "patient",
+   "text": "It's hard to put a number on it. It's not too bad, but it's bad enough that it's always on my mind."
+  },
+  {
+   "role": "agent",
+   "text": "Would you say this back trouble feels mild and mostly manageable, moderate and clearly getting in the way of what you want to do, quite bad and hard to cope with — or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say moderate — it's clearly getting in the way of what I want to do. About a 6 out of 10, if that helps, and it's worst first thing in the morning."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment, for any reason — regular ones or anything new or changed recently — none, one or two, or three or more, or are you not sure; and if you can, please tell me what they are and how much you take?"
+  },
+  {
+   "role": "patient",
+   "text": "I take three things. Gliclazide 80 mg twice a day and metformin 1 g twice a day for the diabetes, and then ibuprofen 400 mg three times a day, which I got from the chemist when this started."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add about the medicines you take?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's the lot — nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me when your lower back problem started and how it came on, and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.39,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Can you tell me about any medicines you take regularly or have taken recently, including any new or changed ones, and the dose if you know it?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.36,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "What other symptoms, if any, have you noticed since your back problem started?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.36,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Do any activities seem to make your back problem better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.36,
+    "timing": 0.44,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Is your back problem with you all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "severity": 0.36,
+    "timing": 0.44,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Apart from your diabetes, is there anything else about your past health — like other long-term conditions, past illnesses, operations, or hospital stays — that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.39,
+    "past_history": 0.49,
+    "medications": 0.23,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.49)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "What worries you most about your back, and what are you hoping to get from this visit?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.39,
+    "medications": 0.23,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Could you tell me a bit about how your back problem is at the moment, and whether it's making any difference to your daily life, like your sleep, moving around, or your usual activities?",
+   "slots": [
+    "severity",
+    "functional_change"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.39,
+    "medications": 0.23,
+    "functional_change": 0.38
+   },
+   "reason": "highest-priority gap: severity, functional_change (reported, vague; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "functional_change": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Could you tell me when this latest bout of back trouble started, and whether it came on suddenly or built up gradually — and did anything in particular seem to set it off?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.29,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.32)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "How much is your back affecting you day to day at the moment — say, on a scale of 0 to 10, where 0 is no trouble at all and 10 is the worst you can imagine?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.29)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Would you say this back trouble feels mild and mostly manageable, moderate and clearly getting in the way of what you want to do, quite bad and hard to cope with — or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Are you taking any medicines at the moment, for any reason — regular ones or anything new or changed recently — none, one or two, or three or more, or are you not sure; and if you can, please tell me what they are and how much you take?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Is there anything else you’d like to add about the medicines you take?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Lower back problem",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my lower back, doctor."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "About ten days ago; came on suddenly after shifting heavy bags of compost",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It came on a while back, after I'd been doing some lifting in the garden."
+     },
+     {
+      "turn": 10,
+      "quote": "It started about ten days ago. I was shifting some heavy bags of compost and it came on suddenly after that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse when bending over or getting out of the car; eases off when lying on his side, and a hot water bottle helps a bit",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's worse when I bend over or get out of the car. It eases off if I lie on my side, and a hot water bottle helps a bit."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Constant background pain with a sharp twinge now and then",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "now and then I get a sharp twinge on top of it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Lower back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my lower back, doctor."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Moderate — clearly getting in the way of what he wants to do; about 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been giving me a fair bit of grief."
+     },
+     {
+      "turn": 11,
+      "quote": "It's hard to put a number on it. It's not too bad, but it's bad enough that it's always on my mind."
+     },
+     {
+      "turn": 12,
+      "quote": "I'd say moderate — it's clearly getting in the way of what I want to do. About a 6 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Worst first thing in the morning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "It's mostly there all the time, though now and then I get a sharp twinge on top of it."
+     },
+     {
+      "turn": 12,
+      "quote": "it's worst first thing in the morning"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No numbness or weakness in the legs, no trouble with urination or bowels, no fever or weight loss",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "no numbness or weakness in my legs, no trouble with the waterworks or my bowels, and no fever or weight loss"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diabetes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take some tablets for my diabetes"
+     },
+     {
+      "turn": 7,
+      "quote": "I had a similar spell of back trouble a few years back, and that settled down with some physiotherapy."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Tablets for diabetes (name not given) and a painkiller from the chemist started since this began; doses unknown; Three medicines: gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes, plus ibuprofen 400 mg three times a day from the chemist since this started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take some tablets for my diabetes, and I've been taking a painkiller from the chemist since this started. I couldn't tell you the doses offhand."
+     },
+     {
+      "turn": 13,
+      "quote": "I take three things. Gliclazide 80 mg twice a day and metformin 1 g twice a day for the diabetes, and then ibuprofen 400 mg three times a day, which I got from the chemist when this started."
+     },
+     {
+      "turn": 14,
+      "quote": "No, that's the lot — nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I've never had any bad reactions that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Back problem has stopped him gardening, which upsets him, and he needs help putting his socks on in the morning; otherwise he can still get about, just stiff and slow",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "It's putting a stop to my gardening, which I'm not happy about, and I need a hand getting my socks on in the morning. Otherwise I'm managing to get about, just a bit stiff and slow."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried whether he has slipped a disc and whether he needs a scan; wants to find that out",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "whether I've slipped a disc, and whether I need to have a scan done"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Lower back problem",
+    "evidence": [
+     "It's my lower back, doctor."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse when bending over or getting out of the car; eases off when lying on his side, and a hot water bottle helps a bit",
+    "evidence": [
+     "It's worse when I bend over or get out of the car. It eases off if I lie on my side, and a hot water bottle helps a bit."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Constant background pain with a sharp twinge now and then",
+    "evidence": [
+     "now and then I get a sharp twinge on top of it"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Lower back",
+    "evidence": [
+     "It's my lower back, doctor."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Worst first thing in the morning",
+    "evidence": [
+     "It's mostly there all the time, though now and then I get a sharp twinge on top of it.",
+     "it's worst first thing in the morning"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No numbness or weakness in the legs, no trouble with urination or bowels, no fever or weight loss",
+    "evidence": [
+     "no numbness or weakness in my legs, no trouble with the waterworks or my bowels, and no fever or weight loss"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diabetes",
+    "evidence": [
+     "I take some tablets for my diabetes",
+     "I had a similar spell of back trouble a few years back, and that settled down with some physiotherapy."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known bad reactions to medicines",
+    "evidence": [
+     "I've never had any bad reactions that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Back problem has stopped him gardening, which upsets him, and he needs help putting his socks on in the morning; otherwise he can still get about, just stiff and slow",
+    "evidence": [
+     "It's putting a stop to my gardening, which I'm not happy about, and I need a hand getting my socks on in the morning. Otherwise I'm managing to get about, just a bit stiff and slow."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried whether he has slipped a disc and whether he needs a scan; wants to find that out",
+    "evidence": [
+     "whether I've slipped a disc, and whether I need to have a scan done"
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "About ten days ago; came on suddenly after shifting heavy bags of compost",
+    "evidence": [
+     "It came on a while back, after I'd been doing some lifting in the garden.",
+     "It started about ten days ago. I was shifting some heavy bags of compost and it came on suddenly after that."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Moderate — clearly getting in the way of what he wants to do; about 6 out of 10",
+    "evidence": [
+     "It's been giving me a fair bit of grief.",
+     "It's hard to put a number on it. It's not too bad, but it's bad enough that it's always on my mind.",
+     "I'd say moderate — it's clearly getting in the way of what I want to do. About a 6 out of 10"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Tablets for diabetes (name not given) and a painkiller from the chemist started since this began; doses unknown; Three medicines: gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes, plus ibuprofen 400 mg three times a day from the chemist since this started",
+    "evidence": [
+     "I take some tablets for my diabetes, and I've been taking a painkiller from the chemist since this started. I couldn't tell you the doses offhand.",
+     "I take three things. Gliclazide 80 mg twice a day and metformin 1 g twice a day for the diabetes, and then ibuprofen 400 mg three times a day, which I got from the chemist when this started.",
+     "No, that's the lot — nothing else I can think of."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 14,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.356,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.528,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.614,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.807,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.754,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.727,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.713,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.707,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.428,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.564,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.482,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.591,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_09",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 14,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 362,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.75,
+  "essential_completeness": 0.8888888888888888,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

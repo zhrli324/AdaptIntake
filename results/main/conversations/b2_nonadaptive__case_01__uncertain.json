@@ -1,0 +1,850 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I keep getting dizzy when I stand up. It's been happening for a little while now, and it worries me."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies, or have you ever had a bad reaction to a medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I've never had a bad reaction to anything as far as I know. No allergies."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the dizziness when you stand up?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not too bad — uncomfortable, but I can manage. It does make me grab hold of something sometimes."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me what medicines you take, including any new or changed ones, and how much you take if you know?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a water tablet for my blood pressure, and a small one for my stomach each morning — I can't remember what that one's called. There's paracetamol for my hips. And the nurse started me on a new blood pressure tablet a little while back. I don't really know the amounts, sorry."
+  },
+  {
+   "role": "agent",
+   "text": "Besides your blood pressure and stomach, do you have any other long-term health conditions?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got arthritis in both hips, which is why I take the paracetamol. And I've had high blood pressure for years, about fifteen now."
+  },
+  {
+   "role": "agent",
+   "text": "When the dizziness comes on, does anything else happen at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that — no chest pain or palpitations, and I haven't blacked out. My arms and legs feel fine."
+  },
+  {
+   "role": "agent",
+   "text": "When the dizziness comes on, where in your body do you feel it, and does it spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly in my head, a swimmy sort of feeling. No, it doesn't spread anywhere — it's just that about-to-faint feeling."
+  },
+  {
+   "role": "agent",
+   "text": "How often does the dizzy feeling happen when you stand up?"
+  },
+  {
+   "role": "patient",
+   "text": "It happens a few times, on and off. I haven't really counted."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice this dizzy feeling when you stand up?"
+  },
+  {
+   "role": "patient",
+   "text": "It started a little while back, not long after the new tablet. I can't say exactly when."
+  },
+  {
+   "role": "agent",
+   "text": "You've mentioned arthritis and high blood pressure — is there anything else about your past health that you think I should know?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so. That's about it really — the hips and the blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about the medicines you take that you think I should know?"
+  },
+  {
+   "role": "patient",
+   "text": "The nurse added the new one because my readings were still high. The water tablet I've been on for years, and the little stomach one too. I'm sorry, I don't remember the names of them."
+  },
+  {
+   "role": "agent",
+   "text": "Thinking back to when this first began, did it come on suddenly, or did it build up gradually over time, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on gradually, over a few days. It wasn't all at once, just started happening after I'd been on the new tablet for about a week."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the dizziness when you stand up — is it mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say it's moderate — I'd put it at about a six out of ten. It's bad enough that I nearly fell once and had to grab the kitchen worktop."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the tablets you've already told me about, is there anything else you take for your health — like something you buy at the chemist, a cream or patch, or a vitamin?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that. Just what I've told you about."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Do you have any allergies, or have you ever had a bad reaction to a medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How bad is the dizziness when you stand up?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me what medicines you take, including any new or changed ones, and how much you take if you know?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Besides your blood pressure and stomach, do you have any other long-term health conditions?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "When the dizziness comes on, does anything else happen at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "When the dizziness comes on, where in your body do you feel it, and does it spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "How often does the dizzy feeling happen when you stand up?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "severity": 0.26,
+    "timing": 0.44,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "When did you first notice this dizzy feeling when you stand up?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "severity": 0.26,
+    "timing": 0.1,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "You've mentioned arthritis and high blood pressure — is there anything else about your past health that you think I should know?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "timing": 0.1,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else about the medicines you take that you think I should know?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "timing": 0.1,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Thinking back to when this first began, did it come on suddenly, or did it build up gradually over time, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "timing": 0.1,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "How bad is the dizziness when you stand up — is it mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "timing": 0.1,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.26)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Besides the tablets you've already told me about, is there anything else you take for your health — like something you buy at the chemist, a cream or patch, or a vitamin?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "timing": 0.1,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Keeps getting dizzy when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I keep getting dizzy when I stand up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on gradually over a few days, not all at once; began about a week after starting the new tablet",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been happening for a little while now"
+     },
+     {
+      "turn": 9,
+      "quote": "It started a little while back, not long after the new tablet."
+     },
+     {
+      "turn": 12,
+      "quote": "It came on gradually, over a few days. It wasn't all at once, just started happening after I'd been on the new tablet for about a week."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Happens when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "when I stand up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A swimmy sort of feeling, like an about-to-faint feeling",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I keep getting dizzy"
+     },
+     {
+      "turn": 7,
+      "quote": "a swimmy sort of feeling"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Mostly in the head; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It's mostly in my head"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Moderate — about 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's not too bad — uncomfortable, but I can manage."
+     },
+     {
+      "turn": 13,
+      "quote": "I'd say it's moderate — I'd put it at about a six out of ten."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Happens a few times, on and off; patient hasn't counted",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It happens a few times, on and off. I haven't really counted."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No chest pain, no palpitations, no blackouts; arms and legs feel fine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "No, nothing like that — no chest pain or palpitations, and I haven't blacked out. My arms and legs feel fine."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Arthritis in both hips; high blood pressure for about fifteen years",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I've got arthritis in both hips, which is why I take the paracetamol. And I've had high blood pressure for years, about fifteen now."
+     },
+     {
+      "turn": 10,
+      "quote": "No, I don't think so. That's about it really — the hips and the blood pressure."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a water tablet for blood pressure, a small tablet for stomach in the morning (name forgotten), paracetamol for hips, and a new blood pressure tablet started by nurse a little while back. Doesn't know the amounts.; Takes paracetamol because of arthritis in both hips; Water tablet for blood pressure has been taken for years; small stomach tablet also long-standing; the new blood pressure tablet was added by the nurse because readings were still high; patient cannot remember the names of the tablets",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I take a water tablet for my blood pressure, and a small one for my stomach each morning — I can't remember what that one's called. There's paracetamol for my hips. And the nurse started me on a new blood pressure tablet a little while back. I don't really know the amounts, sorry."
+     },
+     {
+      "turn": 5,
+      "quote": "which is why I take the paracetamol"
+     },
+     {
+      "turn": 11,
+      "quote": "The nurse added the new one because my readings were still high. The water tablet I've been on for years, and the little stomach one too."
+     },
+     {
+      "turn": 14,
+      "quote": "No, nothing like that. Just what I've told you about."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; never had a bad reaction to anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "No, I've never had a bad reaction to anything as far as I know. No allergies."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Bad enough that they nearly fell once and had to grab the kitchen worktop",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It does make me grab hold of something sometimes."
+     },
+     {
+      "turn": 13,
+      "quote": "It's bad enough that I nearly fell once and had to grab the kitchen worktop."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "The dizziness worries them",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it worries me"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Keeps getting dizzy when standing up",
+    "evidence": [
+     "I keep getting dizzy when I stand up."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Happens when standing up",
+    "evidence": [
+     "when I stand up"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A swimmy sort of feeling, like an about-to-faint feeling",
+    "evidence": [
+     "I keep getting dizzy",
+     "a swimmy sort of feeling"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Mostly in the head; does not spread anywhere else",
+    "evidence": [
+     "It's mostly in my head"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No chest pain, no palpitations, no blackouts; arms and legs feel fine",
+    "evidence": [
+     "No, nothing like that — no chest pain or palpitations, and I haven't blacked out. My arms and legs feel fine."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Arthritis in both hips; high blood pressure for about fifteen years",
+    "evidence": [
+     "I've got arthritis in both hips, which is why I take the paracetamol. And I've had high blood pressure for years, about fifteen now.",
+     "No, I don't think so. That's about it really — the hips and the blood pressure."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; never had a bad reaction to anything",
+    "evidence": [
+     "No, I've never had a bad reaction to anything as far as I know. No allergies."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Bad enough that they nearly fell once and had to grab the kitchen worktop",
+    "evidence": [
+     "It does make me grab hold of something sometimes.",
+     "It's bad enough that I nearly fell once and had to grab the kitchen worktop."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "The dizziness worries them",
+    "evidence": [
+     "it worries me"
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Came on gradually over a few days, not all at once; began about a week after starting the new tablet",
+    "evidence": [
+     "It's been happening for a little while now",
+     "It started a little while back, not long after the new tablet.",
+     "It came on gradually, over a few days. It wasn't all at once, just started happening after I'd been on the new tablet for about a week."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Moderate — about 6 out of 10",
+    "evidence": [
+     "It's not too bad — uncomfortable, but I can manage.",
+     "I'd say it's moderate — I'd put it at about a six out of ten."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a water tablet for blood pressure, a small tablet for stomach in the morning (name forgotten), paracetamol for hips, and a new blood pressure tablet started by nurse a little while back. Doesn't know the amounts.; Takes paracetamol because of arthritis in both hips; Water tablet for blood pressure has been taken for years; small stomach tablet also long-standing; the new blood pressure tablet was added by the nurse because readings were still high; patient cannot remember the names of the tablets",
+    "evidence": [
+     "I take a water tablet for my blood pressure, and a small one for my stomach each morning — I can't remember what that one's called. There's paracetamol for my hips. And the nurse started me on a new blood pressure tablet a little while back. I don't really know the amounts, sorry.",
+     "which is why I take the paracetamol",
+     "The nurse added the new one because my readings were still high. The water tablet I've been on for years, and the little stomach one too.",
+     "No, nothing like that. Just what I've told you about."
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "timing",
+    "text": "Mentioned, but not specific: Happens a few times, on and off; patient hasn't counted",
+    "evidence": [
+     "It happens a few times, on and off. I haven't really counted."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 14,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_01",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 14,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 321,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.7333333333333333,
+  "essential_completeness": 0.875,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": true,
+   "F13": true,
+   "F14": true,
+   "F15": false,
+   "F16": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.07692307692307693,
+  "leading_details": [
+   {
+    "index": 4,
+    "reason": "Presupposes the patient has a long-term stomach condition, but they had only mentioned taking a stomach tablet, not a diagnosed condition."
+   }
+  ]
+ }
+}

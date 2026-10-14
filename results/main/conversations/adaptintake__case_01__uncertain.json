@@ -1,0 +1,990 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's this dizziness I've been getting — when I stand up, I come over all light-headed. It's been bothering me for a little while now."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how much this has been affecting your daily life, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "I've stopped going to my Tuesday lunch club, as I'm worried about feeling faint on the bus. As for medicines, no, I've never had a bad reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take regularly or have started recently — including what they are and the dose if you know — and also about any long-term health problems, past illnesses, operations, or hospital stays you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a few tablets — a water tablet every morning that I've been on for years, something for my stomach, and a new blood-pressure one the nurse started me on not long ago. I've had high blood pressure for years and arthritis in both hips."
+  },
+  {
+   "role": "agent",
+   "text": "How much does the dizziness get in the way of your everyday activities: a little, a fair amount, a lot, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say a fair amount — it's making me wary of going out, which isn't like me."
+  },
+  {
+   "role": "agent",
+   "text": "When you get that light-headed feeling, does anything else happen at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that — no chest pain, no palpitations, and I've not fainted or had any weakness in my arms or legs. It's just a swimmy, about-to-faint feeling, not the room spinning."
+  },
+  {
+   "role": "agent",
+   "text": "When that light-headed feeling comes over you, where in your body do you notice it, and does it spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly in my head, like a swimmy feeling that comes over me all at once. It doesn't really spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "When that light-headed feeling comes over you, how strong is it: mild, moderate, or severe — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd call it moderate. I nearly fell once and had to grab the kitchen worktop, though I've not actually gone down."
+  },
+  {
+   "role": "agent",
+   "text": "How often do you get this light-headed feeling?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes on a few times, most days — I haven't really counted."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me when you first started getting this light-headed feeling, and what was going on when it first began?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on a little while back — not long after I started that new blood-pressure tablet the nurse gave me."
+  },
+  {
+   "role": "agent",
+   "text": "Apart from your high blood pressure and arthritis in both hips, is there anything else about your past health that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's about it, as far as I can recall. Nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed along with the light-headed feeling that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else comes to mind — it's just the dizzy feeling when I stand up."
+  },
+  {
+   "role": "agent",
+   "text": "When that light-headed feeling first came on, did it start suddenly, build up gradually over a few days, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It sort of crept up on me over a few days, I think — I didn't notice it all at once."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you're taking at the moment, including any new or changed ones, and the doses if you know them?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, there's the water tablet, bendroflumethiazide 2.5 mg, every morning — I've been on that for years. The new one is amlodipine 5 mg once a day, which the nurse added a couple of weeks ago. I also take a small tablet for my stomach each morning, but I can't remember what it's called, and paracetamol 1 g up to three times a day for my hips."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you take for your health — like other tablets, creams, inhalers, or vitamins — that we haven’t talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all of them — I don't take anything else, no vitamins or creams."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me how much this has been affecting your daily life, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "region": 0.51,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take regularly or have started recently — including what they are and the dose if you know — and also about any long-term health problems, past illnesses, operations, or hospital stays you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "region": 0.51,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much does the dizziness get in the way of your everyday activities: a little, a fair amount, a lot, or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "When you get that light-headed feeling, does anything else happen at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "When that light-headed feeling comes over you, where in your body do you notice it, and does it spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "region": 0.48,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "When that light-headed feeling comes over you, how strong is it: mild, moderate, or severe — or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "How often do you get this light-headed feeling?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Can you tell me when you first started getting this light-headed feeling, and what was going on when it first began?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.42,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.42)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Apart from your high blood pressure and arthritis in both hips, is there anything else about your past health that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you’ve noticed along with the light-headed feeling that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "associated_symptoms": 0.3,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "When that light-headed feeling first came on, did it start suddenly, build up gradually over a few days, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Could you tell me about any medicines you're taking at the moment, including any new or changed ones, and the doses if you know them?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.23)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Is there anything else you take for your health — like other tablets, creams, inhalers, or vitamins — that we haven’t talked about yet?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Dizziness, coming over light-headed when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's this dizziness I've been getting — when I stand up, I come over all light-headed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Crept up gradually over a few days rather than starting suddenly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been bothering me for a little while now."
+     },
+     {
+      "turn": 9,
+      "quote": "It came on a little while back — not long after I started that new blood-pressure tablet the nurse gave me."
+     },
+     {
+      "turn": 12,
+      "quote": "It sort of crept up on me over a few days, I think — I didn't notice it all at once."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Comes on when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "when I stand up, I come over all light-headed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A swimmy, about-to-faint feeling, not the room spinning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I come over all light-headed"
+     },
+     {
+      "turn": 5,
+      "quote": "It's just a swimmy, about-to-faint feeling, not the room spinning"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Mostly in the head; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "It's mostly in my head"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Moderate; has nearly fallen once and had to grab the kitchen worktop, but has not actually gone down",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I'd call it moderate. I nearly fell once and had to grab the kitchen worktop, though I've not actually gone down."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes on a few times most days; patient hasn't really counted",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It comes on a few times, most days — I haven't really counted."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No chest pain, no palpitations, no fainting, no weakness in arms or legs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "no chest pain, no palpitations, and I've not fainted or had any weakness in my arms or legs"
+     },
+     {
+      "turn": 11,
+      "quote": "No, nothing else comes to mind"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure for years and arthritis in both hips",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had high blood pressure for years and arthritis in both hips"
+     },
+     {
+      "turn": 10,
+      "quote": "No, that's about it, as far as I can recall. Nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "A water tablet every morning for years, something for the stomach, and a new blood-pressure tablet started by the nurse not long ago; Bendroflumethiazide 2.5 mg every morning for years; amlodipine 5 mg once daily started by the nurse a couple of weeks ago; a small stomach tablet each morning (name not remembered); paracetamol 1 g up to three times a day for hips",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "a water tablet every morning that I've been on for years, something for my stomach, and a new blood-pressure one the nurse started me on not long ago"
+     },
+     {
+      "turn": 13,
+      "quote": "bendroflumethiazide 2.5 mg, every morning — I've been on that for years. The new one is amlodipine 5 mg once a day, which the nurse added a couple of weeks ago."
+     },
+     {
+      "turn": 14,
+      "quote": "No, that's all of them — I don't take anything else, no vitamins or creams."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies - never had a bad reaction to anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "no, I've never had a bad reaction to anything"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "A fair amount — the dizziness makes them wary of going out, which is not like them",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I've stopped going to my Tuesday lunch club, as I'm worried about feeling faint on the bus."
+     },
+     {
+      "turn": 4,
+      "quote": "a fair amount — it's making me wary of going out, which isn't like me"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about feeling faint on the bus",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I'm worried about feeling faint on the bus"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Dizziness, coming over light-headed when standing up",
+    "evidence": [
+     "It's this dizziness I've been getting — when I stand up, I come over all light-headed."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Comes on when standing up",
+    "evidence": [
+     "when I stand up, I come over all light-headed"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A swimmy, about-to-faint feeling, not the room spinning",
+    "evidence": [
+     "I come over all light-headed",
+     "It's just a swimmy, about-to-faint feeling, not the room spinning"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Mostly in the head; does not spread anywhere else",
+    "evidence": [
+     "It's mostly in my head"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Moderate; has nearly fallen once and had to grab the kitchen worktop, but has not actually gone down",
+    "evidence": [
+     "I'd call it moderate. I nearly fell once and had to grab the kitchen worktop, though I've not actually gone down."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes on a few times most days; patient hasn't really counted",
+    "evidence": [
+     "It comes on a few times, most days — I haven't really counted."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No chest pain, no palpitations, no fainting, no weakness in arms or legs",
+    "evidence": [
+     "no chest pain, no palpitations, and I've not fainted or had any weakness in my arms or legs",
+     "No, nothing else comes to mind"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure for years and arthritis in both hips",
+    "evidence": [
+     "I've had high blood pressure for years and arthritis in both hips",
+     "No, that's about it, as far as I can recall. Nothing else I can think of."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies - never had a bad reaction to anything",
+    "evidence": [
+     "no, I've never had a bad reaction to anything"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "A fair amount — the dizziness makes them wary of going out, which is not like them",
+    "evidence": [
+     "I've stopped going to my Tuesday lunch club, as I'm worried about feeling faint on the bus.",
+     "a fair amount — it's making me wary of going out, which isn't like me"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about feeling faint on the bus",
+    "evidence": [
+     "I'm worried about feeling faint on the bus"
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Crept up gradually over a few days rather than starting suddenly",
+    "evidence": [
+     "It's been bothering me for a little while now.",
+     "It came on a little while back — not long after I started that new blood-pressure tablet the nurse gave me.",
+     "It sort of crept up on me over a few days, I think — I didn't notice it all at once."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "A water tablet every morning for years, something for the stomach, and a new blood-pressure tablet started by the nurse not long ago; Bendroflumethiazide 2.5 mg every morning for years; amlodipine 5 mg once daily started by the nurse a couple of weeks ago; a small stomach tablet each morning (name not remembered); paracetamol 1 g up to three times a day for hips",
+    "evidence": [
+     "a water tablet every morning that I've been on for years, something for my stomach, and a new blood-pressure one the nurse started me on not long ago",
+     "bendroflumethiazide 2.5 mg, every morning — I've been on that for years. The new one is amlodipine 5 mg once a day, which the nurse added a couple of weeks ago.",
+     "No, that's all of them — I don't take anything else, no vitamins or creams."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 14,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.838,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.494,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.447,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.423,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.631,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.665,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.408,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.554,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.627,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.663,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.532,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.616,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_01",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 14,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 362,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.7333333333333333,
+  "essential_completeness": 0.875,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F13": true,
+   "F14": true,
+   "F15": false,
+   "F16": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

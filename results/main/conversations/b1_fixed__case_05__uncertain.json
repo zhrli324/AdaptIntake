@@ -1,0 +1,703 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's this cough. It just won't go away and it's getting me down."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Hard to say exactly... it's been a while now. It sort of came on after I had a cold."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air seems to set it off, and if I talk for a long while it starts up too. Steam helps a little, I think."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm bringing up phlegm with it — white to yellowish stuff. More than the bit I usually get in the mornings."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my chest, mostly. I wouldn't say it spreads anywhere."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not great with numbers like that. It's bad enough that it's bothering me, I'd say."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes. Worse in the mornings, and it wakes me at night too."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "I do get a bit more puffed than usual, even just walking to the shop."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've got COPD — had it for about eight years now."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, a few inhalers and a tablet for my blood pressure. I'd have to check the names, I can never remember them."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing that I know of. I've never had a problem with any medicine."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I get a bit more puffed, and the night coughing tires me out. I'm probably not getting as much done as I'd like."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well... I do worry. My lungs have been getting worse over the years, and you hear things. I suppose I wonder if it could be something more serious."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that won't go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's this cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started a while ago, after the patient had a cold; exact timing unclear",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Hard to say exactly... it's been a while now. It sort of came on after I had a cold."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Cold air and talking for a long time bring the cough on; steam helps a little",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Cold air seems to set it off, and if I talk for a long while it starts up too. Steam helps a little, I think."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Bringing up phlegm with the cough; white to yellowish, more than the small amount usually produced in the mornings",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'm bringing up phlegm with it — white to yellowish stuff. More than the bit I usually get in the mornings."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the chest, mostly; does not spread anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's in my chest, mostly. I wouldn't say it spreads anywhere."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Can't give a number; says it's bad enough that it's bothering them",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'm not great with numbers like that. It's bad enough that it's bothering me"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "conflicting",
+    "value": "Persistent, does not go away (no duration given)",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It just won't go away"
+     },
+     {
+      "turn": 7,
+      "quote": "It comes and goes. Worse in the mornings, and it wakes me at night too."
+     }
+    ],
+    "conflicting_values": [
+     "Persistent, does not go away (no duration given)",
+     "Comes and goes; worse in the mornings and wakes the patient at night"
+    ],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Gets a bit more puffed than usual, even just walking to the shop",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I do get a bit more puffed than usual, even just walking to the shop."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has COPD, diagnosed about eight years ago; sees a doctor regularly for it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got COPD — had it for about eight years now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "A few inhalers and a tablet for blood pressure; names not remembered",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "a few inhalers and a tablet for my blood pressure"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; has never had a problem with any medicine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, nothing that I know of. I've never had a problem with any medicine."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Gets more puffed, and the night coughing tires them out; probably not getting as much done as they would like",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's getting me down"
+     },
+     {
+      "turn": 12,
+      "quote": "I'm probably not getting as much done as I'd like."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their lungs have been getting worse over the years and wonders whether it could be something more serious",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I do worry. My lungs have been getting worse over the years, and you hear things. I suppose I wonder if it could be something more serious."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that won't go away",
+    "evidence": [
+     "It's this cough."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Cold air and talking for a long time bring the cough on; steam helps a little",
+    "evidence": [
+     "Cold air seems to set it off, and if I talk for a long while it starts up too. Steam helps a little, I think."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Bringing up phlegm with the cough; white to yellowish, more than the small amount usually produced in the mornings",
+    "evidence": [
+     "I'm bringing up phlegm with it — white to yellowish stuff. More than the bit I usually get in the mornings."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the chest, mostly; does not spread anywhere",
+    "evidence": [
+     "It's in my chest, mostly. I wouldn't say it spreads anywhere."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Gets a bit more puffed than usual, even just walking to the shop",
+    "evidence": [
+     "I do get a bit more puffed than usual, even just walking to the shop."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has COPD, diagnosed about eight years ago; sees a doctor regularly for it",
+    "evidence": [
+     "I've got COPD — had it for about eight years now"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "A few inhalers and a tablet for blood pressure; names not remembered",
+    "evidence": [
+     "a few inhalers and a tablet for my blood pressure"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; has never had a problem with any medicine",
+    "evidence": [
+     "No, nothing that I know of. I've never had a problem with any medicine."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their lungs have been getting worse over the years and wonders whether it could be something more serious",
+    "evidence": [
+     "I do worry. My lungs have been getting worse over the years, and you hear things. I suppose I wonder if it could be something more serious."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "functional_change",
+    "text": "Gets more puffed, and the night coughing tires them out; probably not getting as much done as they would like",
+    "evidence": [
+     "it's getting me down",
+     "I'm probably not getting as much done as I'd like."
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "Mentioned, but not specific: Started a while ago, after the patient had a cold; exact timing unclear",
+    "evidence": [
+     "Hard to say exactly... it's been a while now. It sort of came on after I had a cold."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Mentioned, but not specific: Can't give a number; says it's bad enough that it's bothering them",
+    "evidence": [
+     "I'm not great with numbers like that. It's bad enough that it's bothering me"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Two different answers were given: 'Persistent, does not go away (no duration given)' and 'Comes and goes; worse in the mornings and wakes the patient at night'",
+    "evidence": [
+     "It just won't go away",
+     "It comes and goes. Worse in the mornings, and it wakes me at night too."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_05",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 234,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5333333333333333,
+  "essential_completeness": 0.4,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": false,
+   "F9": true,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 0.9,
+  "accuracy": 0.9,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

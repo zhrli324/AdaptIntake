@@ -1,0 +1,923 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've been getting out of breath going up the stairs. It's been bothering me more lately."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me when you first noticed this, whether it came on suddenly or gradually, what you were doing when it started, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on gradually, I think — a while back now. And no, I've never had any trouble with medicines as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 0 means it doesn't bother you at all and 10 means it's the worst it could be, how much does getting out of breath on the stairs affect you day to day?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, I couldn't put a number on it. It's not too bad, but I do have to stop and catch my breath."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you're taking—regular or new ones—and any past health problems, operations, or hospital stays you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a few tablets — one in the morning and some with my evening meal — my wife keeps track of them better than I do. As for my health, I had a heart attack some years back, and I've got an irregular heartbeat."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath on the stairs, is there anything else you notice happening at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've noticed my ankles get a bit puffy by the evening, and I've started using two pillows at night instead of one. No chest pain or anything like that, though."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath going up the stairs, where in your body do you feel it, and does it move anywhere or stay in one place?"
+  },
+  {
+   "role": "patient",
+   "text": "I just feel it in my chest really, like I can't get enough air in. It doesn't move anywhere, it's just there until I rest."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about this, and what are you hoping we can do for you today?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm worried about managing the stairs to get up to bed, and I'd like to know whether my heart is getting worse."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the heart attack and irregular heartbeat you mentioned, is there anything else about your past health, operations, or hospital stays you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I did have a scan of my heart at the hospital last year, but I can't remember what they said about it. Nothing else I can think of, no operations."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other things you've noticed along with the breathlessness, or anything else you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I don't think so. Just the puffiness in the ankles and needing the extra pillow. No cough or fever or anything."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice getting out of breath on the stairs — did it come on suddenly or build up gradually, and was anything going on at the time?"
+  },
+  {
+   "role": "patient",
+   "text": "It built up gradually, over about three months now that I think about it. Nothing special was going on — it just got worse little by little."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me what medicines you take regularly, and if any have been started or changed recently, including the dose if you know it?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a blood thinner — rivaroxaban, I think it's called — with my evening meal. And bisoprolol in the morning, plus atorvastatin at night and ramipril. I'm not sure of the doses, my wife would know better."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your medicines you'd like to add — anything you take that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's the lot — four tablets as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me when you first noticed this, whether it came on suddenly or gradually, what you were doing when it started, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "timing": 0.24,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "On a scale from 0 to 10, where 0 means it doesn't bother you at all and 10 means it's the worst it could be, how much does getting out of breath on the stairs affect you day to day?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.2,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me about any medicines you're taking—regular or new ones—and any past health problems, operations, or hospital stays you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "quality": 0.38,
+    "region": 0.51,
+    "timing": 0.24,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "When you get out of breath on the stairs, is there anything else you notice happening at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.2,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "When you get out of breath going up the stairs, where in your body do you feel it, and does it move anywhere or stay in one place?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.2,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What worries you most about this, and what are you hoping we can do for you today?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "timing": 0.24,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Besides the heart attack and irregular heartbeat you mentioned, is there anything else about your past health, operations, or hospital stays you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "timing": 0.24,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Are there any other things you've noticed along with the breathlessness, or anything else you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "timing": 0.24,
+    "associated_symptoms": 0.34,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "When did you first notice getting out of breath on the stairs — did it come on suddenly or build up gradually, and was anything going on at the time?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "timing": 0.24,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.32)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Can you tell me what medicines you take regularly, and if any have been started or changed recently, including the dose if you know it?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.23)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else about your medicines you'd like to add — anything you take that we haven't talked about yet?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Getting out of breath going up the stairs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been getting out of breath going up the stairs"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Built up gradually over about three months; nothing special was going on at the time",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It came on gradually, I think — a while back now."
+     },
+     {
+      "turn": 10,
+      "quote": "It built up gradually, over about three months now that I think about it. Nothing special was going on"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "The feeling stays until they rest",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "getting out of breath going up the stairs"
+     },
+     {
+      "turn": 6,
+      "quote": "it's just there until I rest"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Like not being able to get enough air in",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "like I can't get enough air in"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the chest; it does not move anywhere or spread",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I just feel it in my chest really"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I couldn't put a number on it. It's not too bad"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Getting worse little by little over about three months",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been bothering me more lately"
+     },
+     {
+      "turn": 10,
+      "quote": "it just got worse little by little"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Ankles get a bit puffy by the evening; has started using two pillows at night instead of one; no chest pain",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "my ankles get a bit puffy by the evening, and I've started using two pillows at night instead of one. No chest pain or anything like that, though."
+     },
+     {
+      "turn": 9,
+      "quote": "No cough or fever or anything"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Had a heart attack some years back; has an irregular heartbeat",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I had a heart attack some years back, and I've got an irregular heartbeat."
+     },
+     {
+      "turn": 8,
+      "quote": "I did have a scan of my heart at the hospital last year, but I can't remember what they said about it. Nothing else I can think of, no operations."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets: one in the morning and some with evening meal; wife manages them; Takes a blood thinner, rivaroxaban, with evening meal; bisoprolol in the morning; atorvastatin at night; and ramipril. Not sure of the doses; wife would know better.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I take a few tablets — one in the morning and some with my evening meal — my wife keeps track of them better than I do."
+     },
+     {
+      "turn": 11,
+      "quote": "I take a blood thinner — rivaroxaban, I think it's called — with my evening meal. And bisoprolol in the morning, plus atorvastatin at night and ramipril. I'm not sure of the doses, my wife would know better."
+     },
+     {
+      "turn": 12,
+      "quote": "No, that's the lot — four tablets as far as I know."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I've never had any trouble with medicines as far as I know"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Concerned about managing the stairs to get up to bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I do have to stop and catch my breath"
+     },
+     {
+      "turn": 5,
+      "quote": "I've started using two pillows at night instead of one"
+     },
+     {
+      "turn": 7,
+      "quote": "managing the stairs to get up to bed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about managing the stairs to get up to bed, and wants to know whether their heart is getting worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I'm worried about managing the stairs to get up to bed, and I'd like to know whether my heart is getting worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Getting out of breath going up the stairs",
+    "evidence": [
+     "I've been getting out of breath going up the stairs"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "The feeling stays until they rest",
+    "evidence": [
+     "getting out of breath going up the stairs",
+     "it's just there until I rest"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Like not being able to get enough air in",
+    "evidence": [
+     "like I can't get enough air in"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the chest; it does not move anywhere or spread",
+    "evidence": [
+     "I just feel it in my chest really"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Ankles get a bit puffy by the evening; has started using two pillows at night instead of one; no chest pain",
+    "evidence": [
+     "my ankles get a bit puffy by the evening, and I've started using two pillows at night instead of one. No chest pain or anything like that, though.",
+     "No cough or fever or anything"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Had a heart attack some years back; has an irregular heartbeat",
+    "evidence": [
+     "I had a heart attack some years back, and I've got an irregular heartbeat.",
+     "I did have a scan of my heart at the hospital last year, but I can't remember what they said about it. Nothing else I can think of, no operations."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "I've never had any trouble with medicines as far as I know"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Concerned about managing the stairs to get up to bed",
+    "evidence": [
+     "I do have to stop and catch my breath",
+     "I've started using two pillows at night instead of one",
+     "managing the stairs to get up to bed"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about managing the stairs to get up to bed, and wants to know whether their heart is getting worse",
+    "evidence": [
+     "I'm worried about managing the stairs to get up to bed, and I'd like to know whether my heart is getting worse."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Built up gradually over about three months; nothing special was going on at the time",
+    "evidence": [
+     "It came on gradually, I think — a while back now.",
+     "It built up gradually, over about three months now that I think about it. Nothing special was going on"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Getting worse little by little over about three months",
+    "evidence": [
+     "It's been bothering me more lately",
+     "it just got worse little by little"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a few tablets: one in the morning and some with evening meal; wife manages them; Takes a blood thinner, rivaroxaban, with evening meal; bisoprolol in the morning; atorvastatin at night; and ramipril. Not sure of the doses; wife would know better.",
+    "evidence": [
+     "I take a few tablets — one in the morning and some with my evening meal — my wife keeps track of them better than I do.",
+     "I take a blood thinner — rivaroxaban, I think it's called — with my evening meal. And bisoprolol in the morning, plus atorvastatin at night and ramipril. I'm not sure of the doses, my wife would know better.",
+     "No, that's the lot — four tablets as far as I know."
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I couldn't put a number on it. It's not too bad"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 12,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.9,
+   "score": 0.731,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.441,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.42,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.71,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.705,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.703,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.701,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.851,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.625,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.663,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_10",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 12,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 315,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5333333333333333,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

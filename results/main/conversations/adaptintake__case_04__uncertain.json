@@ -1,0 +1,1215 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've been having trouble going to the toilet. It's been a bit of a bother, really."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice this trouble?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been a little while now, I couldn't tell you exactly."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any medicine allergies?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't have any allergies that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "How much is this trouble affecting your day-to-day life?"
+  },
+  {
+   "role": "patient",
+   "text": "It's uncomfortable, I'd say. It does bother me, but I get by."
+  },
+  {
+   "role": "agent",
+   "text": "Is this a small, medium, or big problem, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say a medium sort of problem. The straining is uncomfortable — I'd put it at about a 4 out of 10."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about any medicines you're taking or have taken recently, and any past health problems or operations you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a few tablets, I couldn't tell you all the names offhand. I've got arthritis in my back and knees, and an irregular heartbeat."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything else going on along with this trouble going to the toilet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't seen any blood or anything black, and I've not been sick. My lower tummy does feel a bit bloated though."
+  },
+  {
+   "role": "agent",
+   "text": "Do you strain every time you go, sometimes, rarely, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I do have to strain, yes. It seems like most times, but I couldn't say for certain how often."
+  },
+  {
+   "role": "agent",
+   "text": "Does anything you do make it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I have been drinking less than I used to, to keep from getting up in the night. I suppose that might not help."
+  },
+  {
+   "role": "agent",
+   "text": "What's been worrying you most about all of this?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd just like something to get me going again. But I do worry it could be something serious, like bowel cancer."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you'd like to add about your tablets?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, the doctor gave me some strong ones for my back about a month ago — co-codamol, two tablets four times a day. And I take a blood thinner, apixaban, and bisoprolol for my heart, plus a calcium and vitamin D chew."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health, such as other conditions, operations, or hospital stays, that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so. Just the arthritis and the irregular heartbeat — I've not had any operations that I can recall."
+  },
+  {
+   "role": "agent",
+   "text": "When you say trouble going to the toilet, is it more about going less often, going more often, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It's that I'm going much less often than I used to."
+  },
+  {
+   "role": "agent",
+   "text": "And is there anything else you've noticed that came on around the same time as going less often?"
+  },
+  {
+   "role": "patient",
+   "text": "Just the bloated feeling in my lower tummy, nothing else that I've noticed."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice you were going to the toilet less often, and did it come on suddenly or gradually, or was there anything that seemed to bring it on?"
+  },
+  {
+   "role": "patient",
+   "text": "It started about three weeks ago now, and it came on gradually really. The only thing that's changed is those new tablets for my back, which I started about a month ago."
+  },
+  {
+   "role": "agent",
+   "text": "Thanks for listing those — is there anything else you take that we haven't covered, including anything you buy yourself without a prescription?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's the lot. I don't take anything you buy yourself, just what the doctor gives me."
+  },
+  {
+   "role": "agent",
+   "text": "Whereabouts do you feel that bloated feeling, and does it stay in one place or spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my lower tummy, and it stays there. It doesn't really spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "How have things been for you day to day since this started — has anything changed with your usual routine, rest, eating, or how much you can do on your own?"
+  },
+  {
+   "role": "patient",
+   "text": "Not much has changed really, I get by. My son helps me when I need it, and I've been drinking less to stop getting up in the night."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice this trouble?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.42,
+    "onset": 0.74,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Do you have any medicine allergies?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "chief_complaint": 0.4,
+    "onset": 0.24,
+    "provocation": 0.4,
+    "quality": 0.3,
+    "region": 0.45,
+    "severity": 0.65,
+    "timing": 0.4,
+    "associated_symptoms": 0.5,
+    "past_history": 0.55,
+    "medications": 0.55,
+    "allergies": 0.7,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.7)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much is this trouble affecting your day-to-day life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.42,
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Is this a small, medium, or big problem, or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "scaffolded",
+   "scores": {
+    "chief_complaint": 0.4,
+    "onset": 0.24,
+    "provocation": 0.4,
+    "quality": 0.3,
+    "region": 0.45,
+    "severity": 0.55,
+    "timing": 0.4,
+    "associated_symptoms": 0.5,
+    "past_history": 0.55,
+    "medications": 0.55,
+    "functional_change": 0.1,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.55)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Can you tell me about any medicines you're taking or have taken recently, and any past health problems or operations you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "chief_complaint": 0.44,
+    "onset": 0.32,
+    "provocation": 0.48,
+    "region": 0.51,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Have you noticed anything else going on along with this trouble going to the toilet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.42,
+    "onset": 0.28,
+    "provocation": 0.44,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Do you strain every time you go, sometimes, rarely, or you're not sure?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "closed",
+   "guidance": "scaffolded",
+   "scores": {
+    "chief_complaint": 0.4,
+    "onset": 0.24,
+    "provocation": 0.4,
+    "region": 0.21,
+    "timing": 0.4,
+    "associated_symptoms": 0.26,
+    "past_history": 0.29,
+    "medications": 0.27,
+    "functional_change": 0.1,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: chief_complaint (reported, vague; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Does anything you do make it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "chief_complaint": 0.3,
+    "onset": 0.24,
+    "provocation": 0.4,
+    "region": 0.21,
+    "timing": 0.16,
+    "associated_symptoms": 0.26,
+    "past_history": 0.29,
+    "medications": 0.27,
+    "functional_change": 0.1,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What's been worrying you most about all of this?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.32,
+    "onset": 0.28,
+    "region": 0.24,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you'd like to add about your tablets?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "chief_complaint": 0.34,
+    "onset": 0.32,
+    "region": 0.27,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else about your past health, such as other conditions, operations, or hospital stays, that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.32,
+    "onset": 0.28,
+    "region": 0.24,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.24,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "When you say trouble going to the toilet, is it more about going less often, going more often, or you're not sure?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "chief_complaint": 0.32,
+    "onset": 0.28,
+    "region": 0.24,
+    "associated_symptoms": 0.3,
+    "medications": 0.24,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: chief_complaint (reported, vague; score 0.32)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "And is there anything else you've noticed that came on around the same time as going less often?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "region": 0.27,
+    "associated_symptoms": 0.34,
+    "medications": 0.31,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "When did you first notice you were going to the toilet less often, and did it come on suddenly or gradually, or was there anything that seemed to bring it on?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "region": 0.27,
+    "medications": 0.31,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.32)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Thanks for listing those — is there anything else you take that we haven't covered, including anything you buy yourself without a prescription?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "region": 0.27,
+    "medications": 0.31,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.31)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Whereabouts do you feel that bloated feeling, and does it stay in one place or spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "region": 0.27,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: region (reported, vague; score 0.27)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "How have things been for you day to day since this started — has anything changed with your usual routine, rest, eating, or how much you can do on your own?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: functional_change (reported, vague; score 0.18)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Going to the toilet much less often than used to",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having trouble going to the toilet"
+     },
+     {
+      "turn": 13,
+      "quote": "I'm going much less often than I used to"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three weeks ago and came on gradually; the only thing that has changed is new tablets for the back, started about a month ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's been a little while now, I couldn't tell you exactly"
+     },
+     {
+      "turn": 15,
+      "quote": "It started about three weeks ago now, and it came on gradually really. The only thing that's changed is those new tablets for my back, which I started about a month ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Drinking less to stop getting up in the night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I have been drinking less than I used to, to keep from getting up in the night. I suppose that might not help."
+     },
+     {
+      "turn": 18,
+      "quote": "I've been drinking less to stop getting up in the night"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Straining, which is uncomfortable",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "The straining is uncomfortable"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Lower tummy; stays in one place and does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "My lower tummy does feel a bit bloated though."
+     },
+     {
+      "turn": 17,
+      "quote": "It's in my lower tummy, and it stays there. It doesn't really spread anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "A medium sort of problem; about 4 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I'd say a medium sort of problem. The straining is uncomfortable — I'd put it at about a 4 out of 10."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Gets up in the night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It seems like most times, but I couldn't say for certain how often."
+     },
+     {
+      "turn": 9,
+      "quote": "to keep from getting up in the night"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No blood or black stools, and no vomiting; lower tummy feels a bit bloated",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "No, I haven't seen any blood or anything black, and I've not been sick. My lower tummy does feel a bit bloated though."
+     },
+     {
+      "turn": 14,
+      "quote": "Just the bloated feeling in my lower tummy, nothing else that I've noticed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Arthritis in the back and knees; irregular heartbeat",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I've got arthritis in my back and knees, and an irregular heartbeat."
+     },
+     {
+      "turn": 12,
+      "quote": "Just the arthritis and the irregular heartbeat — I've not had any operations that I can recall."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets; cannot recall all the names offhand; Co-codamol two tablets four times a day, started about a month ago for back pain; apixaban (blood thinner); bisoprolol for the heart; calcium and vitamin D chew",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I take a few tablets, I couldn't tell you all the names offhand."
+     },
+     {
+      "turn": 11,
+      "quote": "the doctor gave me some strong ones for my back about a month ago — co-codamol, two tablets four times a day. And I take a blood thinner, apixaban, and bisoprolol for my heart, plus a calcium and vitamin D chew"
+     },
+     {
+      "turn": 16,
+      "quote": "No, that's the lot. I don't take anything you buy yourself, just what the doctor gives me."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, I don't have any allergies that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Not much has changed; patient gets by, with their son helping when needed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It does bother me, but I get by."
+     },
+     {
+      "turn": 18,
+      "quote": "Not much has changed really, I get by. My son helps me when I need it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Hopes to get something to get them going again; worries it could be something serious, such as bowel cancer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I'd just like something to get me going again. But I do worry it could be something serious, like bowel cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "provocation",
+    "text": "Drinking less to stop getting up in the night",
+    "evidence": [
+     "I have been drinking less than I used to, to keep from getting up in the night. I suppose that might not help.",
+     "I've been drinking less to stop getting up in the night"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Straining, which is uncomfortable",
+    "evidence": [
+     "The straining is uncomfortable"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "A medium sort of problem; about 4 out of 10",
+    "evidence": [
+     "I'd say a medium sort of problem. The straining is uncomfortable — I'd put it at about a 4 out of 10."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No blood or black stools, and no vomiting; lower tummy feels a bit bloated",
+    "evidence": [
+     "No, I haven't seen any blood or anything black, and I've not been sick. My lower tummy does feel a bit bloated though.",
+     "Just the bloated feeling in my lower tummy, nothing else that I've noticed."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Arthritis in the back and knees; irregular heartbeat",
+    "evidence": [
+     "I've got arthritis in my back and knees, and an irregular heartbeat.",
+     "Just the arthritis and the irregular heartbeat — I've not had any operations that I can recall."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a few tablets; cannot recall all the names offhand; Co-codamol two tablets four times a day, started about a month ago for back pain; apixaban (blood thinner); bisoprolol for the heart; calcium and vitamin D chew",
+    "evidence": [
+     "I take a few tablets, I couldn't tell you all the names offhand.",
+     "the doctor gave me some strong ones for my back about a month ago — co-codamol, two tablets four times a day. And I take a blood thinner, apixaban, and bisoprolol for my heart, plus a calcium and vitamin D chew",
+     "No, that's the lot. I don't take anything you buy yourself, just what the doctor gives me."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, I don't have any allergies that I know of."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Hopes to get something to get them going again; worries it could be something serious, such as bowel cancer",
+    "evidence": [
+     "I'd just like something to get me going again. But I do worry it could be something serious, like bowel cancer."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "chief_complaint",
+    "text": "Going to the toilet much less often than used to",
+    "evidence": [
+     "I've been having trouble going to the toilet",
+     "I'm going much less often than I used to"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three weeks ago and came on gradually; the only thing that has changed is new tablets for the back, started about a month ago",
+    "evidence": [
+     "it's been a little while now, I couldn't tell you exactly",
+     "It started about three weeks ago now, and it came on gradually really. The only thing that's changed is those new tablets for my back, which I started about a month ago."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Lower tummy; stays in one place and does not spread anywhere else",
+    "evidence": [
+     "My lower tummy does feel a bit bloated though.",
+     "It's in my lower tummy, and it stays there. It doesn't really spread anywhere else."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Gets up in the night",
+    "evidence": [
+     "It seems like most times, but I couldn't say for certain how often.",
+     "to keep from getting up in the night"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Not much has changed; patient gets by, with their son helping when needed",
+    "evidence": [
+     "It does bother me, but I get by.",
+     "Not much has changed really, I get by. My son helps me when I need it"
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 18,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.15,
+   "score": 0.375,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.263,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.481,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.316,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.658,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.529,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.339,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.245,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.622,
+   "level": "focused",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.661,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.531,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.615,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.658,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.679,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.689,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.695,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_04",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 18,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 364,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6666666666666666,
+  "essential_completeness": 0.6666666666666666,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": false,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

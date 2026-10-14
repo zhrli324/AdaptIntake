@@ -1,0 +1,717 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been having trouble opening my bowels. It's been going on for about three weeks now, and I have to strain a lot."
+  },
+  {
+   "role": "agent",
+   "text": "Could you describe how, if at all, this trouble opening your bowels is affecting your daily life, and let me know if you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "The straining is uncomfortable — I'd say about a 4 out of 10 — and my lower tummy feels bloated, which is bothersome day to day. As for allergies, I don't have any that I know of to medicines."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you're taking now or have taken recently, and any past health problems, operations, or hospital stays you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take co-codamol 30/500 — two tablets four times a day — which I started about a month ago for back pain. I also take apixaban 2.5 mg twice a day, bisoprolol 2.5 mg once a day, and a calcium and vitamin D chewable tablet twice a day.\n\nAs for my health, I have osteoarthritis in my spine and knees, and I have an irregular heartbeat. I haven't had any operations or hospital stays that I can recall."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me what seems to make the trouble opening your bowels better or worse, and how it's been over these three weeks — for example, whether it's there all the time or comes and goes?"
+  },
+  {
+   "role": "patient",
+   "text": "It's there all the time, not coming and going. I think I've made it worse because I've been drinking less — only about three cups of tea a day — to avoid getting up at night. These days I only open my bowels about every four to five days, when normally it's every day or every other day, and the stools are hard and pellet-like."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the bloating in your lower tummy, is there anything else you've noticed that came along with the trouble opening your bowels?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any blood in my stools, and no black stools or vomiting either. Just the bloating and the straining."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you're taking, like other medicines or supplements, that we haven't talked about?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's everything — those are all the medicines and supplements I take."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about this, and what are you hoping we can help with today?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd really like something to get things moving again, and to be honest I'm worried it could be something serious, like bowel cancer."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the osteoarthritis and irregular heartbeat, is there anything else about your health in the past that you think we should know?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all I can think of — just the osteoarthritis and the irregular heartbeat. I can't recall any other health problems."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you describe how, if at all, this trouble opening your bowels is affecting your daily life, and let me know if you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "region": 0.51,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you're taking now or have taken recently, and any past health problems, operations, or hospital stays you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "timing": 0.48,
+    "associated_symptoms": 0.44,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Can you tell me what seems to make the trouble opening your bowels better or worse, and how it's been over these three weeks — for example, whether it's there all the time or comes and goes?",
+   "slots": [
+    "provocation",
+    "timing"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "timing": 0.48,
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: provocation, timing (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false,
+    "timing": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Besides the bloating in your lower tummy, is there anything else you've noticed that came along with the trouble opening your bowels?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Is there anything else you're taking, like other medicines or supplements, that we haven't talked about?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What worries you most about this, and what are you hoping we can help with today?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "past_history": 0.39,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Besides the osteoarthritis and irregular heartbeat, is there anything else about your health in the past that you think we should know?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "past_history": 0.39
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Trouble opening his bowels",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having trouble opening my bowels."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three weeks ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been going on for about three weeks now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Drinking less fluid (only about three cups of tea a day) to avoid getting up at night seems to have made it worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I've been drinking less — only about three cups of tea a day — to avoid getting up at night"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Stools are hard and pellet-like",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I have to strain a lot."
+     },
+     {
+      "turn": 4,
+      "quote": "the stools are hard and pellet-like"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Lower tummy (lower abdomen)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "my lower tummy feels bloated"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 4 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I'd say about a 4 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "There all the time, not coming and going; opens his bowels only about every four to five days, whereas normally it is every day or every other day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's there all the time, not coming and going."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Bloating in the lower tummy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "my lower tummy feels bloated"
+     },
+     {
+      "turn": 5,
+      "quote": "No, I haven't had any blood in my stools, and no black stools or vomiting either. Just the bloating and the straining."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Osteoarthritis in the spine and knees; irregular heartbeat; no operations or hospital stays he can recall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I have osteoarthritis in my spine and knees, and I have an irregular heartbeat."
+     },
+     {
+      "turn": 8,
+      "quote": "No, that's all I can think of — just the osteoarthritis and the irregular heartbeat. I can't recall any other health problems."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Co-codamol 30/500, two tablets four times a day, started about a month ago for back pain; apixaban 2.5 mg twice a day; bisoprolol 2.5 mg once a day; a calcium and vitamin D chewable tablet twice a day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take co-codamol 30/500 — two tablets four times a day — which I started about a month ago for back pain."
+     },
+     {
+      "turn": 6,
+      "quote": "No, that's everything — those are all the medicines and supplements I take."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any that I know of to medicines"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "The bloating is bothersome day to day; the straining is uncomfortable",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "which is bothersome day to day"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants something to get his bowels moving again; worried it could be something serious, such as bowel cancer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I'd really like something to get things moving again, and to be honest I'm worried it could be something serious, like bowel cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Trouble opening his bowels",
+    "evidence": [
+     "I've been having trouble opening my bowels."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three weeks ago",
+    "evidence": [
+     "It's been going on for about three weeks now"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Drinking less fluid (only about three cups of tea a day) to avoid getting up at night seems to have made it worse",
+    "evidence": [
+     "I've been drinking less — only about three cups of tea a day — to avoid getting up at night"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Stools are hard and pellet-like",
+    "evidence": [
+     "I have to strain a lot.",
+     "the stools are hard and pellet-like"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Lower tummy (lower abdomen)",
+    "evidence": [
+     "my lower tummy feels bloated"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 4 out of 10",
+    "evidence": [
+     "I'd say about a 4 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "There all the time, not coming and going; opens his bowels only about every four to five days, whereas normally it is every day or every other day",
+    "evidence": [
+     "It's there all the time, not coming and going."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Bloating in the lower tummy",
+    "evidence": [
+     "my lower tummy feels bloated",
+     "No, I haven't had any blood in my stools, and no black stools or vomiting either. Just the bloating and the straining."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Osteoarthritis in the spine and knees; irregular heartbeat; no operations or hospital stays he can recall",
+    "evidence": [
+     "I have osteoarthritis in my spine and knees, and I have an irregular heartbeat.",
+     "No, that's all I can think of — just the osteoarthritis and the irregular heartbeat. I can't recall any other health problems."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Co-codamol 30/500, two tablets four times a day, started about a month ago for back pain; apixaban 2.5 mg twice a day; bisoprolol 2.5 mg once a day; a calcium and vitamin D chewable tablet twice a day",
+    "evidence": [
+     "I take co-codamol 30/500 — two tablets four times a day — which I started about a month ago for back pain.",
+     "No, that's everything — those are all the medicines and supplements I take."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "I don't have any that I know of to medicines"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "The bloating is bothersome day to day; the straining is uncomfortable",
+    "evidence": [
+     "which is bothersome day to day"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants something to get his bowels moving again; worried it could be something serious, such as bowel cancer",
+    "evidence": [
+     "I'd really like something to get things moving again, and to be honest I'm worried it could be something serious, like bowel cancer."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 8,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.9,
+   "level": "confirm",
+   "resolved": 4,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.65,
+   "level": "confirm",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.825,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.762,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.731,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.716,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.708,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_04",
+ "persona": "clear",
+ "metrics": {
+  "questions": 8,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 285,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.9333333333333333,
+  "essential_completeness": 0.8888888888888888,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 0.6923076923076923,
+  "accuracy": 0.6923076923076923,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

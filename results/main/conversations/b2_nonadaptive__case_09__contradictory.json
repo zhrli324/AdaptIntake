@@ -1,0 +1,713 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been having pain in my lower back that's been bothering me. It came on out of nowhere about a month ago."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't have any allergies to medicines that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 0 is no pain at all and 10 is the worst pain you can imagine, how would you rate your lower back pain these days?"
+  },
+  {
+   "role": "patient",
+   "text": "It's about a 6 out of 10. It's worst first thing in the morning."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you are taking at the moment?"
+  },
+  {
+   "role": "patient",
+   "text": "I take gliclazide 80 mg twice a day and metformin 1 g twice a day for my diabetes. And since the back pain started, I've been taking ibuprofen 400 mg three times a day that I got from the chemist."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the back pain, have you noticed any other symptoms or changes in how you feel?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any fever or weight loss, and no numbness or trouble with my waterworks or bowels. But I can't do any gardening now and I need help putting my socks on."
+  },
+  {
+   "role": "agent",
+   "text": "What kinds of things, if any, seem to make your back pain better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Bending and getting out of the car make it worse. It eases off when I lie on my side or use a hot water bottle."
+  },
+  {
+   "role": "agent",
+   "text": "Other than your diabetes, is there anything else about your past health — like other ongoing conditions, past illnesses, operations, or hospital stays — that you’d like to tell me about?"
+  },
+  {
+   "role": "patient",
+   "text": "I had a similar episode of back pain about 5 years ago, but it settled with physiotherapy. Nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your back pain?"
+  },
+  {
+   "role": "patient",
+   "text": "I want to know whether I've slipped a disc, and whether I need to have a scan."
+  },
+  {
+   "role": "agent",
+   "text": "What does the pain in your lower back feel like?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a stiff, aching pain, with the odd sharp twinge."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the gliclazide, metformin, and ibuprofen you mentioned, is there anything else you take or have recently taken?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's everything I take."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed or want to mention that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think there's anything else."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Do you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "On a scale from 0 to 10, where 0 is no pain at all and 10 is the worst pain you can imagine, how would you rate your lower back pain these days?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me about any medicines you are taking at the moment?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Besides the back pain, have you noticed any other symptoms or changes in how you feel?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "What kinds of things, if any, seem to make your back pain better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Other than your diabetes, is there anything else about your past health — like other ongoing conditions, past illnesses, operations, or hospital stays — that you’d like to tell me about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "What worries you most about your back pain?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "What does the pain in your lower back feel like?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Besides the gliclazide, metformin, and ibuprofen you mentioned, is there anything else you take or have recently taken?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you've noticed or want to mention that we haven't talked about yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in the lower back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having pain in my lower back"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on out of nowhere about a month ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It came on out of nowhere about a month ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse with bending and getting out of the car; eases off when lying on the side or using a hot water bottle",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "Bending and getting out of the car make it worse. It eases off when I lie on my side or use a hot water bottle."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Stiff, aching pain with the odd sharp twinge",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "It's a stiff, aching pain, with the odd sharp twinge."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Lower back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "pain in my lower back"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's about a 6 out of 10."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Worst first thing in the morning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's worst first thing in the morning."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No fever, no weight loss, no numbness, no trouble with urination or bowels",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "no fever or weight loss, and no numbness or trouble with my waterworks or bowels"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diabetes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "for my diabetes"
+     },
+     {
+      "turn": 7,
+      "quote": "I had a similar episode of back pain about 5 years ago, but it settled with physiotherapy."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes; ibuprofen 400 mg three times a day since back pain started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "gliclazide 80 mg twice a day and metformin 1 g twice a day for my diabetes. And since the back pain started, I've been taking ibuprofen 400 mg three times a day"
+     },
+     {
+      "turn": 10,
+      "quote": "No, that's everything I take."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "No, I don't have any allergies to medicines that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Cannot do any gardening now and needs help putting socks on",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I can't do any gardening now and I need help putting my socks on"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants to know whether he has slipped a disc and whether he needs a scan",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I want to know whether I've slipped a disc, and whether I need to have a scan."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in the lower back",
+    "evidence": [
+     "I've been having pain in my lower back"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Came on out of nowhere about a month ago",
+    "evidence": [
+     "It came on out of nowhere about a month ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse with bending and getting out of the car; eases off when lying on the side or using a hot water bottle",
+    "evidence": [
+     "Bending and getting out of the car make it worse. It eases off when I lie on my side or use a hot water bottle."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Stiff, aching pain with the odd sharp twinge",
+    "evidence": [
+     "It's a stiff, aching pain, with the odd sharp twinge."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Lower back",
+    "evidence": [
+     "pain in my lower back"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 6 out of 10",
+    "evidence": [
+     "It's about a 6 out of 10."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Worst first thing in the morning",
+    "evidence": [
+     "It's worst first thing in the morning."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No fever, no weight loss, no numbness, no trouble with urination or bowels",
+    "evidence": [
+     "no fever or weight loss, and no numbness or trouble with my waterworks or bowels"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diabetes",
+    "evidence": [
+     "for my diabetes",
+     "I had a similar episode of back pain about 5 years ago, but it settled with physiotherapy."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes; ibuprofen 400 mg three times a day since back pain started",
+    "evidence": [
+     "gliclazide 80 mg twice a day and metformin 1 g twice a day for my diabetes. And since the back pain started, I've been taking ibuprofen 400 mg three times a day",
+     "No, that's everything I take."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "No, I don't have any allergies to medicines that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Cannot do any gardening now and needs help putting socks on",
+    "evidence": [
+     "I can't do any gardening now and I need help putting my socks on"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants to know whether he has slipped a disc and whether he needs a scan",
+    "evidence": [
+     "I want to know whether I've slipped a disc, and whether I need to have a scan."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 11,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_09",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 11,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 209,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6875,
+  "essential_completeness": 0.7777777777777778,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": false,
+   "F10": false,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

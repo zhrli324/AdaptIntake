@@ -1,0 +1,1102 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've just been feeling tired all the time, and I haven't got any energy. It's been going on for a while now and I'm not managing as well as I used to."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "There's a painkiller that makes me terribly sick — I can't quite recall the name of it offhand."
+  },
+  {
+   "role": "agent",
+   "text": "How much is the tiredness affecting your usual day-to-day activities?"
+  },
+  {
+   "role": "patient",
+   "text": "It's slowing me right down, to be honest. I've had to give up my swimming, and I'm not managing things around the house like I used to."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me what medicines you're taking now, including any that have been started or changed recently, and the dose if you know it?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a few tablets each day — something for my diabetes, one for my thyroid, one for indigestion, and I buy some painkillers for my shoulder. I couldn't tell you the doses, sorry."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had any operations or spent time in hospital?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think I've ever had an operation or been in hospital for anything."
+  },
+  {
+   "role": "agent",
+   "text": "How bad would you say your tiredness is these days: mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say it's on the worse side — more than mild, that's for certain."
+  },
+  {
+   "role": "agent",
+   "text": "Along with the tiredness, have you noticed anything else that's changed in how you've been feeling?"
+  },
+  {
+   "role": "patient",
+   "text": "I get more short of breath than I used to, especially going up hills, and a couple of friends have said I look a bit pale."
+  },
+  {
+   "role": "agent",
+   "text": "When you feel this tiredness, is it more in one part of your body, or does it feel like it's all over?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not in any one place — it's just a general sort of tiredness all over."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything you've noticed that seems to make your tiredness better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It tends to get worse as the day goes on — by the afternoon I'm really flagging."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first start feeling this tiredness?"
+  },
+  {
+   "role": "patient",
+   "text": "It's come on gradually — it's been creeping up on me for a while now."
+  },
+  {
+   "role": "agent",
+   "text": "What, if anything, worries you most about this tiredness?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm worried I won't be able to keep looking after my husband. He's got Parkinson's, and I do everything for him — if I keep feeling like this I don't know how I'll manage."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed if your medicines make your tiredness better, worse, or make no difference, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I really couldn't say — I've not noticed any difference one way or the other, to be honest."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me what the tiredness actually feels like for you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's hard to describe — it's just a heavy, worn-out feeling, like I've got nothing left in the tank. It's there all day really."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health problems that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had diabetes for a fair few years now, and I've also got an underactive thyroid. Those are the main things I see the doctor about."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed about how you've been feeling that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I sleep about seven hours, but I still wake up feeling unrefreshed. And I suppose my mood's been a bit flat with all the caring, if I'm honest."
+  },
+  {
+   "role": "agent",
+   "text": "Are you aware of any allergies or bad reactions to medicines, are there none that you know of, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, sorry — it's codeine. It makes me very sick if I take it."
+  },
+  {
+   "role": "agent",
+   "text": "Thinking about the tiredness and lack of energy, did that start suddenly, come on gradually, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on gradually, over about two months or so."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your health in the past that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "The diabetes has been going on for about twelve years now, so I'm fairly used to that. The thyroid trouble came along too, but I couldn't tell you exactly when."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed about how you've been feeling that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've not had any chest pain or lost any weight, and my bowels have been fine — nothing like that going on."
+  },
+  {
+   "role": "agent",
+   "text": "How bad would you say the tiredness is? Is it mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd put my energy at about 3 out of 10, if that helps. It's a big change for me — I used to swim twice a week and I've had to stop that."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Do you have any allergies or bad reactions to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How much is the tiredness affecting your usual day-to-day activities?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.3,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me what medicines you're taking now, including any that have been started or changed recently, and the dose if you know it?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you ever had any operations or spent time in hospital?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How bad would you say your tiredness is these days: mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Along with the tiredness, have you noticed anything else that's changed in how you've been feeling?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "When you feel this tiredness, is it more in one part of your body, or does it feel like it's all over?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything you've noticed that seems to make your tiredness better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "When did you first start feeling this tiredness?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.38,
+    "provocation": 0.34,
+    "quality": 0.34,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What, if anything, worries you most about this tiredness?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.34,
+    "quality": 0.34,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Have you noticed if your medicines make your tiredness better, worse, or make no difference, or are you not sure?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.34,
+    "quality": 0.34,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Can you tell me what the tiredness actually feels like for you?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Is there anything else about your past health problems that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "allergies": 0.3
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Is there anything else you've noticed about how you've been feeling that you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.16,
+    "allergies": 0.3
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Are you aware of any allergies or bad reactions to medicines, are there none that you know of, or are you not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.16,
+    "allergies": 0.3
+   },
+   "reason": "highest-priority gap: allergies (reported, vague; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Thinking about the tiredness and lack of energy, did that start suddenly, come on gradually, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "Is there anything else about your health in the past that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 18,
+   "turn": 18,
+   "text": "Is there anything else you've noticed about how you've been feeling that you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.14,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 19,
+   "turn": 19,
+   "text": "How bad would you say the tiredness is? Is it mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.1,
+    "past_history": 0.14,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Feeling tired all the time and having no energy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've just been feeling tired all the time, and I haven't got any energy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on gradually, over about two months",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been going on for a while now"
+     },
+     {
+      "turn": 10,
+      "quote": "It's come on gradually — it's been creeping up on me for a while now."
+     },
+     {
+      "turn": 17,
+      "quote": "It came on gradually, over about two months or so."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Medicines make no difference to the tiredness — has not noticed any change one way or the other",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I've not noticed any difference one way or the other"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A heavy, worn-out feeling, like having nothing left in the tank; hard to describe",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "it's just a heavy, worn-out feeling, like I've got nothing left in the tank"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Not in any one place; a general tiredness all over the body",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It's not in any one place — it's just a general sort of tiredness all over."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Energy at about 3 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'd say it's on the worse side — more than mild, that's for certain."
+     },
+     {
+      "turn": 20,
+      "quote": "I'd put my energy at about 3 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Present all day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "It tends to get worse as the day goes on — by the afternoon I'm really flagging."
+     },
+     {
+      "turn": 13,
+      "quote": "It's there all day really"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Getting more short of breath than before, especially going up hills; friends have said they look a bit pale; Mood has been a bit flat, which they attribute to all the caring.; No chest pain, no weight loss, and bowels have been fine — nothing of that sort going on",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I get more short of breath than I used to, especially going up hills, and a couple of friends have said I look a bit pale."
+     },
+     {
+      "turn": 15,
+      "quote": "my mood's been a bit flat with all the caring"
+     },
+     {
+      "turn": 19,
+      "quote": "I've not had any chest pain or lost any weight, and my bowels have been fine"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "No operations and no hospital stays; Has had diabetes for several years and also has an underactive thyroid; these are the main things they see the doctor about; Has had diabetes for about twelve years and is fairly used to it; also has thyroid trouble, though they cannot say exactly when that started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, I don't think I've ever had an operation or been in hospital for anything."
+     },
+     {
+      "turn": 14,
+      "quote": "I've had diabetes for a fair few years now, and I've also got an underactive thyroid. Those are the main things I see the doctor about."
+     },
+     {
+      "turn": 18,
+      "quote": "The diabetes has been going on for about twelve years now, so I'm fairly used to that. The thyroid trouble came along too, but I couldn't tell you exactly when."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets each day: something for diabetes, one for thyroid, one for indigestion, and buys painkillers for their shoulder; does not know the doses",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I take a few tablets each day — something for my diabetes, one for my thyroid, one for indigestion, and I buy some painkillers for my shoulder."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Allergic to codeine — taking it makes them very sick",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "There's a painkiller that makes me terribly sick — I can't quite recall the name of it offhand."
+     },
+     {
+      "turn": 16,
+      "quote": "it's codeine. It makes me very sick if I take it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Used to swim twice a week and has had to stop — a big change for them",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I'm not managing as well as I used to"
+     },
+     {
+      "turn": 3,
+      "quote": "It's slowing me right down, to be honest. I've had to give up my swimming, and I'm not managing things around the house like I used to."
+     },
+     {
+      "turn": 15,
+      "quote": "I sleep about seven hours, but I still wake up feeling unrefreshed."
+     },
+     {
+      "turn": 20,
+      "quote": "I used to swim twice a week and I've had to stop that"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried they won't be able to keep looking after their husband, who has Parkinson's and relies on them for everything; unsure how they will manage if the tiredness continues",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "I'm worried I won't be able to keep looking after my husband."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Feeling tired all the time and having no energy",
+    "evidence": [
+     "I've just been feeling tired all the time, and I haven't got any energy"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Medicines make no difference to the tiredness — has not noticed any change one way or the other",
+    "evidence": [
+     "I've not noticed any difference one way or the other"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A heavy, worn-out feeling, like having nothing left in the tank; hard to describe",
+    "evidence": [
+     "it's just a heavy, worn-out feeling, like I've got nothing left in the tank"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Not in any one place; a general tiredness all over the body",
+    "evidence": [
+     "It's not in any one place — it's just a general sort of tiredness all over."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Present all day",
+    "evidence": [
+     "It tends to get worse as the day goes on — by the afternoon I'm really flagging.",
+     "It's there all day really"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Getting more short of breath than before, especially going up hills; friends have said they look a bit pale; Mood has been a bit flat, which they attribute to all the caring.; No chest pain, no weight loss, and bowels have been fine — nothing of that sort going on",
+    "evidence": [
+     "I get more short of breath than I used to, especially going up hills, and a couple of friends have said I look a bit pale.",
+     "my mood's been a bit flat with all the caring",
+     "I've not had any chest pain or lost any weight, and my bowels have been fine"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "No operations and no hospital stays; Has had diabetes for several years and also has an underactive thyroid; these are the main things they see the doctor about; Has had diabetes for about twelve years and is fairly used to it; also has thyroid trouble, though they cannot say exactly when that started",
+    "evidence": [
+     "No, I don't think I've ever had an operation or been in hospital for anything.",
+     "I've had diabetes for a fair few years now, and I've also got an underactive thyroid. Those are the main things I see the doctor about.",
+     "The diabetes has been going on for about twelve years now, so I'm fairly used to that. The thyroid trouble came along too, but I couldn't tell you exactly when."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried they won't be able to keep looking after their husband, who has Parkinson's and relies on them for everything; unsure how they will manage if the tiredness continues",
+    "evidence": [
+     "I'm worried I won't be able to keep looking after my husband."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Came on gradually, over about two months",
+    "evidence": [
+     "It's been going on for a while now",
+     "It's come on gradually — it's been creeping up on me for a while now.",
+     "It came on gradually, over about two months or so."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Energy at about 3 out of 10",
+    "evidence": [
+     "I'd say it's on the worse side — more than mild, that's for certain.",
+     "I'd put my energy at about 3 out of 10"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Allergic to codeine — taking it makes them very sick",
+    "evidence": [
+     "There's a painkiller that makes me terribly sick — I can't quite recall the name of it offhand.",
+     "it's codeine. It makes me very sick if I take it."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Used to swim twice a week and has had to stop — a big change for them",
+    "evidence": [
+     "I'm not managing as well as I used to",
+     "It's slowing me right down, to be honest. I've had to give up my swimming, and I'm not managing things around the house like I used to.",
+     "I sleep about seven hours, but I still wake up feeling unrefreshed.",
+     "I used to swim twice a week and I've had to stop that"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes a few tablets each day: something for diabetes, one for thyroid, one for indigestion, and buys painkillers for their shoulder; does not know the doses",
+    "evidence": [
+     "I take a few tablets each day — something for my diabetes, one for my thyroid, one for indigestion, and I buy some painkillers for my shoulder."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 20,
+ "end_reason": "turn budget reached",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_06",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 20,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 453,
+  "end_reason": "turn budget reached",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5,
+  "essential_completeness": 0.6,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": false,
+   "F9": true,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": false,
+   "F16": true
+  },
+  "fidelity": 0.8333333333333334,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

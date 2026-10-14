@@ -1,0 +1,1088 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "This cough just won't go away."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "About three weeks ago, after a cold."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how this cough is affecting you day to day, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "My wife keeps telling me to get it checked."
+  },
+  {
+   "role": "agent",
+   "text": "What medicines are you taking now, including any new or changed ones, and what dose if you know it?"
+  },
+  {
+   "role": "patient",
+   "text": "The blue inhaler — I'm using it much more now."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an allergy or bad reaction to a medicine — yes, no, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, never had a reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any other health conditions that you've had for a long time?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got COPD — had it about eight years."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is your cough at the moment — would you say it's mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Maybe six out of ten — it's bad."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the cough, have you noticed anything else new or different going on with your health lately?"
+  },
+  {
+   "role": "patient",
+   "text": "Getting a bit more breathless walking to the shop."
+  },
+  {
+   "role": "agent",
+   "text": "When you cough, where in your body do you feel it most, and does it stay in one spot or spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "Can't say I feel it in one spot. My son's a builder, keeps fussing too."
+  },
+  {
+   "role": "agent",
+   "text": "What have you noticed about your cough over time — for example, when it tends to happen and whether anything seems to make it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Worst in the morning and at night."
+  },
+  {
+   "role": "agent",
+   "text": "You mentioned your lung condition — is there anything else from your past health, like other illnesses, operations, or hospital stays, that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Smoked twenty a day for forty years — gave it up ten years ago."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed whether anything you do, eat, drink, or take makes your cough better, makes it worse, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air and talking a lot set it off."
+  },
+  {
+   "role": "agent",
+   "text": "What does your cough feel like when it happens?"
+  },
+  {
+   "role": "patient",
+   "text": "Bringing up white-to-yellow phlegm, more than usual."
+  },
+  {
+   "role": "agent",
+   "text": "Other than feeling more breathless than usual, has anything else been different or bothering you along with the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "My wife's been sleeping in the spare room."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your health history you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Been on tablets for blood pressure for years — lisinopril."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add about the medicines you take?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got the purple one too — two puffs twice a day."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice the cough?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me how this cough is affecting you day to day, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "What medicines are you taking now, including any new or changed ones, and what dose if you know it?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.62,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you ever had an allergy or bad reaction to a medicine — yes, no, or are you not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "allergies": 0.62,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Do you have any other health conditions that you've had for a long time?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "How bad is your cough at the moment — would you say it's mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Besides the cough, have you noticed anything else new or different going on with your health lately?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "When you cough, where in your body do you feel it most, and does it stay in one spot or spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What have you noticed about your cough over time — for example, when it tends to happen and whether anything seems to make it better or worse?",
+   "slots": [
+    "provocation",
+    "timing"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "timing": 0.48,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: provocation, timing (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false,
+    "timing": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "You mentioned your lung condition — is there anything else from your past health, like other illnesses, operations, or hospital stays, that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.38,
+    "quality": 0.38,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Have you noticed whether anything you do, eat, drink, or take makes your cough better, makes it worse, or are you not sure?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.34,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "What does your cough feel like when it happens?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Other than feeling more breathless than usual, has anything else been different or bothering you along with the cough?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.29,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Is there anything else about your health history you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Is there anything else you’d like to add about the medicines you take?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.14,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that won't go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "This cough just won't go away."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three weeks ago, after a cold",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "About three weeks ago, after a cold."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Cold air and talking a lot set the cough off",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "Cold air and talking a lot set it off."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Brings up white-to-yellow phlegm, more than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "Bringing up white-to-yellow phlegm, more than usual."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Does not feel the cough in one spot",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "Can't say I feel it in one spot"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 6 out of 10 — described as bad",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "Maybe six out of ten — it's bad."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Cough is worst in the morning and at night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "Worst in the morning and at night."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "More breathless than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "Getting a bit more breathless"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has COPD, had it for about eight years; Smoked 20 cigarettes a day for forty years; stopped smoking ten years ago; Has been on blood pressure tablets for years",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I've got COPD — had it about eight years."
+     },
+     {
+      "turn": 11,
+      "quote": "Smoked twenty a day for forty years — gave it up ten years ago."
+     },
+     {
+      "turn": 15,
+      "quote": "Been on tablets for blood pressure for years"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Uses a blue inhaler, and is using it much more now; dose not stated; Lisinopril tablets for blood pressure, taken for years; dose not stated; Also uses a purple inhaler, two puffs twice a day; name not stated",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "The blue inhaler — I'm using it much more now."
+     },
+     {
+      "turn": 15,
+      "quote": "Been on tablets for blood pressure for years — lisinopril."
+     },
+     {
+      "turn": 16,
+      "quote": "I've got the purple one too — two puffs twice a day."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to any medicine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, never had a reaction to anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "His wife has been sleeping in the spare room (household/sleep arrangements changed since the cough)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "walking to the shop"
+     },
+     {
+      "turn": 14,
+      "quote": "My wife's been sleeping in the spare room."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "His wife keeps telling him to get the cough checked",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "My wife keeps telling me to get it checked."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that won't go away",
+    "evidence": [
+     "This cough just won't go away."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three weeks ago, after a cold",
+    "evidence": [
+     "About three weeks ago, after a cold."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Cold air and talking a lot set the cough off",
+    "evidence": [
+     "Cold air and talking a lot set it off."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Brings up white-to-yellow phlegm, more than usual",
+    "evidence": [
+     "Bringing up white-to-yellow phlegm, more than usual."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Does not feel the cough in one spot",
+    "evidence": [
+     "Can't say I feel it in one spot"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 6 out of 10 — described as bad",
+    "evidence": [
+     "Maybe six out of ten — it's bad."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Cough is worst in the morning and at night",
+    "evidence": [
+     "Worst in the morning and at night."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "More breathless than usual",
+    "evidence": [
+     "Getting a bit more breathless"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has COPD, had it for about eight years; Smoked 20 cigarettes a day for forty years; stopped smoking ten years ago; Has been on blood pressure tablets for years",
+    "evidence": [
+     "I've got COPD — had it about eight years.",
+     "Smoked twenty a day for forty years — gave it up ten years ago.",
+     "Been on tablets for blood pressure for years"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to any medicine",
+    "evidence": [
+     "No, never had a reaction to anything."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "His wife has been sleeping in the spare room (household/sleep arrangements changed since the cough)",
+    "evidence": [
+     "walking to the shop",
+     "My wife's been sleeping in the spare room."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "His wife keeps telling him to get the cough checked",
+    "evidence": [
+     "My wife keeps telling me to get it checked."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Uses a blue inhaler, and is using it much more now; dose not stated; Lisinopril tablets for blood pressure, taken for years; dose not stated; Also uses a purple inhaler, two puffs twice a day; name not stated",
+    "evidence": [
+     "The blue inhaler — I'm using it much more now.",
+     "Been on tablets for blood pressure for years — lisinopril.",
+     "I've got the purple one too — two puffs twice a day."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 16,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.7,
+   "score": 0.65,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.15,
+   "score": 0.356,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.528,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.464,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.582,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.641,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.671,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.685,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.543,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.621,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.661,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.53,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.465,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.308,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_05",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 16,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 147,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6666666666666666,
+  "essential_completeness": 0.7,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": false,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": false,
+   "F13": true,
+   "F14": true,
+   "F15": false
+  },
+  "fidelity": 0.8333333333333334,
+  "accuracy": 0.9166666666666666,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

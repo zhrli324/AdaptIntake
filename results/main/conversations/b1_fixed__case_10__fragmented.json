@@ -1,0 +1,701 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Getting out of breath on the stairs."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "It's come on slowly, maybe three months."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's worse going uphill."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "I have to stop halfway up to get my breath."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "Just short of breath, no pain."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "My son does the garden now, I can't manage it."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "Only when I move about, not when sitting."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "My ankles get a bit puffy by evening."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had a funny heart rhythm for years."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I take bisoprolol once a day."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, none that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "My memory's not what it used to be."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I worry about getting up the stairs to bed."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": true
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": true
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Getting out of breath on the stairs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Getting out of breath on the stairs."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Gradual onset, about three months ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It's come on slowly, maybe three months."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Brought on by moving about; not present when sitting",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Getting out of breath on the stairs."
+     },
+     {
+      "turn": 3,
+      "quote": "It's worse going uphill."
+     },
+     {
+      "turn": 7,
+      "quote": "Only when I move about, not when sitting."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "No specific location — just short of breath, no pain anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Just short of breath, no pain."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Breathlessness bad enough that they must stop halfway up the stairs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I have to stop halfway up to get my breath."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes on only when moving about; not present when sitting/at rest",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "Only when I move about, not when sitting."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No pain; Ankles get a bit puffy by the evening",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "no pain"
+     },
+     {
+      "turn": 8,
+      "quote": "My ankles get a bit puffy by evening."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has had an irregular/funny heart rhythm for years",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've had a funny heart rhythm for years."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes bisoprolol once a day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I take bisoprolol once a day."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, none that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Can no longer manage the garden; their son does it now",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I have to stop halfway up to get my breath."
+     },
+     {
+      "turn": 6,
+      "quote": "My son does the garden now, I can't manage it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about getting up the stairs to bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I worry about getting up the stairs to bed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Getting out of breath on the stairs",
+    "evidence": [
+     "Getting out of breath on the stairs."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Gradual onset, about three months ago",
+    "evidence": [
+     "It's come on slowly, maybe three months."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Brought on by moving about; not present when sitting",
+    "evidence": [
+     "Getting out of breath on the stairs.",
+     "It's worse going uphill.",
+     "Only when I move about, not when sitting."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "No specific location — just short of breath, no pain anywhere",
+    "evidence": [
+     "Just short of breath, no pain."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Breathlessness bad enough that they must stop halfway up the stairs",
+    "evidence": [
+     "I have to stop halfway up to get my breath."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes on only when moving about; not present when sitting/at rest",
+    "evidence": [
+     "Only when I move about, not when sitting."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No pain; Ankles get a bit puffy by the evening",
+    "evidence": [
+     "no pain",
+     "My ankles get a bit puffy by evening."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has had an irregular/funny heart rhythm for years",
+    "evidence": [
+     "I've had a funny heart rhythm for years."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes bisoprolol once a day",
+    "evidence": [
+     "I take bisoprolol once a day."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, none that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Can no longer manage the garden; their son does it now",
+    "evidence": [
+     "I have to stop halfway up to get my breath.",
+     "My son does the garden now, I can't manage it."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about getting up the stairs to bed",
+    "evidence": [
+     "I worry about getting up the stairs to bed."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_10",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 3,
+  "unnecessary_rate": 0.23076923076923078,
+  "patient_words": 97,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5333333333333333,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": false,
+   "F11": false,
+   "F12": true,
+   "F13": false,
+   "F14": false,
+   "F15": true,
+   "F16": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.08333333333333333,
+  "leading_details": [
+   {
+    "index": 4,
+    "reason": "Asking whether 'it' spreads implies radiating pain or a spreading sensation not previously reported; the patient responded by denying pain."
+   }
+  ]
+ }
+}

@@ -1,0 +1,704 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, dear, I've been having trouble going to the toilet. It's been a bit of a bother lately."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been going on a while now. I'm not too sure exactly when it started."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I haven't been drinking as much as I used to. I cut back so I don't have to get up in the night."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "The stools come out hard, like little pellets. And I have to strain quite a bit, which is uncomfortable."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's down in my lower tummy, and it feels all bloated. It doesn't really spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, I couldn't really put a number on it. It's uncomfortable, but not terrible."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not there all the time. It sort of comes and goes, mostly when I try to go."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else really. I haven't seen any blood or anything black in the stools, and I haven't been sick."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I do see the doctor. I've got arthritis in my back and knees, and I have an irregular heartbeat."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I take a few tablets for my heart and my bones, and some painkillers. I can't remember the names of them all, dear."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not that I know of, dear. I've never had a reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I still manage around the house, though the bloating and straining do slow me down a bit. My son helps out with most things anyway."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I do worry a bit. I'd like something to get things moving, and I hope it isn't anything serious, like cancer."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Trouble going to the toilet",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having trouble going to the toilet"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started lately; Going on a while now; patient is not sure exactly when it started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been a bit of a bother lately"
+     },
+     {
+      "turn": 2,
+      "quote": "it's been going on a while now. I'm not too sure exactly when it started."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Cut back on how much they drink fluids so they don't have to get up in the night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I cut back so I don't have to get up in the night."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Also feels all bloated in the lower tummy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "The stools come out hard, like little pellets. And I have to strain quite a bit"
+     },
+     {
+      "turn": 5,
+      "quote": "it feels all bloated"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Lower tummy (lower abdomen); does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's down in my lower tummy, and it feels all bloated. It doesn't really spread anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Uncomfortable but not terrible; unable to put a number on it",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "which is uncomfortable"
+     },
+     {
+      "turn": 6,
+      "quote": "I couldn't really put a number on it. It's uncomfortable, but not terrible."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Not there all the time; comes and goes, mostly when trying to go to the toilet",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It's not there all the time. It sort of comes and goes, mostly when I try to go."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No other symptoms; no blood or black stools, and no vomiting",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "No, nothing else really. I haven't seen any blood or anything black in the stools, and I haven't been sick."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Arthritis in the back and knees; irregular heartbeat; sees a doctor regularly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got arthritis in my back and knees, and I have an irregular heartbeat."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets for heart and bones, and some painkillers. Cannot remember the names.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I take a few tablets for my heart and my bones, and some painkillers. I can't remember the names of them all, dear."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; never had a reaction to anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, not that I know of, dear. I've never had a reaction to anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Still manages around the house, but the bloating and straining slow them down a bit; son helps out with most things.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I still manage around the house, though the bloating and straining do slow me down a bit."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried a bit; would like something to get things moving and hopes it is not anything serious, like cancer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I'd like something to get things moving, and I hope it isn't anything serious, like cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Trouble going to the toilet",
+    "evidence": [
+     "I've been having trouble going to the toilet"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started lately; Going on a while now; patient is not sure exactly when it started",
+    "evidence": [
+     "It's been a bit of a bother lately",
+     "it's been going on a while now. I'm not too sure exactly when it started."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Cut back on how much they drink fluids so they don't have to get up in the night",
+    "evidence": [
+     "I cut back so I don't have to get up in the night."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Also feels all bloated in the lower tummy",
+    "evidence": [
+     "The stools come out hard, like little pellets. And I have to strain quite a bit",
+     "it feels all bloated"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Lower tummy (lower abdomen); does not spread anywhere else",
+    "evidence": [
+     "It's down in my lower tummy, and it feels all bloated. It doesn't really spread anywhere else."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Not there all the time; comes and goes, mostly when trying to go to the toilet",
+    "evidence": [
+     "It's not there all the time. It sort of comes and goes, mostly when I try to go."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No other symptoms; no blood or black stools, and no vomiting",
+    "evidence": [
+     "No, nothing else really. I haven't seen any blood or anything black in the stools, and I haven't been sick."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Arthritis in the back and knees; irregular heartbeat; sees a doctor regularly",
+    "evidence": [
+     "I've got arthritis in my back and knees, and I have an irregular heartbeat."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a few tablets for heart and bones, and some painkillers. Cannot remember the names.",
+    "evidence": [
+     "I take a few tablets for my heart and my bones, and some painkillers. I can't remember the names of them all, dear."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; never had a reaction to anything",
+    "evidence": [
+     "No, not that I know of, dear. I've never had a reaction to anything."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Still manages around the house, but the bloating and straining slow them down a bit; son helps out with most things.",
+    "evidence": [
+     "I still manage around the house, though the bloating and straining do slow me down a bit."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried a bit; would like something to get things moving and hopes it is not anything serious, like cancer",
+    "evidence": [
+     "I'd like something to get things moving, and I hope it isn't anything serious, like cancer."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "Mentioned, but not specific: Uncomfortable but not terrible; unable to put a number on it",
+    "evidence": [
+     "which is uncomfortable",
+     "I couldn't really put a number on it. It's uncomfortable, but not terrible."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_04",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 254,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.4,
+  "essential_completeness": 0.2222222222222222,
+  "captured_facts": {
+   "F1": false,
+   "F2": false,
+   "F3": false,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

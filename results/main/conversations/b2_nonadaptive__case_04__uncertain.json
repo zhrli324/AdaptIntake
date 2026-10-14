@@ -1,0 +1,828 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've been having trouble going to the toilet — opening my bowels much less often, and I have to strain a lot."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice you were having trouble going to the toilet?"
+  },
+  {
+   "role": "patient",
+   "text": "It's been going on for a while now, I'm not quite sure exactly."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies, or has any medicine ever given you a bad reaction?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so — I've never had a bad reaction to any medicine."
+  },
+  {
+   "role": "agent",
+   "text": "How much is this affecting your day-to-day life?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not too bad, but it does make me feel uncomfortable and a bit bloated in my tummy."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment — either ones you take regularly, or anything new or changed recently?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I take a few tablets — some for my heart, and some painkillers for my back."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had any operations or stayed in hospital for anything?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think I've ever had an operation or stayed in hospital."
+  },
+  {
+   "role": "agent",
+   "text": "How bad would you say the trouble going to the toilet is — mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It's uncomfortable, I'd say somewhere in the middle — not terrible, but not nothing either."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you feel this discomfort the most, and does it stay in one place or spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly in my lower tummy, and it just stays there."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything you eat or drink that seems to make it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not really sure. I have been drinking less than I used to, I suppose."
+  },
+  {
+   "role": "agent",
+   "text": "You mentioned feeling a bit bloated in your tummy — is there anything else you've noticed going on with your body that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else really — no blood or anything like that, and I haven't been sick."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about the trouble you're having going to the toilet?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd just like something to get things moving again, really. And I suppose I do worry a bit that it could be something serious."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else from your past health — like other illnesses or ongoing conditions — that you think I should know about?"
+  },
+  {
+   "role": "patient",
+   "text": "I have arthritis in my back and knees, and I've got an irregular heartbeat — the doctor told me about that some time ago."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your health from the past — any other conditions or illnesses — that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all I can think of — just the arthritis and the irregular heartbeat."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment — ones you take regularly, any that have been started or changed recently, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I take a couple of tablets for my heart, and I was started on some strong painkillers for my back about a month ago — co-codamol, the doctor gave me those."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice you were having trouble going to the toilet?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Do you have any allergies, or has any medicine ever given you a bad reaction?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much is this affecting your day-to-day life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Are you taking any medicines at the moment — either ones you take regularly, or anything new or changed recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.4,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Have you ever had any operations or stayed in hospital for anything?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.4,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "How bad would you say the trouble going to the toilet is — mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Where do you feel this discomfort the most, and does it stay in one place or spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Have you noticed anything you eat or drink that seems to make it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "You mentioned feeling a bit bloated in your tummy — is there anything else you've noticed going on with your body that we haven't talked about yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What worries you most about the trouble you're having going to the toilet?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else from your past health — like other illnesses or ongoing conditions — that you think I should know about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.34,
+    "medications": 0.16,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything else about your health from the past — any other conditions or illnesses — that we haven't talked about yet?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.24,
+    "medications": 0.16,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Are you taking any medicines at the moment — ones you take regularly, any that have been started or changed recently, or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.16,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Trouble going to the toilet — opening bowels much less often and having to strain a lot",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having trouble going to the toilet"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It's been going on for a while now, I'm not quite sure exactly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I'm not really sure. I have been drinking less than I used to, I suppose."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Has to strain a lot when opening bowels",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I have to strain a lot"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Mostly in the lower tummy; stays in one place and does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It's mostly in my lower tummy, and it just stays there."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Somewhere in the middle — uncomfortable, not terrible but not nothing",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It's uncomfortable, I'd say somewhere in the middle — not terrible, but not nothing either."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Opening bowels much less often than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "opening my bowels much less often"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling a bit bloated in the tummy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "a bit bloated in my tummy"
+     },
+     {
+      "turn": 10,
+      "quote": "No, nothing else really — no blood or anything like that, and I haven't been sick."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "No operations and no hospital stays; Has arthritis in the back and knees, and an irregular heartbeat (told by a doctor some time ago)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "No, I don't think I've ever had an operation or stayed in hospital."
+     },
+     {
+      "turn": 12,
+      "quote": "I have arthritis in my back and knees, and I've got an irregular heartbeat"
+     },
+     {
+      "turn": 13,
+      "quote": "No, that's all I can think of — just the arthritis and the irregular heartbeat."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets — some for the heart and some painkillers for back pain (names not given); Takes a couple of tablets for the heart (names not given); was started on strong painkillers for the back about a month ago — co-codamol, given by the doctor",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I take a few tablets — some for my heart, and some painkillers for my back"
+     },
+     {
+      "turn": 14,
+      "quote": "I take a couple of tablets for my heart, and I was started on some strong painkillers for my back about a month ago — co-codamol, the doctor gave me those."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; has never had a bad reaction to any medicine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, I don't think so — I've never had a bad reaction to any medicine."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Not too bad day-to-day, but makes them feel uncomfortable",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's not too bad, but it does make me feel uncomfortable"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Would just like something to get things moving again; also worries a bit that it could be something serious",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "I'd just like something to get things moving again, really. And I suppose I do worry a bit that it could be something serious."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Trouble going to the toilet — opening bowels much less often and having to strain a lot",
+    "evidence": [
+     "I've been having trouble going to the toilet"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Has to strain a lot when opening bowels",
+    "evidence": [
+     "I have to strain a lot"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Mostly in the lower tummy; stays in one place and does not spread anywhere else",
+    "evidence": [
+     "It's mostly in my lower tummy, and it just stays there."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Somewhere in the middle — uncomfortable, not terrible but not nothing",
+    "evidence": [
+     "It's uncomfortable, I'd say somewhere in the middle — not terrible, but not nothing either."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Opening bowels much less often than usual",
+    "evidence": [
+     "opening my bowels much less often"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling a bit bloated in the tummy",
+    "evidence": [
+     "a bit bloated in my tummy",
+     "No, nothing else really — no blood or anything like that, and I haven't been sick."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "No operations and no hospital stays; Has arthritis in the back and knees, and an irregular heartbeat (told by a doctor some time ago)",
+    "evidence": [
+     "No, I don't think I've ever had an operation or stayed in hospital.",
+     "I have arthritis in my back and knees, and I've got an irregular heartbeat",
+     "No, that's all I can think of — just the arthritis and the irregular heartbeat."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; has never had a bad reaction to any medicine",
+    "evidence": [
+     "No, I don't think so — I've never had a bad reaction to any medicine."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Would just like something to get things moving again; also worries a bit that it could be something serious",
+    "evidence": [
+     "I'd just like something to get things moving again, really. And I suppose I do worry a bit that it could be something serious."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "It's been going on for a while now, I'm not quite sure exactly."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I'm not really sure. I have been drinking less than I used to, I suppose."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes a few tablets — some for the heart and some painkillers for back pain (names not given); Takes a couple of tablets for the heart (names not given); was started on strong painkillers for the back about a month ago — co-codamol, given by the doctor",
+    "evidence": [
+     "I take a few tablets — some for my heart, and some painkillers for my back",
+     "I take a couple of tablets for my heart, and I was started on some strong painkillers for my back about a month ago — co-codamol, the doctor gave me those."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Mentioned, but not specific: Not too bad day-to-day, but makes them feel uncomfortable",
+    "evidence": [
+     "It's not too bad, but it does make me feel uncomfortable"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 14,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_04",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 14,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 251,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.4666666666666667,
+  "essential_completeness": 0.4444444444444444,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": false,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

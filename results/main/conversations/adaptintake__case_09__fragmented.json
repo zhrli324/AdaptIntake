@@ -1,0 +1,1076 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Back's been playing up."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me when your back first started playing up, how it came on, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "Started ten days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how your back has been affecting you day to day, and what medicines you’re taking at the moment—including anything new or changed, and the doses if you know them?"
+  },
+  {
+   "role": "patient",
+   "text": "Can't do any gardening now."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any other health problems, operations, or hospital stays you’ve had in the past?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got type 2 diabetes."
+  },
+  {
+   "role": "agent",
+   "text": "Which of these fits best: you’ve had an allergy or bad reaction to a medicine, you haven’t had one, or you’re not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, never had a reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "How much is your back bothering you at the moment: not at all, a little, or a lot — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "About six out of ten."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me what medicines you take regularly and anything you’ve taken recently, including any new or changed ones, and how much you take, if you know?"
+  },
+  {
+   "role": "patient",
+   "text": "Been taking ibuprofen from the chemist."
+  },
+  {
+   "role": "agent",
+   "text": "Have you had any other symptoms along with your back problem?"
+  },
+  {
+   "role": "patient",
+   "text": "No numbness round the back passage."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything you've noticed that seems to make your back feel better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "My wife reckons I overdid it in the garden."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me whether your back problem is there all the time or if it comes and goes?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a stiff ache, there all the time."
+  },
+  {
+   "role": "agent",
+   "text": "What’s on your mind most about your back, and what are you hoping to get from this visit?"
+  },
+  {
+   "role": "patient",
+   "text": "Wondering if I've slipped a disc. Do I need a scan?"
+  },
+  {
+   "role": "agent",
+   "text": "Besides your diabetes, is there anything else about your past health you’d like to add — like other long-term health problems, past illnesses, operations, or hospital stays?"
+  },
+  {
+   "role": "patient",
+   "text": "Had the same thing five years back."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed going on with your body since your back problem started?"
+  },
+  {
+   "role": "patient",
+   "text": "No weakness in my legs."
+  },
+  {
+   "role": "agent",
+   "text": "Other than your diabetes and the back problem you had five years ago, is there anything else about your past health you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else. My tomatoes won the village show last year."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the ibuprofen you got from the chemist, are you taking any other medicines at the moment, either regularly or every now and then?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, metformin."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed with your back problem that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Need help getting my socks on."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me when your back first started playing up, how it came on, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me how your back has been affecting you day to day, and what medicines you’re taking at the moment—including anything new or changed, and the doses if you know them?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me about any other health problems, operations, or hospital stays you’ve had in the past?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.59,
+    "allergies": 0.64,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.65)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Which of these fits best: you’ve had an allergy or bad reaction to a medicine, you haven’t had one, or you’re not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How much is your back bothering you at the moment: not at all, a little, or a lot — or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Could you tell me what medicines you take regularly and anything you’ve taken recently, including any new or changed ones, and how much you take, if you know?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.39,
+    "medications": 0.59,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.59)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Have you had any other symptoms along with your back problem?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.24,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything you've noticed that seems to make your back feel better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.24,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Can you tell me whether your back problem is there all the time or if it comes and goes?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.24,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What’s on your mind most about your back, and what are you hoping to get from this visit?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.31,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Besides your diabetes, is there anything else about your past health you’d like to add — like other long-term health problems, past illnesses, operations, or hospital stays?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.31
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything else you’ve noticed going on with your body since your back problem started?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Other than your diabetes and the back problem you had five years ago, is there anything else about your past health you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Besides the ibuprofen you got from the chemist, are you taking any other medicines at the moment, either regularly or every now and then?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Is there anything else you’ve noticed with your back problem that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "medications": 0.14
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Back has been playing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Back's been playing up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started ten days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Started ten days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Wife thinks he overdid it in the garden, suggesting gardening made it worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "My wife reckons I overdid it in the garden."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Stiff ache",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "It's a stiff ache"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Back's been playing up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About six out of ten",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "About six out of ten"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "There all the time (constant)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "there all the time"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No numbness around the back passage; No weakness in the legs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "No numbness round the back passage."
+     },
+     {
+      "turn": 13,
+      "quote": "No weakness in my legs."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Type 2 diabetes; Had the same back problem five years ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I've got type 2 diabetes."
+     },
+     {
+      "turn": 12,
+      "quote": "Had the same thing five years back."
+     },
+     {
+      "turn": 14,
+      "quote": "No, nothing else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Taking ibuprofen obtained from the chemist (dose not stated); Also taking metformin",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "Been taking ibuprofen from the chemist."
+     },
+     {
+      "turn": 15,
+      "quote": "Yes, metformin."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, never had a reaction to anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Unable to do gardening; needs help getting his socks on",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Can't do any gardening now."
+     },
+     {
+      "turn": 16,
+      "quote": "Need help getting my socks on."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wondering whether he has slipped a disc and whether he needs a scan",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "Wondering if I've slipped a disc. Do I need a scan?"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Back has been playing up",
+    "evidence": [
+     "Back's been playing up"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started ten days ago",
+    "evidence": [
+     "Started ten days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Wife thinks he overdid it in the garden, suggesting gardening made it worse",
+    "evidence": [
+     "My wife reckons I overdid it in the garden."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Stiff ache",
+    "evidence": [
+     "It's a stiff ache"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Back",
+    "evidence": [
+     "Back's been playing up"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About six out of ten",
+    "evidence": [
+     "About six out of ten"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "There all the time (constant)",
+    "evidence": [
+     "there all the time"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No numbness around the back passage; No weakness in the legs",
+    "evidence": [
+     "No numbness round the back passage.",
+     "No weakness in my legs."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Type 2 diabetes; Had the same back problem five years ago",
+    "evidence": [
+     "I've got type 2 diabetes.",
+     "Had the same thing five years back.",
+     "No, nothing else."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Taking ibuprofen obtained from the chemist (dose not stated); Also taking metformin",
+    "evidence": [
+     "Been taking ibuprofen from the chemist.",
+     "Yes, metformin."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to medicines",
+    "evidence": [
+     "No, never had a reaction to anything."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Unable to do gardening; needs help getting his socks on",
+    "evidence": [
+     "Can't do any gardening now.",
+     "Need help getting my socks on."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wondering whether he has slipped a disc and whether he needs a scan",
+    "evidence": [
+     "Wondering if I've slipped a disc. Do I need a scan?"
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 16,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.75,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.725,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.631,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.666,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.533,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.466,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.583,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.792,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.746,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.573,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.486,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.593,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.497,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.448,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_09",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 16,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 101,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6875,
+  "essential_completeness": 0.6666666666666666,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": false,
+   "F8": false,
+   "F9": true,
+   "F10": true,
+   "F11": false,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

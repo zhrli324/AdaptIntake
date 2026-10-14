@@ -1,0 +1,744 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's my sleep, really. I just can't seem to get a proper night's rest anymore, and it's wearing me down. I was hoping the doctor could give me something to help me sleep properly."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "It started about three months ago, around the time I retired. Before that I slept fine, so it's been a bit of a shock to the system."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "If I've been for a long walk during the day, I sleep a bit better. But if I sit up late watching TV, it's worse — I seem to wake even earlier those nights."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, it's not that I struggle to fall asleep — I nod off fine at about 11. The problem is I wake up at 3 or 4 in the morning and then just can't get back off again. So I'm lucky if I get four hours, and I wake up feeling exhausted."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not sure I follow — there's no pain or anything like that. It's just that I wake up too early and can't get back to sleep. I haven't noticed anything spreading anywhere."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd put it at about a 7 out of 10. Some nights are better than others, but most mornings I feel pretty rough."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's most nights, to be honest. I can't remember the last time I slept through to a reasonable hour."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "My mood's been a bit low at times since I retired, if I'm honest. Nothing dramatic — I've no thoughts of harming myself or anything like that — but I do feel a bit flat some days. And I'm often too tired to get down to my allotment, and I end up dozing in the chair in the afternoon."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've got high blood pressure and an enlarged prostate, so I see the doctor about those. I take losartan 50 mg once a day for the blood pressure, and tamsulosin at night for the prostate."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I take losartan 50 mg once a day and tamsulosin at night for the prostate. And for the last three weeks or so I've been getting some over-the-counter sleeping tablets from the pharmacy — diphenhydramine, most nights."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I'm not allergic to anything as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, a fair bit really. I'm too tired to get on with my allotment, which I used to enjoy, and I keep dozing off in the chair in the afternoon. It's not like me at all."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "The main thing is I'd just like the doctor to give me something proper for sleeping. These tablets from the pharmacy aren't really doing the job, and I want to get back to sleeping properly again."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": true
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cannot get a proper night's rest / trouble sleeping",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I just can't seem to get a proper night's rest anymore"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three months ago, around the time they retired; they slept fine before that",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It started about three months ago, around the time I retired."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "A long walk during the day makes them sleep a bit better; sitting up late watching TV makes it worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "If I've been for a long walk during the day, I sleep a bit better. But if I sit up late watching TV, it's worse"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Not a problem falling asleep — they nod off fine; the problem is waking in the early hours and not being able to get back to sleep",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "it's not that I struggle to fall asleep — I nod off fine at about 11. The problem is I wake up at 3 or 4 in the morning and then just can't get back off again"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "No pain or any specific location; nothing spreads anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "there's no pain or anything like that"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 7 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'd put it at about a 7 out of 10."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Happens most nights; they rarely sleep through to a reasonable hour",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I seem to wake even earlier those nights"
+     },
+     {
+      "turn": 4,
+      "quote": "I nod off fine at about 11. The problem is I wake up at 3 or 4 in the morning"
+     },
+     {
+      "turn": 6,
+      "quote": "Some nights are better than others"
+     },
+     {
+      "turn": 7,
+      "quote": "It's most nights, to be honest. I can't remember the last time I slept through to a reasonable hour."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Wakes up feeling exhausted; Most mornings they feel pretty rough; Mood has been a bit low at times since retiring, feeling a bit flat some days; no thoughts of harming themselves; often too tired and dozes off in the chair in the afternoon",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I wake up feeling exhausted"
+     },
+     {
+      "turn": 6,
+      "quote": "most mornings I feel pretty rough"
+     },
+     {
+      "turn": 8,
+      "quote": "My mood's been a bit low at times since I retired, if I'm honest."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure and an enlarged prostate, for which they see the doctor regularly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got high blood pressure and an enlarged prostate, so I see the doctor about those"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Losartan 50 mg once a day for blood pressure; tamsulosin at night for the prostate; Losartan 50 mg once a day, tamsulosin at night for the prostate, and over-the-counter diphenhydramine sleeping tablets most nights for the last three weeks.; The over-the-counter tablets from the pharmacy are not really doing the job",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I take losartan 50 mg once a day for the blood pressure, and tamsulosin at night for the prostate"
+     },
+     {
+      "turn": 10,
+      "quote": "I take losartan 50 mg once a day and tamsulosin at night for the prostate. And for the last three weeks or so I've been getting some over-the-counter sleeping tablets from the pharmacy — diphenhydramine, most nights."
+     },
+     {
+      "turn": 13,
+      "quote": "These tablets from the pharmacy aren't really doing the job"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, I'm not allergic to anything as far as I know."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Too tired to get on with their allotment, which they used to enjoy, and keeps dozing off in the chair in the afternoon; says this is not like them at all",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's wearing me down"
+     },
+     {
+      "turn": 8,
+      "quote": "I'm often too tired to get down to my allotment, and I end up dozing in the chair in the afternoon."
+     },
+     {
+      "turn": 12,
+      "quote": "I'm too tired to get on with my allotment, which I used to enjoy, and I keep dozing off in the chair in the afternoon."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants the doctor to give them something proper for sleeping, because the tablets from the pharmacy are not really doing the job and they want to get back to sleeping properly again",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I was hoping the doctor could give me something to help me sleep properly"
+     },
+     {
+      "turn": 13,
+      "quote": "I'd just like the doctor to give me something proper for sleeping."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cannot get a proper night's rest / trouble sleeping",
+    "evidence": [
+     "I just can't seem to get a proper night's rest anymore"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three months ago, around the time they retired; they slept fine before that",
+    "evidence": [
+     "It started about three months ago, around the time I retired."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "A long walk during the day makes them sleep a bit better; sitting up late watching TV makes it worse",
+    "evidence": [
+     "If I've been for a long walk during the day, I sleep a bit better. But if I sit up late watching TV, it's worse"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Not a problem falling asleep — they nod off fine; the problem is waking in the early hours and not being able to get back to sleep",
+    "evidence": [
+     "it's not that I struggle to fall asleep — I nod off fine at about 11. The problem is I wake up at 3 or 4 in the morning and then just can't get back off again"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "No pain or any specific location; nothing spreads anywhere",
+    "evidence": [
+     "there's no pain or anything like that"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 7 out of 10",
+    "evidence": [
+     "I'd put it at about a 7 out of 10."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Happens most nights; they rarely sleep through to a reasonable hour",
+    "evidence": [
+     "I seem to wake even earlier those nights",
+     "I nod off fine at about 11. The problem is I wake up at 3 or 4 in the morning",
+     "Some nights are better than others",
+     "It's most nights, to be honest. I can't remember the last time I slept through to a reasonable hour."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure and an enlarged prostate, for which they see the doctor regularly",
+    "evidence": [
+     "I've got high blood pressure and an enlarged prostate, so I see the doctor about those"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Losartan 50 mg once a day for blood pressure; tamsulosin at night for the prostate; Losartan 50 mg once a day, tamsulosin at night for the prostate, and over-the-counter diphenhydramine sleeping tablets most nights for the last three weeks.; The over-the-counter tablets from the pharmacy are not really doing the job",
+    "evidence": [
+     "I take losartan 50 mg once a day for the blood pressure, and tamsulosin at night for the prostate",
+     "I take losartan 50 mg once a day and tamsulosin at night for the prostate. And for the last three weeks or so I've been getting some over-the-counter sleeping tablets from the pharmacy — diphenhydramine, most nights.",
+     "These tablets from the pharmacy aren't really doing the job"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, I'm not allergic to anything as far as I know."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants the doctor to give them something proper for sleeping, because the tablets from the pharmacy are not really doing the job and they want to get back to sleeping properly again",
+    "evidence": [
+     "I was hoping the doctor could give me something to help me sleep properly",
+     "I'd just like the doctor to give me something proper for sleeping."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "associated_symptoms",
+    "text": "Wakes up feeling exhausted; Most mornings they feel pretty rough; Mood has been a bit low at times since retiring, feeling a bit flat some days; no thoughts of harming themselves; often too tired and dozes off in the chair in the afternoon",
+    "evidence": [
+     "I wake up feeling exhausted",
+     "most mornings I feel pretty rough",
+     "My mood's been a bit low at times since I retired, if I'm honest."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Too tired to get on with their allotment, which they used to enjoy, and keeps dozing off in the chair in the afternoon; says this is not like them at all",
+    "evidence": [
+     "it's wearing me down",
+     "I'm often too tired to get down to my allotment, and I end up dozing in the chair in the afternoon.",
+     "I'm too tired to get on with my allotment, which I used to enjoy, and I keep dozing off in the chair in the afternoon."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_08",
+ "persona": "clear",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 3,
+  "unnecessary_rate": 0.23076923076923078,
+  "patient_words": 437,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.8,
+  "essential_completeness": 0.75,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F11": true,
+   "F12": false,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.08333333333333333,
+  "leading_details": [
+   {
+    "index": 4,
+    "reason": "Presupposes a localized bodily sensation that can spread, which the patient had not mentioned, and implies a pain or sensory symptom with location and radiation."
+   }
+  ]
+ }
+}

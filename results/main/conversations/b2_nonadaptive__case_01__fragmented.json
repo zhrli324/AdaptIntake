@@ -1,0 +1,852 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I keep going dizzy when I stand up."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice the dizziness when you stand up?"
+  },
+  {
+   "role": "patient",
+   "text": "Started about ten days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an allergic reaction or a bad reaction to any medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "No, never had a problem with medicines."
+  },
+  {
+   "role": "agent",
+   "text": "How much does the dizziness when you stand up affect your daily activities?"
+  },
+  {
+   "role": "patient",
+   "text": "I've stopped going to my lunch club, dear."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything changed with your medicines recently, like a new one or a different dose?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I started a new blood-pressure tablet."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an operation?"
+  },
+  {
+   "role": "patient",
+   "text": "No, never had an operation."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the dizziness when you stand up? Would you say it's mild, moderate, or severe, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "About six out of ten. I nearly fell once."
+  },
+  {
+   "role": "agent",
+   "text": "When that dizzy feeling comes on, where in your body do you feel it most?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a swimmy, faint feeling in my head."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed along with the dizziness that you’d like to mention?"
+  },
+  {
+   "role": "patient",
+   "text": "No chest pain or anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about the dizziness?"
+  },
+  {
+   "role": "patient",
+   "text": "I think the new tablet's causing it."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add about your past health?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had high blood pressure for years."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you'd like to add about what you notice when you feel dizzy?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter comes round every Tuesday, she does my shopping."
+  },
+  {
+   "role": "agent",
+   "text": "Other than your high blood pressure, is there anything else about your past health you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got arthritis in both my hips."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed when you feel dizzy standing up?"
+  },
+  {
+   "role": "patient",
+   "text": "It settles if I sit back down a minute."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment: yes, either regularly or ones you've started or changed recently; no; or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, a water tablet each morning."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice the dizziness when you stand up?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Have you ever had an allergic reaction or a bad reaction to any medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much does the dizziness when you stand up affect your daily activities?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Has anything changed with your medicines recently, like a new one or a different dose?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Have you ever had an operation?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "How bad is the dizziness when you stand up? Would you say it's mild, moderate, or severe, or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "When that dizzy feeling comes on, where in your body do you feel it most?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.48,
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything else you’ve noticed along with the dizziness that you’d like to mention?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What worries you most about the dizziness?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you’d like to add about your past health?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else you'd like to add about what you notice when you feel dizzy?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Other than your high blood pressure, is there anything else about your past health you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Is there anything else you’ve noticed when you feel dizzy standing up?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "past_history": 0.14,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Are you taking any medicines at the moment: yes, either regularly or ones you've started or changed recently; no; or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.14,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Keeps going dizzy when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I keep going dizzy when I stand up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about ten days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Started about ten days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Sitting back down settles the dizziness within about a minute",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "when I stand up"
+     },
+     {
+      "turn": 14,
+      "quote": "It settles if I sit back down a minute."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Swimmy, faint feeling",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "dizzy"
+     },
+     {
+      "turn": 8,
+      "quote": "a swimmy, faint feeling"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the head",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "in my head"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About six out of ten",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "About six out of ten."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Recurring episodes, happening when standing up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "keep going dizzy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Nearly fell once; No chest pain or anything like that",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I nearly fell once."
+     },
+     {
+      "turn": 9,
+      "quote": "No chest pain or anything like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Never had an operation; Has had high blood pressure for years; Has arthritis in both hips",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "No, never had an operation."
+     },
+     {
+      "turn": 11,
+      "quote": "I've had high blood pressure for years."
+     },
+     {
+      "turn": 13,
+      "quote": "I've got arthritis in both my hips"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Started a new blood-pressure tablet (name not given); A water tablet each morning (name not given)",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I started a new blood-pressure tablet"
+     },
+     {
+      "turn": 15,
+      "quote": "a water tablet each morning"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; never had a problem with medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, never had a problem with medicines."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has stopped going to their lunch club",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I've stopped going to my lunch club, dear."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that the new blood-pressure tablet is causing the dizziness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I think the new tablet's causing it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Keeps going dizzy when standing up",
+    "evidence": [
+     "I keep going dizzy when I stand up."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about ten days ago",
+    "evidence": [
+     "Started about ten days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Sitting back down settles the dizziness within about a minute",
+    "evidence": [
+     "when I stand up",
+     "It settles if I sit back down a minute."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Swimmy, faint feeling",
+    "evidence": [
+     "dizzy",
+     "a swimmy, faint feeling"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the head",
+    "evidence": [
+     "in my head"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About six out of ten",
+    "evidence": [
+     "About six out of ten."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Recurring episodes, happening when standing up",
+    "evidence": [
+     "keep going dizzy"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Nearly fell once; No chest pain or anything like that",
+    "evidence": [
+     "I nearly fell once.",
+     "No chest pain or anything like that."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Never had an operation; Has had high blood pressure for years; Has arthritis in both hips",
+    "evidence": [
+     "No, never had an operation.",
+     "I've had high blood pressure for years.",
+     "I've got arthritis in both my hips"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; never had a problem with medicines",
+    "evidence": [
+     "No, never had a problem with medicines."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has stopped going to their lunch club",
+    "evidence": [
+     "I've stopped going to my lunch club, dear."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that the new blood-pressure tablet is causing the dizziness",
+    "evidence": [
+     "I think the new tablet's causing it."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Started a new blood-pressure tablet (name not given); A water tablet each morning (name not given)",
+    "evidence": [
+     "I started a new blood-pressure tablet",
+     "a water tablet each morning"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 15,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_01",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 15,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 110,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.4666666666666667,
+  "essential_completeness": 0.375,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": false,
+   "F13": false,
+   "F14": true,
+   "F15": false,
+   "F16": false
+  },
+  "fidelity": 0.9166666666666666,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

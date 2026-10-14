@@ -1,0 +1,727 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, it's a burning when I pass water, and I'm needing to go much more often than usual. It's been going on a little while now and it's getting tiresome."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been about two weeks now."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't say I've noticed anything in particular that makes a difference, no. It's just there, mostly when I'm passing water."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a stinging, burning sort of feeling when I go — I'd say about a 5 out of 10. Uncomfortable, but I'm managing."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "Just down below, when the water comes out. No, it doesn't spread anywhere — I've not had any back or side pain."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd put it at about a 5. Uncomfortable but manageable, really."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "The stinging is really just when I'm passing water. But the needing to go is fairly constant — I'm going about every hour during the day, and I'm up three or four times at night, when usually it's only once."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "The water looks cloudy and smells stronger than usual. I've not seen any blood, though. And I've not had a fever, shivers, or any sickness — my niece hasn't noticed me being confused or anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have an underactive thyroid, and I take a tablet for that. And I've got thin bones — I take something once a week for those. I had a water infection about a year ago too, but that cleared up with antibiotics."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I take a levothyroxine tablet, 75 micrograms, each morning for my thyroid. Then once a week I take an alendronic acid tablet, 70 mg, for my thin bones. And I use a vaginal cream from the hospital twice a week — I'm afraid I can't remember the name of it."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I'm allergic to trimethoprim — it gave me an itchy rash."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've stopped going to the residents' coffee morning. I'm worried I won't make it to the toilet in time."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I do think it's another water infection, like the one I had last year. I'm hoping I can get some antibiotics before the weekend comes."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": true
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": true
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": true
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Burning when passing water and needing to go much more often than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's a burning when I pass water, and I'm needing to go much more often than usual"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about two weeks ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's been about two weeks now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Has not noticed anything in particular that makes it better or worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I can't say I've noticed anything in particular that makes a difference, no."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A stinging, burning sort of feeling when passing water",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "a burning when I pass water"
+     },
+     {
+      "turn": 4,
+      "quote": "It's a stinging, burning sort of feeling when I go"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Down below, when the water comes out; does not spread anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Just down below, when the water comes out. No, it doesn't spread anywhere"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About a 5 out of 10; uncomfortable but manageable",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'd say about a 5 out of 10. Uncomfortable, but I'm managing."
+     },
+     {
+      "turn": 6,
+      "quote": "I'd put it at about a 5. Uncomfortable but manageable, really."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "The stinging is only when passing water, but the need to go is fairly constant — passing water about every hour during the day and up three or four times at night (usually only once)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been going on a little while now"
+     },
+     {
+      "turn": 7,
+      "quote": "The stinging is really just when I'm passing water. But the needing to go is fairly constant — I'm going about every hour during the day, and I'm up three or four times at night, when usually it's only once."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No back or side pain; Urine looks cloudy and smells stronger than usual; no blood seen; no fever, shivers, sickness, or confusion noticed (niece has not noticed any confusion)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I've not had any back or side pain"
+     },
+     {
+      "turn": 8,
+      "quote": "The water looks cloudy and smells stronger than usual. I've not seen any blood, though. And I've not had a fever, shivers, or any sickness"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Underactive thyroid; thin bones; had a water infection about a year ago that cleared up with antibiotics",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I have an underactive thyroid"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a tablet for an underactive thyroid, and something once a week for thin bones; Levothyroxine 75 micrograms each morning for thyroid; alendronic acid 70 mg once a week for thin bones; a vaginal cream from the hospital twice a week (cannot remember the name)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I take a tablet for that. And I've got thin bones — I take something once a week for those."
+     },
+     {
+      "turn": 10,
+      "quote": "I take a levothyroxine tablet, 75 micrograms, each morning for my thyroid. Then once a week I take an alendronic acid tablet, 70 mg, for my thin bones. And I use a vaginal cream from the hospital twice a week — I'm afraid I can't remember the name of it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Allergic to trimethoprim — it gave an itchy rash",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "Yes, I'm allergic to trimethoprim — it gave me an itchy rash."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has stopped going to the residents' coffee morning because of worry about not making it to the toilet in time",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's getting tiresome"
+     },
+     {
+      "turn": 7,
+      "quote": "I'm up three or four times at night, when usually it's only once."
+     },
+     {
+      "turn": 12,
+      "quote": "I've stopped going to the residents' coffee morning. I'm worried I won't make it to the toilet in time."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Thinks this is another water infection like the one last year, and hopes to get antibiotics before the weekend",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I'm worried I won't make it to the toilet in time."
+     },
+     {
+      "turn": 13,
+      "quote": "I do think it's another water infection, like the one I had last year. I'm hoping I can get some antibiotics before the weekend comes."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Burning when passing water and needing to go much more often than usual",
+    "evidence": [
+     "it's a burning when I pass water, and I'm needing to go much more often than usual"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about two weeks ago",
+    "evidence": [
+     "it's been about two weeks now"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Has not noticed anything in particular that makes it better or worse",
+    "evidence": [
+     "I can't say I've noticed anything in particular that makes a difference, no."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A stinging, burning sort of feeling when passing water",
+    "evidence": [
+     "a burning when I pass water",
+     "It's a stinging, burning sort of feeling when I go"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Down below, when the water comes out; does not spread anywhere",
+    "evidence": [
+     "Just down below, when the water comes out. No, it doesn't spread anywhere"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About a 5 out of 10; uncomfortable but manageable",
+    "evidence": [
+     "I'd say about a 5 out of 10. Uncomfortable, but I'm managing.",
+     "I'd put it at about a 5. Uncomfortable but manageable, really."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No back or side pain; Urine looks cloudy and smells stronger than usual; no blood seen; no fever, shivers, sickness, or confusion noticed (niece has not noticed any confusion)",
+    "evidence": [
+     "I've not had any back or side pain",
+     "The water looks cloudy and smells stronger than usual. I've not seen any blood, though. And I've not had a fever, shivers, or any sickness"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Underactive thyroid; thin bones; had a water infection about a year ago that cleared up with antibiotics",
+    "evidence": [
+     "I have an underactive thyroid"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Allergic to trimethoprim — it gave an itchy rash",
+    "evidence": [
+     "Yes, I'm allergic to trimethoprim — it gave me an itchy rash."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Thinks this is another water infection like the one last year, and hopes to get antibiotics before the weekend",
+    "evidence": [
+     "I'm worried I won't make it to the toilet in time.",
+     "I do think it's another water infection, like the one I had last year. I'm hoping I can get some antibiotics before the weekend comes."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "timing",
+    "text": "The stinging is only when passing water, but the need to go is fairly constant — passing water about every hour during the day and up three or four times at night (usually only once)",
+    "evidence": [
+     "It's been going on a little while now",
+     "The stinging is really just when I'm passing water. But the needing to go is fairly constant — I'm going about every hour during the day, and I'm up three or four times at night, when usually it's only once."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a tablet for an underactive thyroid, and something once a week for thin bones; Levothyroxine 75 micrograms each morning for thyroid; alendronic acid 70 mg once a week for thin bones; a vaginal cream from the hospital twice a week (cannot remember the name)",
+    "evidence": [
+     "I take a tablet for that. And I've got thin bones — I take something once a week for those.",
+     "I take a levothyroxine tablet, 75 micrograms, each morning for my thyroid. Then once a week I take an alendronic acid tablet, 70 mg, for my thin bones. And I use a vaginal cream from the hospital twice a week — I'm afraid I can't remember the name of it."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has stopped going to the residents' coffee morning because of worry about not making it to the toilet in time",
+    "evidence": [
+     "it's getting tiresome",
+     "I'm up three or four times at night, when usually it's only once.",
+     "I've stopped going to the residents' coffee morning. I'm worried I won't make it to the toilet in time."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_03",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 4,
+  "unnecessary_rate": 0.3076923076923077,
+  "patient_words": 341,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.9230769230769231,
+  "essential_completeness": 0.875,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F12": true,
+   "F13": true,
+   "F14": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

@@ -1,0 +1,1069 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's this cough, mainly. It just won't go away and it's getting me down a bit."
+  },
+  {
+   "role": "agent",
+   "text": "Could you describe when this cough started, how it came on, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on a while back, after I'd had a bit of a cold. As for medicines, I don't think I've ever had a bad reaction to any of them."
+  },
+  {
+   "role": "agent",
+   "text": "How much is this cough affecting your day-to-day life?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a nuisance, more than I'd expect from a bit of a cough. It's been waking me up at night, that's the worst part."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about any medicines you take regularly, and whether anything new or different has been started recently?"
+  },
+  {
+   "role": "patient",
+   "text": "Just my usual inhalers and a tablet for my blood pressure, nothing new."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an operation?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I've never had an operation."
+  },
+  {
+   "role": "agent",
+   "text": "Apart from the cough, have you noticed anything else that's been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I do seem to get a bit more puffed out than usual when I walk to the shop. No blood or anything like that, though."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you feel the cough most, and does it spread anywhere from there?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my chest, mostly. I haven't noticed it spreading anywhere."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything you've noticed that makes your cough better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air seems to set it off, and if I'm talking for a long while. Steam helps a little bit."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your cough?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I worry my lungs are getting worse, or that it could be something like cancer. That's what's been on my mind."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health — like ongoing conditions, past illnesses, or hospital stays — that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got COPD — emphysema, they called it — and I've had that for a good while now. Nothing else springs to mind."
+  },
+  {
+   "role": "agent",
+   "text": "Can you describe what the cough actually feels like when it comes on?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a chesty cough — I'm bringing stuff up, more than I usually do in the mornings."
+  },
+  {
+   "role": "agent",
+   "text": "You’ve mentioned getting more puffed out than usual when walking and that there’s no blood in the cough — is there anything else you’ve noticed that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, otherwise I feel alright in myself. I've not lost any weight, and I've not had any night sweats or chest pains."
+  },
+  {
+   "role": "agent",
+   "text": "When did this cough first start, and did it come on suddenly or build up gradually — and did anything seem to set it off at the time?"
+  },
+  {
+   "role": "patient",
+   "text": "It started about three weeks ago now, and it came on gradually after I'd had a cold. Nothing else seemed to set it off."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale of 0 to 10, how much does the cough get in the way of your usual daily activities, with 0 being not at all and 10 being a great deal?"
+  },
+  {
+   "role": "patient",
+   "text": "It gets in the way a fair bit, I'd say. I couldn't really put a number on it, though."
+  },
+  {
+   "role": "agent",
+   "text": "Thinking about your usual day, is the cough something you can mostly carry on through, does it slow you down a bit, or does it stop you doing things you'd normally do — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It slows me down a bit, and it wakes me most nights — I'd put it at about a 6 out of 10."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you describe when this cough started, how it came on, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How much is this cough affecting your day-to-day life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Can you tell me about any medicines you take regularly, and whether anything new or different has been started recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you ever had an operation?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "onset": 0.24,
+    "provocation": 0.4,
+    "quality": 0.3,
+    "region": 0.45,
+    "severity": 0.23,
+    "associated_symptoms": 0.5,
+    "past_history": 0.55,
+    "medications": 0.09,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.55)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Apart from the cough, have you noticed anything else that's been bothering you?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Where do you feel the cough most, and does it spread anywhere from there?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything you've noticed that makes your cough better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "What worries you most about your cough?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Is there anything else about your past health — like ongoing conditions, past illnesses, or hospital stays — that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "quality": 0.38,
+    "severity": 0.29,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Can you describe what the cough actually feels like when it comes on?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "quality": 0.38,
+    "severity": 0.29,
+    "associated_symptoms": 0.34,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "You’ve mentioned getting more puffed out than usual when walking and that there’s no blood in the cough — is there anything else you’ve noticed that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.29,
+    "associated_symptoms": 0.34,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "When did this cough first start, and did it come on suddenly or build up gradually — and did anything seem to set it off at the time?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.32,
+    "severity": 0.29,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.32)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "On a scale of 0 to 10, how much does the cough get in the way of your usual daily activities, with 0 being not at all and 10 being a great deal?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29,
+    "medications": 0.23
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.29)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Thinking about your usual day, is the cough something you can mostly carry on through, does it slow you down a bit, or does it stop you doing things you'd normally do — or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that won't go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's this cough, mainly. It just won't go away"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three weeks ago and came on gradually after having had a cold; nothing else seemed to set it off at the time.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It came on a while back, after I'd had a bit of a cold."
+     },
+     {
+      "turn": 13,
+      "quote": "It started about three weeks ago now, and it came on gradually after I'd had a cold. Nothing else seemed to set it off."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Cold air and talking for a long while set the cough off; steam helps a little.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "Cold air seems to set it off, and if I'm talking for a long while. Steam helps a little bit."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A chesty cough, bringing stuff up (phlegm), more than usual in the mornings",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "It's a chesty cough — I'm bringing stuff up, more than I usually do in the mornings."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the chest, mostly; not noticed it spreading anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It's in my chest, mostly. I haven't noticed it spreading anywhere."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "conflicting",
+    "value": "Gets in the way of daily activities a fair bit; patient couldn't put a number on it.",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's a nuisance, more than I'd expect from a bit of a cough."
+     },
+     {
+      "turn": 14,
+      "quote": "It gets in the way a fair bit, I'd say. I couldn't really put a number on it, though."
+     },
+     {
+      "turn": 15,
+      "quote": "I'd put it at about a 6 out of 10"
+     }
+    ],
+    "conflicting_values": [
+     "Gets in the way of daily activities a fair bit; patient couldn't put a number on it.",
+     "About 6 out of 10."
+    ],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Wakes them most nights.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It just won't go away"
+     },
+     {
+      "turn": 3,
+      "quote": "It's been waking me up at night"
+     },
+     {
+      "turn": 15,
+      "quote": "it wakes me most nights"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Gets more puffed out than usual when walking; no blood in the cough.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I do seem to get a bit more puffed out than usual when I walk to the shop. No blood or anything like that, though."
+     },
+     {
+      "turn": 12,
+      "quote": "I've not lost any weight, and I've not had any night sweats or chest pains."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has never had an operation",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, I've never had an operation."
+     },
+     {
+      "turn": 10,
+      "quote": "I've got COPD — emphysema, they called it — and I've had that for a good while now."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Usual inhalers and a tablet for blood pressure; nothing new or different started recently.",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "Just my usual inhalers and a tablet for my blood pressure, nothing new."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No bad reaction to any medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't think I've ever had a bad reaction to any of them."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "The cough slows them down a bit during their usual day.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's getting me down a bit"
+     },
+     {
+      "turn": 3,
+      "quote": "It's been waking me up at night, that's the worst part."
+     },
+     {
+      "turn": 6,
+      "quote": "I do seem to get a bit more puffed out than usual when I walk to the shop."
+     },
+     {
+      "turn": 15,
+      "quote": "It slows me down a bit"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their lungs are getting worse, or that it could be something like cancer.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I suppose I worry my lungs are getting worse, or that it could be something like cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that won't go away",
+    "evidence": [
+     "It's this cough, mainly. It just won't go away"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Cold air and talking for a long while set the cough off; steam helps a little.",
+    "evidence": [
+     "Cold air seems to set it off, and if I'm talking for a long while. Steam helps a little bit."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A chesty cough, bringing stuff up (phlegm), more than usual in the mornings",
+    "evidence": [
+     "It's a chesty cough — I'm bringing stuff up, more than I usually do in the mornings."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the chest, mostly; not noticed it spreading anywhere",
+    "evidence": [
+     "It's in my chest, mostly. I haven't noticed it spreading anywhere."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Wakes them most nights.",
+    "evidence": [
+     "It just won't go away",
+     "It's been waking me up at night",
+     "it wakes me most nights"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Gets more puffed out than usual when walking; no blood in the cough.",
+    "evidence": [
+     "I do seem to get a bit more puffed out than usual when I walk to the shop. No blood or anything like that, though.",
+     "I've not lost any weight, and I've not had any night sweats or chest pains."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has never had an operation",
+    "evidence": [
+     "No, I've never had an operation.",
+     "I've got COPD — emphysema, they called it — and I've had that for a good while now."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No bad reaction to any medicines",
+    "evidence": [
+     "I don't think I've ever had a bad reaction to any of them."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their lungs are getting worse, or that it could be something like cancer.",
+    "evidence": [
+     "I suppose I worry my lungs are getting worse, or that it could be something like cancer."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Started about three weeks ago and came on gradually after having had a cold; nothing else seemed to set it off at the time.",
+    "evidence": [
+     "It came on a while back, after I'd had a bit of a cold.",
+     "It started about three weeks ago now, and it came on gradually after I'd had a cold. Nothing else seemed to set it off."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "The cough slows them down a bit during their usual day.",
+    "evidence": [
+     "it's getting me down a bit",
+     "It's been waking me up at night, that's the worst part.",
+     "I do seem to get a bit more puffed out than usual when I walk to the shop.",
+     "It slows me down a bit"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "Two different answers were given: 'Gets in the way of daily activities a fair bit; patient couldn't put a number on it.' and 'About 6 out of 10.'",
+    "evidence": [
+     "It's a nuisance, more than I'd expect from a bit of a cough.",
+     "It gets in the way a fair bit, I'd say. I couldn't really put a number on it, though.",
+     "I'd put it at about a 6 out of 10"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Usual inhalers and a tablet for blood pressure; nothing new or different started recently.",
+    "evidence": [
+     "Just my usual inhalers and a tablet for my blood pressure, nothing new."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 15,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.506,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.328,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.364,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.382,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.541,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.621,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.66,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.68,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.69,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.695,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.698,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.424,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.05,
+   "score": 0.237,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 1,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_05",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 15,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 296,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5333333333333333,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": false,
+   "F9": false,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

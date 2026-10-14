@@ -1,0 +1,1004 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's this cough, mainly. It just won't go away."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "Hard to say exactly — it came on a while back, after I had a cold."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had any allergies, or a bad reaction to a medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not that I know of. I've never had a bad reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "How much does the cough affect your daily activities?"
+  },
+  {
+   "role": "patient",
+   "text": "It bothers me a fair bit, but I get by. It's mainly at night that it's troublesome."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, a few — some inhalers and a tablet for my blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "How much is the cough bothering you overall — a little, moderately, or a lot, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Quite a lot, I'd say. It's waking me up most nights — I'd put it at about a 6 out of 10."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed any other symptoms along with the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "I get a bit more out of breath than usual when I walk to the shop. No blood or anything like that, and no chest pain."
+  },
+  {
+   "role": "agent",
+   "text": "When you cough, where in your body do you feel it most, and does it stay in that one spot or spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just in my chest, really. It doesn't spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that seems to make your cough better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air sets it off, and talking for a long time. Steam helps a little."
+  },
+  {
+   "role": "agent",
+   "text": "Besides your blood pressure, is there anything else about your health from the past that you think I should know about?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got COPD — had it about eight years now. And I used to smoke, but I gave that up about ten years ago."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about this cough?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I'm worried my lungs are getting worse. Or that it could be something more serious, like cancer."
+  },
+  {
+   "role": "agent",
+   "text": "What does your cough feel like when it happens?"
+  },
+  {
+   "role": "patient",
+   "text": "I bring up some phlegm with it — more than the bit I usually get in the mornings."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health that you think I should know?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's about it as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the cough, the extra phlegm and getting more out of breath, is there anything else you've noticed that seems new or different?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing new. No blood, no weight loss, no night sweats, no chest pain."
+  },
+  {
+   "role": "agent",
+   "text": "Did this cough come on suddenly one day, or did it build up gradually over time, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on gradually, I think — it started about three weeks ago, after I had a cold."
+  },
+  {
+   "role": "agent",
+   "text": "Have you been taking any medicines regularly, started or changed any recently, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I've a blue inhaler — salbutamol — for when I get wheezy, and a Fostair one, twice a day. And lisinopril for the blood pressure. Nothing new, though I'm using the blue one more than I normally do."
+  },
+  {
+   "role": "agent",
+   "text": "Thanks — that's helpful. Is there anything else about your medicines you'd like to mention, like anything you buy over the counter or anything you've stopped taking lately?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't take anything else. Just those."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed that's been different or bothering you lately, along with the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so. Just the cough and being a bit more puffed than usual."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice the cough?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Have you ever had any allergies, or a bad reaction to a medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much does the cough affect your daily activities?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Are you taking any medicines at the moment?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How much is the cough bothering you overall — a little, moderately, or a lot, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Have you noticed any other symptoms along with the cough?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "When you cough, where in your body do you feel it most, and does it stay in that one spot or spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything that seems to make your cough better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Besides your blood pressure, is there anything else about your health from the past that you think I should know about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What worries you most about this cough?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "What does your cough feel like when it happens?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything else about your past health that you think I should know?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Besides the cough, the extra phlegm and getting more out of breath, is there anything else you've noticed that seems new or different?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "associated_symptoms": 0.3,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Did this cough come on suddenly one day, or did it build up gradually over time, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Have you been taking any medicines regularly, started or changed any recently, or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Thanks — that's helpful. Is there anything else about your medicines you'd like to mention, like anything you buy over the counter or anything you've stopped taking lately?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "Is there anything else you've noticed that's been different or bothering you lately, along with the cough?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that won't go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's this cough, mainly. It just won't go away."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on gradually, started about three weeks ago, after having a cold",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it came on a while back, after I had a cold"
+     },
+     {
+      "turn": 15,
+      "quote": "It came on gradually, I think — it started about three weeks ago, after I had a cold."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Uses the blue salbutamol inhaler when wheezy, and is needing it more often than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "Cold air sets it off, and talking for a long time. Steam helps a little."
+     },
+     {
+      "turn": 16,
+      "quote": "for when I get wheezy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Brings up phlegm with the cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I bring up some phlegm with it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the chest only; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It's just in my chest, really. It doesn't spread anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Quite a lot; rated about 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'd put it at about a 6 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Wakes the patient up most nights",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's mainly at night that it's troublesome."
+     },
+     {
+      "turn": 6,
+      "quote": "It's waking me up most nights"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Gets more out of breath than usual when walking to the shop; no blood and no chest pain; More phlegm than the small amount usually brought up in the mornings; Gets wheezy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I get a bit more out of breath than usual when I walk to the shop. No blood or anything like that, and no chest pain."
+     },
+     {
+      "turn": 12,
+      "quote": "more than the bit I usually get in the mornings"
+     },
+     {
+      "turn": 14,
+      "quote": "No blood, no weight loss, no night sweats, no chest pain."
+     },
+     {
+      "turn": 16,
+      "quote": "for when I get wheezy"
+     },
+     {
+      "turn": 18,
+      "quote": "No, I don't think so. Just the cough and being a bit more puffed than usual."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has blood pressure for which they take a tablet; Has COPD, diagnosed about eight years ago; used to smoke but gave up about ten years ago; also has blood pressure for which they take a tablet",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "a tablet for my blood pressure"
+     },
+     {
+      "turn": 10,
+      "quote": "I've got COPD — had it about eight years now. And I used to smoke, but I gave that up about ten years ago."
+     },
+     {
+      "turn": 13,
+      "quote": "No, that's about it as far as I know."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few medicines: some inhalers and a tablet for blood pressure (names not given); Blue inhaler salbutamol (reliever, used when wheezy), Fostair inhaler twice a day, and lisinopril for blood pressure; no new medicines, but using the blue inhaler more than usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "some inhalers and a tablet for my blood pressure"
+     },
+     {
+      "turn": 16,
+      "quote": "I've a blue inhaler — salbutamol — for when I get wheezy, and a Fostair one, twice a day. And lisinopril for the blood pressure. Nothing new, though I'm using the blue one more than I normally do."
+     },
+     {
+      "turn": 17,
+      "quote": "No, I don't take anything else. Just those."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; has never had a bad reaction to anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, not that I know of. I've never had a bad reaction to anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Becomes more breathless than usual when walking to the shop",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It bothers me a fair bit, but I get by."
+     },
+     {
+      "turn": 6,
+      "quote": "It's waking me up most nights"
+     },
+     {
+      "turn": 7,
+      "quote": "I get a bit more out of breath than usual when I walk to the shop."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their lungs are getting worse, or that it could be something more serious like cancer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "I'm worried my lungs are getting worse. Or that it could be something more serious, like cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that won't go away",
+    "evidence": [
+     "It's this cough, mainly. It just won't go away."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Uses the blue salbutamol inhaler when wheezy, and is needing it more often than usual",
+    "evidence": [
+     "Cold air sets it off, and talking for a long time. Steam helps a little.",
+     "for when I get wheezy"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Brings up phlegm with the cough",
+    "evidence": [
+     "I bring up some phlegm with it"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the chest only; does not spread anywhere else",
+    "evidence": [
+     "It's just in my chest, really. It doesn't spread anywhere else."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Quite a lot; rated about 6 out of 10",
+    "evidence": [
+     "I'd put it at about a 6 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Wakes the patient up most nights",
+    "evidence": [
+     "It's mainly at night that it's troublesome.",
+     "It's waking me up most nights"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Gets more out of breath than usual when walking to the shop; no blood and no chest pain; More phlegm than the small amount usually brought up in the mornings; Gets wheezy",
+    "evidence": [
+     "I get a bit more out of breath than usual when I walk to the shop. No blood or anything like that, and no chest pain.",
+     "more than the bit I usually get in the mornings",
+     "No blood, no weight loss, no night sweats, no chest pain.",
+     "for when I get wheezy",
+     "No, I don't think so. Just the cough and being a bit more puffed than usual."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has blood pressure for which they take a tablet; Has COPD, diagnosed about eight years ago; used to smoke but gave up about ten years ago; also has blood pressure for which they take a tablet",
+    "evidence": [
+     "a tablet for my blood pressure",
+     "I've got COPD — had it about eight years now. And I used to smoke, but I gave that up about ten years ago.",
+     "No, that's about it as far as I know."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; has never had a bad reaction to anything",
+    "evidence": [
+     "No, not that I know of. I've never had a bad reaction to anything."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their lungs are getting worse, or that it could be something more serious like cancer",
+    "evidence": [
+     "I'm worried my lungs are getting worse. Or that it could be something more serious, like cancer."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Came on gradually, started about three weeks ago, after having a cold",
+    "evidence": [
+     "it came on a while back, after I had a cold",
+     "It came on gradually, I think — it started about three weeks ago, after I had a cold."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes a few medicines: some inhalers and a tablet for blood pressure (names not given); Blue inhaler salbutamol (reliever, used when wheezy), Fostair inhaler twice a day, and lisinopril for blood pressure; no new medicines, but using the blue inhaler more than usual",
+    "evidence": [
+     "some inhalers and a tablet for my blood pressure",
+     "I've a blue inhaler — salbutamol — for when I get wheezy, and a Fostair one, twice a day. And lisinopril for the blood pressure. Nothing new, though I'm using the blue one more than I normally do.",
+     "No, I don't take anything else. Just those."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Becomes more breathless than usual when walking to the shop",
+    "evidence": [
+     "It bothers me a fair bit, but I get by.",
+     "It's waking me up most nights",
+     "I get a bit more out of breath than usual when I walk to the shop."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 18,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_05",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 18,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 307,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6666666666666666,
+  "essential_completeness": 0.9,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": false,
+   "F9": true,
+   "F10": false,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

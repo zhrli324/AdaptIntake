@@ -1,0 +1,938 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's the stairs, really — I keep getting out of breath going up to bed. I have to stop halfway and get my wind back."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice this happening?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been going on a while back now. It's sort of crept up on me."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I've never had any trouble with medicines, as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "How much is this getting in the way of your everyday life?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, it's not too bad most of the time, but it does hold me up. I'm slower than I used to be on the stairs."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at all at the moment, whether they're ones you take regularly, ones you've just started, or ones you only take now and then?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I take a few tablets every day. My wife usually keeps track of them for me."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever been in hospital for anything?"
+  },
+  {
+   "role": "patient",
+   "text": "I had a heart attack years back, and I've been in for that. I've also got a funny heartbeat — atrial fibrillation, they call it."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath going up the stairs to bed, is there anything else you notice at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, my ankles tend to get a bit puffy by the evening, and I've started using two pillows at night instead of one."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath going up the stairs, where do you feel it most, and does it spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just breathlessness really — I don't get any pain with it, and nothing spreads anywhere. It's my breathing that's the trouble."
+  },
+  {
+   "role": "agent",
+   "text": "When you go up the stairs to bed, does the breathlessness happen every time, or only once in a while?"
+  },
+  {
+   "role": "patient",
+   "text": "It's most times, I'd say, when I'm going up. If I take it slow I'm not too bad, but usually I have to stop."
+  },
+  {
+   "role": "agent",
+   "text": "What, if anything, worries you most about what's been happening?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I'm worried about whether my heart is getting worse, and how I'll manage the stairs to bed if it keeps up."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the heart attack and the funny heartbeat you've told me about, is there anything else about your past health you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I did have a scan on my heart at the hospital last year, but I can't remember what they said about it. My wife might know better than me."
+  },
+  {
+   "role": "agent",
+   "text": "When the breathlessness comes on going up the stairs, is there anything else you notice at the same time that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so — no cough, no fever, nothing like that. Just the puffiness in my ankles and needing the extra pillow."
+  },
+  {
+   "role": "agent",
+   "text": "When did getting out of breath on the stairs first start for you — did it come on suddenly, build up gradually, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It came on gradually, over about three months, I'd say. It wasn't sudden."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath on the stairs, how much does it affect you day to day — is it a mild nuisance, does it get in the way of things you'd like to do, does it stop you doing most things, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It gets in the way a bit — I have to stop halfway up our fourteen stairs to catch my breath, and I never used to need to do that."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the heart attack, the funny heartbeat, and the heart scan you mentioned, is there anything else about your health in the past that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's the lot as far as I remember. That's about all my health troubles."
+  },
+  {
+   "role": "agent",
+   "text": "When it comes to your medicines, are you mainly taking ones you've been on for a long time, ones you've started recently, or ones that have been changed recently, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "They're ones I've been on for a good while, I think. I've not had anything new started lately as far as I know."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice this happening?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Do you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much is this getting in the way of your everyday life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Are you taking any medicines at all at the moment, whether they're ones you take regularly, ones you've just started, or ones you only take now and then?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [
+    {
+     "draft": "What medicines do you take regularly?",
+     "problems": [
+      "critic: The question presupposes that the patient takes regular medicines rather than asking whether they take any, so it implies an expected answer and lacks an explicit option to say none."
+     ]
+    }
+   ],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Have you ever been in hospital for anything?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "When you get out of breath going up the stairs to bed, is there anything else you notice at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "When you get out of breath going up the stairs, where do you feel it most, and does it spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "region": 0.48,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "When you go up the stairs to bed, does the breathlessness happen every time, or only once in a while?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What, if anything, worries you most about what's been happening?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Besides the heart attack and the funny heartbeat you've told me about, is there anything else about your past health you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "When the breathlessness comes on going up the stairs, is there anything else you notice at the same time that we haven't talked about yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "When did getting out of breath on the stairs first start for you — did it come on suddenly, build up gradually, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.28,
+    "severity": 0.26,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: onset (reported, vague; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "When you get out of breath on the stairs, how much does it affect you day to day — is it a mild nuisance, does it get in the way of things you'd like to do, does it stop you doing most things, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.26,
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.26)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Besides the heart attack, the funny heartbeat, and the heart scan you mentioned, is there anything else about your health in the past that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.24,
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "When it comes to your medicines, are you mainly taking ones you've been on for a long time, ones you've started recently, or ones that have been changed recently, or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.16
+   },
+   "reason": "highest-priority gap: medications (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Gets out of breath going up the stairs to bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I keep getting out of breath going up to bed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on gradually, over about three months; not sudden",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's been going on a while back now. It's sort of crept up on me."
+     },
+     {
+      "turn": 13,
+      "quote": "It came on gradually, over about three months, I'd say. It wasn't sudden."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Going slowly helps a bit, but he usually still has to stop",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's the stairs, really"
+     },
+     {
+      "turn": 9,
+      "quote": "If I take it slow I'm not too bad, but usually I have to stop"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Just breathlessness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I keep getting out of breath"
+     },
+     {
+      "turn": 8,
+      "quote": "It's just breathlessness really"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "No particular location — it is just breathlessness, and nothing spreads anywhere",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "nothing spreads anywhere"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Gets in the way a bit",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "it's not too bad most of the time"
+     },
+     {
+      "turn": 14,
+      "quote": "It gets in the way a bit"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Happens most times when going up the stairs to bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "It's most times, I'd say, when I'm going up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Ankles get a bit puffy by the evening; No pain with the breathlessness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "my ankles tend to get a bit puffy by the evening"
+     },
+     {
+      "turn": 8,
+      "quote": "I don't get any pain with it"
+     },
+     {
+      "turn": 12,
+      "quote": "No, I don't think so — no cough, no fever, nothing like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Had a heart attack years ago and was in hospital for it; also has atrial fibrillation (funny heartbeat).; Had a scan on his heart at the hospital last year; cannot remember what was said about it, and his wife might know better",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I had a heart attack years back, and I've been in for that. I've also got a funny heartbeat — atrial fibrillation, they call it."
+     },
+     {
+      "turn": 11,
+      "quote": "I did have a scan on my heart at the hospital last year, but I can't remember what they said about it."
+     },
+     {
+      "turn": 15,
+      "quote": "No, that's the lot as far as I remember. That's about all my health troubles."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes a few tablets every day; his wife usually keeps track of them; His medicines are ones he has been on for a good while; nothing new started lately as far as he knows",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Yes, I take a few tablets every day. My wife usually keeps track of them for me."
+     },
+     {
+      "turn": 16,
+      "quote": "They're ones I've been on for a good while, I think. I've not had anything new started lately as far as I know."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; never had any trouble with medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, I've never had any trouble with medicines, as far as I know."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Gets in the way a bit — has to stop halfway up their fourteen stairs to catch their breath, which they never used to need to do",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I have to stop halfway and get my wind back"
+     },
+     {
+      "turn": 4,
+      "quote": "I'm slower than I used to be on the stairs"
+     },
+     {
+      "turn": 7,
+      "quote": "I've started using two pillows at night instead of one"
+     },
+     {
+      "turn": 14,
+      "quote": "It gets in the way a bit — I have to stop halfway up our fourteen stairs to catch my breath, and I never used to need to do that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about whether his heart is getting worse, and how he will manage the stairs to bed if it keeps up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I'm worried about whether my heart is getting worse, and how I'll manage the stairs to bed if it keeps up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Gets out of breath going up the stairs to bed",
+    "evidence": [
+     "I keep getting out of breath going up to bed"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Going slowly helps a bit, but he usually still has to stop",
+    "evidence": [
+     "It's the stairs, really",
+     "If I take it slow I'm not too bad, but usually I have to stop"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Just breathlessness",
+    "evidence": [
+     "I keep getting out of breath",
+     "It's just breathlessness really"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "No particular location — it is just breathlessness, and nothing spreads anywhere",
+    "evidence": [
+     "nothing spreads anywhere"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Happens most times when going up the stairs to bed",
+    "evidence": [
+     "It's most times, I'd say, when I'm going up"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Ankles get a bit puffy by the evening; No pain with the breathlessness",
+    "evidence": [
+     "my ankles tend to get a bit puffy by the evening",
+     "I don't get any pain with it",
+     "No, I don't think so — no cough, no fever, nothing like that."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Had a heart attack years ago and was in hospital for it; also has atrial fibrillation (funny heartbeat).; Had a scan on his heart at the hospital last year; cannot remember what was said about it, and his wife might know better",
+    "evidence": [
+     "I had a heart attack years back, and I've been in for that. I've also got a funny heartbeat — atrial fibrillation, they call it.",
+     "I did have a scan on my heart at the hospital last year, but I can't remember what they said about it.",
+     "No, that's the lot as far as I remember. That's about all my health troubles."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; never had any trouble with medicines",
+    "evidence": [
+     "No, I've never had any trouble with medicines, as far as I know."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Gets in the way a bit — has to stop halfway up their fourteen stairs to catch their breath, which they never used to need to do",
+    "evidence": [
+     "I have to stop halfway and get my wind back",
+     "I'm slower than I used to be on the stairs",
+     "I've started using two pillows at night instead of one",
+     "It gets in the way a bit — I have to stop halfway up our fourteen stairs to catch my breath, and I never used to need to do that."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about whether his heart is getting worse, and how he will manage the stairs to bed if it keeps up",
+    "evidence": [
+     "I'm worried about whether my heart is getting worse, and how I'll manage the stairs to bed if it keeps up"
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "onset",
+    "text": "Came on gradually, over about three months; not sudden",
+    "evidence": [
+     "it's been going on a while back now. It's sort of crept up on me.",
+     "It came on gradually, over about three months, I'd say. It wasn't sudden."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Gets in the way a bit",
+    "evidence": [
+     "it's not too bad most of the time",
+     "It gets in the way a bit"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes a few tablets every day; his wife usually keeps track of them; His medicines are ones he has been on for a good while; nothing new started lately as far as he knows",
+    "evidence": [
+     "Yes, I take a few tablets every day. My wife usually keeps track of them for me.",
+     "They're ones I've been on for a good while, I think. I've not had anything new started lately as far as I know."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 16,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_10",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 16,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 347,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 1,
+  "completeness": 0.4666666666666667,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

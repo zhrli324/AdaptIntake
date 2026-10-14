@@ -1,0 +1,715 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've just been feeling ever so tired, and I haven't got any energy. It's been going on for a while now."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Hard to say exactly — it sort of crept up on me. I couldn't put a date on it."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's worse as the day goes on, really. Resting doesn't seem to perk me up much either."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "Just a heavy, drained feeling, like I've got nothing left in the tank. And even after a night's sleep I don't feel refreshed."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not really in one place — it's just my whole body feels flat and heavy. Nowhere specific."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not sure how to put a number on it — it's just not too bad, but it's there all the time.\n\nuser If you had to give a rough idea — is it mild, moderate, or severe?"
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly there all the time, though some days are better than others."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've noticed I get more short of breath than usual when I'm walking up hills. And a couple of friends have said I look a bit pale."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've got a couple of ongoing things — my sugar, and my thyroid. I'm on tablets for both."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, several — some tablets for my sugar and my thyroid, and something for my indigestion that I've taken for ages. And painkillers for my shoulder that I get from the chemist."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, there's one painkiller that makes me really sick — I've learned to avoid it."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had to give up my swimming, which I miss. And I'm finding it harder to help my husband wash and dress in the mornings."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I do worry, yes. My husband has Parkinson's and I look after him — I'm scared I won't be able to keep caring for him if this carries on."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Feeling very tired and having no energy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've just been feeling ever so tired, and I haven't got any energy."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "It crept up gradually; patient cannot put a date on it",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been going on for a while now."
+     },
+     {
+      "turn": 2,
+      "quote": "it sort of crept up on me. I couldn't put a date on it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Resting doesn't seem to perk them up much; nothing has been found to make it better.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Resting doesn't seem to perk me up much either."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A heavy, drained feeling, like there is nothing left in the tank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "Just a heavy, drained feeling, like I've got nothing left in the tank."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Not in one place; the whole body feels flat and heavy, nowhere specific",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's not really in one place — it's just my whole body feels flat and heavy. Nowhere specific."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'm not sure how to put a number on it — it's just not too bad"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Mostly there all the time, though some days are better than others",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's worse as the day goes on, really."
+     },
+     {
+      "turn": 6,
+      "quote": "it's there all the time"
+     },
+     {
+      "turn": 7,
+      "quote": "It's mostly there all the time, though some days are better than others."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Does not feel refreshed even after a night's sleep; Gets more short of breath than usual when walking up hills; friends have said they look a bit pale",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "even after a night's sleep I don't feel refreshed"
+     },
+     {
+      "turn": 8,
+      "quote": "I get more short of breath than usual when I'm walking up hills. And a couple of friends have said I look a bit pale."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has a couple of ongoing conditions: blood sugar (diabetes) and thyroid problems",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got a couple of ongoing things — my sugar, and my thyroid"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes tablets for both the sugar and thyroid conditions (names not given); Tablets for blood sugar (diabetes) and thyroid, something for indigestion taken for ages, and painkillers from the chemist for the shoulder (names not given)",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I'm on tablets for both"
+     },
+     {
+      "turn": 10,
+      "quote": "some tablets for my sugar and my thyroid, and something for my indigestion that I've taken for ages. And painkillers for my shoulder that I get from the chemist"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Allergic to one painkiller (name not known) that makes them really sick; has learned to avoid it",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "Yes, there's one painkiller that makes me really sick"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has had to give up swimming, which they miss; finding it harder to help their husband wash and dress in the mornings",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I've had to give up my swimming, which I miss. And I'm finding it harder to help my husband wash and dress in the mornings."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that they will not be able to keep caring for their husband, who has Parkinson's, if this continues",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I'm scared I won't be able to keep caring for him if this carries on"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Feeling very tired and having no energy",
+    "evidence": [
+     "I've just been feeling ever so tired, and I haven't got any energy."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Resting doesn't seem to perk them up much; nothing has been found to make it better.",
+    "evidence": [
+     "Resting doesn't seem to perk me up much either."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A heavy, drained feeling, like there is nothing left in the tank",
+    "evidence": [
+     "Just a heavy, drained feeling, like I've got nothing left in the tank."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Not in one place; the whole body feels flat and heavy, nowhere specific",
+    "evidence": [
+     "It's not really in one place — it's just my whole body feels flat and heavy. Nowhere specific."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Mostly there all the time, though some days are better than others",
+    "evidence": [
+     "It's worse as the day goes on, really.",
+     "it's there all the time",
+     "It's mostly there all the time, though some days are better than others."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Does not feel refreshed even after a night's sleep; Gets more short of breath than usual when walking up hills; friends have said they look a bit pale",
+    "evidence": [
+     "even after a night's sleep I don't feel refreshed",
+     "I get more short of breath than usual when I'm walking up hills. And a couple of friends have said I look a bit pale."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has a couple of ongoing conditions: blood sugar (diabetes) and thyroid problems",
+    "evidence": [
+     "I've got a couple of ongoing things — my sugar, and my thyroid"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has had to give up swimming, which they miss; finding it harder to help their husband wash and dress in the mornings",
+    "evidence": [
+     "I've had to give up my swimming, which I miss. And I'm finding it harder to help my husband wash and dress in the mornings."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that they will not be able to keep caring for their husband, who has Parkinson's, if this continues",
+    "evidence": [
+     "I'm scared I won't be able to keep caring for him if this carries on"
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "Mentioned, but not specific: It crept up gradually; patient cannot put a date on it",
+    "evidence": [
+     "It's been going on for a while now.",
+     "it sort of crept up on me. I couldn't put a date on it"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I'm not sure how to put a number on it — it's just not too bad"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes tablets for both the sugar and thyroid conditions (names not given); Tablets for blood sugar (diabetes) and thyroid, something for indigestion taken for ages, and painkillers from the chemist for the shoulder (names not given)",
+    "evidence": [
+     "I'm on tablets for both",
+     "some tablets for my sugar and my thyroid, and something for my indigestion that I've taken for ages. And painkillers for my shoulder that I get from the chemist"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Mentioned, but not specific: Allergic to one painkiller (name not known) that makes them really sick; has learned to avoid it",
+    "evidence": [
+     "Yes, there's one painkiller that makes me really sick"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_06",
+ "persona": "uncertain",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 1,
+  "unnecessary_rate": 0.07692307692307693,
+  "patient_words": 297,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.25,
+  "essential_completeness": 0.2,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": false,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": false,
+   "F9": false,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.8888888888888888,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

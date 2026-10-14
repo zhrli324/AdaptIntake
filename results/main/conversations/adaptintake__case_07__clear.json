@@ -1,0 +1,813 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Both my ankles have been swollen. I first noticed it about four weeks ago."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how the swelling is affecting your daily life, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly that my shoes feel tight by teatime, and I've stopped wearing my usual shoes. I sit with my feet up in the afternoons now. As for medicines, I don't have any allergies that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take or have taken recently, and any past health problems or operations?"
+  },
+  {
+   "role": "patient",
+   "text": "For my blood pressure I take amlodipine, which was increased from 5 mg to 10 mg once daily about six weeks ago. I also take a small water tablet each morning but I can't remember its name, and simvastatin 20 mg at night. I have high blood pressure and have been told my kidney function is a bit reduced; I haven't had any operations."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, with 0 being no trouble at all and 10 being the worst possible, how much does the swelling in your ankles bother you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mildly uncomfortable, I'd say about a 3 out of 10."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been going on alongside the swelling, and have you noticed anything that seems to make it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any breathlessness lying flat, no waking up breathless, no chest pain, and no calf pain or redness. The swelling is worse by the evening and mostly gone in the morning after lying flat."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any other medicines or supplements that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all I take. Just the amlodipine, the water tablet in the morning that I can't remember the name of, and the simvastatin at night."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your ankles, or what are you hoping we can help with today?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm afraid the swelling means my heart is failing, because my sister had heart failure. That's what worries me most."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you'd like to add about your past health?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all I can think of — just the high blood pressure and being told my kidney function is a bit reduced. Nothing else."
+  },
+  {
+   "role": "agent",
+   "text": "Can you describe what your ankles feel like, in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "They're puffy and a bit tight, and my socks leave marks on the skin. It's both ankles and the lower shins, about equally. It's mildly uncomfortable, around a 3 out of 10."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed along with the swelling?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else — no breathlessness, no chest pain, no calf pain or redness. Just the swelling in both ankles and lower shins."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me how the swelling is affecting your daily life, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take or have taken recently, and any past health problems or operations?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.61,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "On a scale from 0 to 10, with 0 being no trouble at all and 10 being the worst possible, how much does the swelling in your ankles bother you?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.61,
+    "associated_symptoms": 0.58,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.61)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Has anything else been going on alongside the swelling, and have you noticed anything that seems to make it better or worse?",
+   "slots": [
+    "associated_symptoms",
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "associated_symptoms": 0.58,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms, provocation (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false,
+    "provocation": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Are you taking any other medicines or supplements that we haven't talked about yet?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What worries you most about your ankles, or what are you hoping we can help with today?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything else you'd like to add about your past health?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.34,
+    "past_history": 0.39
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Can you describe what your ankles feel like, in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Is there anything else you've noticed along with the swelling?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Swollen ankles",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Both my ankles have been swollen"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "First noticed about four weeks ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I first noticed it about four weeks ago"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse by the evening; better in the morning after lying flat.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "The swelling is worse by the evening and mostly gone in the morning after lying flat."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Puffy and a bit tight",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "They're puffy and a bit tight"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Both ankles and the lower shins, about equally",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Both my ankles"
+     },
+     {
+      "turn": 9,
+      "quote": "It's both ankles and the lower shins, about equally"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Mildly uncomfortable, around 3 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's mildly uncomfortable, I'd say about a 3 out of 10."
+     },
+     {
+      "turn": 9,
+      "quote": "It's mildly uncomfortable, around a 3 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Worse by the evening, mostly gone in the morning after lying flat.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "my shoes feel tight by teatime"
+     },
+     {
+      "turn": 5,
+      "quote": "The swelling is worse by the evening and mostly gone in the morning after lying flat."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No breathlessness lying flat, no waking breathless, no chest pain, no calf pain or redness.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, I haven't had any breathlessness lying flat, no waking up breathless, no chest pain, and no calf pain or redness."
+     },
+     {
+      "turn": 10,
+      "quote": "No, nothing else — no breathlessness, no chest pain, no calf pain or redness."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure; told kidney function is a bit reduced; no operations.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I have high blood pressure and have been told my kidney function is a bit reduced; I haven't had any operations."
+     },
+     {
+      "turn": 8,
+      "quote": "No, that's all I can think of — just the high blood pressure and being told my kidney function is a bit reduced. Nothing else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Amlodipine, increased from 5 mg to 10 mg once daily about six weeks ago (for blood pressure); a small water tablet each morning (name not remembered); simvastatin 20 mg at night.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take amlodipine, which was increased from 5 mg to 10 mg once daily about six weeks ago. I also take a small water tablet each morning but I can't remember its name, and simvastatin 20 mg at night."
+     },
+     {
+      "turn": 6,
+      "quote": "No, that's all I take."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any allergies that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Shoes feel tight by teatime; stopped wearing usual shoes; sits with feet up in the afternoons.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "my shoes feel tight by teatime, and I've stopped wearing my usual shoes. I sit with my feet up in the afternoons now."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that the ankle swelling means her heart is failing, because her sister had heart failure.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I'm afraid the swelling means my heart is failing, because my sister had heart failure."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Swollen ankles",
+    "evidence": [
+     "Both my ankles have been swollen"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "First noticed about four weeks ago",
+    "evidence": [
+     "I first noticed it about four weeks ago"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse by the evening; better in the morning after lying flat.",
+    "evidence": [
+     "The swelling is worse by the evening and mostly gone in the morning after lying flat."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Puffy and a bit tight",
+    "evidence": [
+     "They're puffy and a bit tight"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Both ankles and the lower shins, about equally",
+    "evidence": [
+     "Both my ankles",
+     "It's both ankles and the lower shins, about equally"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Mildly uncomfortable, around 3 out of 10",
+    "evidence": [
+     "It's mildly uncomfortable, I'd say about a 3 out of 10.",
+     "It's mildly uncomfortable, around a 3 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Worse by the evening, mostly gone in the morning after lying flat.",
+    "evidence": [
+     "my shoes feel tight by teatime",
+     "The swelling is worse by the evening and mostly gone in the morning after lying flat."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No breathlessness lying flat, no waking breathless, no chest pain, no calf pain or redness.",
+    "evidence": [
+     "No, I haven't had any breathlessness lying flat, no waking up breathless, no chest pain, and no calf pain or redness.",
+     "No, nothing else — no breathlessness, no chest pain, no calf pain or redness."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure; told kidney function is a bit reduced; no operations.",
+    "evidence": [
+     "I have high blood pressure and have been told my kidney function is a bit reduced; I haven't had any operations.",
+     "No, that's all I can think of — just the high blood pressure and being told my kidney function is a bit reduced. Nothing else."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Amlodipine, increased from 5 mg to 10 mg once daily about six weeks ago (for blood pressure); a small water tablet each morning (name not remembered); simvastatin 20 mg at night.",
+    "evidence": [
+     "I take amlodipine, which was increased from 5 mg to 10 mg once daily about six weeks ago. I also take a small water tablet each morning but I can't remember its name, and simvastatin 20 mg at night.",
+     "No, that's all I take."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies.",
+    "evidence": [
+     "I don't have any allergies that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Shoes feel tight by teatime; stopped wearing usual shoes; sits with feet up in the afternoons.",
+    "evidence": [
+     "my shoes feel tight by teatime, and I've stopped wearing my usual shoes. I sit with my feet up in the afternoons now."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that the ankle swelling means her heart is failing, because her sister had heart failure.",
+    "evidence": [
+     "I'm afraid the swelling means my heart is failing, because my sister had heart failure."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 10,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.9,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.65,
+   "level": "confirm",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.688,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.694,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.698,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.7,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_07",
+ "persona": "clear",
+ "metrics": {
+  "questions": 10,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 290,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 1.0,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

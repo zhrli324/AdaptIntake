@@ -1,0 +1,723 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's this cough that just won't go away. I've had it about three weeks now, ever since I had a cold, and it's not clearing up."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "It started about three weeks ago, right after I had a cold. The cold itself went, but the cough stayed."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air sets it off, and if I talk for a long time it starts up as well. Steam inhalation seems to help a little."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm bringing up phlegm, a white-to-yellow colour, and there's more of it than my usual morning phlegm."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my chest, that's where it comes from when I cough. It doesn't spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say about a 6 out of 10. It's disturbing my sleep most nights, which is the worst part of it."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes. It's worst in the morning and at night, and when I get a fit it lasts a few minutes."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been a bit more breathless than usual when I walk to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've got COPD — I've had that for about eight years now."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I use a blue salbutamol inhaler, and I've been needing that 4-5 times a day now instead of my usual twice. I also use a Fostair 100/6 inhaler, two puffs twice daily. And I take lisinopril 10 mg once a day for my blood pressure — I've been on that for several years."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I'm not allergic to any medicines that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I get a bit more breathless walking to the shop than I used to, so I've been slower at that. Nothing else has really changed around the house."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, it does worry me. I'm concerned my lungs are getting worse, or that this could be something like cancer."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": true
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": true
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that will not go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's this cough that just won't go away."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three weeks ago, right after a cold",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've had it about three weeks now, ever since I had a cold"
+     },
+     {
+      "turn": 2,
+      "quote": "It started about three weeks ago, right after I had a cold."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse with cold air and with talking for a long time; steam inhalation helps a little",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Cold air sets it off, and if I talk for a long time it starts up as well. Steam inhalation seems to help a little."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Bringing up phlegm, white-to-yellow in colour, and more of it than usual morning phlegm",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'm bringing up phlegm, a white-to-yellow colour, and there's more of it than my usual morning phlegm."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the chest, where it comes from when coughing; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's in my chest, that's where it comes from when I cough. It doesn't spread anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'd say about a 6 out of 10."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes; worst in the morning and at night, and each coughing fit lasts a few minutes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "and it's not clearing up"
+     },
+     {
+      "turn": 2,
+      "quote": "The cold itself went, but the cough stayed."
+     },
+     {
+      "turn": 7,
+      "quote": "It comes and goes. It's worst in the morning and at night, and when I get a fit it lasts a few minutes."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "More breathless than usual when walking to the shop; no coughing up blood, no weight loss, no night sweats, no chest pain",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I've been a bit more breathless than usual when I walk to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has COPD, which started about eight years ago; sees a doctor regularly for it; Takes lisinopril for blood pressure, which has been going on for several years",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got COPD — I've had that for about eight years now."
+     },
+     {
+      "turn": 10,
+      "quote": "lisinopril 10 mg once a day for my blood pressure — I've been on that for several years"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Blue salbutamol inhaler, now needed 4-5 times a day instead of the usual twice; Fostair 100/6 inhaler, two puffs twice daily; lisinopril 10 mg once a day for blood pressure, taken for several years",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I use a blue salbutamol inhaler, and I've been needing that 4-5 times a day now instead of my usual twice. I also use a Fostair 100/6 inhaler, two puffs twice daily. And I take lisinopril 10 mg once a day for my blood pressure"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, I'm not allergic to any medicines that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Gets a bit more breathless walking to the shop than before and has been slower at that; nothing else has changed around the house",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "It's disturbing my sleep most nights"
+     },
+     {
+      "turn": 8,
+      "quote": "I've been a bit more breathless than usual when I walk to the shop."
+     },
+     {
+      "turn": 12,
+      "quote": "I get a bit more breathless walking to the shop than I used to, so I've been slower at that. Nothing else has really changed around the house."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their lungs are getting worse, or that this could be something like cancer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "which is the worst part of it"
+     },
+     {
+      "turn": 13,
+      "quote": "I'm concerned my lungs are getting worse, or that this could be something like cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that will not go away",
+    "evidence": [
+     "It's this cough that just won't go away."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three weeks ago, right after a cold",
+    "evidence": [
+     "I've had it about three weeks now, ever since I had a cold",
+     "It started about three weeks ago, right after I had a cold."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse with cold air and with talking for a long time; steam inhalation helps a little",
+    "evidence": [
+     "Cold air sets it off, and if I talk for a long time it starts up as well. Steam inhalation seems to help a little."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Bringing up phlegm, white-to-yellow in colour, and more of it than usual morning phlegm",
+    "evidence": [
+     "I'm bringing up phlegm, a white-to-yellow colour, and there's more of it than my usual morning phlegm."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the chest, where it comes from when coughing; does not spread anywhere else",
+    "evidence": [
+     "It's in my chest, that's where it comes from when I cough. It doesn't spread anywhere else."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 6 out of 10",
+    "evidence": [
+     "I'd say about a 6 out of 10."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes; worst in the morning and at night, and each coughing fit lasts a few minutes",
+    "evidence": [
+     "and it's not clearing up",
+     "The cold itself went, but the cough stayed.",
+     "It comes and goes. It's worst in the morning and at night, and when I get a fit it lasts a few minutes."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "More breathless than usual when walking to the shop; no coughing up blood, no weight loss, no night sweats, no chest pain",
+    "evidence": [
+     "I've been a bit more breathless than usual when I walk to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has COPD, which started about eight years ago; sees a doctor regularly for it; Takes lisinopril for blood pressure, which has been going on for several years",
+    "evidence": [
+     "I've got COPD — I've had that for about eight years now.",
+     "lisinopril 10 mg once a day for my blood pressure — I've been on that for several years"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Blue salbutamol inhaler, now needed 4-5 times a day instead of the usual twice; Fostair 100/6 inhaler, two puffs twice daily; lisinopril 10 mg once a day for blood pressure, taken for several years",
+    "evidence": [
+     "I use a blue salbutamol inhaler, and I've been needing that 4-5 times a day now instead of my usual twice. I also use a Fostair 100/6 inhaler, two puffs twice daily. And I take lisinopril 10 mg once a day for my blood pressure"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "No, I'm not allergic to any medicines that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Gets a bit more breathless walking to the shop than before and has been slower at that; nothing else has changed around the house",
+    "evidence": [
+     "It's disturbing my sleep most nights",
+     "I've been a bit more breathless than usual when I walk to the shop.",
+     "I get a bit more breathless walking to the shop than I used to, so I've been slower at that. Nothing else has really changed around the house."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their lungs are getting worse, or that this could be something like cancer",
+    "evidence": [
+     "which is the worst part of it",
+     "I'm concerned my lungs are getting worse, or that this could be something like cancer."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_05",
+ "persona": "clear",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 4,
+  "unnecessary_rate": 0.3076923076923077,
+  "patient_words": 303,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.9333333333333333,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

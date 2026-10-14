@@ -1,0 +1,723 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's my breathing, mostly. I get out of breath climbing the stairs at home, and it's been getting worse over about the last three months."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say about three months ago it started, and it's crept up on me gradually since then. There wasn't one particular day."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes on when I climb the stairs or walk uphill, and it settles down if I rest for two or three minutes. Otherwise, when I'm sitting, I'm fine."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say I'm puffed out — I have to stop and catch my breath. It's not painful, just that I can't get enough air in when I'm exerting myself."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not in one spot — it's just a general feeling of being short of breath all over, really. It doesn't spread anywhere, and there's no pain with it."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "When it's at its worst, on the stairs, I'd call it a 6 or 7. I have to stop halfway up our 14 stairs to get my breath, whereas I used to manage the whole flight without stopping."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes — only with exertion. When I'm sitting down or resting I'm not breathless at all."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, my ankles are a bit puffy by the evening, and I've started using two pillows at night instead of one. Other than that, no chest pain, no cough, and no fever."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have a few things. I've had atrial fibrillation for about five years now, and I had a heart attack twelve years ago."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I take four: rivaroxaban 15 mg once a day with my evening meal, bisoprolol 5 mg once a day, atorvastatin 40 mg at night, and ramipril 2.5 mg once a day. No new ones."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, no known drug allergies that I'm aware of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, it's slowing me down. I have to stop halfway up the stairs, which I never used to, and I'm a bit wary about managing them to get to bed. It's on my mind."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes — two things really. I'm worried about how I'll manage the stairs to get to bed, and I'd like to know whether my heart is getting worse."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": true
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": true
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": true
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": true
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Breathing problems, mainly getting out of breath",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my breathing, mostly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about three months ago, came on gradually with no single particular day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been getting worse over about the last three months"
+     },
+     {
+      "turn": 2,
+      "quote": "about three months ago it started, and it's crept up on me gradually since then. There wasn't one particular day"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Comes on when climbing stairs or walking uphill; settles down after resting two or three minutes; fine when sitting",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I get out of breath climbing the stairs at home"
+     },
+     {
+      "turn": 3,
+      "quote": "It comes on when I climb the stairs or walk uphill, and it settles down if I rest for two or three minutes."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Feels \"puffed out\" and unable to get enough air in when exerting herself; not painful",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'd say I'm puffed out — I have to stop and catch my breath. It's not painful, just that I can't get enough air in when I'm exerting myself."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Not in one spot — a general feeling of being short of breath all over; it doesn't spread anywhere and there is no pain with it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's not in one spot — it's just a general feeling of being short of breath all over, really. It doesn't spread anywhere, and there's no pain with it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "6 or 7 out of 10 when at its worst, on the stairs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "When it's at its worst, on the stairs, I'd call it a 6 or 7"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes — only with exertion; not breathless at all when sitting down or resting",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been getting worse over about the last three months"
+     },
+     {
+      "turn": 3,
+      "quote": "it settles down if I rest for two or three minutes. Otherwise, when I'm sitting, I'm fine."
+     },
+     {
+      "turn": 7,
+      "quote": "It comes and goes — only with exertion."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Ankles a bit puffy by the evening; has started using two pillows at night instead of one; no chest pain, no cough and no fever",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "my ankles are a bit puffy by the evening, and I've started using two pillows at night instead of one. Other than that, no chest pain, no cough, and no fever."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has atrial fibrillation diagnosed about five years ago; had a heart attack twelve years ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've had atrial fibrillation for about five years now, and I had a heart attack twelve years ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes four regular medicines: rivaroxaban 15 mg once a day with the evening meal, bisoprolol 5 mg once a day, atorvastatin 40 mg at night, and ramipril 2.5 mg once a day; no new medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I take four: rivaroxaban 15 mg once a day with my evening meal, bisoprolol 5 mg once a day, atorvastatin 40 mg at night, and ramipril 2.5 mg once a day. No new ones."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known drug allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, no known drug allergies that I'm aware of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "It's slowing her down — she has to stop halfway up the stairs, which she never used to do, and she is wary about managing the stairs to get to bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I have to stop halfway up our 14 stairs to get my breath, whereas I used to manage the whole flight without stopping"
+     },
+     {
+      "turn": 8,
+      "quote": "I've started using two pillows at night instead of one"
+     },
+     {
+      "turn": 12,
+      "quote": "it's slowing me down. I have to stop halfway up the stairs, which I never used to, and I'm a bit wary about managing them to get to bed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Two worries: how she will manage the stairs to get to bed, and wanting to know whether her heart is getting worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I'm a bit wary about managing them to get to bed. It's on my mind."
+     },
+     {
+      "turn": 13,
+      "quote": "I'm worried about how I'll manage the stairs to get to bed, and I'd like to know whether my heart is getting worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Breathing problems, mainly getting out of breath",
+    "evidence": [
+     "It's my breathing, mostly."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about three months ago, came on gradually with no single particular day",
+    "evidence": [
+     "it's been getting worse over about the last three months",
+     "about three months ago it started, and it's crept up on me gradually since then. There wasn't one particular day"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Comes on when climbing stairs or walking uphill; settles down after resting two or three minutes; fine when sitting",
+    "evidence": [
+     "I get out of breath climbing the stairs at home",
+     "It comes on when I climb the stairs or walk uphill, and it settles down if I rest for two or three minutes."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Feels \"puffed out\" and unable to get enough air in when exerting herself; not painful",
+    "evidence": [
+     "I'd say I'm puffed out — I have to stop and catch my breath. It's not painful, just that I can't get enough air in when I'm exerting myself."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Not in one spot — a general feeling of being short of breath all over; it doesn't spread anywhere and there is no pain with it",
+    "evidence": [
+     "It's not in one spot — it's just a general feeling of being short of breath all over, really. It doesn't spread anywhere, and there's no pain with it."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "6 or 7 out of 10 when at its worst, on the stairs",
+    "evidence": [
+     "When it's at its worst, on the stairs, I'd call it a 6 or 7"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes — only with exertion; not breathless at all when sitting down or resting",
+    "evidence": [
+     "it's been getting worse over about the last three months",
+     "it settles down if I rest for two or three minutes. Otherwise, when I'm sitting, I'm fine.",
+     "It comes and goes — only with exertion."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Ankles a bit puffy by the evening; has started using two pillows at night instead of one; no chest pain, no cough and no fever",
+    "evidence": [
+     "my ankles are a bit puffy by the evening, and I've started using two pillows at night instead of one. Other than that, no chest pain, no cough, and no fever."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has atrial fibrillation diagnosed about five years ago; had a heart attack twelve years ago",
+    "evidence": [
+     "I've had atrial fibrillation for about five years now, and I had a heart attack twelve years ago."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes four regular medicines: rivaroxaban 15 mg once a day with the evening meal, bisoprolol 5 mg once a day, atorvastatin 40 mg at night, and ramipril 2.5 mg once a day; no new medicines",
+    "evidence": [
+     "I take four: rivaroxaban 15 mg once a day with my evening meal, bisoprolol 5 mg once a day, atorvastatin 40 mg at night, and ramipril 2.5 mg once a day. No new ones."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known drug allergies",
+    "evidence": [
+     "No, no known drug allergies that I'm aware of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "It's slowing her down — she has to stop halfway up the stairs, which she never used to do, and she is wary about managing the stairs to get to bed",
+    "evidence": [
+     "I have to stop halfway up our 14 stairs to get my breath, whereas I used to manage the whole flight without stopping",
+     "I've started using two pillows at night instead of one",
+     "it's slowing me down. I have to stop halfway up the stairs, which I never used to, and I'm a bit wary about managing them to get to bed"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Two worries: how she will manage the stairs to get to bed, and wanting to know whether her heart is getting worse",
+    "evidence": [
+     "I'm a bit wary about managing them to get to bed. It's on my mind.",
+     "I'm worried about how I'll manage the stairs to get to bed, and I'd like to know whether my heart is getting worse."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_10",
+ "persona": "clear",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 5,
+  "unnecessary_rate": 0.38461538461538464,
+  "patient_words": 352,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.9333333333333333,
+  "essential_completeness": 0.9166666666666666,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.7692307692307693,
+  "accuracy": 0.7692307692307693,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

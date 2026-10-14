@@ -1,0 +1,804 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a burning when I pass water, and I'm needing to go much more often than usual. It's very uncomfortable and it's getting me down a bit, so I'd like to get it seen to."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice the burning when you pass water and needing to go more often?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been about two weeks now."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies to medicines, or have you ever had a bad reaction to one?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I'm allergic to trimethoprim — it gave me a nasty itchy rash."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment, either regularly or ones you've started or stopped recently?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I take levothyroxine 75 micrograms every morning, and alendronic acid 70 mg once a week for my thin bones. I also use a vaginal cream from the hospital twice a week, but I can't remember what it's called."
+  },
+  {
+   "role": "agent",
+   "text": "When you feel that burning when you pass water, where exactly do you feel it?"
+  },
+  {
+   "role": "patient",
+   "text": "It's down below, in the water passage, when I'm actually passing water. The stinging is about 5 out of 10 — uncomfortable, but I'm managing."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything you've noticed that makes the burning or the need to go more often better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't say I've noticed anything that makes much difference, really — it's just there. I suppose going more often is because I feel I need to go, but that's about it."
+  },
+  {
+   "role": "agent",
+   "text": "Is the burning there every time you pass water, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's there most times I go, but it does vary a bit — sometimes stronger than others. It's not there all day, just when I'm passing water."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your health in the past — like other ongoing health problems, past illnesses, operations, or times in hospital — that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got an underactive thyroid, and I had a water infection about a year ago that was treated with antibiotics. That's about it as far as I can remember."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed going on alongside the burning and needing to go more often?"
+  },
+  {
+   "role": "patient",
+   "text": "The water looks cloudy and smells stronger than usual, though I've not seen any blood. My niece hasn't noticed me being confused or anything like that either."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other medicines you take — anything at all, like tablets, creams, patches, or things you buy yourself — that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's the lot — the levothyroxine, the alendronic acid, and the vaginal cream I can't remember the name of. I don't take anything else, and I don't buy anything myself."
+  },
+  {
+   "role": "agent",
+   "text": "Has this been getting in the way of your sleep at all?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, it's disturbing my sleep quite a bit — I'm getting up three or four times in the night, when I'd usually only go once."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I have stopped going to the residents' coffee morning, as I'm worried I won't reach a toilet in time. I do think it's another water infection, and I'm hoping I can get some antibiotics before the weekend."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health — other ongoing problems, past illnesses, operations, or times in hospital — that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so — just the underactive thyroid and that water infection a year ago. Nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice the burning when you pass water and needing to go more often?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Do you have any allergies to medicines, or have you ever had a bad reaction to one?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Are you taking any medicines at the moment, either regularly or ones you've started or stopped recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "When you feel that burning when you pass water, where exactly do you feel it?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Is there anything you've noticed that makes the burning or the need to go more often better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is the burning there every time you pass water, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything else about your health in the past — like other ongoing health problems, past illnesses, operations, or times in hospital — that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything else you've noticed going on alongside the burning and needing to go more often?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Are there any other medicines you take — anything at all, like tablets, creams, patches, or things you buy yourself — that we haven't talked about yet?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Has this been getting in the way of your sleep at all?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else you've noticed that we haven't talked about yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything else about your past health — other ongoing problems, past illnesses, operations, or times in hospital — that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "past_history": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Burning when passing water and needing to go much more often than usual.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's a burning when I pass water, and I'm needing to go much more often than usual."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about two weeks ago.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's been about two weeks now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Has not noticed anything that makes much difference to the burning or the need to go — it is just there.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I can't say I've noticed anything that makes much difference, really — it's just there."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Burning.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "burning"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Down below, in the water passage, felt when actually passing water.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's down below, in the water passage, when I'm actually passing water."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 5 out of 10 — uncomfortable, but managing.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's very uncomfortable and it's getting me down a bit"
+     },
+     {
+      "turn": 5,
+      "quote": "The stinging is about 5 out of 10 — uncomfortable, but I'm managing."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Wakes three or four times in the night to pass water, compared with usually only once.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It's there most times I go, but it does vary a bit — sometimes stronger than others. It's not there all day, just when I'm passing water."
+     },
+     {
+      "turn": 11,
+      "quote": "I'm getting up three or four times in the night, when I'd usually only go once."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Needing to go much more often than usual.; Urine looks cloudy and smells stronger than usual; no blood seen; no confusion noticed by her niece.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I'm needing to go much more often than usual."
+     },
+     {
+      "turn": 9,
+      "quote": "The water looks cloudy and smells stronger than usual, though I've not seen any blood."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has thin bones, for which she takes alendronic acid.; Has had a water infection before (describes this as 'another' one).",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "alendronic acid 70 mg once a week for my thin bones"
+     },
+     {
+      "turn": 8,
+      "quote": "I've got an underactive thyroid, and I had a water infection about a year ago that was treated with antibiotics."
+     },
+     {
+      "turn": 12,
+      "quote": "it's another water infection"
+     },
+     {
+      "turn": 13,
+      "quote": "just the underactive thyroid and that water infection a year ago. Nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Levothyroxine 75 micrograms every morning; alendronic acid 70 mg once a week; a vaginal cream from the hospital twice a week (name not remembered).",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I take levothyroxine 75 micrograms every morning, and alendronic acid 70 mg once a week for my thin bones. I also use a vaginal cream from the hospital twice a week, but I can't remember what it's called."
+     },
+     {
+      "turn": 10,
+      "quote": "No, that's the lot"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Allergic to trimethoprim — it caused a nasty itchy rash.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I'm allergic to trimethoprim — it gave me a nasty itchy rash."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has stopped going to the residents' coffee morning because she is worried she won't reach a toilet in time.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "it's disturbing my sleep quite a bit — I'm getting up three or four times in the night, when I'd usually only go once."
+     },
+     {
+      "turn": 12,
+      "quote": "I have stopped going to the residents' coffee morning, as I'm worried I won't reach a toilet in time"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Thinks it is another water infection and hopes to get some antibiotics before the weekend.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "so I'd like to get it seen to."
+     },
+     {
+      "turn": 12,
+      "quote": "I do think it's another water infection, and I'm hoping I can get some antibiotics before the weekend"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Burning when passing water and needing to go much more often than usual.",
+    "evidence": [
+     "It's a burning when I pass water, and I'm needing to go much more often than usual."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about two weeks ago.",
+    "evidence": [
+     "it's been about two weeks now"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Has not noticed anything that makes much difference to the burning or the need to go — it is just there.",
+    "evidence": [
+     "I can't say I've noticed anything that makes much difference, really — it's just there."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Burning.",
+    "evidence": [
+     "burning"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Down below, in the water passage, felt when actually passing water.",
+    "evidence": [
+     "It's down below, in the water passage, when I'm actually passing water."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 5 out of 10 — uncomfortable, but managing.",
+    "evidence": [
+     "It's very uncomfortable and it's getting me down a bit",
+     "The stinging is about 5 out of 10 — uncomfortable, but I'm managing."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Wakes three or four times in the night to pass water, compared with usually only once.",
+    "evidence": [
+     "It's there most times I go, but it does vary a bit — sometimes stronger than others. It's not there all day, just when I'm passing water.",
+     "I'm getting up three or four times in the night, when I'd usually only go once."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Needing to go much more often than usual.; Urine looks cloudy and smells stronger than usual; no blood seen; no confusion noticed by her niece.",
+    "evidence": [
+     "I'm needing to go much more often than usual.",
+     "The water looks cloudy and smells stronger than usual, though I've not seen any blood."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has thin bones, for which she takes alendronic acid.; Has had a water infection before (describes this as 'another' one).",
+    "evidence": [
+     "alendronic acid 70 mg once a week for my thin bones",
+     "I've got an underactive thyroid, and I had a water infection about a year ago that was treated with antibiotics.",
+     "it's another water infection",
+     "just the underactive thyroid and that water infection a year ago. Nothing else I can think of."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Levothyroxine 75 micrograms every morning; alendronic acid 70 mg once a week; a vaginal cream from the hospital twice a week (name not remembered).",
+    "evidence": [
+     "I take levothyroxine 75 micrograms every morning, and alendronic acid 70 mg once a week for my thin bones. I also use a vaginal cream from the hospital twice a week, but I can't remember what it's called.",
+     "No, that's the lot"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Allergic to trimethoprim — it caused a nasty itchy rash.",
+    "evidence": [
+     "I'm allergic to trimethoprim — it gave me a nasty itchy rash."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has stopped going to the residents' coffee morning because she is worried she won't reach a toilet in time.",
+    "evidence": [
+     "it's disturbing my sleep quite a bit — I'm getting up three or four times in the night, when I'd usually only go once.",
+     "I have stopped going to the residents' coffee morning, as I'm worried I won't reach a toilet in time"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Thinks it is another water infection and hopes to get some antibiotics before the weekend.",
+    "evidence": [
+     "so I'd like to get it seen to.",
+     "I do think it's another water infection, and I'm hoping I can get some antibiotics before the weekend"
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_03",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 351,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.6153846153846154,
+  "essential_completeness": 0.75,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": false,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": false,
+   "F9": true,
+   "F10": true,
+   "F12": true,
+   "F13": true,
+   "F14": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 1,
+  "leading_rate": 0.08333333333333333,
+  "leading_details": [
+   {
+    "index": 10,
+    "reason": "Introduces sleep disturbance, which the patient had not mentioned, and suggests the urinary symptoms may be causing it."
+   }
+  ]
+ }
+}

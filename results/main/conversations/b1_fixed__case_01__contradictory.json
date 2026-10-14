@@ -1,0 +1,728 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's the dizziness, mostly. I feel light-headed and swimmy when I stand up — getting out of bed or up from a chair. It's been troubling me."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Oh, it's been going on for months, I think."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's worse first thing in the morning, and if I stand up too quickly. If I sit back down for a minute it usually settles."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a swimmy sort of feeling, like I'm about to faint — not the room spinning round like some people get."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just in my head, really — a light-headed, swimmy feeling. It doesn't spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd say about a 6. I nearly fell once — had to grab hold of the kitchen worktop — but I haven't actually gone over."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes — each spell lasts less than a minute, but it happens several times a day. And now I think about it properly, I've had it about ten days, not months — I misspoke earlier."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that — no chest pain, no palpitations, no blackouts, and my arms and legs feel fine."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've had high blood pressure for about 15 years, and I've got arthritis in both hips. That's what the tablets are for."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "There's a new one for my blood pressure — amlodipine, 5 mg once a day — the nurse at the practice added it about two and a half weeks ago. I've taken a water tablet, bendroflumethiazide, for years, every morning. And I take paracetamol, up to three times a day, for my hip pain. There's also a small tablet I take each morning for my stomach, but I can't remember what that one's called."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not that I know of. I've never had a reaction to anything."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've stopped going to my Tuesday lunch club. I was worried about feeling faint on the bus. Otherwise I manage at home all right — I live on my own, in a ground-floor flat."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes — I keep wondering if that new blood-pressure tablet is what's causing it, and whether I should stop taking it. That's really what I wanted to ask about."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": true
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": true
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Dizziness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's the dizziness, mostly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "conflicting",
+    "value": "Started months ago",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's been going on for months, I think"
+     },
+     {
+      "turn": 7,
+      "quote": "I've had it about ten days, not months — I misspoke earlier"
+     }
+    ],
+    "conflicting_values": [
+     "Started months ago",
+     "About ten days ago (correcting earlier 'months')"
+    ],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse if standing up too quickly; sitting back down for a minute usually settles it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "when I stand up — getting out of bed or up from a chair"
+     },
+     {
+      "turn": 3,
+      "quote": "if I stand up too quickly. If I sit back down for a minute it usually settles"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Light-headed, swimmy feeling",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I feel light-headed and swimmy"
+     },
+     {
+      "turn": 4,
+      "quote": "It's a swimmy sort of feeling, like I'm about to faint — not the room spinning round like some people get."
+     },
+     {
+      "turn": 5,
+      "quote": "a light-headed, swimmy feeling"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the head only; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's just in my head, really"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I'd say about a 6"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes; each spell lasts less than a minute but happens several times a day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's worse first thing in the morning"
+     },
+     {
+      "turn": 7,
+      "quote": "It comes and goes — each spell lasts less than a minute, but it happens several times a day"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Nearly fell once — had to grab the kitchen worktop — but has not actually fallen",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I nearly fell once — had to grab hold of the kitchen worktop — but I haven't actually gone over"
+     },
+     {
+      "turn": 8,
+      "quote": "no chest pain, no palpitations, no blackouts, and my arms and legs feel fine"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure for about 15 years; arthritis in both hips; sees a doctor regularly for these",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've had high blood pressure for about 15 years, and I've got arthritis in both hips."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes tablets for the high blood pressure and arthritis (names not given); Amlodipine 5 mg once a day — a new one for blood pressure, added about two and a half weeks ago; bendroflumethiazide (water tablet) every morning for years; paracetamol up to three times a day for hip pain; a small tablet each morning for the stomach, name not remembered",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "That's what the tablets are for."
+     },
+     {
+      "turn": 10,
+      "quote": "There's a new one for my blood pressure — amlodipine, 5 mg once a day"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies; never had a reaction to anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, not that I know of. I've never had a reaction to anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has stopped going to the Tuesday lunch club because of worry about feeling faint on the bus; otherwise manages at home, lives alone in a ground-floor flat",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I've stopped going to my Tuesday lunch club. I was worried about feeling faint on the bus."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worries that the new blood-pressure tablet may be causing the dizziness, and wants to know whether to stop taking it — that is the main thing they wanted to ask about",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I keep wondering if that new blood-pressure tablet is what's causing it, and whether I should stop taking it. That's really what I wanted to ask about."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Dizziness",
+    "evidence": [
+     "It's the dizziness, mostly."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse if standing up too quickly; sitting back down for a minute usually settles it",
+    "evidence": [
+     "when I stand up — getting out of bed or up from a chair",
+     "if I stand up too quickly. If I sit back down for a minute it usually settles"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Light-headed, swimmy feeling",
+    "evidence": [
+     "I feel light-headed and swimmy",
+     "It's a swimmy sort of feeling, like I'm about to faint — not the room spinning round like some people get.",
+     "a light-headed, swimmy feeling"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the head only; does not spread anywhere else",
+    "evidence": [
+     "It's just in my head, really"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 6 out of 10",
+    "evidence": [
+     "I'd say about a 6"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes; each spell lasts less than a minute but happens several times a day",
+    "evidence": [
+     "It's worse first thing in the morning",
+     "It comes and goes — each spell lasts less than a minute, but it happens several times a day"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Nearly fell once — had to grab the kitchen worktop — but has not actually fallen",
+    "evidence": [
+     "I nearly fell once — had to grab hold of the kitchen worktop — but I haven't actually gone over",
+     "no chest pain, no palpitations, no blackouts, and my arms and legs feel fine"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure for about 15 years; arthritis in both hips; sees a doctor regularly for these",
+    "evidence": [
+     "I've had high blood pressure for about 15 years, and I've got arthritis in both hips."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies; never had a reaction to anything",
+    "evidence": [
+     "No, not that I know of. I've never had a reaction to anything."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has stopped going to the Tuesday lunch club because of worry about feeling faint on the bus; otherwise manages at home, lives alone in a ground-floor flat",
+    "evidence": [
+     "I've stopped going to my Tuesday lunch club. I was worried about feeling faint on the bus."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worries that the new blood-pressure tablet may be causing the dizziness, and wants to know whether to stop taking it — that is the main thing they wanted to ask about",
+    "evidence": [
+     "I keep wondering if that new blood-pressure tablet is what's causing it, and whether I should stop taking it. That's really what I wanted to ask about."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "medications",
+    "text": "Takes tablets for the high blood pressure and arthritis (names not given); Amlodipine 5 mg once a day — a new one for blood pressure, added about two and a half weeks ago; bendroflumethiazide (water tablet) every morning for years; paracetamol up to three times a day for hip pain; a small tablet each morning for the stomach, name not remembered",
+    "evidence": [
+     "That's what the tablets are for.",
+     "There's a new one for my blood pressure — amlodipine, 5 mg once a day"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "Two different answers were given: 'Started months ago' and 'About ten days ago (correcting earlier 'months')'",
+    "evidence": [
+     "it's been going on for months, I think",
+     "I've had it about ten days, not months — I misspoke earlier"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_01",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 3,
+  "unnecessary_rate": 0.23076923076923078,
+  "patient_words": 354,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.9333333333333333,
+  "essential_completeness": 0.875,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.8333333333333334,
+  "accuracy": 0.9166666666666666,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

@@ -1,0 +1,723 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been feeling light-headed and dizzy when I stand up from a chair or get out of bed. It started about ten days ago and it's been happening several times a day."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how much these dizzy spells are affecting your day-to-day life, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "I've stopped going to my Tuesday lunch club because I'm worried about feeling faint on the bus. The dizziness is about a 6 out of 10, and I nearly fell once and had to grab the kitchen worktop, though I haven't actually fallen. As for allergies, I don't have any that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take — regular ones or anything new or changed recently — and any health problems, operations, or hospital stays you've had in the past?"
+  },
+  {
+   "role": "patient",
+   "text": "I started a new blood-pressure tablet about two and a half weeks ago — amlodipine 5 mg, once a day, the practice nurse added it for high readings. I've also taken bendroflumethiazide 2.5 mg every morning for years, that's a water tablet. I take a small tablet for my stomach each morning but I can't remember its name, and paracetamol 1 g up to three times a day for hip pain. As for my health, I've had high blood pressure for about 15 years and osteoarthritis in both hips. I haven't had any operations or hospital stays."
+  },
+  {
+   "role": "agent",
+   "text": "Could you describe where in your body you notice the light-headedness, and whether it spreads or moves anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not really in one spot — it's a general swimmy, about-to-faint feeling in my head, like I'm going to come over faint. It doesn't spread or move anywhere else, no."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed along with the dizziness, or anything else you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any chest pain, palpitations, blackouts, or weakness in my arms or legs. The main thing is I'm worried the new tablet is causing this, and I'd like to know whether I should stop taking it."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your health in the past that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, there isn't anything else — just the high blood pressure and the arthritis in both hips. One thing you may want to know is that I have a bit of hearing loss in my left ear, so I sometimes need things repeated."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you'd like to add about your medicines — anything else you take, including things you buy yourself from a pharmacy or shop, or anything you've recently stopped?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't take anything else — just the tablets I've mentioned, and I haven't stopped anything recently."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed along with the dizziness that you haven't already mentioned?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else that I've noticed."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me how much these dizzy spells are affecting your day-to-day life, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take — regular ones or anything new or changed recently — and any health problems, operations, or hospital stays you've had in the past?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.44,
+    "past_history": 0.65,
+    "medications": 0.69
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you describe where in your body you notice the light-headedness, and whether it spreads or moves anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41
+   },
+   "reason": "highest-priority gap: region (missing; score 0.51)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Is there anything else you've noticed along with the dizziness, or anything else you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Is there anything else about your health in the past that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [
+    {
+     "draft": "Apart from the high blood pressure and the hip arthritis you mentioned, is there anything else about your health in the past that you think I should know about?",
+     "problems": [
+      "introduces unmentioned diagnosis 'arthritis'"
+     ]
+    }
+   ],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is there anything else you'd like to add about your medicines — anything else you take, including things you buy yourself from a pharmacy or shop, or anything you've recently stopped?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "medications": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything else you've noticed along with the dizziness that you haven't already mentioned?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Feeling light-headed and dizzy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been feeling light-headed and dizzy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about ten days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It started about ten days ago"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Occurs when standing up from a chair or getting out of bed",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "when I stand up from a chair or get out of bed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "A general swimmy, about-to-faint feeling",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "it's a general swimmy, about-to-faint feeling in my head, like I'm going to come over faint"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Not in one specific spot; felt generally in the head. Does not spread or move anywhere else.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's not really in one spot — it's a general swimmy, about-to-faint feeling in my head"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Dizziness about 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "The dizziness is about a 6 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Happening several times a day",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been happening several times a day"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Nearly fell once and had to grab the kitchen worktop, but has not actually fallen; No chest pain, no palpitations, no blackouts, and no weakness in the arms or legs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I nearly fell once and had to grab the kitchen worktop, though I haven't actually fallen."
+     },
+     {
+      "turn": 5,
+      "quote": "I haven't had any chest pain, palpitations, blackouts, or weakness in my arms or legs"
+     },
+     {
+      "turn": 8,
+      "quote": "No, nothing else that I've noticed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure for about 15 years and osteoarthritis in both hips; no operations or hospital stays.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had high blood pressure for about 15 years and osteoarthritis in both hips. I haven't had any operations or hospital stays."
+     },
+     {
+      "turn": 6,
+      "quote": "No, there isn't anything else — just the high blood pressure and the arthritis in both hips. One thing you may want to know is that I have a bit of hearing loss in my left ear, so I sometimes need things repeated."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Started amlodipine 5 mg once a day about two and a half weeks ago (new, added by the practice nurse for high readings); bendroflumethiazide 2.5 mg every morning for years (a water tablet); a small tablet for the stomach each morning whose name they cannot remember; paracetamol 1 g up to three times a day for hip pain.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I started a new blood-pressure tablet about two and a half weeks ago — amlodipine 5 mg, once a day, the practice nurse added it for high readings. I've also taken bendroflumethiazide 2.5 mg every morning for years, that's a water tablet. I take a small tablet for my stomach each morning but I can't remember its name, and paracetamol 1 g up to three times a day for hip pain."
+     },
+     {
+      "turn": 7,
+      "quote": "No, I don't take anything else — just the tablets I've mentioned, and I haven't stopped anything recently."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has stopped going to their Tuesday lunch club because they worry about feeling faint on the bus",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I've stopped going to my Tuesday lunch club because I'm worried about feeling faint on the bus."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried the new tablet is causing the dizziness and wants to know whether to stop taking it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I'm worried about feeling faint on the bus"
+     },
+     {
+      "turn": 5,
+      "quote": "I'm worried the new tablet is causing this, and I'd like to know whether I should stop taking it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Feeling light-headed and dizzy",
+    "evidence": [
+     "I've been feeling light-headed and dizzy"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about ten days ago",
+    "evidence": [
+     "It started about ten days ago"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Occurs when standing up from a chair or getting out of bed",
+    "evidence": [
+     "when I stand up from a chair or get out of bed"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "A general swimmy, about-to-faint feeling",
+    "evidence": [
+     "it's a general swimmy, about-to-faint feeling in my head, like I'm going to come over faint"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Not in one specific spot; felt generally in the head. Does not spread or move anywhere else.",
+    "evidence": [
+     "It's not really in one spot — it's a general swimmy, about-to-faint feeling in my head"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Dizziness about 6 out of 10",
+    "evidence": [
+     "The dizziness is about a 6 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Happening several times a day",
+    "evidence": [
+     "it's been happening several times a day"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Nearly fell once and had to grab the kitchen worktop, but has not actually fallen; No chest pain, no palpitations, no blackouts, and no weakness in the arms or legs",
+    "evidence": [
+     "I nearly fell once and had to grab the kitchen worktop, though I haven't actually fallen.",
+     "I haven't had any chest pain, palpitations, blackouts, or weakness in my arms or legs",
+     "No, nothing else that I've noticed."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure for about 15 years and osteoarthritis in both hips; no operations or hospital stays.",
+    "evidence": [
+     "I've had high blood pressure for about 15 years and osteoarthritis in both hips. I haven't had any operations or hospital stays.",
+     "No, there isn't anything else — just the high blood pressure and the arthritis in both hips. One thing you may want to know is that I have a bit of hearing loss in my left ear, so I sometimes need things repeated."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Started amlodipine 5 mg once a day about two and a half weeks ago (new, added by the practice nurse for high readings); bendroflumethiazide 2.5 mg every morning for years (a water tablet); a small tablet for the stomach each morning whose name they cannot remember; paracetamol 1 g up to three times a day for hip pain.",
+    "evidence": [
+     "I started a new blood-pressure tablet about two and a half weeks ago — amlodipine 5 mg, once a day, the practice nurse added it for high readings. I've also taken bendroflumethiazide 2.5 mg every morning for years, that's a water tablet. I take a small tablet for my stomach each morning but I can't remember its name, and paracetamol 1 g up to three times a day for hip pain.",
+     "No, I don't take anything else — just the tablets I've mentioned, and I haven't stopped anything recently."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "I don't have any that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has stopped going to their Tuesday lunch club because they worry about feeling faint on the bus",
+    "evidence": [
+     "I've stopped going to my Tuesday lunch club because I'm worried about feeling faint on the bus."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried the new tablet is causing the dizziness and wants to know whether to stop taking it",
+    "evidence": [
+     "I'm worried about feeling faint on the bus",
+     "I'm worried the new tablet is causing this, and I'd like to know whether I should stop taking it"
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 8,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 4,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.9,
+   "level": "confirm",
+   "resolved": 4,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.65,
+   "level": "confirm",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.825,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.613,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.656,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.678,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.689,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_01",
+ "persona": "clear",
+ "metrics": {
+  "questions": 8,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 320,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 1,
+  "completeness": 0.9333333333333333,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

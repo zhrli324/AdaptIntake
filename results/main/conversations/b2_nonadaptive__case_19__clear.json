@@ -1,0 +1,323 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, I've been getting a pressure in my chest. It started this morning while I was carrying the shopping up the hill, and it came back again while I was walking over here."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for telling me. What you just described can be a sign of something that needs urgent attention. I am pausing these questions. Please seek medical help now: call your local emergency number or tell a member of staff right away."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pressure in the chest",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been getting a pressure in my chest"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started this morning while carrying the shopping up the hill",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It started this morning while I was carrying the shopping up the hill"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Comes on with exertion: while carrying the shopping up the hill and while walking over here",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it came back again while I was walking over here"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Pressure",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "a pressure in my chest"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Chest",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "a pressure in my chest"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Started this morning and came back again later (on walking over)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it came back again while I was walking over here"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pressure in the chest",
+    "evidence": [
+     "I've been getting a pressure in my chest"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started this morning while carrying the shopping up the hill",
+    "evidence": [
+     "It started this morning while I was carrying the shopping up the hill"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Comes on with exertion: while carrying the shopping up the hill and while walking over here",
+    "evidence": [
+     "it came back again while I was walking over here"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Pressure",
+    "evidence": [
+     "a pressure in my chest"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Chest",
+    "evidence": [
+     "a pressure in my chest"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Started this morning and came back again later (on walking over)",
+    "evidence": [
+     "it came back again while I was walking over here"
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "Not discussed.",
+    "evidence": []
+   },
+   {
+    "slot": "past_history",
+    "text": "Not discussed.",
+    "evidence": []
+   },
+   {
+    "slot": "medications",
+    "text": "Not discussed.",
+    "evidence": []
+   },
+   {
+    "slot": "allergies",
+    "text": "Not discussed.",
+    "evidence": []
+   }
+  ],
+  "red_flag": "chest pain or pressure"
+ },
+ "turns": 1,
+ "end_reason": "red flag: chest pain or pressure",
+ "red_flag": "chest pain or pressure",
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_19",
+ "persona": "clear",
+ "metrics": {
+  "questions": 1,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 33,
+  "end_reason": "red flag: chest pain or pressure",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "red_flag_detected": true,
+  "red_flag_turn": 1,
+  "completeness": 0.14285714285714285,
+  "essential_completeness": 0.15384615384615385,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": false,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": false,
+   "F9": false,
+   "F10": false,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0
+ }
+}

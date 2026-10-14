@@ -1,0 +1,733 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Well, it's my ankles — they've both been swelling up. I first noticed it about four weeks ago."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "About four weeks ago. It's both ankles, and it's worse by the evening."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's worse as the day goes on — by teatime my shoes feel tight. Then in the morning, after lying flat all night, it's mostly gone again."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not very painful, just a bit uncomfortable — I'd say about 3 out of 10. It's more that my shoes feel tight and my socks leave marks on my skin."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's both ankles and the lower part of my shins, about equally on both sides. It doesn't really spread anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "About a 3 out of 10. It's more uncomfortable than painful, really."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes — it builds up during the day and is worse by the evening. By the morning, after lying flat all night, it's mostly gone."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else really. No chest pain, no calf pain or redness in my legs, and I've not been getting breathless."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have high blood pressure, and I've been told my kidney function is a bit reduced. I'm on tablets for those."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "Let me think... I take amlodipine — I'm still on the 5 mg one, I think. And I take a small water tablet each morning, though I can't remember its name. Oh, and simvastatin 20 mg at night."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, no allergies that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I do sit with my feet up in the afternoons now, and I've stopped wearing my usual shoes because they've gotten too tight. Otherwise I manage."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I am a bit frightened by it, to be honest. My sister had heart failure, and I keep worrying this swelling means the same thing is happening to me."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": true
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": true
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Both ankles have been swelling up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's my ankles — they've both been swelling up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "About four weeks ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I first noticed it about four weeks ago"
+     },
+     {
+      "turn": 2,
+      "quote": "About four weeks ago"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse as the day goes on; better after lying flat all night, when it mostly goes away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It's worse as the day goes on — by teatime my shoes feel tight. Then in the morning, after lying flat all night, it's mostly gone again."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "More uncomfortable than painful",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's not very painful, just a bit uncomfortable"
+     },
+     {
+      "turn": 6,
+      "quote": "It's more uncomfortable than painful, really"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Both ankles and the lower part of the shins, about equally on both sides; does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "they've both been swelling up"
+     },
+     {
+      "turn": 2,
+      "quote": "It's both ankles"
+     },
+     {
+      "turn": 5,
+      "quote": "It's both ankles and the lower part of my shins, about equally on both sides. It doesn't really spread anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 3 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'd say about 3 out of 10"
+     },
+     {
+      "turn": 6,
+      "quote": "About a 3 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes: builds up during the day, worse by the evening, and mostly gone by the morning after lying flat all night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's worse by the evening"
+     },
+     {
+      "turn": 3,
+      "quote": "Then in the morning, after lying flat all night, it's mostly gone again."
+     },
+     {
+      "turn": 7,
+      "quote": "it builds up during the day and is worse by the evening"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Shoes feel tight and socks leave marks on the skin",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "my shoes feel tight and my socks leave marks on my skin"
+     },
+     {
+      "turn": 8,
+      "quote": "No, nothing else really. No chest pain, no calf pain or redness in my legs, and I've not been getting breathless."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure and reduced kidney function (told by a doctor)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I have high blood pressure, and I've been told my kidney function is a bit reduced"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "On tablets for high blood pressure and reduced kidney function (names not given); Amlodipine 5 mg (still on the 5 mg one), a small water tablet each morning (name not remembered), and simvastatin 20 mg at night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I'm on tablets for those"
+     },
+     {
+      "turn": 10,
+      "quote": "I take amlodipine — I'm still on the 5 mg one, I think. And I take a small water tablet each morning, though I can't remember its name. Oh, and simvastatin 20 mg at night."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, no allergies that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Now sits with feet up in the afternoons; has stopped wearing usual shoes because they have gotten too tight; otherwise manages",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I do sit with my feet up in the afternoons now, and I've stopped wearing my usual shoes because they've gotten too tight. Otherwise I manage."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Frightened by the swelling; worried it means the same heart failure his sister had",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I suppose I am a bit frightened by it, to be honest. My sister had heart failure, and I keep worrying this swelling means the same thing is happening to me."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Both ankles have been swelling up",
+    "evidence": [
+     "it's my ankles — they've both been swelling up"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "About four weeks ago",
+    "evidence": [
+     "I first noticed it about four weeks ago",
+     "About four weeks ago"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse as the day goes on; better after lying flat all night, when it mostly goes away",
+    "evidence": [
+     "It's worse as the day goes on — by teatime my shoes feel tight. Then in the morning, after lying flat all night, it's mostly gone again."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "More uncomfortable than painful",
+    "evidence": [
+     "It's not very painful, just a bit uncomfortable",
+     "It's more uncomfortable than painful, really"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Both ankles and the lower part of the shins, about equally on both sides; does not spread anywhere else",
+    "evidence": [
+     "they've both been swelling up",
+     "It's both ankles",
+     "It's both ankles and the lower part of my shins, about equally on both sides. It doesn't really spread anywhere else."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 3 out of 10",
+    "evidence": [
+     "I'd say about 3 out of 10",
+     "About a 3 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes: builds up during the day, worse by the evening, and mostly gone by the morning after lying flat all night",
+    "evidence": [
+     "it's worse by the evening",
+     "Then in the morning, after lying flat all night, it's mostly gone again.",
+     "it builds up during the day and is worse by the evening"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Shoes feel tight and socks leave marks on the skin",
+    "evidence": [
+     "my shoes feel tight and my socks leave marks on my skin",
+     "No, nothing else really. No chest pain, no calf pain or redness in my legs, and I've not been getting breathless."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure and reduced kidney function (told by a doctor)",
+    "evidence": [
+     "I have high blood pressure, and I've been told my kidney function is a bit reduced"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, no allergies that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Now sits with feet up in the afternoons; has stopped wearing usual shoes because they have gotten too tight; otherwise manages",
+    "evidence": [
+     "I do sit with my feet up in the afternoons now, and I've stopped wearing my usual shoes because they've gotten too tight. Otherwise I manage."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Frightened by the swelling; worried it means the same heart failure his sister had",
+    "evidence": [
+     "I suppose I am a bit frightened by it, to be honest. My sister had heart failure, and I keep worrying this swelling means the same thing is happening to me."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "medications",
+    "text": "On tablets for high blood pressure and reduced kidney function (names not given); Amlodipine 5 mg (still on the 5 mg one), a small water tablet each morning (name not remembered), and simvastatin 20 mg at night",
+    "evidence": [
+     "I'm on tablets for those",
+     "I take amlodipine — I'm still on the 5 mg one, I think. And I take a small water tablet each morning, though I can't remember its name. Oh, and simvastatin 20 mg at night."
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_07",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 4,
+  "unnecessary_rate": 0.3076923076923077,
+  "patient_words": 295,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.7857142857142857,
+  "essential_completeness": 0.625,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 0.8461538461538461,
+  "accuracy": 0.8461538461538461,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

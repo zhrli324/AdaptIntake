@@ -1,0 +1,18 @@
+{
+ "models": {
+  "agent": "deepseek-flash",
+  "patient": "deepseek-flash",
+  "judge": "deepseek-flash"
+ },
+ "run_id": "main",
+ "systems": [
+  "b1_fixed",
+  "b2_nonadaptive",
+  "adaptintake"
+ ],
+ "personas": "clear, fragmented, uncertain, contradictory",
+ "cases": "case_01..case_10 (all personas) + case_19, case_20 (clear only)",
+ "workers": 6,
+ "skip_judge": false,
+ "note": "run stopped early to save API budget; partial case_11/12 conversations moved to partial/"
+}

@@ -1,0 +1,719 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It's my lower back, mainly. It came on about 10 days ago after I was lifting heavy bags of compost in the garden, and it's been stiff and aching ever since."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "About 10 days ago. I noticed it right after I'd been lifting heavy bags of compost in the garden."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, it's worse when I bend or when I'm getting out of the car. It eases off if I lie on my side, and a hot water bottle helps quite a bit."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's a stiff, aching pain most of the time, but now and then I get a sharp twinge."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's across the lower back, more on the left side than the right. It spreads into my left buttock, but it doesn't go down below my knee."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "About a 6 out of 10. It's usually worst first thing in the morning."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It's mostly there all the time as a dull ache, but I get occasional sharp twinges on top of that."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else really. I've had no numbness around the back passage or groin, and no trouble passing urine or controlling my bowels. No weakness in my legs either, and no fever."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've got type 2 diabetes, so I see my GP about that fairly regularly. I had a similar bout of back pain about 5 years ago as well, which settled down with physiotherapy."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "For the diabetes, I take gliclazide 80 mg twice a day and metformin 1 g twice a day. And since this back pain started I've been taking ibuprofen 400 mg three times a day, which I got from the chemist."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, no known drug allergies that I'm aware of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, quite a bit. I can't do any gardening at all at the moment, and I need help putting my socks on."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, two things really. I want to know whether I've slipped a disc, and whether I need a scan."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": true
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": true
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Lower back problem",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my lower back, mainly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "About 10 days ago, noticed right after lifting heavy bags of compost in the garden",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It came on about 10 days ago after I was lifting heavy bags of compost in the garden"
+     },
+     {
+      "turn": 2,
+      "quote": "About 10 days ago. I noticed it right after I'd been lifting heavy bags of compost in the garden."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse when bending or getting out of the car; eases off when lying on their side, and a hot water bottle helps quite a bit",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "it's worse when I bend or when I'm getting out of the car. It eases off if I lie on my side, and a hot water bottle helps quite a bit"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Dull ache most of the time, with occasional sharp twinges on top of that",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been stiff and aching ever since"
+     },
+     {
+      "turn": 4,
+      "quote": "It's a stiff, aching pain most of the time, but now and then I get a sharp twinge."
+     },
+     {
+      "turn": 7,
+      "quote": "It's mostly there all the time as a dull ache, but I get occasional sharp twinges on top of that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Across the lower back, more on the left side than the right; spreads into the left buttock but does not go down below the knee",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's my lower back, mainly."
+     },
+     {
+      "turn": 5,
+      "quote": "It's across the lower back, more on the left side than the right. It spreads into my left buttock, but it doesn't go down below my knee."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "About a 6 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Mostly there all the time as a constant dull ache, with occasional sharp twinges on top of that",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been stiff and aching ever since"
+     },
+     {
+      "turn": 6,
+      "quote": "It's usually worst first thing in the morning"
+     },
+     {
+      "turn": 7,
+      "quote": "It's mostly there all the time as a dull ache, but I get occasional sharp twinges on top of that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No other symptoms: no numbness around the back passage or groin, no trouble passing urine or controlling bowels, no weakness in the legs, and no fever",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "No, nothing else really. I've had no numbness around the back passage or groin, and no trouble passing urine or controlling my bowels. No weakness in my legs either, and no fever."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has type 2 diabetes and sees GP regularly for it; had a similar bout of back pain about 5 years ago that settled with physiotherapy.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I've got type 2 diabetes, so I see my GP about that fairly regularly. I had a similar bout of back pain about 5 years ago as well, which settled down with physiotherapy."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes; since the back pain started, ibuprofen 400 mg three times a day bought from the chemist",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "For the diabetes, I take gliclazide 80 mg twice a day and metformin 1 g twice a day. And since this back pain started I've been taking ibuprofen 400 mg three times a day, which I got from the chemist."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known drug allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, no known drug allergies that I'm aware of"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Unable to do any gardening at the moment and needs help putting socks on",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I can't do any gardening at all at the moment, and I need help putting my socks on."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about whether they have slipped a disc and whether they need a scan",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I want to know whether I've slipped a disc, and whether I need a scan."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Lower back problem",
+    "evidence": [
+     "It's my lower back, mainly."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "About 10 days ago, noticed right after lifting heavy bags of compost in the garden",
+    "evidence": [
+     "It came on about 10 days ago after I was lifting heavy bags of compost in the garden",
+     "About 10 days ago. I noticed it right after I'd been lifting heavy bags of compost in the garden."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse when bending or getting out of the car; eases off when lying on their side, and a hot water bottle helps quite a bit",
+    "evidence": [
+     "it's worse when I bend or when I'm getting out of the car. It eases off if I lie on my side, and a hot water bottle helps quite a bit"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Dull ache most of the time, with occasional sharp twinges on top of that",
+    "evidence": [
+     "it's been stiff and aching ever since",
+     "It's a stiff, aching pain most of the time, but now and then I get a sharp twinge.",
+     "It's mostly there all the time as a dull ache, but I get occasional sharp twinges on top of that."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Across the lower back, more on the left side than the right; spreads into the left buttock but does not go down below the knee",
+    "evidence": [
+     "It's my lower back, mainly.",
+     "It's across the lower back, more on the left side than the right. It spreads into my left buttock, but it doesn't go down below my knee."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 6 out of 10",
+    "evidence": [
+     "About a 6 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Mostly there all the time as a constant dull ache, with occasional sharp twinges on top of that",
+    "evidence": [
+     "it's been stiff and aching ever since",
+     "It's usually worst first thing in the morning",
+     "It's mostly there all the time as a dull ache, but I get occasional sharp twinges on top of that."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No other symptoms: no numbness around the back passage or groin, no trouble passing urine or controlling bowels, no weakness in the legs, and no fever",
+    "evidence": [
+     "No, nothing else really. I've had no numbness around the back passage or groin, and no trouble passing urine or controlling my bowels. No weakness in my legs either, and no fever."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has type 2 diabetes and sees GP regularly for it; had a similar bout of back pain about 5 years ago that settled with physiotherapy.",
+    "evidence": [
+     "I've got type 2 diabetes, so I see my GP about that fairly regularly. I had a similar bout of back pain about 5 years ago as well, which settled down with physiotherapy."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Gliclazide 80 mg twice a day and metformin 1 g twice a day for diabetes; since the back pain started, ibuprofen 400 mg three times a day bought from the chemist",
+    "evidence": [
+     "For the diabetes, I take gliclazide 80 mg twice a day and metformin 1 g twice a day. And since this back pain started I've been taking ibuprofen 400 mg three times a day, which I got from the chemist."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known drug allergies",
+    "evidence": [
+     "No, no known drug allergies that I'm aware of"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Unable to do any gardening at the moment and needs help putting socks on",
+    "evidence": [
+     "I can't do any gardening at all at the moment, and I need help putting my socks on."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about whether they have slipped a disc and whether they need a scan",
+    "evidence": [
+     "I want to know whether I've slipped a disc, and whether I need a scan."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "case_09",
+ "persona": "clear",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 4,
+  "unnecessary_rate": 0.3076923076923077,
+  "patient_words": 317,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.8125,
+  "essential_completeness": 0.7777777777777778,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": false,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

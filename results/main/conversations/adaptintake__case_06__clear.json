@@ -1,0 +1,781 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've just been feeling tired all the time and I've no energy. It's been coming on gradually over about two months now, and it's getting me down."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how this tiredness is affecting your day-to-day life, if at all, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It's affecting most things, really. I'm tired all day, worse in the afternoons, and I've started needing a nap most days, which I never used to do — my energy's about a 3 out of 10, and I've had to stop my twice-weekly swimming. I'm also struggling to help my husband wash and dress in the mornings.\n\nAs for medicines, codeine makes me very sick, so I avoid it."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about any medicines you take — regular ones or anything new or changed recently, and the dose if you know it — and also any past health problems, operations, or hospital stays you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take metformin 500 mg twice a day for my diabetes, levothyroxine 100 micrograms each morning for my thyroid, and omeprazole 20 mg once a day for indigestion — I've been on that for years. I also take ibuprofen 400 mg that I buy from the chemist most days for shoulder pain. Nothing new or changed recently.\n\nAs for my health, I've had type 2 diabetes for 12 years and an underactive thyroid. I've not had any operations or hospital stays."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me more about this tiredness—where you feel it in your body, if anywhere, and what makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It's not in one particular place — it's just a whole-body tiredness, like I've got nothing in the tank. It's worse in the afternoon, and a nap does help a bit, but I still wake up not feeling refreshed even after about seven hours' sleep. I've also noticed I get more short of breath than usual going up hills."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed alongside the tiredness that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Friends have said I look pale, and my mood feels a bit flat with all the caring. I've not had any chest pain, no weight loss, and no change in my bowels."
+  },
+  {
+   "role": "agent",
+   "text": "What, if anything, worries you most about how you've been feeling?"
+  },
+  {
+   "role": "patient",
+   "text": "What worries me most is that I won't be able to keep caring for my husband. He has Parkinson's and I'm the main one looking after him, and I'm already struggling with the mornings."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you take for your health—like medicines, vitamins, or supplements—that we haven’t talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's everything — just the metformin, levothyroxine, omeprazole and the ibuprofen. I don't take any vitamins or supplements."
+  },
+  {
+   "role": "agent",
+   "text": "You've mentioned diabetes and an underactive thyroid—is there anything else about your health in the past that you think I should know about?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all — just the diabetes and the underactive thyroid. There's nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Along with the tiredness, is there anything else you've noticed that we haven't talked about yet?"
+  },
+  {
+   "role": "patient",
+   "text": "I don't think so — I've told you about the breathlessness on hills, looking pale, the flat mood, and waking unrefreshed. There's nothing else I've noticed."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me how this tiredness is affecting your day-to-day life, if at all, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "associated_symptoms": 0.44,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Can you tell me about any medicines you take — regular ones or anything new or changed recently, and the dose if you know it — and also any past health problems, operations, or hospital stays you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.44,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me more about this tiredness—where you feel it in your body, if anywhere, and what makes it better or worse?",
+   "slots": [
+    "region",
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: region, provocation (missing; score 0.51)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false,
+    "provocation": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Is there anything else you've noticed alongside the tiredness that you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "What, if anything, worries you most about how you've been feeling?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is there anything else you take for your health—like medicines, vitamins, or supplements—that we haven’t talked about yet?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "You've mentioned diabetes and an underactive thyroid—is there anything else about your health in the past that you think I should know about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Along with the tiredness, is there anything else you've noticed that we haven't talked about yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Feeling tired all the time and having no energy",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've just been feeling tired all the time and I've no energy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Gradual onset over about two months",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been coming on gradually over about two months now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse in the afternoon; a nap helps a bit",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's worse in the afternoon, and a nap does help a bit"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Whole-body tiredness, like having nothing in the tank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "like I've got nothing in the tank"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Not in one particular place — whole-body tiredness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's not in one particular place — it's just a whole-body tiredness"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Energy about 3 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "my energy's about a 3 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Still wakes up not feeling refreshed even after about seven hours' sleep",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "feeling tired all the time"
+     },
+     {
+      "turn": 2,
+      "quote": "I'm tired all day, worse in the afternoons"
+     },
+     {
+      "turn": 4,
+      "quote": "I still wake up not feeling refreshed even after about seven hours' sleep"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling down/low in mood; More short of breath than usual going up hills; Friends say she looks pale; mood feels a bit flat with all the caring; No chest pain, no weight loss, no change in bowel habit",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's getting me down"
+     },
+     {
+      "turn": 4,
+      "quote": "I get more short of breath than usual going up hills"
+     },
+     {
+      "turn": 5,
+      "quote": "Friends have said I look pale, and my mood feels a bit flat with all the caring."
+     },
+     {
+      "turn": 5,
+      "quote": "I've not had any chest pain, no weight loss, and no change in my bowels."
+     },
+     {
+      "turn": 9,
+      "quote": "There's nothing else I've noticed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Type 2 diabetes for 12 years and an underactive thyroid; no operations or hospital stays",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had type 2 diabetes for 12 years and an underactive thyroid. I've not had any operations or hospital stays."
+     },
+     {
+      "turn": 8,
+      "quote": "No, that's all — just the diabetes and the underactive thyroid. There's nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Metformin 500 mg twice a day for diabetes; levothyroxine 100 micrograms each morning for thyroid; omeprazole 20 mg once a day for indigestion (for years); ibuprofen 400 mg bought from the chemist, taken most days for shoulder pain. Nothing new or changed recently.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take metformin 500 mg twice a day for my diabetes, levothyroxine 100 micrograms each morning for my thyroid, and omeprazole 20 mg once a day for indigestion — I've been on that for years. I also take ibuprofen 400 mg that I buy from the chemist most days for shoulder pain. Nothing new or changed recently."
+     },
+     {
+      "turn": 7,
+      "quote": "No, that's everything — just the metformin, levothyroxine, omeprazole and the ibuprofen. I don't take any vitamins or supplements."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Codeine makes her very sick, so she avoids it",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "codeine makes me very sick, so I avoid it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Tiredness affects most things; needs a nap most days (new for her), has had to stop twice-weekly swimming, and struggles to help her husband wash and dress in the mornings",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It's affecting most things, really."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried she will not be able to keep caring for her husband, who has Parkinson's and relies on her as his main carer",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "What worries me most is that I won't be able to keep caring for my husband."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Feeling tired all the time and having no energy",
+    "evidence": [
+     "I've just been feeling tired all the time and I've no energy"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Gradual onset over about two months",
+    "evidence": [
+     "It's been coming on gradually over about two months now"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse in the afternoon; a nap helps a bit",
+    "evidence": [
+     "It's worse in the afternoon, and a nap does help a bit"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Whole-body tiredness, like having nothing in the tank",
+    "evidence": [
+     "like I've got nothing in the tank"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Not in one particular place — whole-body tiredness",
+    "evidence": [
+     "It's not in one particular place — it's just a whole-body tiredness"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Energy about 3 out of 10",
+    "evidence": [
+     "my energy's about a 3 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Still wakes up not feeling refreshed even after about seven hours' sleep",
+    "evidence": [
+     "feeling tired all the time",
+     "I'm tired all day, worse in the afternoons",
+     "I still wake up not feeling refreshed even after about seven hours' sleep"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling down/low in mood; More short of breath than usual going up hills; Friends say she looks pale; mood feels a bit flat with all the caring; No chest pain, no weight loss, no change in bowel habit",
+    "evidence": [
+     "it's getting me down",
+     "I get more short of breath than usual going up hills",
+     "Friends have said I look pale, and my mood feels a bit flat with all the caring.",
+     "I've not had any chest pain, no weight loss, and no change in my bowels.",
+     "There's nothing else I've noticed."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Type 2 diabetes for 12 years and an underactive thyroid; no operations or hospital stays",
+    "evidence": [
+     "I've had type 2 diabetes for 12 years and an underactive thyroid. I've not had any operations or hospital stays.",
+     "No, that's all — just the diabetes and the underactive thyroid. There's nothing else I can think of."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Metformin 500 mg twice a day for diabetes; levothyroxine 100 micrograms each morning for thyroid; omeprazole 20 mg once a day for indigestion (for years); ibuprofen 400 mg bought from the chemist, taken most days for shoulder pain. Nothing new or changed recently.",
+    "evidence": [
+     "I take metformin 500 mg twice a day for my diabetes, levothyroxine 100 micrograms each morning for my thyroid, and omeprazole 20 mg once a day for indigestion — I've been on that for years. I also take ibuprofen 400 mg that I buy from the chemist most days for shoulder pain. Nothing new or changed recently.",
+     "No, that's everything — just the metformin, levothyroxine, omeprazole and the ibuprofen. I don't take any vitamins or supplements."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Codeine makes her very sick, so she avoids it",
+    "evidence": [
+     "codeine makes me very sick, so I avoid it"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Tiredness affects most things; needs a nap most days (new for her), has had to stop twice-weekly swimming, and struggles to help her husband wash and dress in the mornings",
+    "evidence": [
+     "It's affecting most things, really."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried she will not be able to keep caring for her husband, who has Parkinson's and relies on her as his main carer",
+    "evidence": [
+     "What worries me most is that I won't be able to keep caring for my husband."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 9,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.9,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.65,
+   "level": "confirm",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.825,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.613,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.656,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.678,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.689,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.695,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "case_06",
+ "persona": "clear",
+ "metrics": {
+  "questions": 9,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 365,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 1.0,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

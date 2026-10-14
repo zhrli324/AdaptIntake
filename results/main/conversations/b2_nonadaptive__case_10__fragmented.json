@@ -1,0 +1,972 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Getting out of breath going up the stairs."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice getting out of breath going up the stairs?"
+  },
+  {
+   "role": "patient",
+   "text": "It's come on slowly, over about three months."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an allergy or a bad reaction to any medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "My wife's the one who remembers all that."
+  },
+  {
+   "role": "agent",
+   "text": "How much does getting out of breath going up the stairs affect your day-to-day life?"
+  },
+  {
+   "role": "patient",
+   "text": "I have to stop halfway up the stairs to get my breath."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me what medicines you take regularly these days, including anything you've started recently?"
+  },
+  {
+   "role": "patient",
+   "text": "I take bisoprolol once a day."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever stayed in a hospital overnight for any reason?"
+  },
+  {
+   "role": "patient",
+   "text": "My son drove me to the hospital last year for a scan."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath going up the stairs, do you notice any other symptoms at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "My ankles get a bit puffy in the evenings."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you notice it most when you get out of breath going up the stairs?"
+  },
+  {
+   "role": "patient",
+   "text": "Just the breathlessness, no chest pain or anything."
+  },
+  {
+   "role": "agent",
+   "text": "How often do you notice getting out of breath when you go up the stairs?"
+  },
+  {
+   "role": "patient",
+   "text": "Every time I go up them, but not when I'm sitting."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath going up the stairs, where do you feel it most, and does it stay there or spread anywhere — in your chest, in your throat, somewhere else, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Just puffed out all over, nowhere in particular."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about getting out of breath when you go up the stairs?"
+  },
+  {
+   "role": "patient",
+   "text": "Worried my heart might be getting worse."
+  },
+  {
+   "role": "agent",
+   "text": "When you feel puffed out going up the stairs, how would you describe that feeling?"
+  },
+  {
+   "role": "patient",
+   "text": "Just can't seem to get enough air in."
+  },
+  {
+   "role": "agent",
+   "text": "Aside from the hospital scan last year, is there anything else about your past health you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got atrial fibrillation. Had it five years now."
+  },
+  {
+   "role": "agent",
+   "text": "Other than the bisoprolol you take once a day, is there anything else you’d like to add about your medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "There's the rivaroxaban too, with my evening meal."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed along with getting out of breath that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I use two pillows now instead of one."
+  },
+  {
+   "role": "agent",
+   "text": "Have you had any operations in the past you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "Had a heart attack about twelve years ago."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other medicines you take, or any recent changes to your medicines, that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "There's atorvastatin, I take that at night."
+  },
+  {
+   "role": "agent",
+   "text": "When you get out of breath, is there anything else that happens at the same time?"
+  },
+  {
+   "role": "patient",
+   "text": "Reminds me of my brother, he had a bad heart."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice getting out of breath going up the stairs?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Have you ever had an allergy or a bad reaction to any medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much does getting out of breath going up the stairs affect your day-to-day life?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Could you tell me what medicines you take regularly these days, including anything you've started recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Have you ever stayed in a hospital overnight for any reason?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "When you get out of breath going up the stairs, do you notice any other symptoms at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Where do you notice it most when you get out of breath going up the stairs?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "How often do you notice getting out of breath when you go up the stairs?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.38,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "When you get out of breath going up the stairs, where do you feel it most, and does it stay there or spread anywhere — in your chest, in your throat, somewhere else, or are you not sure?",
+   "slots": [
+    "region"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.38,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What worries you most about getting out of breath when you go up the stairs?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "When you feel puffed out going up the stairs, how would you describe that feeling?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "region": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Aside from the hospital scan last year, is there anything else about your past health you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Other than the bisoprolol you take once a day, is there anything else you’d like to add about your medicines?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Is there anything else you’ve noticed along with getting out of breath that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Have you had any operations in the past you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Are there any other medicines you take, or any recent changes to your medicines, that you’d like to add?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.2,
+    "past_history": 0.14,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "When you get out of breath, is there anything else that happens at the same time?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "region": 0.04,
+    "associated_symptoms": 0.2,
+    "past_history": 0.14,
+    "medications": 0.14
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Getting out of breath going up the stairs",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Getting out of breath going up the stairs."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Came on slowly, over about three months",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It's come on slowly, over about three months."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Going up the stairs brings on breathlessness",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Getting out of breath going up the stairs."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Feels like they can't get enough air in",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "Just can't seem to get enough air in."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Feels puffed out all over, nowhere in particular",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "Just puffed out all over, nowhere in particular."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Breathlessness is enough that they must stop halfway up the stairs to get their breath",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I have to stop halfway up the stairs to get my breath."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Breathlessness happens every time they go up stairs; it does not happen when sitting",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "Every time I go up them, but not when I'm sitting."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Ankles get a bit puffy in the evenings; No chest pain or other symptoms, just breathlessness; Now uses two pillows instead of one at night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "My ankles get a bit puffy in the evenings."
+     },
+     {
+      "turn": 8,
+      "quote": "Just the breathlessness, no chest pain or anything."
+     },
+     {
+      "turn": 15,
+      "quote": "I use two pillows now instead of one."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Went to the hospital last year for a scan; son drove them there; Has atrial fibrillation, had it for five years; Had a heart attack about twelve years ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "My son drove me to the hospital last year for a scan."
+     },
+     {
+      "turn": 13,
+      "quote": "I've got atrial fibrillation. Had it five years now."
+     },
+     {
+      "turn": 16,
+      "quote": "Had a heart attack about twelve years ago"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes bisoprolol once a day; Takes bisoprolol once a day; also takes rivaroxaban with the evening meal; Also takes atorvastatin at night",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "I take bisoprolol once a day."
+     },
+     {
+      "turn": 14,
+      "quote": "There's the rivaroxaban too, with my evening meal."
+     },
+     {
+      "turn": 17,
+      "quote": "There's atorvastatin, I take that at night."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "My wife's the one who remembers all that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Sleeping arrangements changed: uses two pillows now instead of one",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I have to stop halfway up the stairs to get my breath."
+     },
+     {
+      "turn": 15,
+      "quote": "I use two pillows now instead of one."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their heart might be getting worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "Worried my heart might be getting worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Getting out of breath going up the stairs",
+    "evidence": [
+     "Getting out of breath going up the stairs."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Came on slowly, over about three months",
+    "evidence": [
+     "It's come on slowly, over about three months."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Going up the stairs brings on breathlessness",
+    "evidence": [
+     "Getting out of breath going up the stairs."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Feels like they can't get enough air in",
+    "evidence": [
+     "Just can't seem to get enough air in."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Breathlessness is enough that they must stop halfway up the stairs to get their breath",
+    "evidence": [
+     "I have to stop halfway up the stairs to get my breath."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Breathlessness happens every time they go up stairs; it does not happen when sitting",
+    "evidence": [
+     "Every time I go up them, but not when I'm sitting."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Ankles get a bit puffy in the evenings; No chest pain or other symptoms, just breathlessness; Now uses two pillows instead of one at night",
+    "evidence": [
+     "My ankles get a bit puffy in the evenings.",
+     "Just the breathlessness, no chest pain or anything.",
+     "I use two pillows now instead of one."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Went to the hospital last year for a scan; son drove them there; Has atrial fibrillation, had it for five years; Had a heart attack about twelve years ago",
+    "evidence": [
+     "My son drove me to the hospital last year for a scan.",
+     "I've got atrial fibrillation. Had it five years now.",
+     "Had a heart attack about twelve years ago"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes bisoprolol once a day; Takes bisoprolol once a day; also takes rivaroxaban with the evening meal; Also takes atorvastatin at night",
+    "evidence": [
+     "I take bisoprolol once a day.",
+     "There's the rivaroxaban too, with my evening meal.",
+     "There's atorvastatin, I take that at night."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Sleeping arrangements changed: uses two pillows now instead of one",
+    "evidence": [
+     "I have to stop halfway up the stairs to get my breath.",
+     "I use two pillows now instead of one."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their heart might be getting worse",
+    "evidence": [
+     "Worried my heart might be getting worse."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "region",
+    "text": "Mentioned, but not specific: Feels puffed out all over, nowhere in particular",
+    "evidence": [
+     "Just puffed out all over, nowhere in particular."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "My wife's the one who remembers all that."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 18,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "case_10",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 18,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 155,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5333333333333333,
+  "essential_completeness": 0.5833333333333334,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F11": false,
+   "F12": false,
+   "F13": false,
+   "F14": false,
+   "F15": false,
+   "F16": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}
