@@ -22,3 +22,6 @@ results/*
 .idea/
 .vscode/
 .ipynb_checkpoints/
+
+# Raw third-party datasets (download separately; see README)
+data/external/

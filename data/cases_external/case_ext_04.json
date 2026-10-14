@@ -1,0 +1,94 @@
+{
+  "id": "ext_04",
+  "title": "Right shoulder pain at a diabetes and blood pressure check",
+  "source": "Adapted from MTS-Dialog (TrainingSet ID 119, GENHX section), CC BY 4.0. Facts are taken only from the source note and dialogue.",
+  "profile": {
+    "age": 66,
+    "sex": "female",
+    "context": "Attends the clinic alone. No further social details are given in the source record."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Has pain in the right shoulder.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "provocation",
+      "text": "Certain movements of the shoulder make it hurt.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "onset",
+      "text": "There was no injury before the shoulder pain started.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "associated_symptoms",
+      "text": "No weakness, numbness or tingling.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "past_history",
+      "text": "Has type 2 diabetes.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "past_history",
+      "text": "Has high blood pressure.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Checks blood sugar only in the mornings; the readings have all been under 100. Does not check after meals.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "past_history",
+      "text": "Home blood pressure readings have been normal when checked, but she has not brought a record of them.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "past_history",
+      "text": "Had a benign breast biopsy in June 2004 and was told to have a repeat mammogram in six months, but never had it.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "main_concern",
+      "text": "Came for her five-month diabetes and blood pressure check; has no other concerns.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": null,
+  "red_flag": null
+}

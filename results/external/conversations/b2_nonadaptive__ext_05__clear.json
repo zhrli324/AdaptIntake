@@ -1,0 +1,731 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had sinus congestion and drainage for the last several days. It's been bothering me enough that I thought I should come in and get it checked."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any bad reactions to medicines that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about any medicines you take regularly or have taken in the last few days?"
+  },
+  {
+   "role": "patient",
+   "text": "I don't take any medicines regularly that I can think of. I was just diagnosed with diabetes last fall, but I'm not aware of being on any routine medication for it."
+  },
+  {
+   "role": "agent",
+   "text": "Have you had any other symptoms along with the sinus congestion and drainage?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else really. I haven't had any stomach pain, nausea, vomiting, diarrhoea, or constipation, and no blood in my urine or stools. I feel well overall otherwise."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you feel the congestion and drainage?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my sinuses — mostly around my nose and cheeks. The drainage runs down the back of my throat."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that seems to make your sinus congestion and drainage better?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't noticed anything that makes it better. It's just been there for the last several days."
+  },
+  {
+   "role": "agent",
+   "text": "Besides your diabetes, is there anything else in your past health or medical history you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm a non-smoker. My mammogram is up to date and I see my gynaecologist regularly, and I check my feet regularly too. That's really about it."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your sinus congestion and drainage?"
+  },
+  {
+   "role": "patient",
+   "text": "I wouldn't say I'm terribly worried — it's just been hanging on for several days and not clearing up, so I wanted to get it looked at."
+  },
+  {
+   "role": "agent",
+   "text": "How much are the sinus congestion and drainage affecting your day-to-day life right now?"
+  },
+  {
+   "role": "patient",
+   "text": "Honestly, not much. I feel well overall and I still walk 1 to 2 miles most days — at the local mall when the weather's bad. The congestion is annoying but it's not keeping me from doing what I normally do."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe what the congestion and drainage feel like to you?"
+  },
+  {
+   "role": "patient",
+   "text": "It feels like a stuffy, full pressure around my nose and cheeks, and there's a dripping sensation at the back of my throat. Nothing sharp or painful — just congested and draining."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you take for your health — even something you only use now and then, or started recently?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing at all. I don't take anything for my health, not even now and then, and I haven't started anything recently."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Do you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.36,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Can you tell me about any medicines you take regularly or have taken in the last few days?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.36,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Have you had any other symptoms along with the sinus congestion and drainage?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.36,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where do you feel the congestion and drainage?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.36,
+    "timing": 0.44,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Is there anything that seems to make your sinus congestion and drainage better?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.36,
+    "timing": 0.44,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Besides your diabetes, is there anything else in your past health or medical history you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.36,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "What worries you most about your sinus congestion and drainage?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.36,
+    "medications": 0.34,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "How much are the sinus congestion and drainage affecting your day-to-day life right now?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.36,
+    "medications": 0.34,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.36)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "How would you describe what the congestion and drainage feel like to you?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Is there anything else you take for your health — even something you only use now and then, or started recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Sinus congestion and drainage",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've had sinus congestion and drainage"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started several days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "for the last several days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Nothing seems to make it better",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "No, I haven't noticed anything that makes it better."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Stuffy, full pressure around the nose and cheeks, with a dripping sensation at the back of the throat; not sharp or painful — just congested and draining",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "It feels like a stuffy, full pressure around my nose and cheeks, and there's a dripping sensation at the back of my throat. Nothing sharp or painful — just congested and draining."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the sinuses, mostly around the nose and cheeks; drainage runs down the back of the throat",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's in my sinuses — mostly around my nose and cheeks. The drainage runs down the back of my throat."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Mild in impact: congestion is annoying but not preventing normal activities",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It's been bothering me enough that I thought I should come in"
+     },
+     {
+      "turn": 9,
+      "quote": "The congestion is annoying but it's not keeping me from doing what I normally do"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Just been there constantly for the last several days",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "It's just been there for the last several days."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No other symptoms: no stomach pain, nausea, vomiting, diarrhoea, constipation, no blood in urine or stools; feels well otherwise",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "No, nothing else really. I haven't had any stomach pain, nausea, vomiting, diarrhoea, or constipation, and no blood in my urine or stools."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diagnosed with diabetes last fall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I was just diagnosed with diabetes last fall"
+     },
+     {
+      "turn": 7,
+      "quote": "I'm a non-smoker. My mammogram is up to date and I see my gynaecologist regularly, and I check my feet regularly too."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes no regular medicines; not aware of being on any routine medication for diabetes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I don't take any medicines regularly that I can think of"
+     },
+     {
+      "turn": 11,
+      "quote": "No, nothing at all. I don't take anything for my health, not even now and then, and I haven't started anything recently."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "No, I haven't had any bad reactions to medicines that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Not much affected; feels well overall and still walks 1 to 2 miles most days (at the local mall when weather is bad); congestion is not keeping them from doing what they normally do",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I still walk 1 to 2 miles most days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Not terribly worried; the congestion has been hanging on for several days without clearing up, so wants it looked at",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I wouldn't say I'm terribly worried — it's just been hanging on for several days and not clearing up, so I wanted to get it looked at."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Sinus congestion and drainage",
+    "evidence": [
+     "I've had sinus congestion and drainage"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started several days ago",
+    "evidence": [
+     "for the last several days"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Nothing seems to make it better",
+    "evidence": [
+     "No, I haven't noticed anything that makes it better."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Stuffy, full pressure around the nose and cheeks, with a dripping sensation at the back of the throat; not sharp or painful — just congested and draining",
+    "evidence": [
+     "It feels like a stuffy, full pressure around my nose and cheeks, and there's a dripping sensation at the back of my throat. Nothing sharp or painful — just congested and draining."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the sinuses, mostly around the nose and cheeks; drainage runs down the back of the throat",
+    "evidence": [
+     "It's in my sinuses — mostly around my nose and cheeks. The drainage runs down the back of my throat."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Just been there constantly for the last several days",
+    "evidence": [
+     "It's just been there for the last several days."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No other symptoms: no stomach pain, nausea, vomiting, diarrhoea, constipation, no blood in urine or stools; feels well otherwise",
+    "evidence": [
+     "No, nothing else really. I haven't had any stomach pain, nausea, vomiting, diarrhoea, or constipation, and no blood in my urine or stools."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diagnosed with diabetes last fall",
+    "evidence": [
+     "I was just diagnosed with diabetes last fall",
+     "I'm a non-smoker. My mammogram is up to date and I see my gynaecologist regularly, and I check my feet regularly too."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes no regular medicines; not aware of being on any routine medication for diabetes",
+    "evidence": [
+     "I don't take any medicines regularly that I can think of",
+     "No, nothing at all. I don't take anything for my health, not even now and then, and I haven't started anything recently."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known bad reactions to medicines",
+    "evidence": [
+     "No, I haven't had any bad reactions to medicines that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Not much affected; feels well overall and still walks 1 to 2 miles most days (at the local mall when weather is bad); congestion is not keeping them from doing what they normally do",
+    "evidence": [
+     "I still walk 1 to 2 miles most days"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Not terribly worried; the congestion has been hanging on for several days without clearing up, so wants it looked at",
+    "evidence": [
+     "I wouldn't say I'm terribly worried — it's just been hanging on for several days and not clearing up, so I wanted to get it looked at."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "severity",
+    "text": "Mild in impact: congestion is annoying but not preventing normal activities",
+    "evidence": [
+     "It's been bothering me enough that I thought I should come in",
+     "The congestion is annoying but it's not keeping me from doing what I normally do"
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 11,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "ext_05",
+ "persona": "clear",
+ "metrics": {
+  "questions": 11,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 285,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.45454545454545453,
+  "essential_completeness": 0.8,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": false,
+   "F9": false,
+   "F10": false,
+   "F11": false
+  },
+  "fidelity": 0.9230769230769231,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 1,
+  "leading_rate": 0.1,
+  "leading_details": [
+   {
+    "index": 7,
+    "reason": "Presupposes the patient is worried about the sinus congestion/drainage by asking 'What worries you most,' although the patient had not said they were worried."
+   }
+  ]
+ }
+}

@@ -109,6 +109,18 @@ Outputs go to `results/<run-id>/`:
 | Leading-question rate | Questions judged leading (the opening question is excluded), LLM judge; spot-check 20% by hand |
 | Red-flag handling | Detected or not, and on which turn (cases 19-20) |
 
+### External validation cases (public data)
+
+`data/cases_external/` holds 5 case cards for patients aged 66-76. They were adapted from
+[MTS-Dialog](https://github.com/abachaa/MTS-Dialog) (Ben Abacha et al., EACL 2023, CC BY 4.0) by
+transcribing the facts in each source note and dialogue, adding nothing. Each card names its source
+record ID. To re-create them, download the CSV files from the MTS-Dialog repository into
+`data/external/mts_dialog/`; that folder is git-ignored.
+
+```bash
+adaptintake-eval --run-id external --cases-dir data/cases_external --personas clear fragmented
+```
+
 `scripts/smoke_eval.py` runs the whole pipeline with fake models, to check that it works without
 spending API credit.
 

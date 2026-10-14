@@ -1,0 +1,918 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had a cough, and I've been getting a pain on the right side of my abdomen. It started two days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how much the cough and the pain are affecting your daily life, and if you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain only comes on when I cough, so it's mostly the coughing that bothers me. Apart from that, I've just been feeling achy and tired. I don't have any allergies to medicines that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take regularly or have started recently—including anything new or changed, and the dose if you know it—and about any past health problems, operations, or hospital stays you've had?"
+  },
+  {
+   "role": "patient",
+   "text": "I take tablets for my high blood pressure and something for my macular degeneration, but I'm afraid I can't remember the names or the doses. As for past problems, I've had high blood pressure for a while and I have macular degeneration in my eyes. I had pneumonia last year, but it cleared up. I haven't had any operations that I can recall."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is your cough: not bad at all, somewhat bad, or very bad, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not really sure how to rate it on that scale. It's a dry cough, and it's the coughing that brings on the pain in my side."
+  },
+  {
+   "role": "agent",
+   "text": "Can you describe how your cough and the pain that comes with it have been coming and going over time? For instance, are they there all the time or do they come and go, how often do they happen, how long do they last, and is there a time of day when they're worse?"
+  },
+  {
+   "role": "patient",
+   "text": "The cough has been there pretty much constantly since it started two days ago. The pain in my side isn't there all the time — it only comes when I cough. I haven't noticed it being any worse at a particular time of day."
+  },
+  {
+   "role": "agent",
+   "text": "Besides feeling achy and tired, is there anything else you’ve noticed going on with your body since the cough and the pain started?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've been feeling nauseous, and I've felt feverish with chills at home — my forehead felt warm to touch."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you the most about what's been going on?"
+  },
+  {
+   "role": "patient",
+   "text": "I suppose I'm a bit worried about the fever and chills, especially since I had pneumonia last year. I just want to make sure it isn't something like that again."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health problems that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I think that's everything. Those are the main things — the high blood pressure, the macular degeneration, and the pneumonia last year."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add about the medicines you take, such as any new or changed ones?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't started anything new or had any changes to my medicines recently. I just take the ones for my blood pressure and my eyes."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other symptoms you've noticed that you haven't mentioned yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so. I've told you about the cough, the pain in my side, the aches, the nausea, and the feverish chills."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how things have been for you day to day lately, like your usual activities, getting around, sleep, appetite, and doing things on your own?"
+  },
+  {
+   "role": "patient",
+   "text": "I've just been feeling achy and tired, and the nausea has put me off my food a little. Other than that, I've been managing at home as usual."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed along with the cough and the pain in your side, apart from the aching, tiredness, and nausea you mentioned?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else beyond what I've already mentioned."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me how much the cough and the pain are affecting your daily life, and if you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take regularly or have started recently—including anything new or changed, and the dose if you know it—and about any past health problems, operations, or hospital stays you've had?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.44,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How bad is your cough: not bad at all, somewhat bad, or very bad, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.4,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [
+    {
+     "draft": "How much is the cough affecting your daily life — would you say a little, some, or a lot, or you're not sure?",
+     "problems": [
+      "critic: The question presupposes that the cough is affecting the patient's daily life and offers severity options that all assume some impact, omitting a 'not at all' option, which can bias the response toward overreporting."
+     ]
+    }
+   ],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Can you describe how your cough and the pain that comes with it have been coming and going over time? For instance, are they there all the time or do they come and go, how often do they happen, how long do they last, and is there a time of day when they're worse?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "timing": 0.48,
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Besides feeling achy and tired, is there anything else you’ve noticed going on with your body since the cough and the pain started?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.44,
+    "past_history": 0.39,
+    "medications": 0.41,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What worries you the most about what's been going on?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Is there anything else about your past health problems that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything else you’d like to add about the medicines you take, such as any new or changed ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "medications": 0.41,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Are there any other symptoms you've noticed that you haven't mentioned yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Can you tell me how things have been for you day to day lately, like your usual activities, getting around, sleep, appetite, and doing things on your own?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "functional_change": 0.18
+   },
+   "reason": "highest-priority gap: functional_change (reported, vague; score 0.18)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else you’ve noticed along with the cough and the pain in your side, apart from the aching, tiredness, and nausea you mentioned?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.24
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cough and pain on the right side of the abdomen",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've had a cough, and I've been getting a pain on the right side of my abdomen."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started two days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It started two days ago."
+     },
+     {
+      "turn": 5,
+      "quote": "since it started two days ago"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Pain only comes when coughing",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "The pain only comes on when I cough"
+     },
+     {
+      "turn": 4,
+      "quote": "it's the coughing that brings on the pain in my side"
+     },
+     {
+      "turn": 5,
+      "quote": "it only comes when I cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Dry cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "It's a dry cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Right side of the abdomen",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "a pain on the right side of my abdomen"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'm not really sure how to rate it on that scale."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Cough is constant since it started two days ago; pain is not there all the time, only comes when coughing; no particular time of day when worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "The cough has been there pretty much constantly since it started two days ago. The pain in my side isn't there all the time — it only comes when I cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Achy and tired; nausea",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I've just been feeling achy and tired"
+     },
+     {
+      "turn": 6,
+      "quote": "I've been feeling nauseous, and I've felt feverish with chills at home — my forehead felt warm to touch."
+     },
+     {
+      "turn": 10,
+      "quote": "No, I don't think so."
+     },
+     {
+      "turn": 11,
+      "quote": "I've just been feeling achy and tired, and the nausea has put me off my food a little."
+     },
+     {
+      "turn": 12,
+      "quote": "No, nothing else beyond what I've already mentioned."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Has had high blood pressure for a while and macular degeneration in the eyes; had pneumonia last year which cleared up; no operations that they can recall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had high blood pressure for a while and I have macular degeneration in my eyes. I had pneumonia last year, but it cleared up. I haven't had any operations that I can recall."
+     },
+     {
+      "turn": 8,
+      "quote": "No, I think that's everything. Those are the main things — the high blood pressure, the macular degeneration, and the pneumonia last year."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes tablets for high blood pressure and something for macular degeneration; cannot remember the names or doses",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take tablets for my high blood pressure and something for my macular degeneration, but I'm afraid I can't remember the names or the doses."
+     },
+     {
+      "turn": 9,
+      "quote": "No, I haven't started anything new or had any changes to my medicines recently."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any allergies to medicines that I know of"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Feeling achy and tired; nausea has put them off their food a little; otherwise managing at home as usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "it's mostly the coughing that bothers me"
+     },
+     {
+      "turn": 11,
+      "quote": "the nausea has put me off my food a little. Other than that, I've been managing at home as usual."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": true,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried about the fever and chills, especially after having pneumonia last year; wants to make sure it isn't something like that again",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I'm a bit worried about the fever and chills, especially since I had pneumonia last year. I just want to make sure it isn't something like that again."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cough and pain on the right side of the abdomen",
+    "evidence": [
+     "I've had a cough, and I've been getting a pain on the right side of my abdomen."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started two days ago",
+    "evidence": [
+     "It started two days ago.",
+     "since it started two days ago"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Pain only comes when coughing",
+    "evidence": [
+     "The pain only comes on when I cough",
+     "it's the coughing that brings on the pain in my side",
+     "it only comes when I cough"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Dry cough",
+    "evidence": [
+     "It's a dry cough"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Right side of the abdomen",
+    "evidence": [
+     "a pain on the right side of my abdomen"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Cough is constant since it started two days ago; pain is not there all the time, only comes when coughing; no particular time of day when worse",
+    "evidence": [
+     "The cough has been there pretty much constantly since it started two days ago. The pain in my side isn't there all the time — it only comes when I cough."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Achy and tired; nausea",
+    "evidence": [
+     "I've just been feeling achy and tired",
+     "I've been feeling nauseous, and I've felt feverish with chills at home — my forehead felt warm to touch.",
+     "No, I don't think so.",
+     "I've just been feeling achy and tired, and the nausea has put me off my food a little.",
+     "No, nothing else beyond what I've already mentioned."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Has had high blood pressure for a while and macular degeneration in the eyes; had pneumonia last year which cleared up; no operations that they can recall",
+    "evidence": [
+     "I've had high blood pressure for a while and I have macular degeneration in my eyes. I had pneumonia last year, but it cleared up. I haven't had any operations that I can recall.",
+     "No, I think that's everything. Those are the main things — the high blood pressure, the macular degeneration, and the pneumonia last year."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes tablets for high blood pressure and something for macular degeneration; cannot remember the names or doses",
+    "evidence": [
+     "I take tablets for my high blood pressure and something for my macular degeneration, but I'm afraid I can't remember the names or the doses.",
+     "No, I haven't started anything new or had any changes to my medicines recently."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "I don't have any allergies to medicines that I know of"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried about the fever and chills, especially after having pneumonia last year; wants to make sure it isn't something like that again",
+    "evidence": [
+     "I'm a bit worried about the fever and chills, especially since I had pneumonia last year. I just want to make sure it isn't something like that again."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "functional_change",
+    "text": "Feeling achy and tired; nausea has put them off their food a little; otherwise managing at home as usual",
+    "evidence": [
+     "it's mostly the coughing that bothers me",
+     "the nausea has put me off my food a little. Other than that, I've been managing at home as usual."
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I'm not really sure how to rate it on that scale."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 12,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.75,
+   "score": 0.775,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.588,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.9,
+   "score": 0.744,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.722,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.561,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.63,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.665,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.683,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.691,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.696,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.698,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "ext_01",
+ "persona": "clear",
+ "metrics": {
+  "questions": 12,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 352,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 1,
+  "completeness": 1.0,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

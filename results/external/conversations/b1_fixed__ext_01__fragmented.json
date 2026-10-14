@@ -1,0 +1,682 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I have a cough, and it hurts on my right side."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "My grandson visited on Sunday, that was nice."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain only comes on when I cough."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "The cough is dry."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "Right side of my tummy."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I couldn't really put a number on it."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes on when I cough."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been aching all over."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "I have high blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't remember the names of them."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I still do my own cooking, mostly."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter worries more than I do, honestly."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I have a cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Pain is brought on only by coughing",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "The pain only comes on when I cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Dry cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "The cough is dry."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Right side of the tummy/abdomen",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it hurts on my right side"
+     },
+     {
+      "turn": 5,
+      "quote": "Right side of my tummy."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I couldn't really put a number on it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes on when coughing (not constant)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It comes on when I cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Aching all over the body",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I've been aching all over"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I have high blood pressure."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I can't remember the names of them."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, nothing like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Still does their own cooking, mostly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I still do my own cooking, mostly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Patient says their daughter worries more than they do; patient does not state a concern of their own",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "My daughter worries more than I do, honestly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cough",
+    "evidence": [
+     "I have a cough"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Pain is brought on only by coughing",
+    "evidence": [
+     "The pain only comes on when I cough."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Dry cough",
+    "evidence": [
+     "The cough is dry."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Right side of the tummy/abdomen",
+    "evidence": [
+     "it hurts on my right side",
+     "Right side of my tummy."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes on when coughing (not constant)",
+    "evidence": [
+     "It comes on when I cough."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Aching all over the body",
+    "evidence": [
+     "I've been aching all over"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure",
+    "evidence": [
+     "I have high blood pressure."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, nothing like that."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Still does their own cooking, mostly",
+    "evidence": [
+     "I still do my own cooking, mostly."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "Not discussed.",
+    "evidence": []
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I couldn't really put a number on it."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't remember the names of them."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Mentioned, but not specific: Patient says their daughter worries more than they do; patient does not state a concern of their own",
+    "evidence": [
+     "My daughter worries more than I do, honestly."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "ext_01",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 1,
+  "unnecessary_rate": 0.07692307692307693,
+  "patient_words": 86,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.5,
+  "essential_completeness": 0.3333333333333333,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": false,
+   "F8": true,
+   "F9": false,
+   "F10": false
+  },
+  "fidelity": 0.8888888888888888,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

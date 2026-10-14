@@ -17,7 +17,7 @@ from pathlib import Path
 
 from ..agent import SYSTEMS
 from ..cases import Case, load_cases
-from ..config import RESULTS_DIR, model_settings
+from ..config import CASES_DIR, RESULTS_DIR, model_settings
 from ..llm import LLM, get_llm
 from ..simulator import PERSONAS, SimulatedPatient
 from .metrics import deterministic_metrics, judge_metrics
@@ -59,17 +59,18 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--systems", nargs="+", default=list(SYSTEMS), choices=list(SYSTEMS))
     parser.add_argument("--personas", nargs="+", default=list(PERSONAS), choices=list(PERSONAS))
     parser.add_argument("--cases", nargs="+", help="case ids, e.g. case_01 case_19 (default: all)")
+    parser.add_argument("--cases-dir", type=Path, default=CASES_DIR, help="folder of case cards (default: data/cases)")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--skip-judge", action="store_true", help="only simulate; no judge calls")
     args = parser.parse_args(argv)
 
-    cases = load_cases(ids=args.cases)
+    cases = load_cases(args.cases_dir, ids=args.cases)
     out_dir = RESULTS_DIR / args.run_id / "conversations"
     out_dir.mkdir(parents=True, exist_ok=True)
     roles = ("agent", "patient") if args.skip_judge else ("agent", "patient", "judge")
     llms = {role: get_llm(role) for role in roles}
     config = {role: model_settings(role).model for role in roles}
-    (out_dir.parent / "config.json").write_text(json.dumps({"models": config, **vars(args)}, indent=1))
+    (out_dir.parent / "config.json").write_text(json.dumps({"models": config, **vars(args)}, indent=1, default=str))
 
     jobs = [(s, c, p) for c in cases for p in args.personas for s in args.systems]
     print(f"{len(jobs)} conversations -> {out_dir} (models: {config})")

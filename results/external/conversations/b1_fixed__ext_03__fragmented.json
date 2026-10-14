@@ -1,0 +1,680 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Pain in my left flank."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Started about four or five days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter keeps telling me to drink more water."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just a pain, I can't describe it better."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's in my abdomen and across my back."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't put a number on it."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't really say, it just seems to be there."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been feeling sick and throwing up."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Another doctor told me I have a stone."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "Nothing much, my knees bother me though."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed any change."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "I just want something done about the stone."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in the left flank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Pain in my left flank."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about four or five days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Started about four or five days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I can't describe it better"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "In the abdomen and across the back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Pain in my left flank."
+     },
+     {
+      "turn": 5,
+      "quote": "It's in my abdomen and across my back."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I can't put a number on it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I can't really say, it just seems to be there."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling sick and throwing up (nausea and vomiting)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I've been feeling sick and throwing up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Another doctor told the patient they have a stone; Knees bother the patient",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "Another doctor told me I have a stone."
+     },
+     {
+      "turn": 10,
+      "quote": "my knees bother me though"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes nothing much / no real regular medicines",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "Nothing much"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, not that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Has not really noticed any change in what they can do around the house or outside.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I haven't really noticed any change."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants something done about the stone",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I just want something done about the stone."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in the left flank",
+    "evidence": [
+     "Pain in my left flank."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about four or five days ago",
+    "evidence": [
+     "Started about four or five days ago."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "In the abdomen and across the back",
+    "evidence": [
+     "Pain in my left flank.",
+     "It's in my abdomen and across my back."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling sick and throwing up (nausea and vomiting)",
+    "evidence": [
+     "I've been feeling sick and throwing up."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, not that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Has not really noticed any change in what they can do around the house or outside.",
+    "evidence": [
+     "I haven't really noticed any change."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants something done about the stone",
+    "evidence": [
+     "I just want something done about the stone."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "quality",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't describe it better"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't put a number on it."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't really say, it just seems to be there."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Mentioned, but not specific: Another doctor told the patient they have a stone; Knees bother the patient",
+    "evidence": [
+     "Another doctor told me I have a stone.",
+     "my knees bother me though"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes nothing much / no real regular medicines",
+    "evidence": [
+     "Nothing much"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "ext_03",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 1,
+  "unnecessary_rate": 0.07692307692307693,
+  "patient_words": 97,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.625,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": true
+  },
+  "fidelity": 0.7142857142857143,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

@@ -1,0 +1,709 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got a cough, and it's causing a pain in the right side of my abdomen. It started two days ago."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "It started two days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain only comes on when I cough — that's what sets it off. Otherwise I haven't noticed anything that makes it better."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "The cough is a dry one — nothing comes up. The pain in my side just comes on sharp when I cough."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "It's on the right side of my abdomen. I haven't noticed it spreading anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "I couldn't really put a number on it — it only bothers me when I cough, and otherwise it's not there."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes — it's only there when I cough. Otherwise it's not bothering me at all."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I've been feeling achy all over, and I've been feeling nauseous. I've also felt feverish with chills — my forehead felt warm at home."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have high blood pressure and macular degeneration. I had pneumonia last year too, but that cleared up."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm sorry, I can't remember the names of my medicines offhand."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I'm not aware of any allergies."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't noticed any change in what I can do — I've been managing as usual."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I can't say anything in particular is worrying me about it — I just thought I should get it checked."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": true
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": true
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": true
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've got a cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started two days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It started two days ago"
+     },
+     {
+      "turn": 2,
+      "quote": "It started two days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "The pain only comes on when the patient coughs — coughing sets it off. Nothing noticed that makes it better.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's causing a pain in the right side of my abdomen"
+     },
+     {
+      "turn": 3,
+      "quote": "The pain only comes on when I cough — that's what sets it off."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "The cough is dry — nothing comes up; the pain in the side comes on sharp when coughing.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "The cough is a dry one — nothing comes up. The pain in my side just comes on sharp when I cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Pain in the right side of the abdomen; it does not spread anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "pain in the right side of my abdomen"
+     },
+     {
+      "turn": 5,
+      "quote": "It's on the right side of my abdomen. I haven't noticed it spreading anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I couldn't really put a number on it"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes — only present when the patient coughs; otherwise not bothering them at all",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "it only bothers me when I cough, and otherwise it's not there"
+     },
+     {
+      "turn": 7,
+      "quote": "It comes and goes — it's only there when I cough. Otherwise it's not bothering me at all."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Pain in the right side of the abdomen, caused by the cough; Also feeling achy all over, nauseous, and feverish with chills — forehead felt warm at home",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's causing a pain in the right side of my abdomen"
+     },
+     {
+      "turn": 8,
+      "quote": "I've been feeling achy all over, and I've been feeling nauseous. I've also felt feverish with chills — my forehead felt warm at home."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure and macular degeneration; also had pneumonia last year, which has cleared up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I have high blood pressure and macular degeneration. I had pneumonia last year too, but that cleared up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I can't remember the names of my medicines offhand"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, I'm not aware of any allergies."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No change in what the patient can do around the house or outside — managing as usual",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "No, I haven't noticed any change in what I can do — I've been managing as usual."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Nothing in particular is worrying the patient about it; they just thought they should get it checked",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "No, I can't say anything in particular is worrying me about it — I just thought I should get it checked."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cough",
+    "evidence": [
+     "I've got a cough"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started two days ago",
+    "evidence": [
+     "It started two days ago",
+     "It started two days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "The pain only comes on when the patient coughs — coughing sets it off. Nothing noticed that makes it better.",
+    "evidence": [
+     "it's causing a pain in the right side of my abdomen",
+     "The pain only comes on when I cough — that's what sets it off."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "The cough is dry — nothing comes up; the pain in the side comes on sharp when coughing.",
+    "evidence": [
+     "The cough is a dry one — nothing comes up. The pain in my side just comes on sharp when I cough."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Pain in the right side of the abdomen; it does not spread anywhere else",
+    "evidence": [
+     "pain in the right side of my abdomen",
+     "It's on the right side of my abdomen. I haven't noticed it spreading anywhere else."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes — only present when the patient coughs; otherwise not bothering them at all",
+    "evidence": [
+     "it only bothers me when I cough, and otherwise it's not there",
+     "It comes and goes — it's only there when I cough. Otherwise it's not bothering me at all."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Pain in the right side of the abdomen, caused by the cough; Also feeling achy all over, nauseous, and feverish with chills — forehead felt warm at home",
+    "evidence": [
+     "it's causing a pain in the right side of my abdomen",
+     "I've been feeling achy all over, and I've been feeling nauseous. I've also felt feverish with chills — my forehead felt warm at home."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure and macular degeneration; also had pneumonia last year, which has cleared up",
+    "evidence": [
+     "I have high blood pressure and macular degeneration. I had pneumonia last year too, but that cleared up."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, I'm not aware of any allergies."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No change in what the patient can do around the house or outside — managing as usual",
+    "evidence": [
+     "No, I haven't noticed any change in what I can do — I've been managing as usual."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Nothing in particular is worrying the patient about it; they just thought they should get it checked",
+    "evidence": [
+     "No, I can't say anything in particular is worrying me about it — I just thought I should get it checked."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I couldn't really put a number on it"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't remember the names of my medicines offhand"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "ext_01",
+ "persona": "clear",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 4,
+  "unnecessary_rate": 0.3076923076923077,
+  "patient_words": 225,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 1.0,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true
+  },
+  "fidelity": 0.9090909090909091,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

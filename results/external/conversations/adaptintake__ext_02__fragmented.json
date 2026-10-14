@@ -1,0 +1,941 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Both knees hurt."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me when your knee pain started, how it came on, and whether you have any allergies to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "Several years now. Worse these last few months."
+  },
+  {
+   "role": "agent",
+   "text": "How is this affecting your day-to-day life, and could you tell me about any medicines you take — including anything new or changed recently?"
+  },
+  {
+   "role": "patient",
+   "text": "Hard to get around, the stairs especially."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me about your past health, like any ongoing health issues, past illnesses, operations, or hospital stays?"
+  },
+  {
+   "role": "patient",
+   "text": "My wife had a hip done years ago, she did well."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had an allergy or a bad reaction to any medicine — yes, no, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the pain in your knees — would you say it’s mild, medium, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Pretty bad. Keeps me from doing much."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else come along with your knee problem?"
+  },
+  {
+   "role": "patient",
+   "text": "No, just the knees."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment — none at all, just one or two, or three or more — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I take anti-inflammatories for the knees."
+  },
+  {
+   "role": "agent",
+   "text": "Have you had other long-term health problems — none, one, or a few, or not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else long-term."
+  },
+  {
+   "role": "agent",
+   "text": "Do any activities make your knee pain better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Haven't really noticed anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your knees?"
+  },
+  {
+   "role": "patient",
+   "text": "Wondering if surgery would help."
+  },
+  {
+   "role": "agent",
+   "text": "Would you say your knee pain is mild, moderate, or severe — or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Pretty bad most days."
+  },
+  {
+   "role": "agent",
+   "text": "Is your knee pain there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "My son keeps telling me to get it seen to."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me when your knee pain started, how it came on, and whether you have any allergies to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.18,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How is this affecting your day-to-day life, and could you tell me about any medicines you take — including anything new or changed recently?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.18,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Can you tell me about your past health, like any ongoing health issues, past illnesses, operations, or hospital stays?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.18,
+    "severity": 0.61,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.59,
+    "allergies": 0.64,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.65)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you ever had an allergy or a bad reaction to any medicine — yes, no, or are you not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.14,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.5,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How bad is the pain in your knees — would you say it’s mild, medium, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.14,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.5,
+    "medications": 0.52,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Has anything else come along with your knee problem?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "provocation": 0.4,
+    "quality": 0.1,
+    "severity": 0.13,
+    "associated_symptoms": 0.5,
+    "past_history": 0.45,
+    "medications": 0.45,
+    "functional_change": 0.1,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.5)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Are you taking any medicines at the moment — none at all, just one or two, or three or more — or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.14,
+    "severity": 0.16,
+    "past_history": 0.5,
+    "medications": 0.52,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.52)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Have you had other long-term health problems — none, one, or a few, or not sure?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "closed",
+   "guidance": "scaffolded",
+   "scores": {
+    "provocation": 0.4,
+    "quality": 0.1,
+    "severity": 0.13,
+    "past_history": 0.45,
+    "medications": -0.01,
+    "functional_change": 0.1,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.45)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Do any activities make your knee pain better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.14,
+    "severity": 0.16,
+    "medications": 0.06,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What worries you most about your knees?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.14,
+    "severity": 0.16,
+    "medications": 0.06,
+    "functional_change": 0.14,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Would you say your knee pain is mild, moderate, or severe — or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.14,
+    "severity": 0.16,
+    "medications": 0.06,
+    "functional_change": 0.14
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is your knee pain there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": 0.1,
+    "timing": 0.16,
+    "medications": -0.01,
+    "functional_change": 0.1
+   },
+   "reason": "highest-priority gap: timing (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in both knees",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Both knees hurt"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started several years ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Several years now"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "Haven't really noticed anything like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Hurt (described only as 'hurt')",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "hurt"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Both knees",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Both knees"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Pretty bad most days",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "Pretty bad"
+     },
+     {
+      "turn": 12,
+      "quote": "Pretty bad most days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Pain is pretty bad most days",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Worse these last few months"
+     },
+     {
+      "turn": 12,
+      "quote": "Pretty bad most days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No other symptoms accompanying the knee problem",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "No, just the knees."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "No other long-term health problems",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "No, nothing else long-term."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes anti-inflammatories for the knees",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I take anti-inflammatories for the knees."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, nothing like that"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Pain keeps them from doing much",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Hard to get around, the stairs especially."
+     },
+     {
+      "turn": 6,
+      "quote": "Keeps me from doing much"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wonders whether surgery would help the knee problem",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "Wondering if surgery would help."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in both knees",
+    "evidence": [
+     "Both knees hurt"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started several years ago",
+    "evidence": [
+     "Several years now"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Both knees",
+    "evidence": [
+     "Both knees"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No other symptoms accompanying the knee problem",
+    "evidence": [
+     "No, just the knees."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "No other long-term health problems",
+    "evidence": [
+     "No, nothing else long-term."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to medicines",
+    "evidence": [
+     "No, nothing like that"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wonders whether surgery would help the knee problem",
+    "evidence": [
+     "Wondering if surgery would help."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "provocation",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "Haven't really noticed anything like that."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Mentioned, but not specific: Hurt (described only as 'hurt')",
+    "evidence": [
+     "hurt"
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Mentioned, but not specific: Pretty bad most days",
+    "evidence": [
+     "Pretty bad",
+     "Pretty bad most days"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Mentioned, but not specific: Pain is pretty bad most days",
+    "evidence": [
+     "Worse these last few months",
+     "Pretty bad most days"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes anti-inflammatories for the knees",
+    "evidence": [
+     "I take anti-inflammatories for the knees."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Mentioned, but not specific: Pain keeps them from doing much",
+    "evidence": [
+     "Hard to get around, the stairs especially.",
+     "Keeps me from doing much"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.838,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.769,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.459,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.58,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.0,
+   "score": 0.29,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 2,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.495,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.322,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.511,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.556,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.628,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.0,
+   "score": 0.314,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 2,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.232,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  }
+ ],
+ "case": "ext_02",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 79,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.375,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": false
+  },
+  "fidelity": 0.8571428571428571,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

@@ -1,0 +1,705 @@
+{
+ "system": "b1_fixed",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "My nose is all stuffed up."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice it?"
+  },
+  {
+   "role": "patient",
+   "text": "Just the last few days."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "Haven't really noticed anything."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "Like pressure in my face. My daughter had the same thing."
+  },
+  {
+   "role": "agent",
+   "text": "Where exactly do you feel it, and does it spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "Around my nose and cheeks."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?"
+  },
+  {
+   "role": "patient",
+   "text": "Not too bad, maybe a two or three."
+  },
+  {
+   "role": "agent",
+   "text": "Is it there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "It comes and goes, mostly in the morning."
+  },
+  {
+   "role": "agent",
+   "text": "Has anything else been bothering you along with this?"
+  },
+  {
+   "role": "patient",
+   "text": "I feel fine mostly. My daughter fusses over me."
+  },
+  {
+   "role": "agent",
+   "text": "Do you see a doctor regularly for any health condition?"
+  },
+  {
+   "role": "patient",
+   "text": "I was told I have diabetes last fall."
+  },
+  {
+   "role": "agent",
+   "text": "Which medicines do you take regularly, including any new ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't remember the name of it."
+  },
+  {
+   "role": "agent",
+   "text": "Are you allergic to any medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't have any allergies that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has this changed what you can do around the house or outside?"
+  },
+  {
+   "role": "patient",
+   "text": "Still walking a mile or two most days."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything about this that worries you?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not really. My sugar's been fine."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice it?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Is there anything that makes it better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How would you describe the feeling in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": true
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where exactly do you feel it, and does it spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": true
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "On a scale from 0 to 10, where 10 is the worst, how bad is it?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Is it there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Has anything else been bothering you along with this?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Do you see a doctor regularly for any health condition?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Which medicines do you take regularly, including any new ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Are you allergic to any medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Has this changed what you can do around the house or outside?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything about this that worries you?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": null,
+   "scores": {},
+   "reason": "next item in fixed order",
+   "source": "template",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Nose is all stuffed up",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "My nose is all stuffed up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started in the last few days",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Just the last few days."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Has not noticed anything that makes it better or worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "Haven't really noticed anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Pressure",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "My nose is all stuffed up."
+     },
+     {
+      "turn": 4,
+      "quote": "Like pressure in my face"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Around the nose and cheeks",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "My nose is all stuffed up."
+     },
+     {
+      "turn": 4,
+      "quote": "Like pressure in my face"
+     },
+     {
+      "turn": 5,
+      "quote": "Around my nose and cheeks."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 2 to 3 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "maybe a two or three"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes and goes, mostly in the morning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "It comes and goes, mostly in the morning."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No other symptoms along with this; feels fine mostly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I feel fine mostly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diagnosed with diabetes last fall; Diabetes is well controlled — sugar has been fine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I was told I have diabetes last fall."
+     },
+     {
+      "turn": 13,
+      "quote": "My sugar's been fine."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I can't remember the name of it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, I don't have any allergies that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Still able to walk a mile or two most days",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "Still walking a mile or two most days."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Not really worried about anything",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "No, not really."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Nose is all stuffed up",
+    "evidence": [
+     "My nose is all stuffed up."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started in the last few days",
+    "evidence": [
+     "Just the last few days."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Has not noticed anything that makes it better or worse",
+    "evidence": [
+     "Haven't really noticed anything."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Pressure",
+    "evidence": [
+     "My nose is all stuffed up.",
+     "Like pressure in my face"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Around the nose and cheeks",
+    "evidence": [
+     "My nose is all stuffed up.",
+     "Like pressure in my face",
+     "Around my nose and cheeks."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 2 to 3 out of 10",
+    "evidence": [
+     "maybe a two or three"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes and goes, mostly in the morning",
+    "evidence": [
+     "It comes and goes, mostly in the morning."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No other symptoms along with this; feels fine mostly",
+    "evidence": [
+     "I feel fine mostly."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diagnosed with diabetes last fall; Diabetes is well controlled — sugar has been fine",
+    "evidence": [
+     "I was told I have diabetes last fall.",
+     "My sugar's been fine."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, I don't have any allergies that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Still able to walk a mile or two most days",
+    "evidence": [
+     "Still walking a mile or two most days."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Not really worried about anything",
+    "evidence": [
+     "No, not really."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't remember the name of it."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 13,
+ "end_reason": "questionnaire complete",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": null,
+ "case": "ext_05",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 13,
+  "unnecessary_questions": 2,
+  "unnecessary_rate": 0.15384615384615385,
+  "patient_words": 96,
+  "end_reason": "questionnaire complete",
+  "rejected_extractions": 0,
+  "template_fallbacks": null,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.45454545454545453,
+  "essential_completeness": 0.8,
+  "captured_facts": {
+   "F1": false,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": false,
+   "F9": true,
+   "F10": false,
+   "F11": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

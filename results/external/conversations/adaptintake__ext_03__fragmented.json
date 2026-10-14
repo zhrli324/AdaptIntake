@@ -1,0 +1,1061 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Pain in my left flank."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me when the pain in your left flank started, how it came on, and whether you have any allergies?"
+  },
+  {
+   "role": "patient",
+   "text": "Started about four, five days ago."
+  },
+  {
+   "role": "agent",
+   "text": "How is this pain affecting your daily life, and what medicines are you taking at the moment, including any new or changed ones?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter keeps telling me to get it checked."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines — would you say no, yes, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't noticed any allergies."
+  },
+  {
+   "role": "agent",
+   "text": "Before this started, have you had any other health problems that you've seen a doctor about?"
+  },
+  {
+   "role": "patient",
+   "text": "Another doctor told me I have a kidney stone."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the pain — would you say it's mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I couldn't say really."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the pain in your left flank, have you noticed anything else that feels different or new?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been feeling sick to my stomach."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment — either ones you take regularly or something you've started recently — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "My son used to take tablets for his back."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything that makes the pain better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't noticed anything making it better or worse."
+  },
+  {
+   "role": "agent",
+   "text": "Does the pain stay with you all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed, it just hurts."
+  },
+  {
+   "role": "agent",
+   "text": "Do you take any medicines yourself — ones you take every day, ones you only take now and then, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't take anything regularly."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me what the pain feels like?"
+  },
+  {
+   "role": "patient",
+   "text": "It just hurts, I can't describe it better."
+  },
+  {
+   "role": "agent",
+   "text": "Has this pain changed how you sleep at night?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't noticed any trouble sleeping."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the kidney stone you mentioned, is there anything else about your past health — like other conditions, illnesses, or operations — that you think I should know about?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing else I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Besides feeling sick to your stomach, is there anything else you’ve noticed that you want to mention?"
+  },
+  {
+   "role": "patient",
+   "text": "My grandson just started school, you know."
+  },
+  {
+   "role": "agent",
+   "text": "Besides feeling sick to your stomach, is there anything else you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been vomiting too."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me when the pain in your left flank started, how it came on, and whether you have any allergies?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How is this pain affecting your daily life, and what medicines are you taking at the moment, including any new or changed ones?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Do you have any allergies or bad reactions to medicines — would you say no, yes, or you're not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Before this started, have you had any other health problems that you've seen a doctor about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How bad is the pain — would you say it's mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Besides the pain in your left flank, have you noticed anything else that feels different or new?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Are you taking any medicines at the moment — either ones you take regularly or something you've started recently — or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.52)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Is there anything that makes the pain better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "provocation": 0.4,
+    "quality": 0.3,
+    "timing": 0.4,
+    "associated_symptoms": 0.26,
+    "past_history": 0.29,
+    "medications": 0.35,
+    "functional_change": 0.3
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Does the pain stay with you all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.42,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Do you take any medicines yourself — ones you take every day, ones you only take now and then, or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.42,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.42)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Can you tell me what the pain feels like?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.14,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Has this pain changed how you sleep at night?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": -0.0,
+    "associated_symptoms": 0.26,
+    "past_history": 0.29,
+    "medications": 0.07,
+    "functional_change": 0.3
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Besides the kidney stone you mentioned, is there anything else about your past health — like other conditions, illnesses, or operations — that you think I should know about?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.04,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.14
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Besides feeling sick to your stomach, is there anything else you’ve noticed that you want to mention?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.04,
+    "associated_symptoms": 0.3,
+    "medications": 0.14
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Besides feeling sick to your stomach, is there anything else you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.04,
+    "associated_symptoms": 0.2,
+    "medications": 0.14
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in the left flank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Pain in my left flank"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started about four to five days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Started about four, five days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Nothing has been noticed making the pain better or worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I haven't noticed anything making it better or worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Just hurts; patient cannot describe it better",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "It just hurts, I can't describe it better."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Left flank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "my left flank"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I couldn't say really."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I haven't really noticed"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling sick to the stomach (nausea); Vomiting as well as nausea",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I've been feeling sick to my stomach."
+     },
+     {
+      "turn": 16,
+      "quote": "I've been vomiting too."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Another doctor told them they have a kidney stone",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Another doctor told me I have a kidney stone."
+     },
+     {
+      "turn": 14,
+      "quote": "No, nothing else I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes no medicines regularly",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, I don't take anything regularly."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "No, I haven't noticed any allergies."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No trouble sleeping",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "No, I haven't noticed any trouble sleeping."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Their daughter keeps telling them to get the problem checked",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "My daughter keeps telling me to get it checked."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in the left flank",
+    "evidence": [
+     "Pain in my left flank"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started about four to five days ago",
+    "evidence": [
+     "Started about four, five days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Nothing has been noticed making the pain better or worse",
+    "evidence": [
+     "I haven't noticed anything making it better or worse."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Left flank",
+    "evidence": [
+     "my left flank"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling sick to the stomach (nausea); Vomiting as well as nausea",
+    "evidence": [
+     "I've been feeling sick to my stomach.",
+     "I've been vomiting too."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Another doctor told them they have a kidney stone",
+    "evidence": [
+     "Another doctor told me I have a kidney stone.",
+     "No, nothing else I can think of."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes no medicines regularly",
+    "evidence": [
+     "No, I don't take anything regularly."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, I haven't noticed any allergies."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No trouble sleeping",
+    "evidence": [
+     "No, I haven't noticed any trouble sleeping."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Their daughter keeps telling them to get the problem checked",
+    "evidence": [
+     "My daughter keeps telling me to get it checked."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "quality",
+    "text": "Mentioned, but not specific: Just hurts; patient cannot describe it better",
+    "evidence": [
+     "It just hurts, I can't describe it better."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I couldn't say really."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I haven't really noticed"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 16,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.75,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.6,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.65,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.525,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.562,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.481,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.316,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.508,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.554,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.477,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.313,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.507,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.603,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.377,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.4,
+   "score": 0.388,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "ext_03",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 16,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 110,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.375,
+  "essential_completeness": 0.5,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": false,
+   "F7": false,
+   "F8": false
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

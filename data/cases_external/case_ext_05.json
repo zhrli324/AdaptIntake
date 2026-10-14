@@ -1,0 +1,102 @@
+{
+  "id": "ext_05",
+  "title": "Sinus congestion in a patient with recently diagnosed diabetes",
+  "source": "Adapted from MTS-Dialog (TestSet-2 ID 94, GENHX section), CC BY 4.0. Facts are taken only from the source note and dialogue.",
+  "profile": {
+    "age": 70,
+    "sex": "female",
+    "context": "Attends the clinic alone. No further social details are given in the source record."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Has sinus congestion and drainage.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "onset",
+      "text": "The sinus symptoms have been present for the last several days.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "past_history",
+      "text": "Was diagnosed with diabetes last fall.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "past_history",
+      "text": "Checks her blood sugar about once a day; readings range from 82 to 132.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "functional_change",
+      "text": "Feels well overall and walks 1-2 miles most days (at a local mall when the weather is bad).",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "past_history",
+      "text": "Is a non-smoker.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "associated_symptoms",
+      "text": "No abdominal pain, nausea, vomiting, diarrhoea, constipation, or blood in the urine or stools.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "associated_symptoms",
+      "text": "Gets up once a night to pass urine.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F9",
+      "slot": "associated_symptoms",
+      "text": "No swelling in the ankles.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F10",
+      "slot": "past_history",
+      "text": "Her mammogram is up to date and she sees a gynaecologist regularly.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F11",
+      "slot": "past_history",
+      "text": "Checks her feet regularly.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": null,
+  "red_flag": null
+}

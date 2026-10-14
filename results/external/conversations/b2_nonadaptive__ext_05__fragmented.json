@@ -1,0 +1,1003 @@
+{
+ "system": "b2_nonadaptive",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "My sinuses are all stuffed up."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice your sinuses getting stuffed up?"
+  },
+  {
+   "role": "patient",
+   "text": "I was diagnosed with diabetes last fall."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies?"
+  },
+  {
+   "role": "patient",
+   "text": "No, not that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "How much is the stuffiness in your sinuses getting in the way of your daily activities?"
+  },
+  {
+   "role": "patient",
+   "text": "I still walk a mile or two most days."
+  },
+  {
+   "role": "agent",
+   "text": "Did your sinus stuffiness start suddenly, come on gradually, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "It's been going on for several days now."
+  },
+  {
+   "role": "agent",
+   "text": "Have you made any changes to your medicines recently?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing's changed that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Would you say the stuffiness in your sinuses feels mild, moderate, or severe — or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed it being that bad."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed any other symptoms along with your sinus stuffiness?"
+  },
+  {
+   "role": "patient",
+   "text": "No stomach upset or anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything that seems to make your sinus stuffiness better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "My granddaughter came by last weekend. Not sure about the sinuses."
+  },
+  {
+   "role": "agent",
+   "text": "Does the stuffiness in your sinuses come and go, or is it there all the time?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just kind of there, I guess."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the diabetes you mentioned, is there anything else about your past health you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I check my feet every day."
+  },
+  {
+   "role": "agent",
+   "text": "When you think about your health these days, what worries you the most?"
+  },
+  {
+   "role": "patient",
+   "text": "I feel well overall, so not much worries me."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health, besides diabetes, that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I don't smoke, never have."
+  },
+  {
+   "role": "agent",
+   "text": "Do you take any medicines, and if so, which ones, including any new or changed ones?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't remember the names, sorry."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the stuffed-up sinuses, is there anything else going on with you that you've noticed?"
+  },
+  {
+   "role": "patient",
+   "text": "I get up once a night to pee."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health, such as any operations, that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No operations that I recall."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you'd like to add about your medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all I can think of."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed along with the stuffed-up sinuses that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "My ankles aren't swollen or anything."
+  },
+  {
+   "role": "agent",
+   "text": "How much are your stuffed-up sinuses bothering you right now: a little, somewhat, or a lot, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Just a little, I'd say."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice your sinuses getting stuffed up?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Do you have any allergies?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.64,
+    "provocation": 0.44,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.72)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "How much is the stuffiness in your sinuses getting in the way of your daily activities?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.64,
+    "provocation": 0.44,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.68)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Did your sinus stuffiness start suddenly, come on gradually, or are you not sure?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.64,
+    "provocation": 0.44,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.64)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Have you made any changes to your medicines recently?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.62,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Would you say the stuffiness in your sinuses feels mild, moderate, or severe — or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Have you noticed any other symptoms along with your sinus stuffiness?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Have you noticed anything that seems to make your sinus stuffiness better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Does the stuffiness in your sinuses come and go, or is it there all the time?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Besides the diabetes you mentioned, is there anything else about your past health you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.44,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "When you think about your health these days, what worries you the most?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Is there anything else about your past health, besides diabetes, that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Do you take any medicines, and if so, which ones, including any new or changed ones?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.34
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [
+    {
+     "draft": "Is there anything else you'd like to add about the medicines you take?",
+     "problems": [
+      "critic: The question presupposes that the patient takes medicines and has already discussed them, but the patient has not mentioned taking any medicines. A neutral question would ask, for example, 'Do you take any medicines?' without assuming the answer."
+     ]
+    }
+   ],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Besides the stuffed-up sinuses, is there anything else going on with you that you've noticed?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Is there anything else about your past health, such as any operations, that you'd like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Is there anything else you'd like to add about your medicines?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.14,
+    "medications": 0.24
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "Is there anything else you’ve noticed along with the stuffed-up sinuses that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.2,
+    "past_history": 0.14
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 18,
+   "turn": 18,
+   "text": "How much are your stuffed-up sinuses bothering you right now: a little, somewhat, or a lot, or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "severity": 0.16,
+    "associated_symptoms": 0.1,
+    "past_history": 0.14
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.16)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Stuffed-up sinuses",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "My sinuses are all stuffed up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Has been going on for several days",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "It's been going on for several days now."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "Not sure about the sinuses."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Stuffed up / congested",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "all stuffed up"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Sinuses",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "My sinuses are all stuffed up."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Only a little bothersome",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I haven't really noticed it being that bad"
+     },
+     {
+      "turn": 19,
+      "quote": "Just a little, I'd say."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": true,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "The stuffiness is just kind of there — it seems to be present rather than coming and going",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "It's just kind of there, I guess."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No stomach upset or similar symptoms; Gets up once a night to pee (nocturia); No swelling in the ankles",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "No stomach upset or anything like that."
+     },
+     {
+      "turn": 15,
+      "quote": "I get up once a night to pee."
+     },
+     {
+      "turn": 18,
+      "quote": "My ankles aren't swollen or anything."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diagnosed with diabetes last fall; Never smoked; No operations that they recall (no prior surgeries)",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I was diagnosed with diabetes last fall."
+     },
+     {
+      "turn": 13,
+      "quote": "I don't smoke, never have."
+     },
+     {
+      "turn": 16,
+      "quote": "No operations that I recall."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": true
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "No recent changes to any medicines; Patient cannot remember the names of the medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "No, nothing's changed that I know of."
+     },
+     {
+      "turn": 14,
+      "quote": "I can't remember the names, sorry."
+     },
+     {
+      "turn": 17,
+      "quote": "No, that's all I can think of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "No, not that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Still walks a mile or two most days; daily activities not much affected",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I still walk a mile or two most days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Not much worries them; feels well overall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I feel well overall, so not much worries me."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Stuffed-up sinuses",
+    "evidence": [
+     "My sinuses are all stuffed up."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Has been going on for several days",
+    "evidence": [
+     "It's been going on for several days now."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Stuffed up / congested",
+    "evidence": [
+     "all stuffed up"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Sinuses",
+    "evidence": [
+     "My sinuses are all stuffed up."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "The stuffiness is just kind of there — it seems to be present rather than coming and going",
+    "evidence": [
+     "It's just kind of there, I guess."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No stomach upset or similar symptoms; Gets up once a night to pee (nocturia); No swelling in the ankles",
+    "evidence": [
+     "No stomach upset or anything like that.",
+     "I get up once a night to pee.",
+     "My ankles aren't swollen or anything."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diagnosed with diabetes last fall; Never smoked; No operations that they recall (no prior surgeries)",
+    "evidence": [
+     "I was diagnosed with diabetes last fall.",
+     "I don't smoke, never have.",
+     "No operations that I recall."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "No recent changes to any medicines; Patient cannot remember the names of the medicines",
+    "evidence": [
+     "No, nothing's changed that I know of.",
+     "I can't remember the names, sorry.",
+     "No, that's all I can think of."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No, not that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Still walks a mile or two most days; daily activities not much affected",
+    "evidence": [
+     "I still walk a mile or two most days"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Not much worries them; feels well overall",
+    "evidence": [
+     "I feel well overall, so not much worries me."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "severity",
+    "text": "Only a little bothersome",
+    "evidence": [
+     "I haven't really noticed it being that bad",
+     "Just a little, I'd say."
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "provocation",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "Not sure about the sinuses."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 19,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [],
+ "case": "ext_05",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 19,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 133,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 1,
+  "completeness": 0.5454545454545454,
+  "essential_completeness": 0.6,
+  "captured_facts": {
+   "F1": false,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": true,
+   "F9": true,
+   "F10": false,
+   "F11": false
+  },
+  "fidelity": 0.9166666666666666,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

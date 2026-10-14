@@ -1,0 +1,1232 @@
+{
+ "system": "adaptintake",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I have a cough."
+  },
+  {
+   "role": "agent",
+   "text": "When did you first notice the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "Two days ago."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how bad your cough has been and how much it’s affecting you day to day, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "The cough is dry."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take regularly or have taken recently—including what they are and how much you take—and about any health conditions you have now or had in the past, operations, or hospital stays?"
+  },
+  {
+   "role": "patient",
+   "text": "I have high blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines, no known allergies, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "No allergies. My daughter took me shopping last week."
+  },
+  {
+   "role": "agent",
+   "text": "How much is your cough affecting your day-to-day life — not at all, a little, or a lot, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": ""
+  },
+  {
+   "role": "agent",
+   "text": "What else came with the cough?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had body aches."
+  },
+  {
+   "role": "agent",
+   "text": "Which of these best describes your medicines right now — you take only regular medicines, you have started or changed a medicine recently, you take no medicines, or you're not sure? If you know, please include the dose."
+  },
+  {
+   "role": "patient",
+   "text": "Just my regular medicines. Can't remember the dose."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you feel the cough, and does it move?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't noticed anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is your cough for you right now — mild, moderate, severe, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Not sure."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything that seems to make your cough worse?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing makes it worse. My grandson visits on Sundays."
+  },
+  {
+   "role": "agent",
+   "text": "Is your cough there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed."
+  },
+  {
+   "role": "agent",
+   "text": "What would you most like us to help you with today about your cough?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain in my right side."
+  },
+  {
+   "role": "agent",
+   "text": "Besides high blood pressure, is there anything else about your past health — like other ongoing conditions, past illnesses, operations, or hospital stays — that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I had pneumonia last year, it cleared up."
+  },
+  {
+   "role": "agent",
+   "text": "Has your cough changed anything about your sleep?"
+  },
+  {
+   "role": "patient",
+   "text": "My eyes bother me sometimes, the macular degeneration."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been feeling nauseous."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health, like any operations, that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, no operations that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Has your cough affected your daily activities a lot, a little, or not at all, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Not sure. I've felt feverish with chills."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other symptoms you've noticed that you'd like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain only comes with coughing."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   }
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "When did you first notice the cough?",
+   "slots": [
+    "onset"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "onset": 0.74,
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "severity": 0.68,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.62,
+    "allergies": 0.72,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: onset (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false
+   }
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Can you tell me how bad your cough has been and how much it’s affecting you day to day, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   }
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me about any medicines you take regularly or have taken recently—including what they are and how much you take—and about any health conditions you have now or had in the past, operations, or hospital stays?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "region": 0.51,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   }
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Do you have any allergies or bad reactions to medicines, no known allergies, or are you not sure?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   }
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How much is your cough affecting your day-to-day life — not at all, a little, or a lot, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What else came with the cough?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "provocation": 0.4,
+    "region": 0.45,
+    "severity": 0.45,
+    "timing": 0.4,
+    "associated_symptoms": 0.5,
+    "past_history": 0.29,
+    "medications": 0.45,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.5)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Which of these best describes your medicines right now — you take only regular medicines, you have started or changed a medicine recently, you take no medicines, or you're not sure? If you know, please include the dose.",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.48,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.52)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   }
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Where do you feel the cough, and does it move?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "provocation": 0.4,
+    "region": 0.45,
+    "severity": 0.45,
+    "timing": 0.4,
+    "associated_symptoms": 0.26,
+    "past_history": 0.29,
+    "medications": -0.01,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: region (missing; score 0.45)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   }
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "How bad is your cough for you right now — mild, moderate, severe, or you're not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   }
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Have you noticed anything that seems to make your cough worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   }
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is your cough there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "timing": 0.44,
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   }
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "What would you most like us to help you with today about your cough?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   }
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Besides high blood pressure, is there anything else about your past health — like other ongoing conditions, past illnesses, operations, or hospital stays — that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.34,
+    "past_history": 0.39,
+    "medications": 0.13,
+    "functional_change": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.39)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Has your cough changed anything about your sleep?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "past_history": 0.24,
+    "medications": 0.06,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Is there anything else you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "associated_symptoms": 0.26,
+    "past_history": 0.19,
+    "medications": -0.01,
+    "functional_change": 0.2
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.26)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Is there anything else about your past health, like any operations, that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "past_history": 0.24,
+    "medications": 0.06,
+    "functional_change": 0.24
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   }
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "Has your cough affected your daily activities a lot, a little, or not at all, or are you not sure?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "medications": 0.06,
+    "functional_change": 0.24
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   }
+  },
+  {
+   "index": 18,
+   "turn": 18,
+   "text": "Are there any other symptoms you've noticed that you'd like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.2,
+    "medications": 0.06
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.2)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   }
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I have a cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started two days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "Two days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "The pain in the right side only comes on with coughing",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "No, nothing makes it worse."
+     },
+     {
+      "turn": 19,
+      "quote": "The pain only comes with coughing."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Dry cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "The cough is dry."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Pain in the right side",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I haven't noticed anything like that."
+     },
+     {
+      "turn": 13,
+      "quote": "The pain in my right side."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "Not sure"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "timing": {
+    "name": "timing",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I haven't really noticed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Body aches; Has been feeling nauseous; Has felt feverish with chills",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I've had body aches."
+     },
+     {
+      "turn": 16,
+      "quote": "I've been feeling nauseous."
+     },
+     {
+      "turn": 18,
+      "quote": "I've felt feverish with chills."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure; Had pneumonia last year, which cleared up (in addition to high blood pressure); Has macular degeneration; eyes bother them sometimes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I have high blood pressure."
+     },
+     {
+      "turn": 14,
+      "quote": "I had pneumonia last year, it cleared up."
+     },
+     {
+      "turn": 15,
+      "quote": "My eyes bother me sometimes, the macular degeneration."
+     },
+     {
+      "turn": 17,
+      "quote": "No, no operations that I know of"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes only regular medicines; cannot remember the dose",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "Just my regular medicines. Can't remember the dose."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No allergies."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 18,
+      "quote": "Not sure."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Most wants help with the pain in their right side",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "The pain in my right side."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cough",
+    "evidence": [
+     "I have a cough."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started two days ago",
+    "evidence": [
+     "Two days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "The pain in the right side only comes on with coughing",
+    "evidence": [
+     "No, nothing makes it worse.",
+     "The pain only comes with coughing."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Dry cough",
+    "evidence": [
+     "The cough is dry."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Pain in the right side",
+    "evidence": [
+     "I haven't noticed anything like that.",
+     "The pain in my right side."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Body aches; Has been feeling nauseous; Has felt feverish with chills",
+    "evidence": [
+     "I've had body aches.",
+     "I've been feeling nauseous.",
+     "I've felt feverish with chills."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure; Had pneumonia last year, which cleared up (in addition to high blood pressure); Has macular degeneration; eyes bother them sometimes",
+    "evidence": [
+     "I have high blood pressure.",
+     "I had pneumonia last year, it cleared up.",
+     "My eyes bother me sometimes, the macular degeneration.",
+     "No, no operations that I know of"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "No allergies."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Most wants help with the pain in their right side",
+    "evidence": [
+     "The pain in my right side."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "Not sure"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I haven't really noticed."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes only regular medicines; cannot remember the dose",
+    "evidence": [
+     "Just my regular medicines. Can't remember the dose."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "Not sure."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 19,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.7,
+   "score": 0.65,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.688,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.544,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.622,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.05,
+   "score": 0.336,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": true,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.368,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.259,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.479,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.54,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.62,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.61,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.655,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.527,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.339,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.4,
+   "score": 0.369,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.535,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.567,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.484,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "case": "ext_01",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 19,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 105,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 1.0,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true
+  },
+  "fidelity": 0.8888888888888888,
+  "accuracy": 0.6666666666666666,
+  "leading_questions": 1,
+  "leading_rate": 0.05555555555555555,
+  "leading_details": [
+   {
+    "index": 8,
+    "reason": "Presupposes the cough has a location and can move, suggesting symptoms the patient had not mentioned."
+   }
+  ]
+ }
+}
