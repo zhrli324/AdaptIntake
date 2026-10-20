@@ -22,8 +22,5 @@ results/
 .vscode/
 .ipynb_checkpoints/
 
-# Raw third-party datasets (download separately; see README)
-data/external/
-
 # Local editor/agent settings
 .claude/

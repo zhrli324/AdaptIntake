@@ -45,20 +45,28 @@ Design notes and pseudocode: [docs/design.md](docs/design.md).
 
 ## Data
 
-- `data/cases/synthetic/`: 20 synthetic case cards for patients aged 66–90, with multimorbidity and
-  polypharmacy.
-  - 18 ordinary presentations and 2 red-flag cases.
-  - Some facts are marked as unknown to the patient, or as something the patient prefers not to
-    discuss.
-  - Most cards plant one contradiction.
-- `data/cases/mts_dialog/`: 5 case cards for patients aged 66–76, adapted from
-  [MTS-Dialog](https://github.com/abachaa/MTS-Dialog) (Ben Abacha et al., EACL 2023, CC BY 4.0).
-  - Each card was transcribed from the source note and dialogue, with nothing added.
-  - Each card names its source record ID.
+| Case set | Cases | Age 65+ | Facts | How it was built |
+|---|---|---|---|---|
+| `synthetic` | 20 | 20 | 304 | Hand-written synthetic older-adult cases with multimorbidity and polypharmacy (18 ordinary, 2 red-flag). Facts unknown to or withheld by the patient; one planted contradiction per ordinary case |
+| `mts_curated` | 5 | 5 | 47 | Hand-transcribed from MTS-Dialog notes and dialogues, nothing added; each card names its source record |
+| `mts_dialog` | 134 | 40 | 1,098 | Adult "general history" sections of [MTS-Dialog](https://github.com/abachaa/MTS-Dialog) (CC BY 4.0), adapted by rules |
+| `agentclinic` | 165 | 31 | 1,951 | Adult `Patient_Actor` records of [AgentClinic-MedQA](https://github.com/SamuelSchmidgall/AgentClinic) (MIT), adapted by rules |
+| **total** | **324** | **96** | **3,400** | |
+
+- The two public datasets are stored unchanged in `data/raw/` (with their licenses; see
+  [data/raw/README.md](data/raw/README.md)).
+- `datasets.py` converts them at load time, using rules only, no model:
+  - one fact per source sentence or field;
+  - a keyword-based slot for each fact;
+  - examination findings, test results and diagnoses are dropped.
+- Cards whose text matches a red-flag rule are labelled as red-flag cases.
+- `adaptintake-data --stats` prints these counts. `--export DIR` writes the adapted cards as JSON
+  for inspection.
 
 Each case card lists the facts a simulated patient knows. These facts are the ground truth for
 evaluation. An LLM plays the patient in one of four communication styles (`simulator.py`): `clear`,
-`fragmented`, `uncertain` or `contradictory`.
+`fragmented`, `uncertain` or `contradictory`. The agent never sees the age; `--min-age 65` selects
+the older-adult subset for evaluation.
 
 ## Setup
 
@@ -91,8 +99,8 @@ The demo has three modes, selected in the sidebar:
 - **Talk**: you are the patient. Type an answer, or tap an answer button for a closed question.
   The right-hand panel shows how the agent decides: guidance level, question form, gap priorities
   and the state of every topic.
-- **Simulate**: pick a case, a communication style and a system, then watch the interview turn by
-  turn. Finished conversations are saved to `results/demos/`.
+- **Simulate**: pick a case from any case set (by default patients aged 65+), a communication style
+  and a system, then watch the interview turn by turn. Finished conversations are saved to `results/demos/`.
 - **Replay**: step through any saved conversation with a slider. It makes no API calls. You can
   show two conversations side by side, for example the fixed questionnaire and AdaptIntake on the
   same case.
@@ -104,7 +112,8 @@ For a quick terminal check: `python -m adaptintake.cli --trace`.
 ```bash
 adaptintake-eval --run-id trial --cases case_01 --personas clear fragmented        # small trial
 adaptintake-eval --run-id synthetic --workers 6                                     # 20 cases x 4 styles x 3 systems
-adaptintake-eval --run-id mts --case-set mts_dialog --personas clear fragmented
+adaptintake-eval --run-id mts --case-set mts_curated --personas clear fragmented
+adaptintake-eval --run-id ac65 --case-set agentclinic --min-age 65 --personas clear fragmented
 adaptintake-analyze --run-id synthetic
 ```
 
@@ -134,7 +143,9 @@ src/adaptintake/              method: schema, extraction, clarity, policy, quest
                               redflags, summary, agent; plus simulator, cases, llm, config, cli
 src/adaptintake/evaluation/   run.py (simulate + score), metrics.py, judge.py, analyze.py
 app/streamlit_app.py          demo (Talk / Simulate / Replay)
-data/cases/                   case cards: synthetic/ and mts_dialog/
+data/cases/                   hand-written case cards: synthetic/ and mts_curated/
+data/raw/                     public datasets, unchanged (MTS-Dialog, AgentClinic-MedQA) + licenses
+src/adaptintake/datasets.py   rule-based adapters from data/raw/ to case cards
 docs/design.md                design notes and pseudocode
 tests/                        offline tests with scripted models
 ```

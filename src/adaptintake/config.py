@@ -10,9 +10,10 @@ from dotenv import load_dotenv
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CASES_DIR = PROJECT_ROOT / "data" / "cases"
+# Hand-written case-card folders. Rule-adapted public datasets are listed in datasets.ADAPTERS.
 CASE_SETS = {
     "synthetic": CASES_DIR / "synthetic",  # 20 synthetic older-adult cases (18 ordinary, 2 red-flag)
-    "mts_dialog": CASES_DIR / "mts_dialog",  # 5 cases adapted from MTS-Dialog (CC BY 4.0)
+    "mts_curated": CASES_DIR / "mts_curated",  # 5 older-adult cases hand-transcribed from MTS-Dialog
 }
 RESULTS_DIR = PROJECT_ROOT / "results"
 

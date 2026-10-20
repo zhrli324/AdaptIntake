@@ -24,6 +24,7 @@ dev = ["pytest>=8"]
 [project.scripts]
 adaptintake-eval = "adaptintake.evaluation.run:main"
 adaptintake-analyze = "adaptintake.evaluation.analyze:main"
+adaptintake-data = "adaptintake.datasets:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

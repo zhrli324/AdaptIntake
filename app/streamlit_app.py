@@ -18,8 +18,8 @@ import pandas as pd
 import streamlit as st
 
 from adaptintake.agent import SYSTEM_LABELS, SYSTEMS
-from adaptintake.cases import load_cases
-from adaptintake.config import CASE_SETS, RESULTS_DIR, model_settings
+from adaptintake.cases import CASE_SET_NAMES, load_cases
+from adaptintake.config import RESULTS_DIR, model_settings
 from adaptintake.llm import LLMError, get_llm
 from adaptintake.schema import SLOTS
 from adaptintake.simulator import PERSONAS, SimulatedPatient
@@ -175,8 +175,12 @@ def talk_mode() -> None:
 # ---- Simulate -----------------------------------------------------------------------------------
 
 def simulate_mode() -> None:
-    case_set = st.sidebar.selectbox("Case set", list(CASE_SETS))
-    cases = {c.id: c for c in load_cases(case_set)}
+    case_set = st.sidebar.selectbox("Case set", CASE_SET_NAMES)
+    older_only = st.sidebar.toggle("Only patients aged 65+", value=True)
+    cases = {c.id: c for c in load_cases(case_set, min_age=65 if older_only else None)}
+    if not cases:
+        st.info("No cases in this set match the filter.")
+        return
     case_id = st.sidebar.selectbox("Case", list(cases), format_func=lambda i: f"{i} · {cases[i].title}")
     persona = st.sidebar.selectbox("Communication style", list(PERSONAS))
     system = st.sidebar.selectbox("System", list(SYSTEMS), index=list(SYSTEMS).index("adaptintake"), format_func=SYSTEM_LABELS.get)

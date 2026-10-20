@@ -81,7 +81,7 @@ class SimulatedPatient:
             )
         self.system = SIMULATOR_PROMPT.format(
             age=case.profile.age,
-            sex=case.profile.sex,
+            sex=case.profile.sex if case.profile.sex != "unspecified" else "adult",
             context=case.profile.context,
             title=case.title,
             facts=format_facts(case),

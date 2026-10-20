@@ -58,10 +58,27 @@ def load_case(path: Path) -> Case:
     return Case.model_validate(json.loads(path.read_text()))
 
 
-def load_cases(case_set: str | Path = "synthetic", ids: list[str] | None = None) -> list[Case]:
-    """Load a case set by name (see config.CASE_SETS) or from a folder of case_*.json files."""
-    directory = CASE_SETS[case_set] if isinstance(case_set, str) else case_set
-    cases = [load_case(p) for p in sorted(directory.glob("case_*.json"))]
+CASE_SET_NAMES = [*CASE_SETS, "mts_dialog", "agentclinic"]
+
+
+def load_cases(case_set: str | Path = "synthetic", ids: list[str] | None = None, min_age: int | None = None) -> list[Case]:
+    """Load a case set by name, or from a folder of case_*.json files.
+
+    Names: "synthetic" and "mts_curated" (hand-written folders), "mts_dialog" and "agentclinic"
+    (public datasets adapted by rules, see datasets.py). `min_age=65` keeps the older-adult subset.
+    """
+    if isinstance(case_set, Path):
+        cases = [load_case(p) for p in sorted(case_set.glob("case_*.json"))]
+    elif case_set in CASE_SETS:
+        cases = [load_case(p) for p in sorted(CASE_SETS[case_set].glob("case_*.json"))]
+    else:
+        from .datasets import ADAPTERS  # local import: datasets builds on Case
+
+        if case_set not in ADAPTERS:
+            raise ValueError(f"unknown case set {case_set!r}; choose from {CASE_SET_NAMES}")
+        cases = ADAPTERS[case_set]()
     if ids:
         cases = [c for c in cases if c.id in ids]
+    if min_age is not None:
+        cases = [c for c in cases if c.profile.age >= min_age]
     return cases

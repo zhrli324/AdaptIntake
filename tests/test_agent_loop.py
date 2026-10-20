@@ -107,7 +107,7 @@ def test_cases_are_valid_and_red_flags_detectable():
 
 
 def test_mts_dialog_cases_are_valid():
-    cases = load_cases("mts_dialog")
+    cases = load_cases("mts_curated")
     assert [c.id for c in cases] == [f"mts_0{i}" for i in range(1, 6)]
     assert all("MTS-Dialog" in c.source for c in cases)
 

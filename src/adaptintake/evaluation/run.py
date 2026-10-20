@@ -3,7 +3,8 @@
 Examples:
     adaptintake-eval --run-id trial --cases case_01 case_02 --personas clear fragmented
     adaptintake-eval --run-id synthetic --workers 8
-    adaptintake-eval --run-id mts --case-set mts_dialog --personas clear fragmented
+    adaptintake-eval --run-id mts --case-set mts_curated --personas clear fragmented
+    adaptintake-eval --run-id ac65 --case-set agentclinic --min-age 65 --limit 20
 Finished conversations are saved one file each and skipped on re-run, so an interrupted run can resume.
 """
 
@@ -17,8 +18,8 @@ from datetime import datetime
 from pathlib import Path
 
 from ..agent import SYSTEMS
-from ..cases import Case, load_cases
-from ..config import CASE_SETS, RESULTS_DIR, model_settings
+from ..cases import CASE_SET_NAMES, Case, load_cases
+from ..config import RESULTS_DIR, model_settings
 from ..llm import LLM, get_llm
 from ..simulator import PERSONAS, SimulatedPatient
 from .metrics import deterministic_metrics, judge_metrics
@@ -60,12 +61,14 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--systems", nargs="+", default=list(SYSTEMS), choices=list(SYSTEMS))
     parser.add_argument("--personas", nargs="+", default=list(PERSONAS), choices=list(PERSONAS))
     parser.add_argument("--cases", nargs="+", help="case ids, e.g. case_01 case_19 (default: all)")
-    parser.add_argument("--case-set", default="synthetic", choices=list(CASE_SETS), help="which case cards to use")
+    parser.add_argument("--case-set", default="synthetic", choices=CASE_SET_NAMES, help="which case cards to use")
+    parser.add_argument("--min-age", type=int, help="only cases at least this old, e.g. 65")
+    parser.add_argument("--limit", type=int, help="only the first N cases (after filtering)")
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--skip-judge", action="store_true", help="only simulate; no judge calls")
     args = parser.parse_args(argv)
 
-    cases = load_cases(args.case_set, ids=args.cases)
+    cases = load_cases(args.case_set, ids=args.cases, min_age=args.min_age)[: args.limit]
     out_dir = RESULTS_DIR / args.run_id / "conversations"
     out_dir.mkdir(parents=True, exist_ok=True)
     roles = ("agent", "patient") if args.skip_judge else ("agent", "patient", "judge")
