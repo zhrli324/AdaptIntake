@@ -100,8 +100,6 @@ The red-flag check has two stages:
    breathe through my nose" or "no chest pain" do not. The LLM may only veto a clear false positive.
    Any uncertainty or error escalates.
 
-The keyword list is illustrative, not a validated triage tool.
-
 ## Baselines
 
 - **Fixed questionnaire**: the same opening, then every topic in a fixed order with fixed wording.

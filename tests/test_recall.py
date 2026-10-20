@@ -2,7 +2,6 @@
 
 import json
 
-from adaptintake import redflags
 from adaptintake.agent import IntakeAgent
 from adaptintake.clarity import Guidance
 from adaptintake.llm import LLMError, ScriptedLLM

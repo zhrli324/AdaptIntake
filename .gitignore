@@ -22,5 +22,3 @@ results/
 .vscode/
 .ipynb_checkpoints/
 
-# Local editor/agent settings
-.claude/
