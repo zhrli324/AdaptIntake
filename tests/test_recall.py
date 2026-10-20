@@ -1,4 +1,4 @@
-"""Tests for the v2 mechanisms: anchored recall, consolidation, red-flag verification (no network)."""
+"""Tests for recall support and red-flag verification (no network)."""
 
 import json
 

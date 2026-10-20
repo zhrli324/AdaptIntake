@@ -17,18 +17,13 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+from ..agent import SYSTEM_LABELS
 from ..config import RESULTS_DIR
 from ..simulator import PERSONAS
 
-SYSTEM_LABELS = {
-    "b1_fixed": "B1 fixed questionnaire",
-    "b2_nonadaptive": "B2 non-adaptive LLM",
-    "adaptintake": "AdaptIntake",
-    "adaptintake_v2": "AdaptIntake v2",
-}
 SYSTEM_ORDER = list(SYSTEM_LABELS)
 # Categorical slots 1-3 of the reference palette (validated as a set; fixed order, never cycled).
-COLORS = {"b1_fixed": "#2a78d6", "b2_nonadaptive": "#eb6834", "adaptintake": "#1baf7a", "adaptintake_v2": "#4a3aa7"}
+COLORS = {"fixed_questionnaire": "#2a78d6", "non_adaptive": "#eb6834", "adaptintake": "#1baf7a"}
 SURFACE, INK, INK_2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
 
 METRICS = {

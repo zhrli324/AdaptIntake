@@ -7,7 +7,7 @@ from pathlib import Path
 
 from pydantic import BaseModel
 
-from .config import CASES_DIR
+from .config import CASE_SETS
 from .schema import SlotName
 
 
@@ -58,7 +58,9 @@ def load_case(path: Path) -> Case:
     return Case.model_validate(json.loads(path.read_text()))
 
 
-def load_cases(directory: Path = CASES_DIR, ids: list[str] | None = None) -> list[Case]:
+def load_cases(case_set: str | Path = "synthetic", ids: list[str] | None = None) -> list[Case]:
+    """Load a case set by name (see config.CASE_SETS) or from a folder of case_*.json files."""
+    directory = CASE_SETS[case_set] if isinstance(case_set, str) else case_set
     cases = [load_case(p) for p in sorted(directory.glob("case_*.json"))]
     if ids:
         cases = [c for c in cases if c.id in ids]

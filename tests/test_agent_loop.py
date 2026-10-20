@@ -38,6 +38,10 @@ def responder(messages, json_output):
             kind = "unknown" if slot == "medications" else "answer"
             updates = [{"slot": slot, "value": reply, "evidence": reply, "kind": kind, "vague": False, "contradicts_previous": False}]
         return json.dumps({"updates": updates, "off_topic": False, "wants_to_stop": False})
+    if system.startswith("You review a whole"):  # conversation-level consolidation
+        return json.dumps({"updates": []})
+    if system.startswith("A keyword screen"):  # red-flag verification
+        return json.dumps({"emergency": True, "reason": "described as stated"})
     if system.startswith("You check"):
         return json.dumps({"leading": False, "reason": "neutral"})
     if system.startswith("You write"):
@@ -100,6 +104,12 @@ def test_cases_are_valid_and_red_flags_detectable():
             assert screen(case.fact(case.red_flag.fact_id).text)
         else:
             assert all(screen(f.text) is None for f in case.facts)
+
+
+def test_mts_dialog_cases_are_valid():
+    cases = load_cases("mts_dialog")
+    assert [c.id for c in cases] == [f"mts_0{i}" for i in range(1, 6)]
+    assert all("MTS-Dialog" in c.source for c in cases)
 
 
 def test_deterministic_metrics():

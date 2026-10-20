@@ -1,8 +1,8 @@
-"""Recall support added after error analysis of the first evaluation run.
+"""Recall support: helping patients report everything they know, and keeping everything they said.
 
-Most facts the agent missed were never said by the patient, and medicines dominated them: patients
-on several medicines recall one or two and then answer "no" to a generic "anything else?". A smaller
-share were said in passing but not recorded by turn-level extraction. Two mechanisms address this:
+Patients on several medicines tend to recall one or two and then answer "no" to a generic
+"anything else?"; and patients who answer in fragments often mention facts in passing, which
+turn-level extraction can miss. Two mechanisms address this:
 
 1. Anchored recall for list slots (after clinical medication reconciliation): instead of a generic
    "anything else?", the agent works through concrete recall cues, such as medicines for each condition

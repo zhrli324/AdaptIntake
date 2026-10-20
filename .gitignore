@@ -13,9 +13,8 @@ venv/
 build/
 dist/
 
-# Evaluation outputs (keep the folder, not the bulk runs)
-results/*
-!results/.gitkeep
+# Evaluation outputs and demo recordings
+results/
 
 # OS / editors
 .DS_Store

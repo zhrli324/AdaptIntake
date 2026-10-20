@@ -1,0 +1,78 @@
+{
+  "id": "mts_03",
+  "title": "Left flank pain with nausea",
+  "source": "Adapted from MTS-Dialog (TrainingSet ID 516, GENHX section), CC BY 4.0. Facts are taken only from the source note and dialogue.",
+  "profile": {
+    "age": 76,
+    "sex": "female",
+    "context": "Attends the clinic alone. No further social details are given in the source record."
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "slot": "chief_complaint",
+      "text": "Has pain in the left flank.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F2",
+      "slot": "region",
+      "text": "The pain is in the abdomen and across the back.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F3",
+      "slot": "onset",
+      "text": "The pain has been present for the last four to five days.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F4",
+      "slot": "associated_symptoms",
+      "text": "Has nausea and vomiting.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F5",
+      "slot": "associated_symptoms",
+      "text": "No blood in the urine and no pain or burning when passing urine.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F6",
+      "slot": "associated_symptoms",
+      "text": "No fevers.",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F7",
+      "slot": "past_history",
+      "text": "Another doctor told her she has a stone of about 1.3 cm in the left ureter (the tube from the kidney).",
+      "essential": true,
+      "known": true,
+      "willing": true
+    },
+    {
+      "id": "F8",
+      "slot": "main_concern",
+      "text": "Wants something done about the stone.",
+      "essential": false,
+      "known": true,
+      "willing": true
+    }
+  ],
+  "contradiction": null,
+  "red_flag": null
+}

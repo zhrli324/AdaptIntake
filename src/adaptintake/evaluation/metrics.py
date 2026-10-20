@@ -18,7 +18,7 @@ def deterministic_metrics(case: Case, convo: dict) -> dict:
         "patient_words": patient_words,
         "end_reason": convo["end_reason"],
         "rejected_extractions": convo["rejected_extractions"],
-        "template_fallbacks": sum(q["source"] == "template" for q in questions) if convo["system"] != "b1_fixed" else None,
+        "template_fallbacks": sum(q["source"] == "template" for q in questions) if convo["system"] != "fixed_questionnaire" else None,
         "rule_flagged_drafts": sum(len(q["rejected_drafts"]) for q in questions),
     }
     if case.red_flag:

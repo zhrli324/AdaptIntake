@@ -1,6 +1,6 @@
 """Chat with the agent in the terminal (useful for a quick check of your .env settings).
 
-    python -m adaptintake.cli [--system adaptintake|b2_nonadaptive|b1_fixed] [--trace]
+    python -m adaptintake.cli [--system adaptintake|non_adaptive|fixed_questionnaire] [--trace]
 """
 
 from __future__ import annotations
