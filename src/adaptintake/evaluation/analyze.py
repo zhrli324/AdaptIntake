@@ -20,10 +20,15 @@ import pandas as pd
 from ..config import RESULTS_DIR
 from ..simulator import PERSONAS
 
-SYSTEM_LABELS = {"b1_fixed": "B1 fixed questionnaire", "b2_nonadaptive": "B2 non-adaptive LLM", "adaptintake": "AdaptIntake"}
+SYSTEM_LABELS = {
+    "b1_fixed": "B1 fixed questionnaire",
+    "b2_nonadaptive": "B2 non-adaptive LLM",
+    "adaptintake": "AdaptIntake",
+    "adaptintake_v2": "AdaptIntake v2",
+}
 SYSTEM_ORDER = list(SYSTEM_LABELS)
 # Categorical slots 1-3 of the reference palette (validated as a set; fixed order, never cycled).
-COLORS = {"b1_fixed": "#2a78d6", "b2_nonadaptive": "#eb6834", "adaptintake": "#1baf7a"}
+COLORS = {"b1_fixed": "#2a78d6", "b2_nonadaptive": "#eb6834", "adaptintake": "#1baf7a", "adaptintake_v2": "#4a3aa7"}
 SURFACE, INK, INK_2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
 
 METRICS = {
@@ -95,21 +100,26 @@ def grouped_bar(df: pd.DataFrame, metric: str, path) -> None:
 def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run-id", required=True)
+    parser.add_argument("--cases", nargs="+", help="only these case ids (a matched subset)")
+    parser.add_argument("--name", default="", help="suffix for the output files, e.g. 'subset'")
     args = parser.parse_args(argv)
     run_dir = RESULTS_DIR / args.run_id
     df = load_run(args.run_id)
+    if args.cases:
+        df = df[df["case"].isin(args.cases)]
     if df.empty:
         raise SystemExit(f"no conversations found in {run_dir / 'conversations'}")
-    df.to_csv(run_dir / "metrics.csv", index=False)
-    (run_dir / "summary.md").write_text(summary_tables(df))
-    fig_dir = run_dir / "figures"
+    suffix = f"_{args.name}" if args.name else ""
+    df.to_csv(run_dir / f"metrics{suffix}.csv", index=False)
+    (run_dir / f"summary{suffix}.md").write_text(summary_tables(df))
+    fig_dir = run_dir / f"figures{suffix}"
     fig_dir.mkdir(exist_ok=True)
     ordinary = df[df["red_flag_detected"].isna()] if "red_flag_detected" in df else df
     for metric in FIGURES:
         if metric in ordinary and ordinary[metric].notna().any():
             grouped_bar(ordinary, metric, fig_dir / f"{metric}.png")
-    print((run_dir / "summary.md").read_text())
-    print(f"\nWrote {run_dir / 'metrics.csv'}, {run_dir / 'summary.md'} and {fig_dir}/")
+    print((run_dir / f"summary{suffix}.md").read_text())
+    print(f"\nWrote metrics{suffix}.csv, summary{suffix}.md and {fig_dir.name}/ in {run_dir}")
 
 
 if __name__ == "__main__":

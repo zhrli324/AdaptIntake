@@ -84,6 +84,7 @@ class SlotState(BaseModel):
     times_asked: int = 0
     clarified: bool = False  # was vague or conflicting at some point, later resolved
     list_open: bool = False  # list slot (e.g. medicines) that may have more items: ask "anything else?"
+    anchors_used: list[str] = Field(default_factory=list)  # recall cues already asked (recall.ANCHORS)
 
     @property
     def is_resolved(self) -> bool:

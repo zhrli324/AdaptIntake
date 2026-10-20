@@ -41,8 +41,12 @@ def responder(messages, json_output):
     if system.startswith("You check"):
         return json.dumps({"leading": False, "reason": "neutral"})
     if system.startswith("You write"):
-        topics = messages[-1]["content"].split("Topic(s) to ask about: ")[1].split("\n")[0]
-        return f"Could you tell me about {topics.split(' (')[0]}?"
+        request = next(m["content"] for m in messages if "Topic(s) to ask about: " in m["content"])
+        topics = request.split("Topic(s) to ask about: ")[1].split("\n")[0]
+        question = f"Could you tell me about {topics.split(' (')[0]}?"
+        if json_output:  # closed question: text plus answer options
+            return json.dumps({"question": question, "options": ["Yes", "No"]})
+        return question
     raise AssertionError(system[:40])
 
 

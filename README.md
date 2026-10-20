@@ -39,6 +39,17 @@ patient reply
 | Summarise | `summary.py` | Template summary: what you told us / what we clarified / still unclear, with quotes |
 | Loop and baselines | `agent.py` | `IntakeAgent(adaptive=True)` = AdaptIntake; `adaptive=False` = B2; `FixedQuestionnaire` = B1 |
 
+**AdaptIntake v2** (`adaptintake_v2`) adds three mechanisms, each motivated by an error analysis of
+the first evaluation run (`recall.py`, `redflags.verify`):
+
+- **Anchored recall**: list follow-ups (medicines, history, other symptoms) use concrete recall cues,
+  as in clinical medication reconciliation. Clear communicators get all cues in one question; others
+  get one cue at a time.
+- **Conversation-level consolidation**: before stopping, the whole conversation is re-read once to
+  recover information said in passing. Each addition must quote the patient.
+- **Two-stage red-flag check**: the rules give high recall. An LLM may only veto clear false positives,
+  and any failure escalates.
+
 More detail and pseudocode: [docs/design.md](docs/design.md).
 
 ## Setup

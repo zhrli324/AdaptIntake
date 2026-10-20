@@ -1,0 +1,1239 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "Pain in my left flank."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me when this started and whether it came on suddenly or gradually, and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It’s been there four or five days."
+  },
+  {
+   "role": "agent",
+   "text": "How much is the pain affecting your daily activities, and what medicines do you take regularly or have taken recently, including any new or changed ones?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter keeps telling me I should rest more."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven’t noticed any allergies to medicines."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any ongoing health conditions that you see a doctor about regularly?"
+  },
+  {
+   "role": "patient",
+   "text": "A doctor told me I have a stone in the left ureter."
+  },
+  {
+   "role": "agent",
+   "text": "How bad is the pain in your left flank right now: mild, moderate, or severe, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I’m not sure how bad it is."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything else going on with your body along with the pain in your left side?"
+  },
+  {
+   "role": "patient",
+   "text": "I keep feeling sick and vomiting."
+  },
+  {
+   "role": "agent",
+   "text": "What medicines are you taking at the moment — only your regular ones, any new or changed ones as well, or none?"
+  },
+  {
+   "role": "patient",
+   "text": "I don’t take any regular medicines."
+  },
+  {
+   "role": "agent",
+   "text": "Does anything make the pain in your left side better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven’t noticed anything that makes it better or worse."
+  },
+  {
+   "role": "agent",
+   "text": "Is the pain in your left side there all the time, or does it come and go?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven’t noticed it coming and going."
+  },
+  {
+   "role": "agent",
+   "text": "Aside from the stone your doctor mentioned, is there anything else in your past health I should know about — for example, conditions you see a doctor or nurse about regularly, operations or hospital stays, or conditions you used to take medicines for, even though you don’t take regular medicines now — or is there nothing else?"
+  },
+  {
+   "role": "patient",
+   "text": "Nothing else that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about this, and what are you hoping to get from today’s visit?"
+  },
+  {
+   "role": "patient",
+   "text": "I want something done about the stone."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the feeling sick and vomiting you mentioned, has anything else changed in how you feel or how your body is working since this started, or has nothing else changed?"
+  },
+  {
+   "role": "patient",
+   "text": "No blood in my urine."
+  },
+  {
+   "role": "agent",
+   "text": "What does the pain in your left side feel like?"
+  },
+  {
+   "role": "patient",
+   "text": "It’s in my abdomen and across my back."
+  },
+  {
+   "role": "agent",
+   "text": "How has all this been affecting your sleep?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven’t noticed any change in my sleep."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the feeling sick and vomiting, is there anything else you’ve noticed since this started that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No fevers."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling of the pain in your abdomen and back — would you say it's sharp, dull, burning, or you're not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I’m not sure how to describe it."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you’ve noticed about how you’re feeling that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No pain or burning when passing urine."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me when this started and whether it came on suddenly or gradually, and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How much is the pain affecting your daily activities, and what medicines do you take regularly or have taken recently, including any new or changed ones?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Do you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   },
+   "options": [
+    "Yes, I have one or more",
+    "No, none that I know of",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Do you have any ongoing health conditions that you see a doctor about regularly?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How bad is the pain in your left flank right now: mild, moderate, or severe, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": [
+    "Mild",
+    "Moderate",
+    "Severe",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Have you noticed anything else going on with your body along with the pain in your left side?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "What medicines are you taking at the moment — only your regular ones, any new or changed ones as well, or none?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.52)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   },
+   "options": [
+    "Only regular medicines",
+    "Regular and new or changed medicines",
+    "No medicines at the moment",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Does anything make the pain in your left side better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   },
+   "options": []
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Is the pain in your left side there all the time, or does it come and go?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   },
+   "options": []
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Aside from the stone your doctor mentioned, is there anything else in your past health I should know about — for example, conditions you see a doctor or nurse about regularly, operations or hospital stays, or conditions you used to take medicines for, even though you don’t take regular medicines now — or is there nothing else?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.465); recall cue: regular_care, from_medicines, procedures",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "What worries you most about this, and what are you hoping to get from today’s visit?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.4,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   },
+   "options": []
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "Besides the feeling sick and vomiting you mentioned, has anything else changed in how you feel or how your body is working since this started, or has nothing else changed?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "associated_symptoms": 0.4,
+    "functional_change": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4); recall cue: general, bodily",
+   "source": "llm",
+   "rejected_drafts": [
+    {
+     "draft": "Besides feeling sick and vomiting, have you noticed anything else since this started — such as changes in your appetite, sleep, weight or energy, or in your bladder, bowels, or breathing — or is there nothing else?",
+     "problems": [
+      "critic: The question introduces a list of specific symptoms the patient has not mentioned (appetite, sleep, weight, energy, bladder, bowels, breathing), which may prompt or prime endorsement even though it also offers 'nothing else'."
+     ]
+    }
+   ],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "What does the pain in your left side feel like?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.28,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   },
+   "options": []
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "How has all this been affecting your sleep?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.24,
+    "associated_symptoms": 0.28,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   },
+   "options": []
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "Besides the feeling sick and vomiting, is there anything else you’ve noticed since this started that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.24,
+    "associated_symptoms": 0.28
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "How would you describe the feeling of the pain in your abdomen and back — would you say it's sharp, dull, burning, or you're not sure?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.24,
+    "associated_symptoms": 0.18
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.24)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   },
+   "options": [
+    "Sharp",
+    "Dull",
+    "Burning",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 17,
+   "turn": 17,
+   "text": "Is there anything else you’ve noticed about how you’re feeling that you’d like to add?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.18
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.18)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in the left flank",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Pain in my left flank."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started four or five days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It’s been there four or five days."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Has not noticed anything that makes the pain better or worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "I haven’t noticed anything that makes it better or worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 17,
+      "quote": "I’m not sure how to describe it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Pain is in the abdomen and spreads across the back",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "Pain in my left flank."
+     },
+     {
+      "turn": 14,
+      "quote": "It’s in my abdomen and across my back."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "I’m not sure how bad it is."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Has not noticed the pain coming and going",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I haven’t noticed it coming and going."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Keeps feeling sick and vomiting; No blood in the urine; No fevers; No pain or burning when passing urine",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I keep feeling sick and vomiting."
+     },
+     {
+      "turn": 13,
+      "quote": "No blood in my urine."
+     },
+     {
+      "turn": 16,
+      "quote": "No fevers."
+     },
+     {
+      "turn": 18,
+      "quote": "No pain or burning when passing urine."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 4,
+    "clarified": false,
+    "list_open": true,
+    "anchors_used": [
+     "general",
+     "bodily"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "A doctor told them they have a stone in the left ureter; Nothing else in past health that they know of",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "A doctor told me I have a stone in the left ureter."
+     },
+     {
+      "turn": 11,
+      "quote": "Nothing else that I know of."
+     },
+     {
+      "turn": 11,
+      "quote": "Nothing else that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "from_medicines",
+     "procedures"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes no regular medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I don’t take any regular medicines."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "No, I haven’t noticed any allergies to medicines."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No change in sleep",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 15,
+      "quote": "I haven’t noticed any change in my sleep."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants something done about the stone",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 12,
+      "quote": "I want something done about the stone."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in the left flank",
+    "evidence": [
+     "Pain in my left flank."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started four or five days ago",
+    "evidence": [
+     "It’s been there four or five days."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Has not noticed anything that makes the pain better or worse",
+    "evidence": [
+     "I haven’t noticed anything that makes it better or worse."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Pain is in the abdomen and spreads across the back",
+    "evidence": [
+     "Pain in my left flank.",
+     "It’s in my abdomen and across my back."
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Has not noticed the pain coming and going",
+    "evidence": [
+     "I haven’t noticed it coming and going."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Keeps feeling sick and vomiting; No blood in the urine; No fevers; No pain or burning when passing urine",
+    "evidence": [
+     "I keep feeling sick and vomiting.",
+     "No blood in my urine.",
+     "No fevers.",
+     "No pain or burning when passing urine."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "A doctor told them they have a stone in the left ureter; Nothing else in past health that they know of",
+    "evidence": [
+     "A doctor told me I have a stone in the left ureter.",
+     "Nothing else that I know of.",
+     "Nothing else that I know of."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Takes no regular medicines",
+    "evidence": [
+     "I don’t take any regular medicines."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "No, I haven’t noticed any allergies to medicines."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No change in sleep",
+    "evidence": [
+     "I haven’t noticed any change in my sleep."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants something done about the stone",
+    "evidence": [
+     "I want something done about the stone."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "quality",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I’m not sure how to describe it."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I’m not sure how bad it is."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 18,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.75,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.45,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.575,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.487,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.544,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.472,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.586,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.643,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.671,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.686,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.693,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.546,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.473,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.587,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.493,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.547,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.473,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 18,
+   "added": [
+    {
+     "slot": "past_history",
+     "value": "Nothing else in past health that they know of",
+     "evidence": "Nothing else that I know of.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": true
+    }
+   ]
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "ext_03",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 18,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 127,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 1,
+  "completeness": 0.875,
+  "essential_completeness": 0.8333333333333334,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

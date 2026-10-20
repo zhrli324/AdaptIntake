@@ -13,6 +13,9 @@ from dataclasses import dataclass, field
 from .clarity import Guidance
 from .llm import LLM, LLMError
 from .policy import Decision, Stage
+from pydantic import BaseModel, Field
+
+from .recall import anchor_template
 from .schema import SLOTS, InformationState, NeutralityVerdict
 
 OPENING_QUESTION = "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
@@ -86,6 +89,25 @@ TEMPLATES: dict[str, dict[Stage, str]] = {
     },
 }
 
+NOT_SURE = "Not sure"
+
+# Answer buttons for closed questions (template fallback). Balanced, always with "Not sure".
+OPTIONS: dict[str, list[str]] = {
+    "chief_complaint": ["Pain", "Feeling unwell or tired", "A change in how my body works", "Something else", NOT_SURE],
+    "onset": ["In the last few days", "1-4 weeks ago", "More than a month ago", NOT_SURE],
+    "provocation": ["Something makes it better", "Something makes it worse", "Nothing I've noticed", NOT_SURE],
+    "quality": ["Sharp", "Dull or aching", "Burning", "Something else", NOT_SURE],
+    "region": ["In one place", "It moves or spreads", "All over", NOT_SURE],
+    "severity": ["Mild", "Moderate", "Severe", NOT_SURE],
+    "timing": ["All the time", "It comes and goes", NOT_SURE],
+    "associated_symptoms": ["Yes", "No", NOT_SURE],
+    "past_history": ["Yes", "No", NOT_SURE],
+    "medications": ["Yes", "No", NOT_SURE],
+    "allergies": ["Yes", "No", NOT_SURE],
+    "functional_change": ["The same as before", "A bit harder", "Much harder", NOT_SURE],
+    "main_concern": ["Yes", "No", NOT_SURE],
+}
+
 # "Anything else?" follow-ups for list slots that may still have items.
 LIST_FOLLOWUP = {
     "medications": "Apart from those, do you take any other medicines, including ones you buy yourself?",
@@ -146,10 +168,27 @@ class QuestionResult:
     text: str
     source: str  # "llm", "template" or "opening"
     attempts: list[dict] = field(default_factory=list)  # rejected drafts and why
+    options: list[str] = field(default_factory=list)  # answer buttons for closed questions
 
 
-def template_question(decision: Decision, state: InformationState) -> str:
+class ClosedQuestion(BaseModel):
+    question: str = Field(description="The question, mentioning the options in natural words.")
+    options: list[str] = Field(description="2-4 short, balanced answer options (a few words each).")
+
+
+def with_not_sure(options: list[str]) -> list[str]:
+    cleaned = [o.strip() for o in options if o.strip() and "not sure" not in o.lower()][:4]
+    return cleaned + [NOT_SURE]
+
+
+def template_options(decision: Decision) -> list[str]:
+    return list(OPTIONS[decision.slots[0]]) if decision.stage == Stage.CLOSED else []
+
+
+def template_question(decision: Decision, state: InformationState, anchors: list[tuple[str, str]] | None = None) -> str:
     slot = decision.slots[0]
+    if anchors:
+        return anchor_template(anchors[0][0], state)
     if state[slot].list_open and not state[slot].vague and slot in LIST_FOLLOWUP:
         return LIST_FOLLOWUP[slot]
     if decision.stage == Stage.CLARIFY:
@@ -165,13 +204,21 @@ def generate_question(
     transcript: list[dict],
     use_critic: bool = True,
     max_drafts: int = 2,
+    anchors: list[tuple[str, str]] | None = None,
 ) -> QuestionResult:
+    """`anchors`: recall cues for a list follow-up (recall.py); all of them are covered in one question."""
     patient_text = " ".join(t["text"] for t in transcript if t["role"] == "patient")
     recent = "\n".join(f"{t['role']}: {t['text']}" for t in transcript[-6:])
     topics = "; ".join(f"{SLOTS[s].label} ({SLOTS[s].description})" for s in decision.slots)
     extra = ""
     first = state[decision.slots[0]]
-    if first.list_open and not first.vague:
+    if first.list_open and not first.vague and anchors:
+        cues = "; ".join(cue for _, cue in anchors)
+        extra = (
+            f"\nThe patient already mentioned: {first.value}. Ask whether there is anything else, using this "
+            f"concrete reminder: {cues}. Ask neutrally and make it easy to answer no."
+        )
+    elif first.list_open and not first.vague:
         extra = f"\nThe patient already mentioned: {first.value}. Ask only whether there is anything else to add."
     if decision.stage == Stage.CLARIFY:
         values = state[decision.slots[0]].conflicting_values
@@ -184,15 +231,23 @@ def generate_question(
         f"Question form: {STAGE_INSTRUCTIONS[decision.stage]}\n"
         f"Style: {GUIDANCE_INSTRUCTIONS[decision.guidance]}"
     )
+    closed = decision.stage == Stage.CLOSED
     attempts: list[dict] = []
     for _ in range(max_drafts):
         messages = [{"role": "system", "content": GENERATION_PROMPT}, {"role": "user", "content": request}]
+        options: list[str] = []
         try:
-            draft = llm.chat(messages).strip().strip('"')
+            if closed:
+                generated = llm.structured(messages, ClosedQuestion)
+                draft, options = generated.question.strip(), with_not_sure(generated.options)
+            else:
+                draft = llm.chat(messages).strip().strip('"')
         except LLMError as err:
             attempts.append({"draft": None, "problems": [str(err)]})
             break
-        problems = rule_check(draft, patient_text)
+        problems = rule_check(draft + " " + " ".join(options), patient_text)
+        if closed and len(options) < 3:
+            problems.append("closed question needs at least two options besides 'not sure'")
         if not problems and use_critic:
             try:
                 verdict = llm.structured(
@@ -207,7 +262,7 @@ def generate_question(
             except LLMError as err:
                 problems.append(f"critic unavailable: {err}")
         if not problems:
-            return QuestionResult(draft, "llm", attempts)
+            return QuestionResult(draft, "llm", attempts, options)
         attempts.append({"draft": draft, "problems": problems})
         request += f"\n\nYour previous draft was rejected ({'; '.join(problems)}). Write a neutral question."
-    return QuestionResult(template_question(decision, state), "template", attempts)
+    return QuestionResult(template_question(decision, state, anchors), "template", attempts, template_options(decision))

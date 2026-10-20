@@ -1,0 +1,969 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've had a cough that just won't go away for about three weeks now. It started after a cold, and it's been bothering me most nights and waking me up."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me a bit more about how much this cough is affecting your days and nights, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It's disturbing my sleep most nights — I'd rate it about 6 out of 10 — and it's worst in the morning and at night. As for medicines, I don't have any allergies that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take regularly or have taken recently — including anything new or changed, and the dose if you know it — and also any health problems, operations, or hospital stays you’ve had in the past?"
+  },
+  {
+   "role": "patient",
+   "text": "I use a blue salbutamol inhaler — I've been needing it 4 to 5 times a day now instead of my usual twice — plus a Fostair 100/6 inhaler, two puffs twice daily, and lisinopril 10 mg once a day for my blood pressure. As for my health, I've had COPD for about 8 years; I smoked 20 cigarettes a day for 40 years but stopped 10 years ago. I haven't had any operations or hospital stays that I can recall."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the cough, have you noticed anything else going on with your body that you’d like to mention?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been a bit more breathless than usual when walking to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain."
+  },
+  {
+   "role": "agent",
+   "text": "Where do you feel the cough most — for example, in your throat or chest — and does that feeling spread anywhere?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed it spreading anywhere — it's just a chesty cough that comes in fits. Nothing that I'd say moves to other places."
+  },
+  {
+   "role": "agent",
+   "text": "Are there any other medicines you take for your COPD or breathing — such as tablets or anything else — besides the inhalers you mentioned?"
+  },
+  {
+   "role": "patient",
+   "text": "No, just those two inhalers for my breathing — nothing else for the COPD. The lisinopril is only for my blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "What have you noticed makes your cough better or worse — for example, activities, positions, foods, medicines, or anything else?"
+  },
+  {
+   "role": "patient",
+   "text": "Cold air and talking for a long time set it off, and it tends to come in fits that last a few minutes. Steam inhalation helps a little. I haven't noticed positions or foods making any difference."
+  },
+  {
+   "role": "agent",
+   "text": "Besides the COPD and blood pressure you mentioned, is there anything else you see a doctor or nurse about regularly, any other health conditions your blue salbutamol inhaler, Fostair, or lisinopril are for, or any operations or hospital stays in the past — or is there nothing else you can think of?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's really it — just the COPD and my blood pressure. I can't think of anything else I see them about, and no operations or hospital stays."
+  },
+  {
+   "role": "agent",
+   "text": "When you cough, where do you feel it most, and does it spread anywhere else?"
+  },
+  {
+   "role": "patient",
+   "text": "It's really in my chest — that's where I feel it most when the fits come on. I haven't noticed it spreading anywhere else."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your cough, and what are you hoping we can do for you today?"
+  },
+  {
+   "role": "patient",
+   "text": "What worries me most is that my lungs are getting worse, or that it could be cancer. I'd like you to check me over and see if something can be done to settle this cough."
+  },
+  {
+   "role": "agent",
+   "text": "Since this cough started, have you noticed any changes in your appetite, sleep, weight, or energy, or any changes in your bladder or bowel habits or breathing — or have things stayed about the same?"
+  },
+  {
+   "role": "patient",
+   "text": "My sleep is being disturbed most nights by the cough, and I've been a bit more breathless than usual walking to the shop. I haven't lost any weight, and I haven't noticed any changes in my appetite, energy, or bowel and bladder habits."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else you've noticed with your health that you haven't had a chance to mention yet?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't think so — I've told you about the cough, the phlegm, the breathlessness and my inhalers. Nothing else springs to mind."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me a bit more about how much this cough is affecting your days and nights, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take regularly or have taken recently — including anything new or changed, and the dose if you know it — and also any health problems, operations, or hospital stays you’ve had in the past?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Besides the cough, have you noticed anything else going on with your body that you’d like to mention?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "region": 0.51,
+    "associated_symptoms": 0.58,
+    "past_history": 0.465,
+    "medications": 0.515,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Where do you feel the cough most — for example, in your throat or chest — and does that feeling spread anywhere?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "region": 0.48,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "medications": 0.48,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: region (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   },
+   "options": []
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Are there any other medicines you take for your COPD or breathing — such as tablets or anything else — besides the inhalers you mentioned?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "region": 0.38,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "medications": 0.48,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.48); recall cue: for_conditions",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "What have you noticed makes your cough better or worse — for example, activities, positions, foods, medicines, or anything else?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "region": 0.41,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Besides the COPD and blood pressure you mentioned, is there anything else you see a doctor or nurse about regularly, any other health conditions your blue salbutamol inhaler, Fostair, or lisinopril are for, or any operations or hospital stays in the past — or is there nothing else you can think of?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "region": 0.41,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.465); recall cue: regular_care, from_medicines, procedures",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "When you cough, where do you feel it most, and does it spread anywhere else?",
+   "slots": [
+    "region"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "region": 0.41,
+    "associated_symptoms": 0.4,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: region (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "region": false
+   },
+   "options": []
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What worries you most about your cough, and what are you hoping we can do for you today?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   },
+   "options": []
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Since this cough started, have you noticed any changes in your appetite, sleep, weight, or energy, or any changes in your bladder or bowel habits or breathing — or have things stayed about the same?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4); recall cue: general, bodily",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else you've noticed with your health that you haven't had a chance to mention yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.28
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.28)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "A cough that won't go away",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've had a cough that just won't go away"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "About three weeks ago; started after a cold",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "for about three weeks now. It started after a cold"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Cold air and talking for a long time set the cough off; steam inhalation helps a little; no difference noticed with positions or foods",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "Cold air and talking for a long time set it off"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Chesty cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "it's just a chesty cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Feels it most in the chest; has not noticed it spreading anywhere else",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 9,
+      "quote": "It's really in my chest — that's where I feel it most when the fits come on. I haven't noticed it spreading anywhere else."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Rates the cough about 6 out of 10",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I'd rate it about 6 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Comes in fits that last a few minutes",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it's been bothering me most nights"
+     },
+     {
+      "turn": 2,
+      "quote": "it's worst in the morning and at night"
+     },
+     {
+      "turn": 5,
+      "quote": "it's just a chesty cough that comes in fits"
+     },
+     {
+      "turn": 7,
+      "quote": "it tends to come in fits that last a few minutes"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "More breathless than usual when walking to the shop; no coughing up blood, no weight loss, no night sweats, no chest pain; No weight loss, no change in appetite, energy, or bowel and bladder habits; Phlegm with the cough.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I've been a bit more breathless than usual when walking to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain."
+     },
+     {
+      "turn": 11,
+      "quote": "I haven't lost any weight, and I haven't noticed any changes in my appetite, energy, or bowel and bladder habits."
+     },
+     {
+      "turn": 12,
+      "quote": "Nothing else springs to mind."
+     },
+     {
+      "turn": 12,
+      "quote": "No, I don't think so — I've told you about the cough, the phlegm, the breathlessness and my inhalers. Nothing else springs to mind."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "general",
+     "bodily"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "COPD for about 8 years; smoked 20 cigarettes a day for 40 years but stopped 10 years ago; no operations or hospital stays that they can recall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I've had COPD for about 8 years; I smoked 20 cigarettes a day for 40 years but stopped 10 years ago. I haven't had any operations or hospital stays that I can recall."
+     },
+     {
+      "turn": 8,
+      "quote": "just the COPD and my blood pressure. I can't think of anything else I see them about, and no operations or hospital stays"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "from_medicines",
+     "procedures"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Blue salbutamol inhaler, now needing it 4 to 5 times a day instead of the usual twice; Fostair 100/6 inhaler, two puffs twice daily; lisinopril 10 mg once a day for blood pressure",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I use a blue salbutamol inhaler — I've been needing it 4 to 5 times a day now instead of my usual twice — plus a Fostair 100/6 inhaler, two puffs twice daily, and lisinopril 10 mg once a day for my blood pressure."
+     },
+     {
+      "turn": 6,
+      "quote": "No, just those two inhalers for my breathing — nothing else for the COPD."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "for_conditions"
+    ]
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any allergies that I know of"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Sleep disturbed most nights by the cough; more breathless than usual walking to the shop",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "waking me up"
+     },
+     {
+      "turn": 2,
+      "quote": "It's disturbing my sleep most nights"
+     },
+     {
+      "turn": 4,
+      "quote": "a bit more breathless than usual when walking to the shop"
+     },
+     {
+      "turn": 11,
+      "quote": "My sleep is being disturbed most nights by the cough"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Worried that their lungs are getting worse or that it could be cancer; hopes to be checked over and to see if something can be done to settle the cough",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "What worries me most is that my lungs are getting worse, or that it could be cancer."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "A cough that won't go away",
+    "evidence": [
+     "I've had a cough that just won't go away"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "About three weeks ago; started after a cold",
+    "evidence": [
+     "for about three weeks now. It started after a cold"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Cold air and talking for a long time set the cough off; steam inhalation helps a little; no difference noticed with positions or foods",
+    "evidence": [
+     "Cold air and talking for a long time set it off"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Chesty cough",
+    "evidence": [
+     "it's just a chesty cough"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Feels it most in the chest; has not noticed it spreading anywhere else",
+    "evidence": [
+     "It's really in my chest — that's where I feel it most when the fits come on. I haven't noticed it spreading anywhere else."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Rates the cough about 6 out of 10",
+    "evidence": [
+     "I'd rate it about 6 out of 10"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Comes in fits that last a few minutes",
+    "evidence": [
+     "it's been bothering me most nights",
+     "it's worst in the morning and at night",
+     "it's just a chesty cough that comes in fits",
+     "it tends to come in fits that last a few minutes"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "More breathless than usual when walking to the shop; no coughing up blood, no weight loss, no night sweats, no chest pain; No weight loss, no change in appetite, energy, or bowel and bladder habits; Phlegm with the cough.",
+    "evidence": [
+     "I've been a bit more breathless than usual when walking to the shop. Otherwise, no coughing up blood, no weight loss, no night sweats and no chest pain.",
+     "I haven't lost any weight, and I haven't noticed any changes in my appetite, energy, or bowel and bladder habits.",
+     "Nothing else springs to mind.",
+     "No, I don't think so — I've told you about the cough, the phlegm, the breathlessness and my inhalers. Nothing else springs to mind."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "COPD for about 8 years; smoked 20 cigarettes a day for 40 years but stopped 10 years ago; no operations or hospital stays that they can recall",
+    "evidence": [
+     "I've had COPD for about 8 years; I smoked 20 cigarettes a day for 40 years but stopped 10 years ago. I haven't had any operations or hospital stays that I can recall.",
+     "just the COPD and my blood pressure. I can't think of anything else I see them about, and no operations or hospital stays"
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Blue salbutamol inhaler, now needing it 4 to 5 times a day instead of the usual twice; Fostair 100/6 inhaler, two puffs twice daily; lisinopril 10 mg once a day for blood pressure",
+    "evidence": [
+     "I use a blue salbutamol inhaler — I've been needing it 4 to 5 times a day now instead of my usual twice — plus a Fostair 100/6 inhaler, two puffs twice daily, and lisinopril 10 mg once a day for my blood pressure.",
+     "No, just those two inhalers for my breathing — nothing else for the COPD."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies to medicines",
+    "evidence": [
+     "I don't have any allergies that I know of"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Sleep disturbed most nights by the cough; more breathless than usual walking to the shop",
+    "evidence": [
+     "waking me up",
+     "It's disturbing my sleep most nights",
+     "a bit more breathless than usual when walking to the shop",
+     "My sleep is being disturbed most nights by the cough"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Worried that their lungs are getting worse or that it could be cancer; hopes to be checked over and to see if something can be done to settle the cough",
+    "evidence": [
+     "What worries me most is that my lungs are getting worse, or that it could be cancer."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 12,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 1,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 4,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.9,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.65,
+   "level": "confirm",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.525,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.613,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.656,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.678,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.689,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.695,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.549,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.624,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 12,
+   "added": [
+    {
+     "slot": "associated_symptoms",
+     "value": "Phlegm with the cough.",
+     "evidence": "No, I don't think so — I've told you about the cough, the phlegm, the breathlessness and my inhalers. Nothing else springs to mind.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": false
+    }
+   ]
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "case_05",
+ "persona": "clear",
+ "metrics": {
+  "questions": 12,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 414,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 1,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.8666666666666667,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

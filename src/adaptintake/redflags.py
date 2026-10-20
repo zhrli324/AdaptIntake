@@ -10,6 +10,8 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from pydantic import BaseModel
+
 RED_FLAGS: dict[str, list[str]] = {
     "chest pain or pressure": [
         r"chest (?:pain|pressure|tightness|heaviness)",
@@ -39,6 +41,33 @@ URGENT_MESSAGE = (
     "urgent attention. I am pausing these questions. Please seek medical help now: call your "
     "local emergency number or tell a member of staff right away."
 )
+
+
+VERIFY_PROMPT = """A keyword screen flagged a possible emergency warning sign ({category}) in a patient's reply
+during a pre-consultation interview. Decide whether the reply plausibly describes that warning sign.
+Answer emergency=false ONLY if the match is clearly not a warning sign (e.g. a blocked nose, a past event
+that has fully resolved, or the phrase used in an unrelated sense). If in any doubt, answer emergency=true."""
+
+
+class RedFlagVerdict(BaseModel):
+    emergency: bool
+    reason: str
+
+
+def verify(llm, hit: "RedFlagHit", reply: str, question: str) -> RedFlagVerdict:
+    """Second stage: the rule decides recall, the LLM may only veto clear false positives.
+
+    Any failure keeps the escalation (fail-safe)."""
+    try:
+        return llm.structured(
+            [
+                {"role": "system", "content": VERIFY_PROMPT.format(category=hit.category)},
+                {"role": "user", "content": f"Question: {question}\nPatient reply: {reply}\nMatched text: {hit.matched_text}"},
+            ],
+            RedFlagVerdict,
+        )
+    except Exception as err:  # noqa: BLE001 - any error must escalate
+        return RedFlagVerdict(emergency=True, reason=f"verification unavailable ({err}); escalating")
 
 
 @dataclass

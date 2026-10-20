@@ -43,6 +43,8 @@ class PolicyConfig:
     max_asks_list_slot: int = 5  # list slots may need "anything else?" follow-ups
     max_turns: int = 20
     allow_bundling: bool = True  # confirm level may cover two missing slots in one question
+    anchored_lists: bool = False  # list follow-ups use concrete recall cues (recall.py)
+    anchored_burden: float = 0.5  # cue-based follow-ups are easy to answer: burden multiplier
 
 
 @dataclass
@@ -69,7 +71,10 @@ def uncertainty(slot: SlotState) -> float:
 
 def priority(slot: SlotState, guidance: Guidance, cfg: PolicyConfig) -> float:
     spec = SLOTS[slot.name]
-    burden = spec.burden * BURDEN_SCALE[guidance] + cfg.repeat_penalty * slot.times_asked
+    base = spec.burden
+    if cfg.anchored_lists and slot.list_open and not slot.vague and slot.status == SlotStatus.REPORTED:
+        base *= cfg.anchored_burden
+    burden = base * BURDEN_SCALE[guidance] + cfg.repeat_penalty * slot.times_asked
     return spec.importance * uncertainty(slot) - cfg.lam * burden
 
 

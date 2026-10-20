@@ -1,0 +1,999 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "It’s my right knee. It’s been aching and getting worse, and it’s really starting to limit me."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me in your own words when this knee aching first started—whether it came on suddenly or gradually, and if anything seemed to set it off—and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It only started getting bad last week. And yes, penicillin gives me a rash."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me in your own words how much the knee aching is affecting your daily life, and whether you take any medicines regularly or have started or changed any recently—including the dose if you know it?"
+  },
+  {
+   "role": "patient",
+   "text": "It’s affecting me quite a bit—I can’t walk the dog round the park anymore, and I’m going downstairs one step at a time holding the rail. I take metformin 1 g twice a day, aspirin 75 mg once a day, atorvastatin 40 mg at night, and ramipril 5 mg once a day; I haven’t started or changed anything recently."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me a bit about your past health—any ongoing health conditions, past illnesses, operations, or hospital stays you’ve had?"
+  },
+  {
+   "role": "patient",
+   "text": "I’ve had type 2 diabetes for about 10 years, and I had a stent put in a heart artery about 6 years ago."
+  },
+  {
+   "role": "agent",
+   "text": "How much would you say the knee aching is getting in the way of your usual day-to-day activities at the moment—just a little, quite a lot, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "Quite a lot, really. On bad days it’s about 7 out of 10, and I can’t walk the dog round the park like I used to."
+  },
+  {
+   "role": "agent",
+   "text": "Since the knee aching started, have you noticed anything else going on with your knee or leg that you haven’t mentioned yet?"
+  },
+  {
+   "role": "patient",
+   "text": "The knee sometimes swells slightly by the evening, but there’s no redness, fever or locking. The pain is on the inner side of the right knee and doesn’t spread down the leg."
+  },
+  {
+   "role": "agent",
+   "text": "Aside from the metformin, aspirin, atorvastatin and ramipril you mentioned, are you taking any other medicines for your diabetes or your heart, or is that all?"
+  },
+  {
+   "role": "patient",
+   "text": "That’s all—I’m not taking any other medicines for my diabetes or my heart."
+  },
+  {
+   "role": "agent",
+   "text": "What sorts of things—like activities, positions, or anything else—seem to make your knee aching better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "It’s worse going down stairs and after walking more than about 10 minutes, and it’s better with rest and paracetamol. It’s a deep, grinding ache, and the knee feels stiff for about 20 minutes in the morning."
+  },
+  {
+   "role": "agent",
+   "text": "Aside from your diabetes and the heart stent, is there anything else you see a doctor or nurse about regularly, or any past operations or hospital stays—and it’s completely fine if there aren’t."
+  },
+  {
+   "role": "patient",
+   "text": "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays."
+  },
+  {
+   "role": "agent",
+   "text": "Just to make sure I have the full picture, are there any other medicines you take at different times of day—like in the morning, evening, or at bedtime—or anything that isn’t a tablet, such as an inhaler, eye drops, cream, injection, or patch, or anything you buy without a prescription, like painkillers, vitamins, or herbal remedies—and it’s completely fine if there aren’t?"
+  },
+  {
+   "role": "patient",
+   "text": "I take paracetamol sometimes for the knee, but nothing else apart from the tablets I mentioned. No inhalers, eye drops, creams, injections, vitamins or herbal remedies."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your knee at the moment, and what are you hoping we can help with today?"
+  },
+  {
+   "role": "patient",
+   "text": "I’d like something stronger for the pain, because it’s really limiting me now. I also want to know whether I might need a knee replacement."
+  },
+  {
+   "role": "agent",
+   "text": "Since your knee started bothering you, have you had any changes in your appetite, sleep, weight, or energy, or any changes in peeing, pooing, or breathing—and it’s completely fine if none of these have changed."
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven’t noticed any changes in my appetite, sleep, weight, energy, peeing, pooing or breathing."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Can you tell me in your own words when this knee aching first started—whether it came on suddenly or gradually, and if anything seemed to set it off—and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me in your own words how much the knee aching is affecting your daily life, and whether you take any medicines regularly or have started or changed any recently—including the dose if you know it?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "severity": 0.71,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "functional_change": 0.18,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Could you tell me a bit about your past health—any ongoing health conditions, past illnesses, operations, or hospital stays you’ve had?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "severity": 0.61,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.515,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.65)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "How much would you say the knee aching is getting in the way of your usual day-to-day activities at the moment—just a little, quite a lot, or are you not sure?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "severity": 0.58,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.48,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": [
+    "Just a little",
+    "Quite a lot",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Since the knee aching started, have you noticed anything else going on with your knee or leg that you haven’t mentioned yet?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "timing": 0.2,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.48,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Aside from the metformin, aspirin, atorvastatin and ramipril you mentioned, are you taking any other medicines for your diabetes or your heart, or is that all?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "medications": 0.48,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.48); recall cue: for_conditions",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "What sorts of things—like activities, positions, or anything else—seem to make your knee aching better or worse?",
+   "slots": [
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: provocation (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "provocation": false
+   },
+   "options": []
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Aside from your diabetes and the heart stent, is there anything else you see a doctor or nurse about regularly, or any past operations or hospital stays—and it’s completely fine if there aren’t.",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "past_history": 0.465,
+    "medications": 0.415,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.465); recall cue: regular_care, from_medicines, procedures",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Just to make sure I have the full picture, are there any other medicines you take at different times of day—like in the morning, evening, or at bedtime—or anything that isn’t a tablet, such as an inhaler, eye drops, cream, injection, or patch, or anything you buy without a prescription, like painkillers, vitamins, or herbal remedies—and it’s completely fine if there aren’t?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "medications": 0.415,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: medications (reported; score 0.415); recall cue: time_of_day, forms, over_the_counter",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "What worries you most about your knee at the moment, and what are you hoping we can help with today?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.41)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   },
+   "options": []
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Since your knee started bothering you, have you had any changes in your appetite, sleep, weight, or energy, or any changes in peeing, pooing, or breathing—and it’s completely fine if none of these have changed.",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.4
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4); recall cue: general, bodily",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Right knee aching and getting worse, and starting to limit them",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It’s my right knee. It’s been aching and getting worse"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started getting bad last week",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It only started getting bad last week."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Worse going down stairs and after walking more than about 10 minutes; better with rest and paracetamol",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "It’s worse going down stairs and after walking more than about 10 minutes, and it’s better with rest and paracetamol."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Deep, grinding ache",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It’s been aching"
+     },
+     {
+      "turn": 8,
+      "quote": "It’s a deep, grinding ache"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Inner side of the right knee; does not spread down the leg",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "It’s my right knee."
+     },
+     {
+      "turn": 6,
+      "quote": "The pain is on the inner side of the right knee and doesn’t spread down the leg."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "About 7 out of 10 on bad days",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "On bad days it’s about 7 out of 10"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Knee feels stiff for about 20 minutes in the morning",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "getting worse"
+     },
+     {
+      "turn": 5,
+      "quote": "On bad days"
+     },
+     {
+      "turn": 6,
+      "quote": "sometimes swells slightly by the evening"
+     },
+     {
+      "turn": 8,
+      "quote": "the knee feels stiff for about 20 minutes in the morning"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Knee sometimes swells slightly by the evening; no redness, fever or locking",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "The knee sometimes swells slightly by the evening, but there’s no redness, fever or locking."
+     },
+     {
+      "turn": 12,
+      "quote": "peeing, pooing or breathing"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "general",
+     "bodily"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Type 2 diabetes for about 10 years; stent placed in a heart artery about 6 years ago; No other conditions they see a doctor or nurse about regularly, and no other operations or hospital stays",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I've had type 2 diabetes for about 10 years, and I had a stent put in a heart artery about 6 years ago."
+     },
+     {
+      "turn": 9,
+      "quote": "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays."
+     },
+     {
+      "turn": 9,
+      "quote": "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "from_medicines",
+     "procedures"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Metformin 1 g twice a day, aspirin 75 mg once a day, atorvastatin 40 mg at night and ramipril 5 mg once a day; no new or changed medicines recently; Takes paracetamol, which helps the knee ache",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take metformin 1 g twice a day, aspirin 75 mg once a day, atorvastatin 40 mg at night, and ramipril 5 mg once a day; I haven’t started or changed anything recently"
+     },
+     {
+      "turn": 7,
+      "quote": "That’s all—I’m not taking any other medicines for my diabetes or my heart."
+     },
+     {
+      "turn": 8,
+      "quote": "it’s better with rest and paracetamol"
+     },
+     {
+      "turn": 10,
+      "quote": "I take paracetamol sometimes for the knee, but nothing else apart from the tablets I mentioned. No inhalers, eye drops, creams, injections, vitamins or herbal remedies."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "for_conditions",
+     "time_of_day",
+     "forms",
+     "over_the_counter"
+    ]
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "Penicillin causes a rash",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "penicillin gives me a rash"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No changes in appetite, sleep, weight or energy since the knee problem started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "it’s really starting to limit me"
+     },
+     {
+      "turn": 3,
+      "quote": "I can’t walk the dog round the park anymore, and I’m going downstairs one step at a time holding the rail"
+     },
+     {
+      "turn": 5,
+      "quote": "Quite a lot, really."
+     },
+     {
+      "turn": 11,
+      "quote": "it’s really limiting me now"
+     },
+     {
+      "turn": 12,
+      "quote": "No, I haven’t noticed any changes in my appetite, sleep, weight, energy"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": true,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Wants something stronger for the pain because it is really limiting them, and wants to know whether they might need a knee replacement",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "I’d like something stronger for the pain, because it’s really limiting me now. I also want to know whether I might need a knee replacement."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Right knee aching and getting worse, and starting to limit them",
+    "evidence": [
+     "It’s my right knee. It’s been aching and getting worse"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started getting bad last week",
+    "evidence": [
+     "It only started getting bad last week."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Worse going down stairs and after walking more than about 10 minutes; better with rest and paracetamol",
+    "evidence": [
+     "It’s worse going down stairs and after walking more than about 10 minutes, and it’s better with rest and paracetamol."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Deep, grinding ache",
+    "evidence": [
+     "It’s been aching",
+     "It’s a deep, grinding ache"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Inner side of the right knee; does not spread down the leg",
+    "evidence": [
+     "It’s my right knee.",
+     "The pain is on the inner side of the right knee and doesn’t spread down the leg."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "About 7 out of 10 on bad days",
+    "evidence": [
+     "On bad days it’s about 7 out of 10"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Knee sometimes swells slightly by the evening; no redness, fever or locking",
+    "evidence": [
+     "The knee sometimes swells slightly by the evening, but there’s no redness, fever or locking.",
+     "peeing, pooing or breathing"
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Type 2 diabetes for about 10 years; stent placed in a heart artery about 6 years ago; No other conditions they see a doctor or nurse about regularly, and no other operations or hospital stays",
+    "evidence": [
+     "I've had type 2 diabetes for about 10 years, and I had a stent put in a heart artery about 6 years ago.",
+     "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays.",
+     "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Metformin 1 g twice a day, aspirin 75 mg once a day, atorvastatin 40 mg at night and ramipril 5 mg once a day; no new or changed medicines recently; Takes paracetamol, which helps the knee ache",
+    "evidence": [
+     "I take metformin 1 g twice a day, aspirin 75 mg once a day, atorvastatin 40 mg at night, and ramipril 5 mg once a day; I haven’t started or changed anything recently",
+     "That’s all—I’m not taking any other medicines for my diabetes or my heart.",
+     "it’s better with rest and paracetamol",
+     "I take paracetamol sometimes for the knee, but nothing else apart from the tablets I mentioned. No inhalers, eye drops, creams, injections, vitamins or herbal remedies."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "Penicillin causes a rash",
+    "evidence": [
+     "penicillin gives me a rash"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Wants something stronger for the pain because it is really limiting them, and wants to know whether they might need a knee replacement",
+    "evidence": [
+     "I’d like something stronger for the pain, because it’s really limiting me now. I also want to know whether I might need a knee replacement."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "timing",
+    "text": "Knee feels stiff for about 20 minutes in the morning",
+    "evidence": [
+     "getting worse",
+     "On bad days",
+     "sometimes swells slightly by the evening",
+     "the knee feels stiff for about 20 minutes in the morning"
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No changes in appetite, sleep, weight or energy since the knee problem started",
+    "evidence": [
+     "it’s really starting to limit me",
+     "I can’t walk the dog round the park anymore, and I’m going downstairs one step at a time holding the rail",
+     "Quite a lot, really.",
+     "it’s really limiting me now",
+     "No, I haven’t noticed any changes in my appetite, sleep, weight, energy"
+    ]
+   }
+  ],
+  "unclear": [],
+  "red_flag": null
+ },
+ "turns": 12,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 0.75,
+   "score": 0.675,
+   "level": "confirm",
+   "resolved": 4,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.838,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.769,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.584,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.45,
+   "score": 0.517,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.609,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.654,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.677,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.689,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.694,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 12,
+   "added": [
+    {
+     "slot": "past_history",
+     "value": "No other conditions they see a doctor or nurse about regularly, and no other operations or hospital stays",
+     "evidence": "No, there isn’t anything else I see a doctor or nurse about regularly, and I haven’t had any other operations or hospital stays.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": false
+    }
+   ]
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "case_02",
+ "persona": "contradictory",
+ "metrics": {
+  "questions": 12,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 311,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.8125,
+  "essential_completeness": 0.8,
+  "captured_facts": {
+   "F1": true,
+   "F2": false,
+   "F3": true,
+   "F4": true,
+   "F5": true,
+   "F6": false,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true,
+   "F12": true,
+   "F13": true,
+   "F14": true,
+   "F15": false,
+   "F16": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 0.9230769230769231,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

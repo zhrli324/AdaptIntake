@@ -1,0 +1,1224 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've got a cough, and pain in my right side."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me a bit about when the cough and the pain in your right side first started—whether they came on suddenly or gradually, and if anything seemed to set them off—and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "It started two days ago."
+  },
+  {
+   "role": "agent",
+   "text": "How much are the cough and the pain affecting you from day to day, and could you tell me about any medicines you take regularly or have taken recently, including anything new or changed?"
+  },
+  {
+   "role": "patient",
+   "text": "My daughter keeps telling me to take it easy these days."
+  },
+  {
+   "role": "agent",
+   "text": "Do you have any allergies to medicines, or have you ever had a bad reaction to a medicine?"
+  },
+  {
+   "role": "patient",
+   "text": "No, nothing like that."
+  },
+  {
+   "role": "agent",
+   "text": "Have you had any ongoing health conditions in the past that you’ve seen a doctor about regularly?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have high blood pressure."
+  },
+  {
+   "role": "agent",
+   "text": "How much are the cough and the pain in your right side bothering you these days?"
+  },
+  {
+   "role": "patient",
+   "text": "The pain only comes on when I cough."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything else bothering you since the cough started?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been feeling a bit nauseous."
+  },
+  {
+   "role": "agent",
+   "text": "Are you taking any medicines at the moment — only your usual ones, something new or changed recently, none at all, or are you not sure?"
+  },
+  {
+   "role": "patient",
+   "text": "I take something for my blood pressure, that's all I know."
+  },
+  {
+   "role": "agent",
+   "text": "How much do the cough and side pain bother you day to day?"
+  },
+  {
+   "role": "patient",
+   "text": "My son visited last Sunday, that was nice."
+  },
+  {
+   "role": "agent",
+   "text": "Besides high blood pressure, do you see a doctor or nurse for anything else?"
+  },
+  {
+   "role": "patient",
+   "text": "Yes, I have macular degeneration."
+  },
+  {
+   "role": "agent",
+   "text": "Do the cough and side pain come and go, or stay?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't really noticed it coming and going."
+  },
+  {
+   "role": "agent",
+   "text": "Since the cough and pain in your right side began, have you noticed any changes in your appetite, sleep, weight, or energy, or has all that stayed about the same?"
+  },
+  {
+   "role": "patient",
+   "text": "I've felt feverish with chills at home."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about this?"
+  },
+  {
+   "role": "patient",
+   "text": "I just hope it's not like the pneumonia last year."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me what the pain in your right side feels like?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't really describe it. It's just there when I cough."
+  },
+  {
+   "role": "agent",
+   "text": "Aside from your high blood pressure, macular degeneration, and the pneumonia last year, is there anything else you’ve been treated for or take medicine for, or is that all?"
+  },
+  {
+   "role": "patient",
+   "text": "No, that's all."
+  },
+  {
+   "role": "agent",
+   "text": "How are you sleeping at night since this started, if it has changed at all?"
+  },
+  {
+   "role": "patient",
+   "text": "I've not noticed anything different with my sleep."
+  },
+  {
+   "role": "agent",
+   "text": "Since this started, have you noticed any changes in your bladder or bowel habits, or any changes in your breathing?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't noticed anything like that."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me a bit about when the cough and the pain in your right side first started—whether they came on suddenly or gradually, and if anything seemed to set them off—and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "How much are the cough and the pain affecting you from day to day, and could you tell me about any medicines you take regularly or have taken recently, including anything new or changed?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.64,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Do you have any allergies to medicines, or have you ever had a bad reaction to a medicine?",
+   "slots": [
+    "allergies"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "allergies": 0.62,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: allergies (missing; score 0.62)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false
+   },
+   "options": [
+    "No allergies or bad reactions",
+    "Yes, I have",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Have you had any ongoing health conditions in the past that you’ve seen a doctor about regularly?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.6,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (missing; score 0.6)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "How much are the cough and the pain in your right side bothering you these days?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "provocation": 0.44,
+    "quality": 0.34,
+    "severity": 0.58,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": [
+    "Not much",
+    "Somewhat",
+    "Very much",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Have you noticed anything else bothering you since the cough started?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.54,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.54)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Are you taking any medicines at the moment — only your usual ones, something new or changed recently, none at all, or are you not sure?",
+   "slots": [
+    "medications"
+   ],
+   "stage": "closed",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "severity": 0.48,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "medications": 0.52,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: medications (missing; score 0.52)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false
+   },
+   "options": [
+    "Only my usual medicines",
+    "Something new or changed recently",
+    "I'm not taking any medicines right now",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "How much do the cough and side pain bother you day to day?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "closed",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": 0.3,
+    "severity": 0.45,
+    "timing": 0.4,
+    "associated_symptoms": 0.36,
+    "past_history": 0.415,
+    "medications": -0.01,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.45)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": [
+    "Not much",
+    "Some",
+    "A lot",
+    "Not sure"
+   ]
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "Besides high blood pressure, do you see a doctor or nurse for anything else?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": 0.3,
+    "timing": 0.4,
+    "associated_symptoms": 0.36,
+    "past_history": 0.415,
+    "medications": -0.01,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.415); recall cue: regular_care",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "Do the cough and side pain come and go, or stay?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": 0.3,
+    "timing": 0.4,
+    "associated_symptoms": 0.36,
+    "past_history": 0.315,
+    "medications": -0.01,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.4)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   },
+   "options": []
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Since the cough and pain in your right side began, have you noticed any changes in your appetite, sleep, weight, or energy, or has all that stayed about the same?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.38,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.38); recall cue: general",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 12,
+   "turn": 12,
+   "text": "What worries you most about this?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "scaffolded",
+   "scores": {
+    "quality": 0.3,
+    "associated_symptoms": 0.26,
+    "past_history": 0.315,
+    "medications": -0.01,
+    "functional_change": 0.3,
+    "main_concern": 0.35
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.35)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   },
+   "options": []
+  },
+  {
+   "index": 13,
+   "turn": 13,
+   "text": "Can you tell me what the pain in your right side feels like?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.28,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   },
+   "options": []
+  },
+  {
+   "index": 14,
+   "turn": 14,
+   "text": "Aside from your high blood pressure, macular degeneration, and the pneumonia last year, is there anything else you’ve been treated for or take medicine for, or is that all?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.28,
+    "past_history": 0.34,
+    "medications": 0.06,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34); recall cue: from_medicines",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 15,
+   "turn": 15,
+   "text": "How are you sleeping at night since this started, if it has changed at all?",
+   "slots": [
+    "functional_change"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "associated_symptoms": 0.28,
+    "medications": 0.06,
+    "functional_change": 0.34
+   },
+   "reason": "highest-priority gap: functional_change (missing; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "functional_change": false
+   },
+   "options": []
+  },
+  {
+   "index": 16,
+   "turn": 16,
+   "text": "Since this started, have you noticed any changes in your bladder or bowel habits, or any changes in your breathing?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "associated_symptoms": 0.3,
+    "medications": 0.13
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.3); recall cue: bodily",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Cough and pain in the right side",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've got a cough, and pain in my right side."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started two days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "It started two days ago."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Pain is present when coughing",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 6,
+      "quote": "The pain only comes on when I cough."
+     },
+     {
+      "turn": 14,
+      "quote": "It's just there when I cough."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 14,
+      "quote": "I can't really describe it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Pain in the right side",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "pain in my right side"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "missing",
+    "value": null,
+    "vague": false,
+    "evidence": [],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "I haven't really noticed it coming and going."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "Feeling a bit nauseous; Has felt feverish with chills; No changes in bladder or bowel habits and no change in breathing.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I've been feeling a bit nauseous."
+     },
+     {
+      "turn": 12,
+      "quote": "I've felt feverish with chills at home."
+     },
+     {
+      "turn": 17,
+      "quote": "No, I haven't noticed anything like that."
+     },
+     {
+      "turn": 17,
+      "quote": "No, I haven't noticed anything like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "general",
+     "bodily"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "High blood pressure; Has macular degeneration, in addition to high blood pressure; Had pneumonia last year; No other past conditions or treatments beyond those already mentioned.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "Yes, I have high blood pressure."
+     },
+     {
+      "turn": 10,
+      "quote": "Yes, I have macular degeneration."
+     },
+     {
+      "turn": 13,
+      "quote": "the pneumonia last year"
+     },
+     {
+      "turn": 15,
+      "quote": "No, that's all."
+     },
+     {
+      "turn": 15,
+      "quote": "No, that's all."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "from_medicines"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "reported",
+    "value": "Takes something for blood pressure; does not know the name; nothing else",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 8,
+      "quote": "I take something for my blood pressure, that's all I know."
+     },
+     {
+      "turn": 15,
+      "quote": "No, that's all."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "No, nothing like that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No change in sleep since the symptoms started",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 16,
+      "quote": "I've not noticed anything different with my sleep."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Hopes it is not like the pneumonia they had last year",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 13,
+      "quote": "I just hope it's not like the pneumonia last year."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Cough and pain in the right side",
+    "evidence": [
+     "I've got a cough, and pain in my right side."
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started two days ago",
+    "evidence": [
+     "It started two days ago."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Pain is present when coughing",
+    "evidence": [
+     "The pain only comes on when I cough.",
+     "It's just there when I cough."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Pain in the right side",
+    "evidence": [
+     "pain in my right side"
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "Feeling a bit nauseous; Has felt feverish with chills; No changes in bladder or bowel habits and no change in breathing.",
+    "evidence": [
+     "I've been feeling a bit nauseous.",
+     "I've felt feverish with chills at home.",
+     "No, I haven't noticed anything like that.",
+     "No, I haven't noticed anything like that."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "High blood pressure; Has macular degeneration, in addition to high blood pressure; Had pneumonia last year; No other past conditions or treatments beyond those already mentioned.",
+    "evidence": [
+     "Yes, I have high blood pressure.",
+     "Yes, I have macular degeneration.",
+     "the pneumonia last year",
+     "No, that's all.",
+     "No, that's all."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to medicines",
+    "evidence": [
+     "No, nothing like that."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No change in sleep since the symptoms started",
+    "evidence": [
+     "I've not noticed anything different with my sleep."
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Hopes it is not like the pneumonia they had last year",
+    "evidence": [
+     "I just hope it's not like the pneumonia last year."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "quality",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't really describe it."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "Not discussed.",
+    "evidence": []
+   },
+   {
+    "slot": "timing",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I haven't really noticed it coming and going."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "Mentioned, but not specific: Takes something for blood pressure; does not know the name; nothing else",
+    "evidence": [
+     "I take something for my blood pressure, that's all I know.",
+     "No, that's all."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 17,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.75,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.45,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.575,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.487,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.594,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.497,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.323,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.237,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.4,
+   "score": 0.318,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.459,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.305,
+   "level": "scaffolded",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": true
+  },
+  {
+   "signal": 0.7,
+   "score": 0.502,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.551,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.626,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.663,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.681,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 17,
+   "added": [
+    {
+     "slot": "associated_symptoms",
+     "value": "No changes in bladder or bowel habits and no change in breathing.",
+     "evidence": "No, I haven't noticed anything like that.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": false
+    },
+    {
+     "slot": "past_history",
+     "value": "No other past conditions or treatments beyond those already mentioned.",
+     "evidence": "No, that's all.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": true
+    }
+   ]
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "ext_01",
+ "persona": "fragmented",
+ "metrics": {
+  "questions": 17,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 128,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.7,
+  "essential_completeness": 0.6666666666666666,
+  "captured_facts": {
+   "F1": false,
+   "F2": true,
+   "F3": true,
+   "F4": false,
+   "F5": false,
+   "F6": true,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true
+  },
+  "fidelity": 0.7777777777777778,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}

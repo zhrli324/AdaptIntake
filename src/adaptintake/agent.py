@@ -13,6 +13,7 @@ from .clarity import ClarityTracker, Guidance
 from .extraction import TurnUpdate, analyse_reply, apply_analysis
 from .llm import LLM, LLMError
 from .policy import Decision, PolicyConfig, Stage, decide
+from .recall import consolidate, remaining_anchors
 from .questions import OPENING_QUESTION, TEMPLATES, generate_question
 from .schema import SLOT_ORDER, InformationState, TurnAnalysis
 from .summary import Summary, build_summary
@@ -52,7 +53,7 @@ class BaseIntake:
         decision = Decision("ask", ["chief_complaint"], Stage.OPEN, Guidance.FOCUSED, reason="opening question")
         return self._ask(OPENING_QUESTION, decision, source="opening")
 
-    def _ask(self, text: str, decision: Decision, source: str, attempts: list | None = None) -> AgentTurn:
+    def _ask(self, text: str, decision: Decision, source: str, attempts: list | None = None, options: list | None = None) -> AgentTurn:
         resolved_before = {s: self.state[s].is_resolved for s in decision.slots}
         for s in decision.slots:
             self.state[s].times_asked += 1
@@ -68,6 +69,7 @@ class BaseIntake:
             "source": source,
             "rejected_drafts": attempts or [],
             "already_resolved": resolved_before,
+            "options": options or [],
         }
         self.questions.append(record)
         self.transcript.append({"role": "agent", "text": text})
@@ -96,7 +98,7 @@ class BaseIntake:
         self.turn += 1
         self.transcript.append({"role": "patient", "text": reply})
         hit = redflags.screen(reply)
-        if hit:
+        if hit and self._confirm_red_flag(hit, reply):
             self.red_flag = hit.category
             self._understand(reply)  # still record what was said, for the summary
             return self._finish(redflags.URGENT_MESSAGE, f"red flag: {hit.category}")
@@ -106,13 +108,19 @@ class BaseIntake:
         if self.questions and not update.off_topic:
             for s in self.questions[-1]["slots"]:
                 if self.state[s].list_open and s not in touched:
-                    self.state[s].list_open = False
+                    self.state[s].list_open = self._keep_list_open(s)
         if update.wants_to_stop:
             return self._finish(STOP_MESSAGE, "patient asked to stop")
         return self._next(update)
 
     def _next(self, update: TurnUpdate) -> AgentTurn:
         raise NotImplementedError
+
+    def _confirm_red_flag(self, hit: redflags.RedFlagHit, reply: str) -> bool:
+        return True  # rules only
+
+    def _keep_list_open(self, slot: str) -> bool:
+        return False  # "anything else?" answered without a new item closes the list
 
     def summary(self) -> Summary:
         return build_summary(self.state, self.red_flag)
@@ -131,27 +139,76 @@ class BaseIntake:
             "rejected_extractions": len(self.rejected_extractions),
             "errors": self.errors,
             "clarity": getattr(getattr(self, "clarity", None), "history", None),
+            "consolidations": getattr(self, "consolidations", []),
+            "red_flag_overrides": getattr(self, "red_flag_overrides", []),
         }
 
 
 class IntakeAgent(BaseIntake):
     """AdaptIntake (adaptive=True) or baseline B2 (adaptive=False, guidance fixed at 'focused')."""
 
-    def __init__(self, llm: LLM, adaptive: bool = True, policy: PolicyConfig | None = None, use_critic: bool = True):
+    def __init__(
+        self,
+        llm: LLM,
+        adaptive: bool = True,
+        policy: PolicyConfig | None = None,
+        use_critic: bool = True,
+        anchored_recall: bool = False,
+        consolidate: bool = False,
+        verify_red_flags: bool = False,
+        name: str | None = None,
+    ):
         super().__init__(llm)
         self.adaptive = adaptive
-        self.name = "adaptintake" if adaptive else "b2_nonadaptive"
-        self.policy = policy or PolicyConfig()
+        self.name = name or ("adaptintake" if adaptive else "b2_nonadaptive")
+        self.policy = policy or PolicyConfig(anchored_lists=anchored_recall)
         self.use_critic = use_critic
+        self.anchored_recall = anchored_recall
+        self.consolidate = consolidate
+        self.verify_red_flags = verify_red_flags
         self.clarity = ClarityTracker()
+        self.consolidations: list[dict] = []
+        self.red_flag_overrides: list[dict] = []
+
+    def _confirm_red_flag(self, hit: redflags.RedFlagHit, reply: str) -> bool:
+        if not self.verify_red_flags:
+            return True
+        question = next((t["text"] for t in reversed(self.transcript[:-1]) if t["role"] == "agent"), "")
+        verdict = redflags.verify(self.llm, hit, reply, question)
+        if not verdict.emergency:
+            self.red_flag_overrides.append({"turn": self.turn, "category": hit.category, "matched": hit.matched_text, "reason": verdict.reason})
+        return verdict.emergency
+
+    def _keep_list_open(self, slot: str) -> bool:
+        return self.anchored_recall and bool(remaining_anchors(slot, self.state))
 
     def _next(self, update: TurnUpdate) -> AgentTurn:
         guidance = self.clarity.update(update) if self.adaptive else Guidance.FOCUSED
         decision = decide(self.state, guidance, len(self.questions), self.policy)
+        if decision.action == "stop" and self.consolidate and len(self.consolidations) < 2 and self.turn >= 2:
+            # Before stopping, re-read the whole conversation for information said in passing.
+            try:
+                added = consolidate(self.llm, self.state, self.transcript)
+            except LLMError as err:
+                self.errors.append(f"turn {self.turn}: consolidation failed: {err}")
+                added = []
+            self.consolidations.append({"turn": self.turn, "added": [u.model_dump() for u in added]})
+            if added:
+                decision = decide(self.state, guidance, len(self.questions), self.policy)
         if decision.action == "stop":
             return self._finish(CLOSING_MESSAGE, decision.reason)
-        result = generate_question(self.llm, decision, self.state, self.transcript, use_critic=self.use_critic)
-        return self._ask(result.text, decision, result.source, result.attempts)
+
+        anchors = None
+        slot = self.state[decision.slots[0]]
+        if self.anchored_recall and slot.list_open and not slot.vague:
+            available = remaining_anchors(slot.name, self.state)
+            # Clear communicators get all cues in one question; others get one concrete cue at a time.
+            anchors = available if guidance == Guidance.CONFIRM else available[:1]
+            slot.anchors_used += [key for key, _ in anchors]
+            if anchors:
+                decision.reason += f"; recall cue: {', '.join(k for k, _ in anchors)}"
+        result = generate_question(self.llm, decision, self.state, self.transcript, use_critic=self.use_critic, anchors=anchors or None)
+        return self._ask(result.text, decision, result.source, result.attempts, result.options)
 
 
 class FixedQuestionnaire(BaseIntake):
@@ -178,4 +235,8 @@ SYSTEMS = {
     "b1_fixed": lambda llm: FixedQuestionnaire(llm),
     "b2_nonadaptive": lambda llm: IntakeAgent(llm, adaptive=False),
     "adaptintake": lambda llm: IntakeAgent(llm, adaptive=True),
+    # v2: adds the three mechanisms motivated by the error analysis of the first run (see recall.py).
+    "adaptintake_v2": lambda llm: IntakeAgent(
+        llm, adaptive=True, anchored_recall=True, consolidate=True, verify_red_flags=True, name="adaptintake_v2"
+    ),
 }

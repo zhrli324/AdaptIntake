@@ -1,0 +1,936 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm here for my five-month diabetes and blood pressure check. I've also been having some pain in my right shoulder."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me when the shoulder pain started and how it came on—whether suddenly or gradually, and what was happening when it began—and also whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "I can't remember exactly when it started, but it came on without any injury beforehand. As for allergies, I don't have any that I know of."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how much the shoulder pain is affecting you day to day, and what medicines you take regularly or have started or changed recently?"
+  },
+  {
+   "role": "patient",
+   "text": "It mainly hurts with certain movements of my shoulder, and I haven't noticed it causing other problems day to day. I take medicines for my diabetes and high blood pressure, but I can't remember the names or doses."
+  },
+  {
+   "role": "agent",
+   "text": "On a scale from 0 to 10, how bad is the shoulder pain when it bothers you most?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not sure—I can't really put a number on it."
+  },
+  {
+   "role": "agent",
+   "text": "Since the shoulder trouble started, have you noticed anything else going on with your shoulder or anywhere else in your body?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I haven't had any weakness, numbness, or tingling."
+  },
+  {
+   "role": "agent",
+   "text": "Apart from your diabetes and high blood pressure, is there anything else you see a doctor or nurse about regularly?"
+  },
+  {
+   "role": "patient",
+   "text": "No, I don't see anyone regularly for anything else—just my diabetes and blood pressure. The only other thing was a benign breast biopsy back in 2004; I was told to have a repeat mammogram six months later, but I never had it."
+  },
+  {
+   "role": "agent",
+   "text": "Does the shoulder pain come and go, or is it there most of the time?"
+  },
+  {
+   "role": "patient",
+   "text": "It mostly bothers me when I make certain movements with my shoulder. I haven't really noticed it being there all the time."
+  },
+  {
+   "role": "agent",
+   "text": "Have you ever had any operations or stays in hospital?"
+  },
+  {
+   "role": "patient",
+   "text": "The breast biopsy in 2004 is the only procedure I've had. I can't recall any other operations or stays in hospital."
+  },
+  {
+   "role": "agent",
+   "text": "Since the shoulder problem started, have you noticed any changes in your appetite, sleep, weight, or energy, or have those stayed about the same?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't noticed any changes there—my appetite, sleep, weight, and energy have all stayed about the same."
+  },
+  {
+   "role": "agent",
+   "text": "What worries you most about your shoulder at the moment?"
+  },
+  {
+   "role": "patient",
+   "text": "I'm not especially worried about it—I mainly came for my routine diabetes and blood pressure check. The shoulder pain is the only other thing I've noticed."
+  },
+  {
+   "role": "agent",
+   "text": "How would you describe the feeling in your shoulder, in your own words?"
+  },
+  {
+   "role": "patient",
+   "text": "It's just pain—I can't really describe it any better than that."
+  },
+  {
+   "role": "agent",
+   "text": "Is there anything else about your past health, or any other operations or hospital stays, that you’d like to add?"
+  },
+  {
+   "role": "patient",
+   "text": "No, there's nothing else I can think of—just the diabetes, high blood pressure, and that benign breast biopsy in 2004."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me when the shoulder pain started and how it came on—whether suddenly or gradually, and what was happening when it began—and also whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "onset",
+    "allergies"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "onset": 0.78,
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.565,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: onset, allergies (missing; score 0.78)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "onset": false,
+    "allergies": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me how much the shoulder pain is affecting you day to day, and what medicines you take regularly or have started or changed recently?",
+   "slots": [
+    "severity",
+    "medications"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "quality": 0.38,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.565,
+    "medications": 0.69,
+    "functional_change": 0.38,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity, medications (missing; score 0.71)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false,
+    "medications": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "On a scale from 0 to 10, how bad is the shoulder pain when it bothers you most?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "severity": 0.61,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.565,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: severity (missing; score 0.61)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": []
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Since the shoulder trouble started, have you noticed anything else going on with your shoulder or anywhere else in your body?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.565,
+    "main_concern": 0.41
+   },
+   "reason": "highest-priority gap: associated_symptoms (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Apart from your diabetes and high blood pressure, is there anything else you see a doctor or nurse about regularly?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.54,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.54); recall cue: regular_care",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Does the shoulder pain come and go, or is it there most of the time?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "timing": 0.44,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.44)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "Have you ever had any operations or stays in hospital?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.38,
+    "past_history": 0.44,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.44); recall cue: procedures",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 8,
+   "turn": 8,
+   "text": "Since the shoulder problem started, have you noticed any changes in your appetite, sleep, weight, or energy, or have those stayed about the same?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.38,
+    "past_history": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.38); recall cue: general",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 9,
+   "turn": 9,
+   "text": "What worries you most about your shoulder at the moment?",
+   "slots": [
+    "main_concern"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.34,
+    "associated_symptoms": 0.28,
+    "past_history": 0.34,
+    "main_concern": 0.38
+   },
+   "reason": "highest-priority gap: main_concern (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "main_concern": false
+   },
+   "options": []
+  },
+  {
+   "index": 10,
+   "turn": 10,
+   "text": "How would you describe the feeling in your shoulder, in your own words?",
+   "slots": [
+    "quality"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "quality": 0.38,
+    "past_history": 0.365
+   },
+   "reason": "highest-priority gap: quality (missing; score 0.38)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "quality": false
+   },
+   "options": []
+  },
+  {
+   "index": 11,
+   "turn": 11,
+   "text": "Is there anything else about your past health, or any other operations or hospital stays, that you’d like to add?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "focused",
+   "scores": {
+    "quality": 0.04,
+    "past_history": 0.34
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.34)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Pain in the right shoulder, along with a five-month diabetes and blood pressure check",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've also been having some pain in my right shoulder."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I can't remember exactly when it started, but it came on without any injury beforehand."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Brought on mostly by certain movements of the shoulder",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "It mainly hurts with certain movements of my shoulder"
+     },
+     {
+      "turn": 7,
+      "quote": "It mostly bothers me when I make certain movements with my shoulder."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Just pain; patient cannot describe it any further",
+    "vague": true,
+    "evidence": [
+     {
+      "turn": 11,
+      "quote": "It's just pain—I can't really describe it any better than that."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Right shoulder",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "pain in my right shoulder"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I'm not sure—I can't really put a number on it."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Not there all the time; mostly bothers the patient with certain shoulder movements",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 7,
+      "quote": "I haven't really noticed it being there all the time."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No weakness, numbness, or tingling",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "No, I haven't had any weakness, numbness, or tingling."
+     },
+     {
+      "turn": 10,
+      "quote": "The shoulder pain is the only other thing I've noticed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "general"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diabetes and blood pressure (attending a five-month check for these); Sees no one regularly for anything other than diabetes and blood pressure; had a benign breast biopsy in 2004 and never had the recommended repeat mammogram six months later; Breast biopsy in 2004 is the only procedure; cannot recall any other operations or hospital stays",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "my five-month diabetes and blood pressure check"
+     },
+     {
+      "turn": 6,
+      "quote": "The only other thing was a benign breast biopsy back in 2004; I was told to have a repeat mammogram six months later, but I never had it."
+     },
+     {
+      "turn": 8,
+      "quote": "The breast biopsy in 2004 is the only procedure I've had. I can't recall any other operations or stays in hospital."
+     },
+     {
+      "turn": 12,
+      "quote": "No, there's nothing else I can think of"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 3,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "procedures"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I take medicines for my diabetes and high blood pressure, but I can't remember the names or doses."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I don't have any that I know of."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "No changes in appetite, sleep, weight or energy since the shoulder problem started; all have stayed about the same",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I haven't noticed it causing other problems day to day"
+     },
+     {
+      "turn": 9,
+      "quote": "my appetite, sleep, weight, and energy have all stayed about the same"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Not especially worried about the shoulder; came mainly for the routine diabetes and blood pressure check",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 10,
+      "quote": "I'm not especially worried about it—I mainly came for my routine diabetes and blood pressure check."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Pain in the right shoulder, along with a five-month diabetes and blood pressure check",
+    "evidence": [
+     "I've also been having some pain in my right shoulder."
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Brought on mostly by certain movements of the shoulder",
+    "evidence": [
+     "It mainly hurts with certain movements of my shoulder",
+     "It mostly bothers me when I make certain movements with my shoulder."
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Right shoulder",
+    "evidence": [
+     "pain in my right shoulder"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Not there all the time; mostly bothers the patient with certain shoulder movements",
+    "evidence": [
+     "I haven't really noticed it being there all the time."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No weakness, numbness, or tingling",
+    "evidence": [
+     "No, I haven't had any weakness, numbness, or tingling.",
+     "The shoulder pain is the only other thing I've noticed."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diabetes and blood pressure (attending a five-month check for these); Sees no one regularly for anything other than diabetes and blood pressure; had a benign breast biopsy in 2004 and never had the recommended repeat mammogram six months later; Breast biopsy in 2004 is the only procedure; cannot recall any other operations or hospital stays",
+    "evidence": [
+     "my five-month diabetes and blood pressure check",
+     "The only other thing was a benign breast biopsy back in 2004; I was told to have a repeat mammogram six months later, but I never had it.",
+     "The breast biopsy in 2004 is the only procedure I've had. I can't recall any other operations or stays in hospital.",
+     "No, there's nothing else I can think of"
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies",
+    "evidence": [
+     "I don't have any that I know of."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "No changes in appetite, sleep, weight or energy since the shoulder problem started; all have stayed about the same",
+    "evidence": [
+     "I haven't noticed it causing other problems day to day",
+     "my appetite, sleep, weight, and energy have all stayed about the same"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Not especially worried about the shoulder; came mainly for the routine diabetes and blood pressure check",
+    "evidence": [
+     "I'm not especially worried about it—I mainly came for my routine diabetes and blood pressure check."
+    ]
+   }
+  ],
+  "clarified": [],
+  "unclear": [
+   {
+    "slot": "onset",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't remember exactly when it started, but it came on without any injury beforehand."
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Mentioned, but not specific: Just pain; patient cannot describe it any further",
+    "evidence": [
+     "It's just pain—I can't really describe it any better than that."
+    ]
+   },
+   {
+    "slot": "severity",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I'm not sure—I can't really put a number on it."
+    ]
+   },
+   {
+    "slot": "medications",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I take medicines for my diabetes and high blood pressure, but I can't remember the names or doses."
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 12,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.9,
+   "score": 0.85,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.9,
+   "score": 0.875,
+   "level": "confirm",
+   "resolved": 3,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.738,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.569,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.484,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.592,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.496,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.4,
+   "score": 0.448,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 1.0,
+   "score": 0.724,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.15,
+   "score": 0.437,
+   "level": "focused",
+   "resolved": 0,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.569,
+   "level": "focused",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 12,
+   "added": []
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "ext_04",
+ "persona": "clear",
+ "metrics": {
+  "questions": 12,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 262,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.7,
+  "essential_completeness": 0.8333333333333334,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": false,
+   "F4": true,
+   "F5": true,
+   "F6": true,
+   "F7": false,
+   "F8": false,
+   "F9": true,
+   "F10": true
+  },
+  "fidelity": 0.8888888888888888,
+  "accuracy": 1.0,
+  "leading_questions": 1,
+  "leading_rate": 0.09090909090909091,
+  "leading_details": [
+   {
+    "index": 9,
+    "reason": "The phrasing 'What worries you most' presupposes that the patient is worried about the shoulder, which the patient had not said."
+   }
+  ]
+ }
+}

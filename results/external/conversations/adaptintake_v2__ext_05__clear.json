@@ -1,0 +1,780 @@
+{
+ "system": "adaptintake_v2",
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?"
+  },
+  {
+   "role": "patient",
+   "text": "I've been having sinus congestion and drainage for the last several days. That's what's been bothering me most."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me how much the congestion and drainage are affecting you day to day, and whether you have any allergies or bad reactions to medicines?"
+  },
+  {
+   "role": "patient",
+   "text": "The congestion is bothersome, but overall I feel well — I still walk 1 to 2 miles most days, at the local mall when the weather's bad. I haven't noticed any allergies or bad reactions to medicines."
+  },
+  {
+   "role": "agent",
+   "text": "Could you tell me about any medicines you take regularly or have taken recently—including anything new or changed, and the dose if you know it—and also about any health problems you’ve had, operations, or times you’ve stayed in hospital?"
+  },
+  {
+   "role": "patient",
+   "text": "I was diagnosed with diabetes last fall. I check my blood sugar about once a day, and my readings run between 82 and 132. I can't remember the names or doses of any medicines I'm on, and I haven't had any operations or hospital stays that I recall."
+  },
+  {
+   "role": "agent",
+   "text": "Have you noticed anything else going on along with the congestion and drainage, and is there anything that seems to make it better or worse?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't had any abdominal pain, nausea, vomiting, diarrhoea or constipation, and no blood in my urine or stools. I do get up once a night to pass urine, but there's no swelling in my ankles, and I haven't noticed anything that clearly makes the congestion better or worse."
+  },
+  {
+   "role": "agent",
+   "text": "Can you tell me how the congestion and drainage have been coming and going for you—whether they’re steady or off and on, how often they show up, how long they tend to last, and if there’s a time of day when you notice them more?"
+  },
+  {
+   "role": "patient",
+   "text": "They've just been present for the last several days — I haven't really noticed them coming and going in any particular pattern, and I can't say there's a time of day when they're worse."
+  },
+  {
+   "role": "agent",
+   "text": "Other than your diabetes, are there any health conditions you see a doctor or nurse about regularly, or any operations or hospital stays in the past that you haven’t mentioned—or is there nothing else?"
+  },
+  {
+   "role": "patient",
+   "text": "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned."
+  },
+  {
+   "role": "agent",
+   "text": "Since the congestion and drainage started, have you noticed any changes in your appetite, sleep, weight, or energy, or any changes in your bladder or bowel habits or breathing—or have those stayed about the same?"
+  },
+  {
+   "role": "patient",
+   "text": "I haven't noticed any changes in my appetite, sleep, weight or energy, and my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed."
+  },
+  {
+   "role": "agent",
+   "text": "How much are the congestion and drainage affecting your daily life right now—on a scale from 0 to 10, where 0 is not at all and 10 is very much?"
+  },
+  {
+   "role": "patient",
+   "text": "I'd put it at about a 2 or 3 — it's bothersome but I still feel well overall and keep up my walking."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, that is very helpful. I have put together a short summary of what you told me. Please read it and tell me if anything should be corrected before it goes to your doctor."
+  }
+ ],
+ "questions": [
+  {
+   "index": 0,
+   "turn": 0,
+   "text": "Hello, I'm here to help you get ready for your appointment. Could you tell me what has been bothering you?",
+   "slots": [
+    "chief_complaint"
+   ],
+   "stage": "open",
+   "guidance": "focused",
+   "scores": {},
+   "reason": "opening question",
+   "source": "opening",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "chief_complaint": false
+   },
+   "options": []
+  },
+  {
+   "index": 1,
+   "turn": 1,
+   "text": "Could you tell me how much the congestion and drainage are affecting you day to day, and whether you have any allergies or bad reactions to medicines?",
+   "slots": [
+    "allergies",
+    "severity"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "severity": 0.71,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69,
+    "allergies": 0.74,
+    "functional_change": 0.38
+   },
+   "reason": "highest-priority gap: allergies, severity (missing; score 0.74)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "allergies": false,
+    "severity": false
+   },
+   "options": []
+  },
+  {
+   "index": 2,
+   "turn": 2,
+   "text": "Could you tell me about any medicines you take regularly or have taken recently—including anything new or changed, and the dose if you know it—and also about any health problems you’ve had, operations, or times you’ve stayed in hospital?",
+   "slots": [
+    "medications",
+    "past_history"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "severity": 0.29,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.65,
+    "medications": 0.69
+   },
+   "reason": "highest-priority gap: medications, past_history (missing; score 0.69)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "medications": false,
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 3,
+   "turn": 3,
+   "text": "Have you noticed anything else going on along with the congestion and drainage, and is there anything that seems to make it better or worse?",
+   "slots": [
+    "associated_symptoms",
+    "provocation"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "provocation": 0.48,
+    "severity": 0.29,
+    "timing": 0.48,
+    "associated_symptoms": 0.58,
+    "past_history": 0.465
+   },
+   "reason": "highest-priority gap: associated_symptoms, provocation (missing; score 0.58)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false,
+    "provocation": false
+   },
+   "options": []
+  },
+  {
+   "index": 4,
+   "turn": 4,
+   "text": "Can you tell me how the congestion and drainage have been coming and going for you—whether they’re steady or off and on, how often they show up, how long they tend to last, and if there’s a time of day when you notice them more?",
+   "slots": [
+    "timing"
+   ],
+   "stage": "open",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29,
+    "timing": 0.48,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465
+   },
+   "reason": "highest-priority gap: timing (missing; score 0.48)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "timing": false
+   },
+   "options": []
+  },
+  {
+   "index": 5,
+   "turn": 5,
+   "text": "Other than your diabetes, are there any health conditions you see a doctor or nurse about regularly, or any operations or hospital stays in the past that you haven’t mentioned—or is there nothing else?",
+   "slots": [
+    "past_history"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29,
+    "associated_symptoms": 0.4,
+    "past_history": 0.465
+   },
+   "reason": "highest-priority gap: past_history (reported; score 0.465); recall cue: regular_care, procedures",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "past_history": false
+   },
+   "options": []
+  },
+  {
+   "index": 6,
+   "turn": 6,
+   "text": "Since the congestion and drainage started, have you noticed any changes in your appetite, sleep, weight, or energy, or any changes in your bladder or bowel habits or breathing—or have those stayed about the same?",
+   "slots": [
+    "associated_symptoms"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29,
+    "associated_symptoms": 0.4
+   },
+   "reason": "highest-priority gap: associated_symptoms (reported; score 0.4); recall cue: general, bodily",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "associated_symptoms": false
+   },
+   "options": []
+  },
+  {
+   "index": 7,
+   "turn": 7,
+   "text": "How much are the congestion and drainage affecting your daily life right now—on a scale from 0 to 10, where 0 is not at all and 10 is very much?",
+   "slots": [
+    "severity"
+   ],
+   "stage": "focused",
+   "guidance": "confirm",
+   "scores": {
+    "severity": 0.29
+   },
+   "reason": "highest-priority gap: severity (reported, vague; score 0.29)",
+   "source": "llm",
+   "rejected_drafts": [],
+   "already_resolved": {
+    "severity": false
+   },
+   "options": []
+  }
+ ],
+ "state": {
+  "slots": {
+   "chief_complaint": {
+    "name": "chief_complaint",
+    "status": "reported",
+    "value": "Sinus congestion and drainage",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "I've been having sinus congestion and drainage"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "onset": {
+    "name": "onset",
+    "status": "reported",
+    "value": "Started the last several days ago",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "for the last several days"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "provocation": {
+    "name": "provocation",
+    "status": "reported",
+    "value": "Has not noticed anything that clearly makes the congestion better or worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I haven't noticed anything that clearly makes the congestion better or worse"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "quality": {
+    "name": "quality",
+    "status": "reported",
+    "value": "Congestion with drainage",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "sinus congestion and drainage"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "region": {
+    "name": "region",
+    "status": "reported",
+    "value": "Sinuses",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "sinus congestion"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "severity": {
+    "name": "severity",
+    "status": "reported",
+    "value": "Rates it about a 2 or 3 out of 10 — bothersome, but they still feel well overall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "The congestion is bothersome, but overall I feel well"
+     },
+     {
+      "turn": 8,
+      "quote": "I'd put it at about a 2 or 3"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": true,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "timing": {
+    "name": "timing",
+    "status": "reported",
+    "value": "Present continuously over the last several days; no particular coming-and-going pattern noticed, and no time of day when they are worse",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 5,
+      "quote": "They've just been present for the last several days — I haven't really noticed them coming and going in any particular pattern, and I can't say there's a time of day when they're worse."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "associated_symptoms": {
+    "name": "associated_symptoms",
+    "status": "reported",
+    "value": "No abdominal pain, nausea, vomiting, diarrhoea, constipation, blood in urine or stools, or ankle swelling; gets up once a night to pass urine; No changes in appetite, sleep, weight or energy; breathing fine; bladder and bowel habits about the same.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 4,
+      "quote": "I haven't had any abdominal pain, nausea, vomiting, diarrhoea or constipation, and no blood in my urine or stools. I do get up once a night to pass urine, but there's no swelling in my ankles"
+     },
+     {
+      "turn": 7,
+      "quote": "my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed."
+     },
+     {
+      "turn": 7,
+      "quote": "I haven't noticed any changes in my appetite, sleep, weight or energy, and my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "general",
+     "bodily"
+    ]
+   },
+   "past_history": {
+    "name": "past_history",
+    "status": "reported",
+    "value": "Diagnosed with diabetes last fall; checks blood sugar about once a day with readings between 82 and 132; no operations or hospital stays that they recall; Beyond diabetes, mammogram is up to date, sees a gynaecologist regularly, and checks feet regularly.",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I was diagnosed with diabetes last fall."
+     },
+     {
+      "turn": 6,
+      "quote": "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned."
+     },
+     {
+      "turn": 6,
+      "quote": "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 2,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": [
+     "regular_care",
+     "procedures"
+    ]
+   },
+   "medications": {
+    "name": "medications",
+    "status": "unknown",
+    "value": null,
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 3,
+      "quote": "I can't remember the names or doses of any medicines I'm on"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "allergies": {
+    "name": "allergies",
+    "status": "reported",
+    "value": "No known allergies or bad reactions to medicines",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I haven't noticed any allergies or bad reactions to medicines."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 1,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "functional_change": {
+    "name": "functional_change",
+    "status": "reported",
+    "value": "Keeps up with walking and still feels well overall",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 2,
+      "quote": "I still walk 1 to 2 miles most days, at the local mall when the weather's bad."
+     },
+     {
+      "turn": 7,
+      "quote": "I haven't noticed any changes in my appetite, sleep, weight or energy"
+     },
+     {
+      "turn": 8,
+      "quote": "I still feel well overall and keep up my walking"
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   },
+   "main_concern": {
+    "name": "main_concern",
+    "status": "reported",
+    "value": "Sinus congestion and drainage is what bothers them most",
+    "vague": false,
+    "evidence": [
+     {
+      "turn": 1,
+      "quote": "That's what's been bothering me most."
+     }
+    ],
+    "conflicting_values": [],
+    "times_asked": 0,
+    "clarified": false,
+    "list_open": false,
+    "anchors_used": []
+   }
+  }
+ },
+ "summary": {
+  "told": [
+   {
+    "slot": "chief_complaint",
+    "text": "Sinus congestion and drainage",
+    "evidence": [
+     "I've been having sinus congestion and drainage"
+    ]
+   },
+   {
+    "slot": "onset",
+    "text": "Started the last several days ago",
+    "evidence": [
+     "for the last several days"
+    ]
+   },
+   {
+    "slot": "provocation",
+    "text": "Has not noticed anything that clearly makes the congestion better or worse",
+    "evidence": [
+     "I haven't noticed anything that clearly makes the congestion better or worse"
+    ]
+   },
+   {
+    "slot": "quality",
+    "text": "Congestion with drainage",
+    "evidence": [
+     "sinus congestion and drainage"
+    ]
+   },
+   {
+    "slot": "region",
+    "text": "Sinuses",
+    "evidence": [
+     "sinus congestion"
+    ]
+   },
+   {
+    "slot": "timing",
+    "text": "Present continuously over the last several days; no particular coming-and-going pattern noticed, and no time of day when they are worse",
+    "evidence": [
+     "They've just been present for the last several days — I haven't really noticed them coming and going in any particular pattern, and I can't say there's a time of day when they're worse."
+    ]
+   },
+   {
+    "slot": "associated_symptoms",
+    "text": "No abdominal pain, nausea, vomiting, diarrhoea, constipation, blood in urine or stools, or ankle swelling; gets up once a night to pass urine; No changes in appetite, sleep, weight or energy; breathing fine; bladder and bowel habits about the same.",
+    "evidence": [
+     "I haven't had any abdominal pain, nausea, vomiting, diarrhoea or constipation, and no blood in my urine or stools. I do get up once a night to pass urine, but there's no swelling in my ankles",
+     "my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed.",
+     "I haven't noticed any changes in my appetite, sleep, weight or energy, and my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed."
+    ]
+   },
+   {
+    "slot": "past_history",
+    "text": "Diagnosed with diabetes last fall; checks blood sugar about once a day with readings between 82 and 132; no operations or hospital stays that they recall; Beyond diabetes, mammogram is up to date, sees a gynaecologist regularly, and checks feet regularly.",
+    "evidence": [
+     "I was diagnosed with diabetes last fall.",
+     "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned.",
+     "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned."
+    ]
+   },
+   {
+    "slot": "allergies",
+    "text": "No known allergies or bad reactions to medicines",
+    "evidence": [
+     "I haven't noticed any allergies or bad reactions to medicines."
+    ]
+   },
+   {
+    "slot": "functional_change",
+    "text": "Keeps up with walking and still feels well overall",
+    "evidence": [
+     "I still walk 1 to 2 miles most days, at the local mall when the weather's bad.",
+     "I haven't noticed any changes in my appetite, sleep, weight or energy",
+     "I still feel well overall and keep up my walking"
+    ]
+   },
+   {
+    "slot": "main_concern",
+    "text": "Sinus congestion and drainage is what bothers them most",
+    "evidence": [
+     "That's what's been bothering me most."
+    ]
+   }
+  ],
+  "clarified": [
+   {
+    "slot": "severity",
+    "text": "Rates it about a 2 or 3 out of 10 — bothersome, but they still feel well overall",
+    "evidence": [
+     "The congestion is bothersome, but overall I feel well",
+     "I'd put it at about a 2 or 3"
+    ]
+   }
+  ],
+  "unclear": [
+   {
+    "slot": "medications",
+    "text": "The patient was not sure.",
+    "evidence": [
+     "I can't remember the names or doses of any medicines I'm on"
+    ]
+   }
+  ],
+  "red_flag": null
+ },
+ "turns": 8,
+ "end_reason": "no remaining gap is worth the patient's effort",
+ "red_flag": null,
+ "rejected_extractions": 0,
+ "errors": [],
+ "clarity": [
+  {
+   "signal": 1.0,
+   "score": 0.8,
+   "level": "confirm",
+   "resolved": 5,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.75,
+   "score": 0.775,
+   "level": "confirm",
+   "resolved": 2,
+   "vague": 1,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.6,
+   "score": 0.688,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 1,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.694,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.697,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.698,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.699,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  },
+  {
+   "signal": 0.7,
+   "score": 0.7,
+   "level": "confirm",
+   "resolved": 1,
+   "vague": 0,
+   "conflicts": 0,
+   "unknown_or_declined": 0,
+   "non_answer": false,
+   "off_topic": false
+  }
+ ],
+ "consolidations": [
+  {
+   "turn": 8,
+   "added": [
+    {
+     "slot": "past_history",
+     "value": "Beyond diabetes, mammogram is up to date, sees a gynaecologist regularly, and checks feet regularly.",
+     "evidence": "Beyond the diabetes, my mammogram is up to date and I see a gynaecologist regularly, and I check my feet regularly. I haven't had any operations or hospital stays that I haven't already mentioned.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": false
+    },
+    {
+     "slot": "associated_symptoms",
+     "value": "No changes in appetite, sleep, weight or energy; breathing fine; bladder and bowel habits about the same.",
+     "evidence": "I haven't noticed any changes in my appetite, sleep, weight or energy, and my breathing seems fine. My bladder and bowel habits are about the same — I get up once a night to pass urine, and nothing else has changed.",
+     "kind": "answer",
+     "vague": false,
+     "contradicts_previous": false,
+     "no_more": false
+    }
+   ]
+  }
+ ],
+ "red_flag_overrides": [],
+ "case": "ext_05",
+ "persona": "clear",
+ "metrics": {
+  "questions": 8,
+  "unnecessary_questions": 0,
+  "unnecessary_rate": 0.0,
+  "patient_words": 284,
+  "end_reason": "no remaining gap is worth the patient's effort",
+  "rejected_extractions": 0,
+  "template_fallbacks": 0,
+  "rule_flagged_drafts": 0,
+  "completeness": 0.8181818181818182,
+  "essential_completeness": 1.0,
+  "captured_facts": {
+   "F1": true,
+   "F2": true,
+   "F3": true,
+   "F4": true,
+   "F5": false,
+   "F6": false,
+   "F7": true,
+   "F8": true,
+   "F9": true,
+   "F10": true,
+   "F11": true
+  },
+  "fidelity": 1.0,
+  "accuracy": 1.0,
+  "leading_questions": 0,
+  "leading_rate": 0.0,
+  "leading_details": []
+ }
+}
